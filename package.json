@@ -4,8 +4,8 @@
   "description": "This is the data selfie app by looks label",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack"
+    "start": "node index.js"
+   
   },
   "keywords": [
     "example",
