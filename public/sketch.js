@@ -5,10 +5,10 @@ function setup() {
   let lat, lon;
   const button = document.getElementById('submit');
   button.addEventListener('click', async event => {
-    const mood = document.getElementById('mood').value;
+    const landmark = document.getElementById('landmark').value;
     video.loadPixels();
     const image64 = video.canvas.toDataURL();
-    const data = { lat, lon, mood, image64 };
+    const data = { lat, lon, landmark, image64 };
     const options = {
       method: 'POST',
       headers: {
