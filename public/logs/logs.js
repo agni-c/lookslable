@@ -6,9 +6,9 @@ document.getElementById('time').addEventListener('click', event => {
   sortData((a, b) => b.time - a.time);
 });
 
-document.getElementById('mood').addEventListener('click', event => {
+document.getElementById('landmark').addEventListener('click', event => {
   sortData((a, b) => {
-    if (b.mood > a.mood) return -1;
+    if (b.landmark > a.landmark) return -1;
     else return 1;
   });
 });
@@ -29,21 +29,21 @@ async function getData() {
 
   for (item of data) {
     const root = document.createElement('p');
-    const mood = document.createElement('div');
+    const landmark = document.createElement('div');
     const geo = document.createElement('div');
     const date = document.createElement('div');
     const image = document.createElement('img');
 
-    mood.textContent = `mood: ${item.mood}`;
+    landmark.textContent = `landmark: ${item.landmark}`;
     geo.textContent = `${item.lat}°, ${item.lon}°`;
     const dateString = new Date(item.timestamp).toLocaleString();
     date.textContent = dateString;
     image.src = item.image64;
     image.alt = 'Dan Shiffman making silly faces.';
 
-    root.append(mood, geo, date, image);
+    root.append(landmark, geo, date, image);
 
-    selfies.push({ elt: root, time: item.timestamp, mood: item.mood });
+    selfies.push({ elt: root, time: item.timestamp, landmark: item.landmark });
     document.body.append(root);
   }
   console.log(data);
