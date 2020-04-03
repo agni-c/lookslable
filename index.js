@@ -12,7 +12,7 @@ var serviceAccount = require('./spring-internship-firebase-adminsdk-7z0b1-5e9510
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
-	databaseURL: 'https://spring-internship.firebaseio.com'
+	databaseURL: 'https://spring-internship.firebaseio.com',
 });
 
 let db = admin.firestore();
@@ -23,20 +23,22 @@ app.use(express.static('public')); //only assets in public will be recognized
 app.use(express.json()); //parsing json, limiting it to 1mb
 
 //Setting doc reference
-let docRef = db.collection('test');
 //get request
 app.get('/api', (request, response) => {
 	//get data from firebase
 	//Reading the data
 	db.collection('test')
 		.get()
-		.then(snapshot => {
-			snapshot.forEach(doc => {
-				response.json(doc.id);
+		.then((snapshot) => {
+			let data = snapshot.docs.map((doc) => {
+				let x = doc.data();
+				x['_id'] = doc.id;
+				return x;
 			});
+			response.status(200).json(data);
 		})
-		.catch(err => {
-			console.log('Error getting documents', err);
+		.catch((err) => {
+			err;
 		});
 });
 
@@ -46,8 +48,8 @@ app.post('/api', (request, response) => {
 	const timestamp = firebase.FieldValue.serverTimestamp(); //saving current date
 	data.timestamp = timestamp; //saving current time var in data obj
 	// response.json(data); //sending response to debug
-
 	//test firebase post
+	let docRef = db.collection('test');
 	docRef.add(data); // can send to firestore
 });
 

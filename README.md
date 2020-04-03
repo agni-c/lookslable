@@ -10,10 +10,13 @@ Index.js : Node JS server code.
 
 /public/logs/logs.js: Retrives data from Database.db to show on /logs/index.html.
 
+Style.css: Contais dummy CSS Designs for Index.html
+
+
 Database.db: Stored data using NEDB,{Lat, long ,"landmark",Image}/\*lat,lon,"landmark" as string and
 
                                                      image as Base64/*
 
-Style.css: Contais dummy CSS Designs for Index.html
-
-- New Update: Uploads data to fireStore
+## UPDATE
+- Uploads data to fireStore
+-  New Update: main DB is firebase now

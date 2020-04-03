@@ -2,11 +2,11 @@ getData();
 
 const selfies = [];
 //sorting data by time
-document.getElementById('time').addEventListener('click', event => {
+document.getElementById('time').addEventListener('click', (event) => {
 	sortData((a, b) => b.time - a.time);
 });
 //sorting data by landmark
-document.getElementById('landmark').addEventListener('click', event => {
+document.getElementById('landmark').addEventListener('click', (event) => {
 	sortData((a, b) => {
 		if (b.landmark > a.landmark) return -1;
 		else return 1;
@@ -27,7 +27,7 @@ async function getData() {
 	const response = await fetch('/api');
 	const data = await response.json();
 
-	for (item of data) {
+	for (let item of data) {
 		const root = document.createElement('p');
 		const landmark = document.createElement('div');
 		const geo = document.createElement('div');
@@ -36,7 +36,7 @@ async function getData() {
 
 		landmark.textContent = `landmark: ${item.landmark}`;
 		geo.textContent = `${item.lat}°, ${item.lon}°`;
-		const dateString = new Date(item.timestamp).toLocaleString();
+		const dateString = Date.now(item.timestamp).toDate();
 		date.textContent = dateString;
 		image.src = item.image64;
 		image.alt = 'Dan Shiffman making silly faces.';
