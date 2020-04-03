@@ -15,3 +15,5 @@ Database.db: Stored data using NEDB,{Lat, long ,"landmark",Image}/\*lat,lon,"lan
                                                      image as Base64/*
 
 Style.css: Contais dummy CSS Designs for Index.html
+
+- New Update: Uploads data to fireStore
