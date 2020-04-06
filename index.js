@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 
 var admin = require('firebase-admin');
 
-var serviceAccount = require('./spring-internship-firebase-adminsdk-7z0b1-5e95103165.json');
+var serviceAccount = require('./spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.json');
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
@@ -32,7 +32,7 @@ app.get('/api', (request, response) => {
 		.then((snapshot) => {
 			let data = snapshot.docs.map((doc) => {
 				let x = doc.data();
-				x['_id'] = doc.id;
+				x._id = doc.id;
 				return x;
 			});
 			response.status(200).json(data);

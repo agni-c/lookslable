@@ -36,7 +36,7 @@ async function getData() {
 
 		landmark.textContent = `landmark: ${item.landmark}`;
 		geo.textContent = `${item.lat}°, ${item.lon}°`;
-		const dateString = Date.now(item.timestamp).toDate();
+		const dateString = Date.now(item.timestamp);
 		date.textContent = dateString;
 		image.src = item.image64;
 		image.alt = 'Dan Shiffman making silly faces.';
