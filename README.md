@@ -12,11 +12,12 @@ Index.js : Node JS server code.
 
 Style.css: Contais dummy CSS Designs for Index.html
 
-
 Database.db: Stored data using NEDB,{Lat, long ,"landmark",Image}/\*lat,lon,"landmark" as string and
 
                                                      image as Base64/*
 
 ## UPDATE
+
 - Uploads data to fireStore
--  New Update: main DB is firebase now
+- main DB is firestore now
+- New Update: Images gets stored in cloud storage
