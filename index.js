@@ -19,13 +19,13 @@ var serviceAccount = require('./spring-internship-firebase-adminsdk-7z0b1-ad7d9b
 
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
-	databaseURL: process.env.FIREBASE_DB,
-	storageBucket: process.env.BUCKET_NAME,
+	databaseURL: 'https://spring-internship.firebaseio.com',
+	storageBucket: 'spring-internship.appspot.com',
 });
 
 const db = admin.firestore();
 const storage = new Storage();
-const bucket = storage.bucket(process.env.BUCKET_NAME);
+const bucket = storage.bucket('spring-internship.appspot.com');
 
 //----------------------------------------
 
@@ -91,7 +91,7 @@ app.post('/api', (request, response) => {
 		});
 
 	//setting firestore image attribute to the url
-	data.image64 = `https://storage.googleapis.com/${process.env.BUCKET_NAME}/${data._id}.png`;
+	data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 
 	let docRef = db.collection('test');
 	docRef.add(data); // can send to firestore
