@@ -88,18 +88,17 @@ app.post('/api', (request, response) => {
 		.on('finish', function () {
 			// The file upload is complete.
 			console.log('upload finished');
+			//setting firestore image attribute to the url
+			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+			let docRef = db.collection('test');
+			docRef.add(data); // can send to firestore
+
+			//Deletes the local file
+			fs.unlink(`./temp/${data._id}.png`, (err) => {
+				if (err) throw err;
+				console.log('deleting the local file');
+			});
 		});
-
-	//setting firestore image attribute to the url
-	data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-
-	let docRef = db.collection('test');
-	docRef.add(data); // can send to firestore
-	//Deletes the local file
-	fs.unlink(`./temp/${data._id}.png`, (err) => {
-		if (err) throw err;
-		console.log('deleting the local file');
-	});
 });
 
 //Listening
