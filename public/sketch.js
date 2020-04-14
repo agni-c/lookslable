@@ -11,8 +11,8 @@ firebase.auth().onAuthStateChanged(async function (user) {
 		const options = {
 			method: "POST",
 			headers: {
-				'Content-Type': 'application/json',
-        		'Accept': 'application/json'
+				"Content-Type": "application/json",
+				Accept: "application/json",
 			},
 			body: JSON.stringify(profile),
 		};
@@ -35,6 +35,8 @@ function setup() {
 	let lat, lon;
 	const button = document.getElementById("submit");
 	button.addEventListener("click", async (event) => {
+		alert("Picture Clicked");
+
 		const landmark = document.getElementById("landmark").value;
 		video.loadPixels();
 		const image64 = video.canvas.toDataURL();
