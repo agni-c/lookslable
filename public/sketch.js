@@ -9,18 +9,19 @@ firebase.auth().onAuthStateChanged(async function (user) {
 			uid: user.uid,
 		};
 		const options = {
-			method: 'POST',
+			method: "POST",
 			headers: {
-				'Content-Type': 'application/json',
+				"Content-Type": "application/json",
+				Accept: "application/json; odata=verbose",
 			},
 			body: JSON.stringify(profile),
 		};
-		const response = await fetch('/api/profile', options);
+		const response = await fetch("/api/profile", options);
 		const json = await response.json();
 		console.log(json);
 	} else {
 		uid = null;
-		window.location.replace('auth.html');
+		window.location.replace("auth.html");
 	}
 });
 function logOut() {
@@ -32,36 +33,36 @@ function setup() {
 	const video = createCapture(VIDEO);
 	video.size(160, 120);
 	let lat, lon;
-	const button = document.getElementById('submit');
-	button.addEventListener('click', async (event) => {
-		const landmark = document.getElementById('landmark').value;
+	const button = document.getElementById("submit");
+	button.addEventListener("click", async (event) => {
+		const landmark = document.getElementById("landmark").value;
 		video.loadPixels();
 		const image64 = video.canvas.toDataURL();
 		const uid = firebase.auth().currentUser.uid;
 		const data = { lat, lon, landmark, image64, uid };
 		const options = {
-			method: 'POST',
+			method: "POST",
 			headers: {
-				'Content-Type': 'application/json',
+				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(data),
 		};
-		const response = await fetch('/api/webcam', options);
+		const response = await fetch("/api/webcam", options);
 		const json = await response.json();
 		console.log(json);
 	});
 
-	if ('geolocation' in navigator) {
-		console.log('geolocation available');
+	if ("geolocation" in navigator) {
+		console.log("geolocation available");
 		navigator.geolocation.getCurrentPosition((position) => {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
 			console.log(lat, lon);
-			document.getElementById('latitude').textContent = lat;
-			document.getElementById('longitude').textContent = lon;
+			document.getElementById("latitude").textContent = lat;
+			document.getElementById("longitude").textContent = lon;
 		});
 	} else {
-		console.log('geolocation not available');
+		console.log("geolocation not available");
 	}
 }
 //------------------------------------------------------
