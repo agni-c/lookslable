@@ -5,7 +5,7 @@ const { Storage } = require('@google-cloud/storage');
 const { v4 } = require('uuid');
 const fs = require('fs');
 require('dotenv').config();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 //--------------------------------------
 const session = require('express-session');
 app.use(
