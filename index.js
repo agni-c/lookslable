@@ -7,14 +7,7 @@ const fs = require('fs');
 require('dotenv').config();
 const port = process.env.PORT || 8080;
 //--------------------------------------
-const session = require('express-session');
-app.use(
-	session({
-		secret: 'keyboard cat',
-		resave: false,
-		saveUninitialized: true,
-	})
-);
+
 //Firestore init--------------------------
 
 var admin = require('firebase-admin');
