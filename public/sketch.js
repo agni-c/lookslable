@@ -11,8 +11,8 @@ firebase.auth().onAuthStateChanged(async function (user) {
 		const options = {
 			method: "POST",
 			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json; odata=verbose",
+				'Content-Type': 'application/json',
+        		'Accept': 'application/json'
 			},
 			body: JSON.stringify(profile),
 		};
