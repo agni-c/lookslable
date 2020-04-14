@@ -1,3 +1,32 @@
+let uid = null;
+
+firebase.auth().onAuthStateChanged(async function (user) {
+	if (user) {
+		const profile = {
+			name: user.displayName,
+			email: user.email,
+			photoURL: user.photoURL,
+			uid: user.uid,
+		};
+		const options = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(profile),
+		};
+		const response = await fetch('/api/profile', options);
+		const json = await response.json();
+		console.log(json);
+	} else {
+		uid = null;
+		window.location.replace('auth.html');
+	}
+});
+function logOut() {
+	firebase.auth().signOut();
+}
+
 function setup() {
 	noCanvas();
 	const video = createCapture(VIDEO);
@@ -8,7 +37,8 @@ function setup() {
 		const landmark = document.getElementById('landmark').value;
 		video.loadPixels();
 		const image64 = video.canvas.toDataURL();
-		const data = { lat, lon, landmark, image64 };
+		const uid = firebase.auth().currentUser.uid;
+		const data = { lat, lon, landmark, image64, uid };
 		const options = {
 			method: 'POST',
 			headers: {
@@ -16,7 +46,7 @@ function setup() {
 			},
 			body: JSON.stringify(data),
 		};
-		const response = await fetch('/api', options);
+		const response = await fetch('/api/webcam', options);
 		const json = await response.json();
 		console.log(json);
 	});
@@ -34,3 +64,4 @@ function setup() {
 		console.log('geolocation not available');
 	}
 }
+//------------------------------------------------------

@@ -1,20 +1,23 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const firebase = require('@google-cloud/firestore');
+const fireStore = require('@google-cloud/firestore');
 const { Storage } = require('@google-cloud/storage');
 const { v4 } = require('uuid');
 const fs = require('fs');
-//--------------------------------------
-const stream = require('stream');
-const bufferStream = new stream.PassThrough();
-//--------------------------------------
 require('dotenv').config();
 const port = process.env.PORT || 5000;
+//--------------------------------------
+const session = require('express-session');
+app.use(
+	session({
+		secret: 'keyboard cat',
+		resave: false,
+		saveUninitialized: true,
+	})
+);
 //Firestore init--------------------------
 
 var admin = require('firebase-admin');
-
 var serviceAccount = require('./spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.json');
 
 admin.initializeApp({
@@ -24,25 +27,43 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
+db.settings({ timestampsInSnapshots: true });
 const storage = new Storage();
 const bucket = storage.bucket('spring-internship.appspot.com');
-
+//REFS
+const profileRef = db.collection('User Profile');
+let uid = null;
 //----------------------------------------
 
-app.use(express.static('public')); //only assets in public will be recognized
+app.use(express.static('public')); //serving static file in public folders
 app.use(express.json()); //parsing json, limiting it to 1mb
 
-//Setting doc reference
+//Creating A user profile
+app.post('/api/profile', (req, res) => {
+	const profile = req.body;
+	// req.session.uid = profile.uid;
+	uid = profile.uid;
+	const docRef = profileRef.doc(profile.uid);
+	if (docRef.uid !== profile.uid) {
+		docRef.set(profile);
+	} else {
+		res.end();
+	}
+});
 //get request
-app.get('/api', (request, response) => {
+app.get('/api/webcam', (request, response) => {
 	//get data from firebase
 	//Reading the data
-	db.collection('test')
+	// let uid = request.session.uid;
+
+	const webCamRef = profileRef.doc(uid).collection('Web Cam');
+
+	webCamRef
 		.get()
 		.then((snapshot) => {
 			let data = snapshot.docs.map((doc) => {
 				let x = doc.data();
-				x._id = doc.id;
+
 				return x;
 			});
 			response.status(200).json(data);
@@ -53,16 +74,21 @@ app.get('/api', (request, response) => {
 });
 
 //post request
-app.post('/api', (request, response) => {
+app.post('/api/webcam', (request, response) => {
 	const data = request.body;
-	const timestamp = firebase.FieldValue.serverTimestamp();
+	const timestamp = new Date(
+		fireStore.FieldValue.serverTimestamp() * 1000
+	).toDateString();
 	data.timestamp = timestamp;
+	let uid = data.uid;
 	data._id = v4().split('-').pop();
+	//----------------
+	const webCamRef = profileRef.doc(uid).collection('Web Cam').doc(data._id);
 
 	//converting data-url to image
 	let imgString = data.image64;
 	let trimmedImg = imgString.split(';base64,').pop();
-	fs.writeFile(
+	fs.writeFileSync(
 		`./temp/${data._id}.png`,
 		trimmedImg,
 		{ encoding: 'base64' },
@@ -73,6 +99,8 @@ app.post('/api', (request, response) => {
 	//uploading files to firebase
 	let localReadStream = fs.createReadStream(`./temp/${data._id}.png`);
 	let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
+		resumable: false,
+		gzip: true,
 		metadata: {
 			contentType: 'image/png',
 			metadata: {
@@ -90,8 +118,7 @@ app.post('/api', (request, response) => {
 			console.log('upload finished');
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-			let docRef = db.collection('test');
-			docRef.add(data); // can send to firestore
+			webCamRef.set(data); // can send to firestore
 
 			//Deletes the local file
 			fs.unlink(`./temp/${data._id}.png`, (err) => {
