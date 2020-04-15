@@ -88,28 +88,28 @@ app.post("/api/webcam", (request, response) => {
 	// Upload the image to the bucket
 	const file = bucket.file(`${data._id}.png`);
 
-	file.save(
-		bufferImg,
-		{
+	file
+		.save(bufferImg, {
 			metadata: {
 				contentType: "image/png",
 				metadata: {
 					custom: "metadata",
 				},
 			},
-		},
-		(err) => {
-			if (err) {
-				console.log(`Failed to upload: ${err}`);
-			}
-			console.log("upload finished");
+			resumable: false,
+			gzip: true,
+		})
+		.then(() => {
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
+			console.log("upload finished");
 
 			response.json(data);
-		}
-	);
+		})
+		.catch((err) => {
+			console.log(err);
+		});
 
 	//=================================================works once
 	// bufferStream.end(bufferImg);
