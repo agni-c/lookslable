@@ -97,8 +97,6 @@ app.post("/api/webcam", (request, response) => {
 					custom: "metadata",
 				},
 			},
-			public: true,
-			validation: "md5",
 		},
 		(err) => {
 			if (err) {
