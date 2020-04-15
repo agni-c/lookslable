@@ -4,10 +4,12 @@ const fireStore = require("@google-cloud/firestore");
 const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
 const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 //--------------------------------------
-
+const stream = require("stream");
+var bufferStream = new stream.PassThrough();
 //Firestore init--------------------------
 
 var admin = require("firebase-admin");
@@ -81,45 +83,103 @@ app.post("/api/webcam", (request, response) => {
 	//converting data-url to image
 	let imgString = data.image64;
 	let trimmedImg = imgString.split(";base64,").pop();
-	fs.writeFileSync(
-		`./temp/${data._id}.png`,
-		trimmedImg,
-		{ encoding: "base64" },
-		function (err) {
-			console.log("File created");
-		}
-	);
-	//uploading files to firebase
-	let localReadStream = fs.createReadStream(`./temp/${data._id}.png`);
-	let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
-		resumable: false,
-		gzip: true,
-		metadata: {
-			contentType: "image/png",
+	const bufferImg = Buffer.from(trimmedImg, "base64");
+
+	// Upload the image to the bucket
+	const file = bucket.file(`${data._id}.png`);
+
+	file.save(
+		bufferImg,
+		{
 			metadata: {
-				custom: "metadata",
+				contentType: "image/png",
+				metadata: {
+					custom: "metadata",
+				},
 			},
+			public: true,
+			validation: "md5",
 		},
-	});
-	localReadStream
-		.pipe(remoteWriteStream)
-		.on("error", function (err) {
-			console.log(`Failed to upload: ${err}`);
-		})
-		.on("finish", function () {
-			// The file upload is complete.
+		(err) => {
+			if (err) {
+				console.log(`Failed to upload: ${err}`);
+			}
 			console.log("upload finished");
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
 
-			//Deletes the local file
-			fs.unlink(`./temp/${data._id}.png`, (err) => {
-				if (err) throw err;
-				console.log("deleting the local file");
-			});
-			response.end();
-		});
+			response.json(data);
+		}
+	);
+
+	//=================================================works once
+	// bufferStream.end(bufferImg);
+
+	// bufferStream
+	// 	.pipe(
+	// 		file.createWriteStream({
+	// 			metadata: {
+	// 				contentType: "image/png",
+	// 				metadata: {
+	// 					custom: "metadata",
+	// 				},
+	// 			},
+	// 			public: true,
+	// 			validation: "md5",
+	// 		})
+	// 	)
+	// 	.on("error", function (err) {
+	// 		console.log(`Failed to upload: ${err}`);
+	// 	})
+	// 	.on("finish", function () {
+	// 		// The file upload is complete.
+	// 		console.log("upload finished");
+	// 		//setting firestore image attribute to the url
+	// 		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+	// 		webCamRef.set(data); // can send to firestore
+
+	// 		response.json(data);
+	// 	});
+	//=================================================Works once
+
+	// // const filePath = path.join(__dirname, `tmp/${data._id}.png`);
+	// fs.writeFileSync(filePath, trimmedImg, { encoding: "base64" }, function (
+	// 	err
+	// ) {
+	// 	console.log("File created");
+	// });
+	// //uploading files to firebase
+	// let localReadStream = fs.createReadStream(filePath);
+	// let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
+	// 	resumable: false,
+	// 	gzip: true,
+	// 	metadata: {
+	// 		contentType: "image/png",
+	// 		metadata: {
+	// 			custom: "metadata",
+	// 		},
+	// 	},
+	// });
+	// localReadStream
+	// 	.pipe(remoteWriteStream)
+	// .on("error", function (err) {
+	// 	console.log(`Failed to upload: ${err}`);
+	// })
+	// .on("finish", function () {
+	// 	// The file upload is complete.
+	// 	console.log("upload finished");
+	// 	//setting firestore image attribute to the url
+	// 	data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+	// 	webCamRef.set(data); // can send to firestore
+
+	// 	// Deletes the local file
+	// 	fs.unlink(`./tmp/${data._id}.png`, (err) => {
+	// 		if (err) throw err;
+	// 		console.log("deleting the local file");
+	// 	});
+	// 	response.end();
+	// });
 });
 
 //Listening
