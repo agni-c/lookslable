@@ -47,7 +47,7 @@ function setup() {
 			},
 			body: JSON.stringify(data),
 		};
-		const response = await fetch("/api/webcam", options);
+		await fetch("/api/webcam", options);
 		alert("Picture Clicked");
 	});
 
