@@ -4,6 +4,7 @@ const fireStore = require("@google-cloud/firestore");
 const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
 const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 //--------------------------------------
@@ -81,16 +82,14 @@ app.post("/api/webcam", (request, response) => {
 	//converting data-url to image
 	let imgString = data.image64;
 	let trimmedImg = imgString.split(";base64,").pop();
-	fs.writeFileSync(
-		`./tmp/${data._id}.png`,
-		trimmedImg,
-		{ encoding: "base64" },
-		function (err) {
-			console.log("File created");
-		}
-	);
+	const filePath = path.join(__dirname, `tmp/${data._id}.png`);
+	fs.writeFileSync(filePath, trimmedImg, { encoding: "base64" }, function (
+		err
+	) {
+		console.log("File created");
+	});
 	//uploading files to firebase
-	let localReadStream = fs.createReadStream(`./tmp/${data._id}.png`);
+	let localReadStream = fs.createReadStream(filePath);
 	let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
 		resumable: false,
 		gzip: true,
@@ -113,11 +112,11 @@ app.post("/api/webcam", (request, response) => {
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
 
-			//Deletes the local file
-			// fs.unlink(`./tmp/${data._id}.png`, (err) => {
-			// 	if (err) throw err;
-			// 	console.log("deleting the local file");
-			// });
+			// Deletes the local file
+			fs.unlink(`./tmp/${data._id}.png`, (err) => {
+				if (err) throw err;
+				console.log("deleting the local file");
+			});
 			response.json();
 		});
 });
