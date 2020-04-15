@@ -114,10 +114,10 @@ app.post("/api/webcam", (request, response) => {
 			webCamRef.set(data); // can send to firestore
 
 			//Deletes the local file
-			fs.unlink(`./tmp/${data._id}.png`, (err) => {
-				if (err) throw err;
-				console.log("deleting the local file");
-			});
+			// fs.unlink(`./tmp/${data._id}.png`, (err) => {
+			// 	if (err) throw err;
+			// 	console.log("deleting the local file");
+			// });
 			response.end();
 		});
 });
