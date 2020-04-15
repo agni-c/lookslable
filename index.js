@@ -118,7 +118,7 @@ app.post("/api/webcam", (request, response) => {
 			// 	if (err) throw err;
 			// 	console.log("deleting the local file");
 			// });
-			response.end();
+			response.json();
 		});
 });
 
