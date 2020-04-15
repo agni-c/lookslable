@@ -82,7 +82,7 @@ app.post("/api/webcam", (request, response) => {
 	let imgString = data.image64;
 	let trimmedImg = imgString.split(";base64,").pop();
 	fs.writeFileSync(
-		`./temp/${data._id}.png`,
+		`./tmp/${data._id}.png`,
 		trimmedImg,
 		{ encoding: "base64" },
 		function (err) {
@@ -90,7 +90,7 @@ app.post("/api/webcam", (request, response) => {
 		}
 	);
 	//uploading files to firebase
-	let localReadStream = fs.createReadStream(`./temp/${data._id}.png`);
+	let localReadStream = fs.createReadStream(`./tmp/${data._id}.png`);
 	let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
 		resumable: false,
 		gzip: true,
@@ -114,7 +114,7 @@ app.post("/api/webcam", (request, response) => {
 			webCamRef.set(data); // can send to firestore
 
 			//Deletes the local file
-			fs.unlink(`./temp/${data._id}.png`, (err) => {
+			fs.unlink(`./tmp/${data._id}.png`, (err) => {
 				if (err) throw err;
 				console.log("deleting the local file");
 			});
