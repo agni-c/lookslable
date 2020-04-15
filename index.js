@@ -41,6 +41,7 @@ app.post("/api/profile", (req, res) => {
 	const docRef = profileRef.doc(profile.uid);
 	if (docRef.uid !== profile.uid) {
 		docRef.set(profile);
+		res.end();
 	} else {
 		res.end();
 	}
@@ -81,35 +82,32 @@ app.post("/api/webcam", (request, response) => {
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);
 
 	//converting data-url to image
-	let imgString = data.image64;
-	let trimmedImg = imgString.split(";base64,").pop();
-	const bufferImg = Buffer.from(trimmedImg, "base64");
+	let imgString = data.image64.split(";base64,").pop();
+
+	const bufferImg = Buffer.from(imgString, "base64");
 
 	// Upload the image to the bucket
 	const file = bucket.file(`${data._id}.png`);
 
-	file
-		.save(bufferImg, {
+	file.save(
+		bufferImg,
+		{
 			metadata: {
 				contentType: "image/png",
-				metadata: {
-					custom: "metadata",
-				},
 			},
+
 			resumable: false,
 			gzip: true,
-		})
-		.then(() => {
+		},
+		() => {
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
 			console.log("upload finished");
 
-			response.json(data);
-		})
-		.catch((err) => {
-			console.log(err);
-		});
+			response.end();
+		}
+	);
 
 	//=================================================works once
 	// bufferStream.end(bufferImg);
