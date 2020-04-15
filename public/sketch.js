@@ -35,8 +35,6 @@ function setup() {
 	let lat, lon;
 	const button = document.getElementById("submit");
 	button.addEventListener("click", async (event) => {
-		alert("Picture Clicked");
-
 		const landmark = document.getElementById("landmark").value;
 		video.loadPixels();
 		const image64 = video.canvas.toDataURL();
@@ -49,9 +47,8 @@ function setup() {
 			},
 			body: JSON.stringify(data),
 		};
-		const response = await fetch("/api/webcam", options);
-		const json = await response.json();
-		console.log(json);
+		await fetch("/api/webcam", options);
+		alert("Picture Clicked");
 	});
 
 	if ("geolocation" in navigator) {
