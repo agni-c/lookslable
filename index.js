@@ -72,9 +72,8 @@ app.get("/api/webcam", (request, response) => {
 //post request
 app.post("/api/webcam", (request, response) => {
 	const data = request.body;
-	const timestamp = new Date(
-		fireStore.FieldValue.serverTimestamp() * 1000
-	).toDateString();
+	const timestamp = fireStore.FieldValue.serverTimestamp();
+
 	data.timestamp = timestamp;
 	let uid = data.uid;
 	data._id = v4().split("-").pop();
@@ -99,7 +98,8 @@ app.post("/api/webcam", (request, response) => {
 			resumable: false,
 			gzip: true,
 		},
-		() => {
+		(err) => {
+			if (err) throw err;
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
