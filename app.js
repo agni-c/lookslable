@@ -5,11 +5,13 @@ const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 //--------------------------------------
 const stream = require("stream");
 var bufferStream = new stream.PassThrough();
+app.use(cors());
 //Firestore init--------------------------
 
 var admin = require("firebase-admin");
@@ -30,7 +32,7 @@ const profileRef = db.collection("User Profile");
 let uid = null;
 //----------------------------------------
 
-app.use(express.static(path.join(__dirname, "public"))); //serving static file in public folders
+app.use(express.static("public")); //serving static file in public folders
 app.use(express.json()); //parsing json, limiting it to 1mb
 
 //Creating A user profile
@@ -103,7 +105,7 @@ app.post("/api/webcam", (request, response) => {
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
-			console.log("upload done");
+			console.log("upload finished");
 
 			response.end();
 		}
