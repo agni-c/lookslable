@@ -107,7 +107,7 @@ app.post("/api/webcam", (request, response) => {
 				contentType: "image/png",
 			},
 
-			resumable: false,
+			resumable: true,
 			gzip: true,
 		},
 		(err) => {
