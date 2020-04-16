@@ -30,7 +30,7 @@ const profileRef = db.collection("User Profile");
 let uid = null;
 //----------------------------------------
 
-app.use(express.static("public")); //serving static file in public folders
+app.use(express.static(path.join(__dirname, "public"))); //serving static file in public folders
 app.use(express.json()); //parsing json, limiting it to 1mb
 
 //Creating A user profile
