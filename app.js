@@ -76,12 +76,12 @@ app.get("/api/webcam", (request, response) => {
 //post request
 app.post("/api/webcam", (request, response) => {
 	const data = request.body;
-	const timestamp = new Date(),
-		date = timestamp.getDate(),
-		month = timestamp.getMonth(),
-		year = timestamp.getFullYear(),
-		hours = timestamp.getHours(),
-		minutes = timestamp.getMinutes();
+	const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
+	(date = timestamp.getDate()),
+		(month = timestamp.getMonth()),
+		(year = timestamp.getFullYear()),
+		(hours = timestamp.getHours()),
+		(minutes = timestamp.getMinutes());
 
 	data.timestamp = `${date}/${month}/${year} || ${
 		hours >= 12 ? hours - 12 : hours
