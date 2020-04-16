@@ -16,7 +16,8 @@ firebase.auth().onAuthStateChanged(async function (user) {
 			},
 			body: JSON.stringify(profile),
 		};
-		await fetch("/api/profile", options);
+		let res = await fetch("/api/profile", options);
+		// console.log(res);
 	} else {
 		uid = null;
 		window.location.replace("auth.html");
@@ -45,7 +46,6 @@ function setup() {
 			},
 			body: JSON.stringify(data),
 		};
-		alert("Picture Clicked");
 
 		await fetch("/api/webcam", options);
 	});

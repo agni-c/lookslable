@@ -2,11 +2,11 @@ getData();
 
 const selfies = [];
 //sorting data by time
-document.getElementById('time').addEventListener('click', (event) => {
+document.getElementById("time").addEventListener("click", (event) => {
 	sortData((a, b) => b.time - a.time);
 });
 //sorting data by landmark
-document.getElementById('landmark').addEventListener('click', (event) => {
+document.getElementById("landmark").addEventListener("click", (event) => {
 	sortData((a, b) => {
 		if (b.landmark > a.landmark) return -1;
 		else return 1;
@@ -24,22 +24,22 @@ function sortData(compare) {
 }
 
 async function getData() {
-	const response = await fetch('/api/webcam');
+	const response = await fetch("/api/webcam");
 	const data = await response.json(); //response.json is fetched here
 
 	for (let item of data) {
-		const root = document.createElement('p');
-		const landmark = document.createElement('div');
-		const geo = document.createElement('div');
-		const date = document.createElement('div');
-		const image = document.createElement('img');
+		const root = document.createElement("p");
+		const landmark = document.createElement("div");
+		const geo = document.createElement("div");
+		const date = document.createElement("div");
+		const image = document.createElement("img");
 
 		landmark.textContent = `landmark: ${item.landmark}`;
 		geo.textContent = `${item.lat}°, ${item.lon}°`;
-		const dateString = Date.now(item.timestamp);
+		const dateString = item.timestamp;
 		date.textContent = dateString;
 		image.src = item.image64;
-		image.alt = 'image unavilabe';
+		image.alt = "image unavilabe";
 		//-----------------Todo: take this function outside of this function
 
 		// const photos = document.createElement('input');

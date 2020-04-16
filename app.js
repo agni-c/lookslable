@@ -42,9 +42,11 @@ app.post("/api/profile", (req, res) => {
 	uid = profile.uid;
 	const docRef = profileRef.doc(profile.uid);
 	if (docRef.uid !== profile.uid) {
+		uid = profile.uid;
 		docRef.set(profile);
 		res.end();
 	} else {
+		uid = profile.uid;
 		res.end();
 	}
 });
@@ -74,9 +76,17 @@ app.get("/api/webcam", (request, response) => {
 //post request
 app.post("/api/webcam", (request, response) => {
 	const data = request.body;
-	const timestamp = fireStore.FieldValue.serverTimestamp();
+	const timestamp = new Date(),
+		date = timestamp.getDate(),
+		month = timestamp.getMonth(),
+		year = timestamp.getFullYear(),
+		hours = timestamp.getHours(),
+		minutes = timestamp.getMinutes();
 
-	data.timestamp = timestamp;
+	data.timestamp = `${date}/${month}/${year} || ${
+		hours >= 12 ? hours - 12 : hours
+	}:${minutes}`;
+	console.log(data.timestamp);
 	let uid = data.uid;
 	data._id = v4().split("-").pop();
 	//----------------
@@ -101,7 +111,9 @@ app.post("/api/webcam", (request, response) => {
 			gzip: true,
 		},
 		(err) => {
-			if (err) throw err;
+			if (err) {
+				console.log(err);
+			}
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
