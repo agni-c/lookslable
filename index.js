@@ -103,7 +103,7 @@ app.post("/api/webcam", (request, response) => {
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
-			console.log("upload finished");
+			console.log("upload done");
 
 			response.end();
 		}
