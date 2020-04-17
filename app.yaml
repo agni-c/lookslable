@@ -1,6 +1,6 @@
-runtime: nodejs
+runtime: nodejs10
 
-env: flex
+# env: flex
 
 env_variables:
   GCLOUD_STORAGE_BUCKET: spring-internship.appspot.com
