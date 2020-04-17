@@ -107,12 +107,12 @@ app.post("/api/webcam", (request, response) => {
 				contentType: "image/png",
 			},
 		})
+		.end(bufferImg)
 		.on("finish", () => {
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
 			console.log("upload finished", data.image64);
-		})
-		.end(bufferImg);
+		});
 
 	//==========================================
 
