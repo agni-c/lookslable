@@ -16,7 +16,12 @@ firebase.auth().onAuthStateChanged(async function (user) {
 			},
 			body: JSON.stringify(profile),
 		};
-		let res = await fetch("/api/profile", options);
+
+		try {
+			await fetch("/api/profile", options);
+		} catch (error) {
+			console.log(error);
+		}
 		// console.log(res);
 	} else {
 		uid = null;
@@ -47,7 +52,11 @@ function setup() {
 			body: JSON.stringify(data),
 		};
 
-		await fetch("/api/webcam", options);
+		try {
+			await fetch("/api/webcam", options);
+		} catch (error) {
+			console.log(error);
+		}
 	});
 
 	if ("geolocation" in navigator) {
