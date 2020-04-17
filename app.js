@@ -100,27 +100,43 @@ app.post("/api/webcam", (request, response) => {
 	// Upload the image to the bucket
 	const file = bucket.file(`${data._id}.png`);
 
-	file.save(
-		bufferImg,
-		{
+	file
+		.createWriteStream({
+			resumable: false,
 			metadata: {
 				contentType: "image/png",
 			},
-
-			resumable: false,
-		},
-		(err) => {
-			if (err) {
-				console.log(err);
-			}
-			//setting firestore image attribute to the url
+		})
+		.on("finish", () => {
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore
-			console.log("upload finished");
+			console.log("upload finished", data.image64);
+		})
+		.end(bufferImg);
 
-			response.end();
-		}
-	);
+	//==========================================
+
+	// file.save(
+	// 	bufferImg,
+	// 	{
+	// 		metadata: {
+	// 			contentType: "image/png",
+	// 		},
+
+	// 		resumable: false,
+	// 	},
+	// 	(err) => {
+	// 		if (err) {
+	// 			console.log(err);
+	// 		}
+	// 		//setting firestore image attribute to the url
+	// 		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+	// 		webCamRef.set(data); // can send to firestore
+	// 		console.log("upload finished");
+
+	// 		response.end();
+	// 	}
+	// );
 
 	//=================================================works once
 	// bufferStream.end(bufferImg);
