@@ -1,5 +1,5 @@
 node_modules/
 # spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.json
-.env
+# .envs
 temp/
 cors.json
