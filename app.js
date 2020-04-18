@@ -33,7 +33,11 @@ let uid = null;
 //----------------------------------------
 
 app.use(express.static("public")); //serving static file in public folders
-app.use(express.json()); //parsing json, limiting it to 1mb
+app.use(express.json()); //parsing json, limiting it to 1mb\
+
+//Creating upload route
+const uploadRoute = require("./routes/uploader");
+app.use("/api", uploadRoute);
 
 //Creating A user profile
 app.post("/api/profile", (req, res) => {
@@ -118,16 +122,10 @@ app.post("/api/webcam", (request, response) => {
 	file.save(
 		bufferImg,
 		{
-			metadata: {
-				contentType: "image/png",
-			},
-
+			contentType: "image/png",
 			resumable: false,
 		},
-		(err) => {
-			if (err) {
-				console.log(err);
-			}
+		() => {
 			//setting firestore image attribute to the url
 			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
 			webCamRef.set(data); // can send to firestore

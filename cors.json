@@ -1,13 +1,8 @@
 [
 	{
-		"origin": [
-			"https://data-retriever-272818.appspot.com",
-			"https://data-retriever-272818.appspot.com:8080",
-			"https://data-retriever-272818.appspot.com/api/webcam",
-			"https://sleepy-crag-01666.herokuapp.com/"
-		],
-		"responseHeader": ["Content-Type"],
-		"method": ["GET", "HEAD", "DELETE", "PUT", "POST", "fetch"],
+		"origin": ["https://storage.googleapis.com/spring-internship.appspot.com"],
+		"responseHeader": ["Access-Control-Allow-Origin", "Content-Type"],
+		"method": ["GET", "HEAD", "DELETE", "OPTIONS", "POST"],
 		"maxAgeSeconds": 3600
 	}
 ]
