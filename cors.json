@@ -1,8 +1,0 @@
-[
-	{
-		"origin": ["https://storage.googleapis.com/spring-internship.appspot.com"],
-		"responseHeader": ["Access-Control-Allow-Origin", "Content-Type"],
-		"method": ["GET", "HEAD", "DELETE", "OPTIONS", "POST"],
-		"maxAgeSeconds": 3600
-	}
-]
