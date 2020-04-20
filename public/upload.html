@@ -1,4 +1,67 @@
-<form action="/api/upload" method="post" enctype="multipart/form-data">
-	<input type="file" name="photos" multiple />
-	<button type="submit">Upload</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Upload Files</title>
+		<style>
+			form {
+				margin: auto;
+				width: 80%;
+				height: 30%;
+				border: 3px solid green;
+				padding: 10px;
+			}
+			button {
+				margin: 0 auto;
+				background-color: rgb(33, 141, 33);
+				color: whitesmoke;
+				border-color: none;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/api/upload" method="post" enctype="multipart/form-data">
+			<label for="upload">Upload Images</label>
+			<input
+				type="file"
+				accept="image/*"
+				id="upload"
+				name="Photos"
+				multiple
+				required
+			/>
+			<label for="landmark">Landmark</label>
+			<input
+				type="text"
+				name="landmark"
+				placeholder="eg. lake gardens"
+				required
+				id="landmark"
+			/>
+			<button type="submit">Upload</button>
+		</form>
+
+		<script>
+			getData();
+			async function getData() {
+				const response = await fetch("/api/upload");
+				const data = await response.json(); //response.json is fetched here
+
+				for (let item of data) {
+					const root = document.createElement("div");
+
+					const image = document.createElement("img");
+
+					image.src = item.image;
+					image.alt = "image unavilabe";
+
+					root.append(image);
+					// console.log(item._id);
+
+					document.body.append(root);
+				}
+			}
+		</script>
+	</body>
+</html>

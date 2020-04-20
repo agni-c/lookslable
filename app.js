@@ -3,6 +3,10 @@ const app = express();
 const fireStore = require("@google-cloud/firestore");
 const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
+
+const multer = require("multer");
+const multerGoogleStorage = require("multer-google-storage");
+
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
@@ -34,10 +38,6 @@ let uid = null;
 
 app.use(express.static("public")); //serving static file in public folders
 app.use(express.json()); //parsing json, limiting it to 1mb\
-
-//Creating upload route
-const uploadRoute = require("./routes/uploader");
-app.use("/api", uploadRoute);
 
 //Creating A user profile
 app.post("/api/profile", (req, res) => {
@@ -77,9 +77,23 @@ app.get("/api/webcam", (request, response) => {
 		});
 });
 
+//Creating Picture upload route
+const uploadHandler = multer({
+	storage: multerGoogleStorage.storageEngine({
+		bucket: "spring-internship.appspot.com",
+		getFilename(req, file, cb) {
+			cb(null, `${file.originalname}`);
+		},
+		contentType(req, file) {
+			return file.mimetype;
+		},
+	}),
+});
+
 //post request
-app.post("/api/webcam", (request, response) => {
+app.post("/api/webcam", uploadHandler.any(), (request, response) => {
 	const data = request.body;
+	const files = request.files;
 	const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
 	(date = timestamp.getDate()),
 		(month = timestamp.getMonth()),
@@ -103,106 +117,45 @@ app.post("/api/webcam", (request, response) => {
 
 	// Upload the image to the bucket
 	const file = bucket.file(`${data._id}.png`);
-
-	// file
-	// 	.createWriteStream({
-	// 		resumable: false,
-	// 		metadata: {
-	// 			contentType: "image/png",
-	// 		},
-	// 	})
-	// 	.end(bufferImg, () => {
-	// 		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-	// 		webCamRef.set(data); // can send to firestore
-	// 		console.log("upload finished", data.image64);
-	// 	});
-
-	//==========================================
-
-	file.save(
-		bufferImg,
-		{
-			contentType: "image/png",
-			resumable: false,
-		},
-		() => {
-			//setting firestore image attribute to the url
-			data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-			webCamRef.set(data); // can send to firestore
-			console.log("upload finished");
-
-			response.end();
+	const file_stream = file.createWriteStream({
+		contentType: "image/png",
+		resumable: false,
+	});
+	file_stream.write(bufferImg, (err) => {
+		if (err) {
+			console.log(err);
 		}
-	);
-
-	//=================================================works once
-	// bufferStream.end(bufferImg);
-
-	// bufferStream
-	// 	.pipe(
-	// 		file.createWriteStream({
-	// 			metadata: {
-	// 				contentType: "image/png",
-	// 				metadata: {
-	// 					custom: "metadata",
-	// 				},
-	// 			},
-	// 			public: true,
-	// 			validation: "md5",
-	// 		})
-	// 	)
-	// 	.on("error", function (err) {
-	// 		console.log(`Failed to upload: ${err}`);
-	// 	})
-	// 	.on("finish", function () {
-	// 		// The file upload is complete.
-	// 		console.log("upload finished");
-	// 		//setting firestore image attribute to the url
-	// 		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-	// 		webCamRef.set(data); // can send to firestore
-
-	// 		response.json(data);
-	// 	});
-	//=================================================Works once
-
-	// // const filePath = path.join(__dirname, `tmp/${data._id}.png`);
-	// fs.writeFileSync(filePath, trimmedImg, { encoding: "base64" }, function (
-	// 	err
-	// ) {
-	// 	console.log("File created");
-	// });
-	// //uploading files to firebase
-	// let localReadStream = fs.createReadStream(filePath);
-	// let remoteWriteStream = bucket.file(`${data._id}.png`).createWriteStream({
-	// 	resumable: false,
-	// 	gzip: true,
-	// 	metadata: {
-	// 		contentType: "image/png",
-	// 		metadata: {
-	// 			custom: "metadata",
-	// 		},
-	// 	},
-	// });
-	// localReadStream
-	// 	.pipe(remoteWriteStream)
-	// .on("error", function (err) {
-	// 	console.log(`Failed to upload: ${err}`);
-	// })
-	// .on("finish", function () {
-	// 	// The file upload is complete.
-	// 	console.log("upload finished");
-	// 	//setting firestore image attribute to the url
-	// 	data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
-	// 	webCamRef.set(data); // can send to firestore
-
-	// 	// Deletes the local file
-	// 	fs.unlink(`./tmp/${data._id}.png`, (err) => {
-	// 		if (err) throw err;
-	// 		console.log("deleting the local file");
-	// 	});
-	// 	response.end();
-	// });
+		//setting firestore image attribute to the url
+		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+		webCamRef.set(data); // can send to firestore
+		console.log("upload finished");
+	});
+	file_stream.end();
+	response.end();
 });
+
+app.post("/api/upload", uploadHandler.any(), (req, res, next) => {
+	//TODO make a reference to image array attribute
+	const accountRef = profileRef.doc(uid).collection("Glary");
+	//TODO Save it to database
+	let imageURLs = [];
+	req.files.forEach((file) => {
+		imageURLs.push(
+			`https://storage.googleapis.com/spring-internship.appspot.com/${file.filename}`
+		);
+	});
+	const session = {
+		images: imageURLs,
+		landmark: req.body.landmark,
+	};
+	accountRef.add(session);
+	res.json(session);
+});
+
+// app.get("/upload", (req, res) => {
+// 	//TODO Fetch Data from DB reference
+// 	//TODO Transform it to json
+// });
 
 //Listening
 app.listen(port, () => {
