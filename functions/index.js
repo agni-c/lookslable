@@ -1,31 +1,30 @@
+const functions = require("firebase-functions");
+
+// // Create and Deploy Your First Cloud Functions
+// // https://firebase.google.com/docs/functions/write-firebase-functions
+//
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//  response.send("Hello from Firebase!");
+// });
 const express = require("express");
 const app = express();
 const fireStore = require("@google-cloud/firestore");
 const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
+const { filesUpload } = require("./middleware");
 
-const multer = require("multer");
-const multerGoogleStorage = require("multer-google-storage");
-
-const fs = require("fs");
-const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
-const port = process.env.PORT || 5000;
+
 //--------------------------------------
-const stream = require("stream");
-var bufferStream = new stream.PassThrough();
 app.use(cors());
+
 //Firestore init--------------------------
 
 var admin = require("firebase-admin");
-var serviceAccount = require("./spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.json");
+// var serviceAccount = require("./spring-internship-firebase-adminsdk-7z0b1-ad7d9b5ea2.json");
 
-admin.initializeApp({
-	credential: admin.credential.cert(serviceAccount),
-	databaseURL: "https://spring-internship.firebaseio.com",
-	storageBucket: "spring-internship.appspot.com",
-});
+admin.initializeApp();
 
 const db = admin.firestore();
 db.settings({ timestampsInSnapshots: true });
@@ -36,8 +35,8 @@ const profileRef = db.collection("User Profile");
 let uid = null;
 //----------------------------------------
 
-app.use(express.static("public")); //serving static file in public folders
-app.use(express.json()); //parsing json, limiting it to 1mb\
+app.use(express.static("../public")); //serving static file in public folders
+app.use(express.json({ limit: "50mb" })); //parsing json, limiting it to 1mb\
 
 //Creating A user profile
 app.post("/api/profile", (req, res) => {
@@ -47,6 +46,7 @@ app.post("/api/profile", (req, res) => {
 	const docRef = profileRef.doc(profile.uid);
 	if (docRef.uid !== profile.uid) {
 		uid = profile.uid;
+		profile.tags = docRef.tags;
 		docRef.set(profile);
 		res.end();
 	} else {
@@ -56,10 +56,6 @@ app.post("/api/profile", (req, res) => {
 });
 //get request
 app.get("/api/webcam", (request, response) => {
-	//get data from firebase
-	//Reading the data
-	// let uid = request.session.uid;
-
 	const webCamRef = profileRef.doc(uid).collection("Web Cam");
 
 	webCamRef
@@ -70,30 +66,16 @@ app.get("/api/webcam", (request, response) => {
 
 				return x;
 			});
-			response.status(200).json(data);
+			return response.status(200).json(data);
 		})
 		.catch((err) => {
 			err;
 		});
 });
 
-//Creating Picture upload route
-const uploadHandler = multer({
-	storage: multerGoogleStorage.storageEngine({
-		bucket: "spring-internship.appspot.com",
-		getFilename(req, file, cb) {
-			cb(null, `${file.originalname}`);
-		},
-		contentType(req, file) {
-			return file.mimetype;
-		},
-	}),
-});
-
 //post request
-app.post("/api/webcam", uploadHandler.any(), (request, response) => {
+app.post("/api/webcam", (request, response) => {
 	const data = request.body;
-	const files = request.files;
 	const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
 	(date = timestamp.getDate()),
 		(month = timestamp.getMonth()),
@@ -134,30 +116,33 @@ app.post("/api/webcam", uploadHandler.any(), (request, response) => {
 	response.end();
 });
 
-app.post("/api/upload", uploadHandler.any(), (req, res, next) => {
+app.post("/api/upload", filesUpload, (req, res) => {
 	//TODO make a reference to image array attribute
-	const accountRef = profileRef.doc(uid).collection("Glary");
-	//TODO Save it to database
+	const glaryRef = profileRef.doc(uid).collection("Glary");
+	const accountRef = profileRef.doc(uid);
+	const files = req.files;
+	//Save it to database
 	let imageURLs = [];
-	req.files.forEach((file) => {
+	files.forEach((file) => {
 		imageURLs.push(
-			`https://storage.googleapis.com/spring-internship.appspot.com/${file.filename}`
+			`https://storage.googleapis.com/spring-internship.appspot.com/${file.originalname}`
 		);
 	});
 	const session = {
 		images: imageURLs,
 		landmark: req.body.landmark,
+		location: req.body.location,
+		price: req.body.price,
+		time: req.body.time,
 	};
-	accountRef.add(session);
+	//Adding to Glary sub collection
+	glaryRef.add(session);
+	//Creating an array in profile which will hold all the landmarks
+	accountRef.update({
+		landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
+	});
 	res.json(session);
 });
 
-// app.get("/upload", (req, res) => {
-// 	//TODO Fetch Data from DB reference
-// 	//TODO Transform it to json
-// });
-
 //Listening
-app.listen(port, () => {
-	console.log(`listening at ${port}`);
-});
+exports.app = functions.https.onRequest(app);

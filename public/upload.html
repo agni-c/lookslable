@@ -18,6 +18,9 @@
 				color: whitesmoke;
 				border-color: none;
 			}
+			input {
+				padding-block: 10%;
+			}
 		</style>
 	</head>
 	<body>
@@ -27,10 +30,13 @@
 				type="file"
 				accept="image/*"
 				id="upload"
-				name="Photos"
+				name="uploads"
 				multiple
 				required
 			/>
+			<br />
+			<br />
+
 			<label for="landmark">Landmark</label>
 			<input
 				type="text"
@@ -39,29 +45,37 @@
 				required
 				id="landmark"
 			/>
+			<br />
+			<br />
+
+			<label for="price">Price</label>
+
+			<select id="price" name="price">
+				<option value="149">149</option>
+				<option value="249">249</option>
+				<option value="499">499</option>
+				<option value="999">999</option>
+				<option value="999">999</option>
+				<option value="1499">1499</option>
+			</select>
+			<br />
+			<br />
+
+			<label for="time">(date and time)</label>
+			<input type="datetime-local" id="time" name="time" />
+
+			<br />
+			<br />
+
+			<label class="location">
+				<input type="radio" name="location" value="Indoor" /> Indoor<br />
+				<input type="radio" name="location" value="Outdoor" /> Outdoor<br />
+			</label>
+
+			<br />
+			<br />
+
 			<button type="submit">Upload</button>
 		</form>
-
-		<script>
-			getData();
-			async function getData() {
-				const response = await fetch("/api/upload");
-				const data = await response.json(); //response.json is fetched here
-
-				for (let item of data) {
-					const root = document.createElement("div");
-
-					const image = document.createElement("img");
-
-					image.src = item.image;
-					image.alt = "image unavilabe";
-
-					root.append(image);
-					// console.log(item._id);
-
-					document.body.append(root);
-				}
-			}
-		</script>
 	</body>
 </html>
