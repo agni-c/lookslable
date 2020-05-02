@@ -12,7 +12,7 @@ exports.filesUpload = function (req, res, next) {
 		headers: req.headers,
 		limits: {
 			// Cloud functions impose this restriction anyway
-			fileSize: 10 * 1024 * 1024,
+			fileSize: 60 * 1024 * 1024,
 		},
 	});
 
@@ -38,40 +38,22 @@ exports.filesUpload = function (req, res, next) {
 			metadata: { contentType: mimetype },
 		});
 		file.pipe(remoteStream);
-		const writeStream = fs.createWriteStream(filepath);
-		file.pipe(writeStream);
 
 		fileWrites.push(
 			new Promise((resolve, reject) => {
-				file.on("end", () => writeStream.end());
-				writeStream.on("finish", () => {
-					// eslint-disable-next-line consistent-return
-					fs.readFile(filepath, (err, buffer) => {
-						const size = Buffer.byteLength(buffer);
-						console.log(`${filename} is ${size} bytes`);
-						if (err) {
-							return reject(err);
-						}
-						// TODO can I push this file withoud writing in function?
-						files.push({
-							fieldname,
-							originalname: filename,
-							encoding,
-							mimetype,
-							buffer,
-							size,
-						});
-
-						try {
-							fs.unlinkSync(filepath);
-						} catch (error) {
-							return reject(error);
-						}
-
-						resolve();
+				file.on("end", () => remoteStream.end());
+				remoteStream.on("finish", () => {
+					// TODO can I push this file withoud writing in function?
+					files.push({
+						fieldname,
+						originalname: filename,
+						encoding,
+						mimetype,
 					});
+					resolve();
 				});
-				writeStream.on("error", reject);
+
+				remoteStream.on("error", reject);
 			})
 		);
 	});

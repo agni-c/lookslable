@@ -123,13 +123,16 @@ app.post("/api/upload", filesUpload, (req, res) => {
 	const files = req.files;
 	//Save it to database
 	let imageURLs = [];
+	let imageNames = [];
 	files.forEach((file) => {
 		imageURLs.push(
 			`https://storage.googleapis.com/spring-internship.appspot.com/${file.originalname}`
 		);
+		imageNames.push(file.originalname);
 	});
 	const session = {
 		images: imageURLs,
+		names: imageNames,
 		landmark: req.body.landmark,
 		location: req.body.location,
 		price: req.body.price,
