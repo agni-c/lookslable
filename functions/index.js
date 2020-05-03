@@ -13,6 +13,8 @@ const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
 const { filesUpload } = require("./middleware");
 
+var sessionstorage = require('sessionstorage');
+
 const cors = require("cors");
 require("dotenv").config();
 
@@ -44,6 +46,7 @@ app.post("/api/profile", (req, res) => {
 	// req.session.uid = profile.uid;
 	//session
 	uid = profile.uid;
+	sessionstorage.setItem("uid",uid);
 	const docRef = profileRef.doc(profile.uid);
 	if (docRef.uid !== profile.uid) {
 		uid = profile.uid;
@@ -88,7 +91,9 @@ app.post("/api/webcam", (request, response) => {
 		hours >= 12 ? hours - 12 : hours
 	}:${minutes}`;
 	console.log(data.timestamp);
+
 	let uid = data.uid;
+	uid = sessionstorage.getItem("uid");
 	data._id = v4().split("-").pop();
 	//----------------
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);

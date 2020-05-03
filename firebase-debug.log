@@ -354,3 +354,58 @@
 [info] i  functions: Finished "app" in ~4s
 [debug] [2020-05-02T06:43:47.661Z] [worker-app-67222ed1-1745-4b5a-98f8-b466469a3573]: IDLE 
 [debug] [2020-05-02T06:43:47.662Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-03T11:58:11.242Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T11:58:11.245Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions,hosting
+[debug] [2020-05-03T11:58:11.245Z] CLI Version:   8.1.1
+[debug] [2020-05-03T11:58:11.245Z] Platform:      win32
+[debug] [2020-05-03T11:58:11.245Z] Node Version:  v12.15.0
+[debug] [2020-05-03T11:58:11.247Z] Time:          Sun May 03 2020 17:28:11 GMT+0530 (India Standard Time)
+[debug] [2020-05-03T11:58:11.247Z] ----------------------------------------------------------------------
+[debug] [2020-05-03T11:58:11.247Z] 
+[debug] [2020-05-03T11:58:11.278Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-03T11:58:11.279Z] > authorizing via signed-in user
+[debug] [2020-05-03T11:58:11.279Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-05-03T11:58:11.282Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-03T11:58:11.283Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-03T11:58:11.730Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 11:58:11 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T11:58:11.982Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-03T11:58:13.955Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 11:58:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1522","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T11:58:13.956Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-05-03T11:58:14.632Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 11:58:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-03T11:58:14.634Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship/webApps/-/config  
+ 
+[debug] [2020-05-03T11:58:15.505Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 03 May 2020 11:58:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions" for Cloud Functions...
+[debug] [2020-05-03T11:58:16.675Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-03T11:58:16.675Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-03T11:58:16.675Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-03T11:58:16.676Z] [worker-~diagnostic~-5dda1ab0-007e-40b9-82c3-27680de271d2]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions\2680 
+[debug] [2020-05-03T11:58:16.676Z] [worker-~diagnostic~-5dda1ab0-007e-40b9-82c3-27680de271d2]: BUSY 
+[debug] [2020-05-03T11:58:17.390Z] [runtime-status] [2680] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-05-03T11:58:17.391Z] [runtime-status] [2680] Disabled runtime features: undefined 
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-03T11:58:17.414Z] [worker-~diagnostic~-5dda1ab0-007e-40b9-82c3-27680de271d2]: exited 
+[debug] [2020-05-03T11:58:17.415Z] [worker-~diagnostic~-5dda1ab0-007e-40b9-82c3-27680de271d2]: FINISHED 
+[debug] [2020-05-03T13:11:33.415Z] File C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions\index.js changed, reloading triggers 
+[debug] [2020-05-03T13:11:33.638Z] File C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions\index.js changed, reloading triggers 
+[debug] [2020-05-03T13:11:33.771Z] File C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions\index.js changed, reloading triggers 
+[debug] [2020-05-03T13:11:34.772Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0 
+[debug] [2020-05-03T13:11:34.778Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-03T13:11:34.778Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-03T13:11:34.778Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-03T13:11:34.778Z] [worker-~diagnostic~-9b87df79-f51e-4d81-854e-1de02bf5f839]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\New folder (5)\lookslabel\functions\20472 
+[debug] [2020-05-03T13:11:34.778Z] [worker-~diagnostic~-9b87df79-f51e-4d81-854e-1de02bf5f839]: BUSY 
+[debug] [2020-05-03T13:11:35.340Z] [runtime-status] [20472] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-05-03T13:11:35.342Z] [runtime-status] [20472] Disabled runtime features: undefined 
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-03T13:11:35.365Z] [worker-~diagnostic~-9b87df79-f51e-4d81-854e-1de02bf5f839]: exited 
+[debug] [2020-05-03T13:11:35.366Z] [worker-~diagnostic~-9b87df79-f51e-4d81-854e-1de02bf5f839]: FINISHED 

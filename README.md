@@ -26,4 +26,5 @@ Index.js : Node JS server code.
 - Returns json data 
   
 ## Q&A
-- This section will log all upcoming questions upon colabration
+- How to emulate firebase in your local server?
+ans. firebase serve --only functions,hosting
