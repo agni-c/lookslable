@@ -34,3 +34,4 @@ Index.js : Node JS server code.
 - How to start tracking a branch in local repo?
   `git fetch`
   `git branch --track branch-name origin/branch-name`
+- Update your repo `git pull`
