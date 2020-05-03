@@ -13,7 +13,7 @@ const { Storage } = require("@google-cloud/storage");
 const { v4 } = require("uuid");
 const { filesUpload } = require("./middleware");
 
-var sessionstorage = require('sessionstorage');
+var sessionstorage = require("sessionstorage");
 
 const cors = require("cors");
 require("dotenv").config();
@@ -34,7 +34,7 @@ const storage = new Storage();
 const bucket = storage.bucket("spring-internship.appspot.com");
 //REFS
 const profileRef = db.collection("User Profile");
-let uid = null;
+let uid = sessionstorage.getItem("uid");
 //----------------------------------------
 
 app.use(express.static("../public")); //serving static file in public folders
@@ -46,11 +46,15 @@ app.post("/api/profile", (req, res) => {
 	// req.session.uid = profile.uid;
 	//session
 	uid = profile.uid;
-	sessionstorage.setItem("uid",uid);
+	sessionstorage.setItem("uid", uid);
 	const docRef = profileRef.doc(profile.uid);
-	if (docRef.uid !== profile.uid) {
+	const docObj = docRef.get().then((doc) => {
+		return doc.data();
+	});
+
+	if (docRef.uid !== docObj.uid) {
 		uid = profile.uid;
-		profile.tags = docRef.tags;
+		profile.tags = docObj.tags;
 		docRef.set(profile);
 		res.end();
 	} else {

@@ -25,6 +25,7 @@
 		"firebase-functions": "^3.3.0",
 		"firebaseui": "^4.5.0",
 		"form-parse": "file:middleware",
+		"sessionstorage": "^0.1.0",
 		"uuid": "^7.0.3"
 	},
 	"devDependencies": {
