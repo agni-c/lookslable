@@ -42,6 +42,7 @@ app.use(express.json({ limit: "50mb" })); //parsing json, limiting it to 1mb\
 app.post("/api/profile", (req, res) => {
 	const profile = req.body;
 	// req.session.uid = profile.uid;
+	//session
 	uid = profile.uid;
 	const docRef = profileRef.doc(profile.uid);
 	if (docRef.uid !== profile.uid) {
