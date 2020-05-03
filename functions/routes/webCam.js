@@ -16,7 +16,7 @@ const profileRef = db.collection("User Profile");
 
 /**
  * get
- * returns json data from firestore
+ * returns json data from firestore l
  */
 router.get("/", (request, response) => {
 	let uid = sessionstorage.getItem("uid");
