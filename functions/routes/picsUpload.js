@@ -38,10 +38,24 @@ router.post("/", filesUpload, (req, res) => {
 	//Adding to Glary sub collection
 	glaryRef.add(session);
 	//Creating an array in profile which will hold all the landmarks
-	accountRef.update({
-		landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
-	});
+	// accountRef.update({
+	// 	landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
+	// });
 	res.json(session);
+});
+/**
+ * get all the p user data
+ */
+router.get("/usergallery", (req, res) => {
+	let uid = sessionstorage.getItem("uid");
+	const glaryRef = profileRef.doc(uid).collection("Glary");
+
+	const userGlary = async () => {
+		const snapshot = await glaryRef.get();
+		const docs = snapshot.docs.map((doc) => doc.data());
+		res.json(docs);
+	};
+	userGlary();
 });
 
 module.exports = router;

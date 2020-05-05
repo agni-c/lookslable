@@ -27,7 +27,6 @@ router.get("/", (request, response) => {
 		.then((snapshot) => {
 			let data = snapshot.docs.map((doc) => {
 				let x = doc.data();
-
 				return x;
 			});
 			return response.status(200).json(data);

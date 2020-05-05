@@ -12,13 +12,16 @@ db.settings({ timestampsInSnapshots: true });
 
 //middlewares
 app.use(cors());
-app.use(express.static("../public"));
+
 app.use(express.json({ limit: "50mb" }));
 
 //profile route
 const profile = require("./routes/profile");
 app.use("/api/profile", profile);
 
+app.get("/", (req, res) => {
+	res.send("🌎🌎");
+});
 // webcam route
 const webCam = require("./routes/webCam");
 app.use("/api/webcam", webCam);
