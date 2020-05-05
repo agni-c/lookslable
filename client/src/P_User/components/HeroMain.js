@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./main.css";
+import AppForm from "./Form/App";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   Tab,
   Tabs,
@@ -20,7 +22,7 @@ import {
 class HeroMain extends Component {
   render() {
     return (
-      <>
+      <Router>
         <Container md="auto" className="center">
           <h1>Welcome Photographer!</h1>
         </Container>
@@ -52,12 +54,8 @@ class HeroMain extends Component {
                 </Tab.Pane>
                 <br />
                 <Tab.Pane eventKey="first">
-                  <a href="https://spring-internship.web.app/logs/index.html">
-                    {" "}
-                    <Button variant="outline-dark">
-                      Submit Location Images
-                    </Button>
-                  </a>
+                  {" "}
+                  <Button variant="outline-dark">Submit Location Images</Button>
                 </Tab.Pane>
                 <br />
 
@@ -71,11 +69,7 @@ class HeroMain extends Component {
                   <p>Lorem</p>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                  <p>Submit your Image Here:- </p>
-                  <a href="https://spring-internship.web.app/upload.html">
-                    {" "}
-                    <Button variant="outline-primary">Submit Image</Button>
-                  </a>
+                  <AppForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
                   <p>Contact Us </p>
@@ -85,7 +79,7 @@ class HeroMain extends Component {
             </Col>
           </Row>
         </Tab.Container>
-      </>
+      </Router>
     );
   }
 }
