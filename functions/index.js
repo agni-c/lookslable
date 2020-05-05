@@ -27,5 +27,8 @@ app.use("/api/webcam", webCam);
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
+const upload_details = require("./routes/upload_details");
+app.use("/api/uploaddetails",upload_details);
+
 //Listening
 exports.app = functions.https.onRequest(app);
