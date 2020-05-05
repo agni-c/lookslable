@@ -1,11 +1,12 @@
 const router =require('express').Router()
 var firebase = require("firebase");
+ require('dotenv').config();
 
 router.post('/',(req,res)=>{
     console.log("in");
     //firebase realtime database
     var firebaseConfig = {
-        apiKey: "AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI",
+        apiKey:process.env.API_KEY,
         authDomain: "spring-internship.firebaseapp.com",
         databaseURL: "https://spring-internship.firebaseio.com",
         projectId: "spring-internship",
