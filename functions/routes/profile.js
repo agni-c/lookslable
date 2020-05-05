@@ -25,19 +25,9 @@ router.post("/", (req, res) => {
 	uid = profile.uid;
 	sessionstorage.setItem("uid", uid);
 	const docRef = profileRef.doc(profile.uid);
-	const docObj = docRef.get().then((doc) => {
-		return doc.data();
-	});
 
-	if (docRef.uid !== docObj.uid) {
-		uid = profile.uid;
-		profile.tags = docObj.tags;
-		docRef.set(profile);
-		res.end();
-	} else {
-		uid = profile.uid;
-		res.end();
-	}
+	docRef.set(profile);
+	res.end();
 });
 
 module.exports = router;
