@@ -43,5 +43,19 @@ router.post("/", filesUpload, (req, res) => {
 	// });
 	res.json(session);
 });
+/**
+ * get all the p user data
+ */
+router.get("/usergallery", (req, res) => {
+	let uid = sessionstorage.getItem("uid");
+	const glaryRef = profileRef.doc(uid).collection("Glary");
+
+	const userGlary = async () => {
+		const snapshot = await glaryRef.get();
+		const docs = snapshot.docs.map((doc) => doc.data());
+		res.json(docs);
+	};
+	userGlary();
+});
 
 module.exports = router;
