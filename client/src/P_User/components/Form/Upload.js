@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
+import "./styles.css";
+import App from "./SampleForm/App";
 export default function Upload() {
-  const [validated, setValidated] = useState(false);
+  //   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  //   const handleSubmit = (event) => {
+  //     const form = event.currentTarget;
+  //     if (form.checkValidity() === false) {
+  //       event.preventDefault();
+  //       event.stopPropagation();
+  //     }
 
-    setValidated(true);
-  };
-
+  //     setValidated(true);
+  //   };
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      {/* <Datepicker /> */}
+
+      <Form noValidate /*{validated={validated}} onSubmit={handleSubmit} */>
         <Form.Row>
           <Form.Group as={Col} md="4" controlId="validationCustom01">
             <Form.Label>Landmark</Form.Label>
@@ -60,15 +64,10 @@ export default function Upload() {
         </Form.Row>
         <Form.Group />
       </Form>
+
       <Form.Group>
-        <div className="mb-3">
-          <Form.File id="formcheck-api-regular" style={{ background: "#eee" }}>
-            <Form.File.Input isValid />
-            <Form.Control.Feedback type="valid" />
-          </Form.File>
-        </div>
+        <App />
       </Form.Group>
-      <Button type="submit">Upload</Button>
     </>
   );
 }
