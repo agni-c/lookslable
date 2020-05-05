@@ -1,0 +1,10 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
+
+.back {
+  /* background: #606972;
+  color: white; */
+}
+.center {
+  text-align: center;
+  margin-bottom: 30px;
+}
