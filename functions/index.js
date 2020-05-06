@@ -27,8 +27,12 @@ app.use("/api/webcam", webCam);
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
+//upload form details of my location
 const upload_details = require("./routes/upload_details");
 app.use("/api/uploaddetails",upload_details);
 
+//popular location
+const popularlocation = require("./routes/popular_location");
+app.use("/api/popularlocation",popularlocation);
 //Listening
 exports.app = functions.https.onRequest(app);

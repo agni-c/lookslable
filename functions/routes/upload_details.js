@@ -1,25 +1,10 @@
 const router =require('express').Router()
 var firebase = require("firebase");
+var database =require('./firebaseAppI');
  require('dotenv').config();
 
 router.post('/',(req,res)=>{
-    console.log("in");
-    //firebase realtime database
-    var firebaseConfig = {
-        apiKey:process.env.API_KEY,
-        authDomain: "spring-internship.firebaseapp.com",
-        databaseURL: "https://spring-internship.firebaseio.com",
-        projectId: "spring-internship",
-        storageBucket: "spring-internship.appspot.com",
-        messagingSenderId: "871532525324",
-        appId: "1:871532525324:web:a6a8cd49b945e5788c3b29",
-        measurementId: "G-S2BPC07SW6"
-      };
-      if (!firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
-      }
-      //create the varible of database
-      var database = firebase.database();
+    console.log("in");``
       //giving the reference
       var ref = database.ref("I_USER");
       //create the object
