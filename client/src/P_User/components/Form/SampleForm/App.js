@@ -41,7 +41,7 @@ class App extends Component {
 	};
 	validateSize = (event) => {
 		let file = event.target.files;
-		let size = 10000;
+		let size = 330000;
 		let err = "";
 		console.log(file.size);
 		if (file.size > size) {
