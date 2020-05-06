@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
+import { Form, Button, Col, Row } from "react-bootstrap";
+import "../styles.css";
 
 class App extends Component {
 	constructor(props) {
@@ -25,11 +27,11 @@ class App extends Component {
 		const data = new FormData();
 		// Change the url which is present in .post method.
 		data.append("file", this.state.selectedFile);
-		//data.append("landmark",this.state.landmark);
 		axios
 			.post(
 				"http://localhost:5000/spring-internship/us-central1/app/api/upload",
-				data
+				data,
+				{ headers: { "content-type": "multipart/form-data" } }
 			)
 			.then((res) => {
 				//  print response status
@@ -53,34 +55,90 @@ class App extends Component {
 	};
 	render() {
 		return (
-			<div className='container'>
-				<div className='row'>
-					<div className='col-md-6'>
-						<ToastContainer />
-						<form method='post' action='#' id='#'>
-							<div className='form-group files'>
-								<label>Upload Your Image </label>
-								<input
-									type='file'
-									multiple
-									name='file'
-									className='form-control'
-									onChange={this.onChangeHandler}
-								/>
+			<>
+				<Form onSubmit={this.handleSubmit}>
+					<Form.Row>
+						<Form.Group as={Col} md='4' controlId='validationCustom01'>
+							<Form.Label>Landmark</Form.Label>
+							<Form.Control
+								required
+								name='landmark'
+								type='text'
+								placeholder='eg Lake gardens'
+								defaultValue='Mark'
+							/>
+							<Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+						</Form.Group>
+						<Form.Group controlId='exampleForm.ControlSelect1'>
+							<Form.Label>Price</Form.Label>
+							<Form.Control as='select' name='price'>
+								<option>149</option>
+								<option>249</option>
+								<option>499</option>
+								<option>999</option>
+								<option>1499</option>
+							</Form.Control>
+						</Form.Group>
+
+						<Form.Group as={Col} md='4' controlId='validationCustomUsername'>
+							<Form.Label>Type</Form.Label>
+							<Form.Group as={Row}>
+								<Col sm={10}>
+									<Form.Check
+										type='radio'
+										name='indoor'
+										label='Indoor'
+										name='formHorizontalRadios'
+										id='formHorizontalRadios1'
+									/>
+									<Form.Check
+										type='radio'
+										name='outdoor'
+										label='Outdoor'
+										name='formHorizontalRadios'
+										id='formHorizontalRadios2'
+									/>
+								</Col>
+							</Form.Group>
+						</Form.Group>
+					</Form.Row>
+					<Form.Group />
+					<Form.Group>
+						<div className='container'>
+							<div className='row'>
+								<div className='col-md-6'>
+									<ToastContainer />
+									<form method='post' action='#' id='#'>
+										<div className='form-group files'>
+											<label>Upload Your Image </label>
+											<input
+												type='file'
+												multiple
+												name='file'
+												className='form-control'
+												onChange={this.onChangeHandler}
+											/>
+										</div>
+										<div className='col-md-6 pull-right'>
+											<button
+												width='100%'
+												type='button'
+												className='btn btn-info'
+												onClick={this.fileUploadHandler}>
+												Upload Image
+											</button>
+										</div>
+									</form>
+								</div>
 							</div>
-							<div className='col-md-6 pull-right'>
-								<button
-									width='100%'
-									type='button'
-									className='btn btn-info'
-									onClick={this.fileUploadHandler}>
-									Upload Image
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+						</div>
+						<br />
+						<Button className='mr-1' type='submit'>
+							Submit
+						</Button>
+					</Form.Group>
+				</Form>
+			</>
 		);
 	}
 }

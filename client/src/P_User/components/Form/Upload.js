@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { Form, Button, Col, Row } from "react-bootstrap";
+
 import "./styles.css";
 import App from "./SampleForm/App";
 class Upload extends React.Component {
+<<<<<<< HEAD
 	constructor() {
 		super();
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -89,6 +89,7 @@ class Upload extends React.Component {
 			</>
 		);
 	}
+
 }
 
 export default Upload;
