@@ -1,12 +1,12 @@
 import React from "react";
 import "./main.css";
-import { Navbar, Button, Nav } from "react-bootstrap";
+import { Navbar, Button, Nav, Container } from "react-bootstrap";
 import firebase from "firebase";
 
 function NavBar() {
   return (
     <>
-      <container>
+      <Container>
         <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
           <Navbar.Brand href="#home">Data Selfie App</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,7 +25,7 @@ function NavBar() {
             </Button>
           </Navbar.Collapse>
         </Navbar>
-      </container>
+      </Container>
     </>
   );
 }

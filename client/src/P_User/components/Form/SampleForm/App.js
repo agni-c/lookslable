@@ -10,6 +10,8 @@ class App extends Component {
 		super(props);
 		this.state = {
 			selectedFile: null,
+			landmark: "",
+			price: "",
 		};
 	}
 	onChangeHandler = (event) => {
@@ -23,15 +25,30 @@ class App extends Component {
 			});
 		}
 	};
+	onChangeLandmark = (event) => {
+		var landmarks = event.target.landmarks;
+		console.log(landmarks);
+		this.setState({
+			landmark: landmarks,
+		});
+	};
+	onChangePrice = (event) => {
+		var prices = event.target.landmarks;
+		console.log(prices);
+		this.setState({
+			price: prices,
+		});
+	};
 	fileUploadHandler = () => {
 		const data = new FormData();
 		// Change the url which is present in .post method.
 		data.append("file", this.state.selectedFile);
+		data.append("landmarks", this.state.landmark);
+		data.append("prices", this.state.price);
 		axios
 			.post(
-				"http://localhost:5000/spring-internship/us-central1/app/api/upload",
-				data,
-				{ headers: { "content-type": "multipart/form-data" } }
+				"http://localhost:3000/spring-internship/us-central1/app/api/upload",
+				data
 			)
 			.then((res) => {
 				//  print response status
@@ -61,6 +78,8 @@ class App extends Component {
 						<Form.Group as={Col} md='4' controlId='validationCustom01'>
 							<Form.Label>Landmark</Form.Label>
 							<Form.Control
+								className='landmarks'
+								onChange={this.onChangeLandmark}
 								required
 								name='landmark'
 								type='text'
@@ -71,7 +90,11 @@ class App extends Component {
 						</Form.Group>
 						<Form.Group controlId='exampleForm.ControlSelect1'>
 							<Form.Label>Price</Form.Label>
-							<Form.Control as='select' name='price'>
+							<Form.Control
+								as='select'
+								name='price'
+								className='prices'
+								onChange={this.onChangePrice}>
 								<option>149</option>
 								<option>249</option>
 								<option>499</option>
@@ -116,7 +139,7 @@ class App extends Component {
 												multiple
 												name='file'
 												className='form-control'
-												onChange={this.onChangeHandler}
+												// onChange={this.onChangeHandler}
 											/>
 										</div>
 										<div className='col-md-6 pull-right'>
@@ -133,7 +156,10 @@ class App extends Component {
 							</div>
 						</div>
 						<br />
-						<Button className='mr-1' type='submit'>
+						<Button
+							className='mr-1'
+							type='submit'
+							onSubmit={this.fileUploadHandler}>
 							Submit
 						</Button>
 					</Form.Group>

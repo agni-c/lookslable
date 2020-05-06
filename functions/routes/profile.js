@@ -12,7 +12,6 @@ const storage = new Storage();
 const bucket = storage.bucket("spring-internship.appspot.com");
 //REFS
 const profileRef = db.collection("User Profile");
-let uid = sessionstorage.getItem("uid");
 
 //----------------------------------------
 
@@ -24,7 +23,7 @@ router.post("/", (req, res) => {
 	//session
 	uid = profile.uid;
 	sessionstorage.setItem("uid", uid);
-	const docRef = profileRef.doc(profile.uid);
+	const docRef = profileRef.doc(uid);
 
 	docRef.set(profile);
 	res.end();
