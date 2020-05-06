@@ -25,6 +25,7 @@ class App extends Component {
 		const data = new FormData();
 		// Change the url which is present in .post method.
 		data.append("file", this.state.selectedFile);
+		//data.append("landmark",this.state.landmark);
 		axios
 			.post(
 				"http://localhost:5000/spring-internship/us-central1/app/api/upload",
