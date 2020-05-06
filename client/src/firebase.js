@@ -70,7 +70,6 @@ class SignInScreen extends React.Component {
           <NavBar />
           <HeroMain />
         </div>
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
       </div>
     );
   }

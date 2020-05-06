@@ -1,6 +1,7 @@
 import React from "react";
 import "./main.css";
 import { Navbar, Button, Nav } from "react-bootstrap";
+import firebase from "firebase";
 
 function NavBar() {
   return (
@@ -15,7 +16,11 @@ function NavBar() {
               <Nav.Link href="#link">Webcam Photos</Nav.Link>
               <Nav.Link href="#upload-photos">Upload Photos</Nav.Link>
             </Nav>
-            <Button variant="outline-light" className="ml-sm-3">
+            <Button
+              variant="outline-light"
+              className="ml-sm-3"
+              onClick={() => firebase.auth().signOut()}
+            >
               Logout
             </Button>
           </Navbar.Collapse>
