@@ -58,4 +58,18 @@ router.get("/usergallery", (req, res) => {
 	userGlary();
 });
 
+router.get("/allUsergallery", (req, res) => {
+	let json = new Array();
+	const Ref = db.collectionGroup("Glary");
+	Ref.get()
+		.then((querySnapshot) => {
+			querySnapshot.forEach((doc) => {
+				console.log(doc.id, " => ", doc.data());
+				json.push(doc.data());
+			});
+			return res.json(json);
+		})
+		.catch((err) => console.log(err));
+});
+
 module.exports = router;
