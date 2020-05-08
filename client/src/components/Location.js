@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Badge } from "react-bootstrap";
+import { Button, Badge, Jumbotron, Card } from "react-bootstrap";
 class Location extends React.Component {
   constructor(props) {
     super(props);
@@ -17,12 +17,10 @@ class Location extends React.Component {
   render() {
     return (
       <>
-        <h4>
-          <Badge variant="success">Latitude:{this.state.lat}</Badge>{" "}
-        </h4>
-        <h4>
-          <Badge variant="success">Longitude:{this.state.long}</Badge>{" "}
-        </h4>
+        <Card>
+          <p>Latitude:{this.state.lat} </p>
+          <p>Longitude:{this.state.long}</p>
+        </Card>
       </>
     );
   }

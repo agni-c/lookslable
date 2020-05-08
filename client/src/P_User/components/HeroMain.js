@@ -3,8 +3,8 @@ import "./main.css";
 import AppForm from "./Form/App";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import firebase from "firebase";
-import WebCam from "../../components/WebCam";
 import Location from "../../components/Location";
+import ToollTip from "../../components/ToolTip";
 import {
   Tab,
   Tabs,
@@ -21,6 +21,7 @@ import {
   Toast,
   Jumbotron,
   Alert,
+  Tooltip,
 } from "react-bootstrap";
 
 class HeroMain extends Component {
@@ -84,9 +85,10 @@ class HeroMain extends Component {
             <Col sm={9} className="back">
               <Tab.Content>
                 <Tab.Pane eventKey="first">
-                  {/* <Button variant="outline-dark">Add Location</Button> */}
+                  {/* <Button variant="outline-dark">Add</Button> */}
                   {/* <LocationPop /> */}
-                  <Location />
+                  {/* <Location /> */}
+                  <ToollTip />
                 </Tab.Pane>
                 <br />
                 <Tab.Pane eventKey="first">

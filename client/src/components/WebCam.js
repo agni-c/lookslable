@@ -3,8 +3,8 @@ import Webcam from "react-webcam";
 
 function WebCam() {
   const videoConstraints = {
-    width: 720,
-    height: 720,
+    width: 650,
+    height: 650,
     facingMode: "user",
   };
   const webcamRef = React.useRef(null);
@@ -12,14 +12,15 @@ function WebCam() {
     const imageSrc = webcamRef.current.getScreenshot();
   }, [webcamRef]);
   console.log(webcamRef);
+
   return (
     <>
       <Webcam
         audio={false}
-        height={720}
+        height={650}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={1280}
+        width={650}
         videoConstraints={videoConstraints}
       />
       <button onClick={capture}>Capture photo</button>
