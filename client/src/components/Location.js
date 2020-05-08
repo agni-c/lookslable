@@ -19,7 +19,7 @@ class Location extends React.Component {
       <>
         <Card>
           <p>Latitude:{this.state.lat} </p>
-          <p>Longitude:{this.state.long}</p>
+          Longitude:{this.state.long}
         </Card>
       </>
     );
