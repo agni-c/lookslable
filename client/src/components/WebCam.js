@@ -1,10 +1,11 @@
 import React from "react";
 import Webcam from "react-webcam";
+import { Button } from "react-bootstrap";
 
 function WebCam() {
   const videoConstraints = {
-    width: 650,
-    height: 650,
+    width: 350,
+    height: 350,
     facingMode: "user",
   };
   const webcamRef = React.useRef(null);
@@ -17,13 +18,16 @@ function WebCam() {
     <>
       <Webcam
         audio={false}
-        height={650}
+        height={350}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={650}
+        width={350}
         videoConstraints={videoConstraints}
       />
-      <button onClick={capture}>Capture photo</button>
+      <br />
+      <Button variant="outline-success" onClick={capture}>
+        Capture photo
+      </Button>
     </>
   );
 }
