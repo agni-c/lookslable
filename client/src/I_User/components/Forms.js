@@ -8,34 +8,42 @@ class Forms extends React.Component {
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                className="colApp"
+                type="email"
+                placeholder="Enter email"
+              />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                className="colApp"
+                type="password"
+                placeholder="Password"
+              />
             </Form.Group>
           </Form.Row>
 
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
+            <Form.Control className="colApp" placeholder="1234 Main St" />
           </Form.Group>
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Phone No</Form.Label>
-            <Form.Control placeholder="+91 " />
+            <Form.Control className="colApp" placeholder="+91 " />
           </Form.Group>
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Event</Form.Label>
-            <Form.Control placeholder="Event_Name" />
+            <Form.Control className="colApp" placeholder="Event_Name" />
           </Form.Group>
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Date</Form.Label>
-            <Form.Control placeholder="Date" />
+            <Form.Control className="colApp" placeholder="Date" />
           </Form.Group>
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Time</Form.Label>
-            <Form.Control placeholder="Time" />
+            <Form.Control className="colApp" placeholder="Time" />
           </Form.Group>
 
           <Form.Group id="formGridCheckbox">
