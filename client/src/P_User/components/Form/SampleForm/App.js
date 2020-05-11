@@ -46,10 +46,7 @@ class App extends Component {
 		data.append("landmarks", this.state.landmark);
 		data.append("prices", this.state.price);
 		axios
-			.post(
-				"http://localhost:3000/spring-internship/us-central1/app/api/upload",
-				data
-			)
+			.post("https://spring-internship.web.app//api/upload", data)
 			.then((res) => {
 				//  print response status
 				toast.success("upload success");

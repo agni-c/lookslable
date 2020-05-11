@@ -8,7 +8,7 @@ export default class App extends React.Component {
 		return (
 			<div className='contain'>
 				<form
-					action='http://localhost:5000/spring-internship/us-central1/app/api/upload'
+					action='https://spring-internship.web.app/api/upload'
 					method='post'
 					enctype='multipart/form-data'>
 					<Form.Group>
