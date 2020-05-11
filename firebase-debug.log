@@ -175,3 +175,16 @@
 [debug] [2020-05-11T11:28:26.249Z] [worker-~diagnostic~-3d5dfddc-184f-438e-999e-ba6cd903556d]: BUSY 
 [debug] [2020-05-11T11:28:26.273Z] [worker-~diagnostic~-e81d2a97-e953-465c-89ca-d1ba9ae8832b]: exited 
 [debug] [2020-05-11T11:28:26.274Z] [worker-~diagnostic~-e81d2a97-e953-465c-89ca-d1ba9ae8832b]: FINISHED 
+[debug] [2020-05-11T11:28:27.100Z] [runtime-status] [13468] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-05-11T11:28:27.103Z] [runtime-status] [13468] Disabled runtime features: undefined 
+[debug] [2020-05-11T11:28:27.108Z] [runtime-status] [13468] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-11T11:28:27.110Z] [runtime-status] [13468] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-11T11:28:27.112Z] [runtime-status] [13468] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-11T11:28:27.179Z] [runtime-status] [13468] Checked functions.config() {"config":{}} 
+[debug] [2020-05-11T11:28:27.181Z] [runtime-status] [13468] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-11T11:28:27.183Z] [runtime-status] [13468] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-11T11:28:27.184Z] [runtime-status] [13468] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-11T11:28:27.185Z] [runtime-status] [13468] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\New folder (5)\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-11T11:28:27.401Z] [runtime-status] [13468] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-11T11:28:28.299Z] [worker-~diagnostic~-3d5dfddc-184f-438e-999e-ba6cd903556d]: IDLE 
