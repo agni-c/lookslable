@@ -6,7 +6,7 @@ const SampleForm = () => {
 	return (
 		<div className='contain'>
 			<form
-				action='http://localhost:5000/spring-internship/us-central1/app/api/webcam/form'
+				action='https://spring-internship.web.app/api/webcam/form'
 				method='post'
 				enctype='multipart/form-data'>
 				<Form.Group as={Row}>
@@ -63,13 +63,7 @@ const SampleForm = () => {
 				<br />
 				<br />
 
-				<Button
-					variant='outline-primary'
-					className='mb-2'
-					type='submit'
-					onClick={(e) => {
-						e.preventDefault();
-					}}>
+				<Button variant='outline-primary' className='mb-2' type='submit'>
 					Upload
 				</Button>
 			</form>
