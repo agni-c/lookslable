@@ -13,11 +13,12 @@ class CalenderA extends React.Component {
 
   render() {
     return (
-      <DatePicker
-        selected={this.state.date}
-        onSelect={this.handleSelect}
-        onChange={this.handleChange}
-      />
+      // <DatePicker
+      //   selected={this.state.date}
+      //   onSelect={this.handleSelect}
+      //   onChange={this.handleChange}
+      // />
+      <h1>Something</h1>
     );
   }
 }

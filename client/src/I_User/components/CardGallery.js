@@ -10,9 +10,9 @@ class CardGallery extends React.Component {
     const { name, title } = this.props;
     return (
       <div>
-        <Card style={{}} className="margin-bt">
+        <Card style={{}} className="margin-bt" className="colApp">
           <Gallery />
-          <Card.Body>
+          <Card.Body className="colApp">
             <Card.Title>{title}</Card.Title>
             <Card.Text>
               <strong>About Photographer : {name}</strong>

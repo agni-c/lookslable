@@ -46,6 +46,7 @@ router.get("/", (request, response) => {
 router.post("/", (request, response) => {
 	let uid = sessionstorage.getItem("uid");
 	const data = request.body;
+
 	// const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
 	// (date = timestamp.getDate()),
 	// 	(month = timestamp.getMonth()),
@@ -98,12 +99,9 @@ router.post("/form", filesUpload, (req, res) => {
 		time: req.body.time,
 	};
 	//save it to doc where webcam pic resides
-	try {
-		webCamRef.set(infoData, { merge: true });
-		res.status(200);
-	} catch (error) {
-		console.log(error);
-	}
+
+	webCamRef.set(infoData, { merge: true });
+	res.end();
 });
 
 module.exports = router;
