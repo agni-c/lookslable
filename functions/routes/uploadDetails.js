@@ -4,7 +4,7 @@ var database =require('./firebaseAppI');
  require('dotenv').config();
 
 router.post('/',(req,res)=>{
-    console.log("in");``
+    
       //giving the reference
       var ref = database.ref("I_USER");
       //create the object
@@ -18,9 +18,7 @@ router.post('/',(req,res)=>{
       };
       //push the object
        var result = ref.push(obj);
-       console.log("out");
-    
-    res.end();
+       res.end();
     
 
 })

@@ -28,11 +28,11 @@ const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
 //upload form details of my location
-const upload_details = require("./routes/upload_details");
-app.use("/api/uploaddetails",upload_details);
+const uploaddetails = require("./routes/uploadDetails");
+app.use("/api/uploaddetails",uploaddetails);
 
 //popular location
-const popularlocation = require("./routes/popular_location");
+const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation",popularlocation);
 //Listening
 exports.app = functions.https.onRequest(app);
