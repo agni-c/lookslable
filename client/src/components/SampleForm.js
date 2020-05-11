@@ -64,7 +64,13 @@ class SampleForm extends React.Component {
 					<br />
 					<br />
 
-					<Button variant='outline-primary' className='mb-2' type='submit'>
+					<Button
+						variant='outline-primary'
+						onClick={(event) => {
+							event.preventdefault();
+						}}
+						className='mb-2'
+						type='submit'>
 						Upload
 					</Button>
 				</form>
