@@ -49,8 +49,9 @@ export default class WebCam extends Component {
   screenshot() {
     var screenshot = this.refs.webcam.getScreenshot();
     this.setState({ screenshot: screenshot });
-  }
 
+    console.log(screenshot);
+  }
   render() {
     return (
       <div>
