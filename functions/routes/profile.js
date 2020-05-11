@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
 	sessionstorage.setItem("uid", uid);
 	const docRef = profileRef.doc(uid);
 
-	docRef.set(profile);
+	docRef.set(profile, { merge: true });
 	res.end();
 });
 

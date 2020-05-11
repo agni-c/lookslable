@@ -38,9 +38,9 @@ router.post("/", filesUpload, (req, res) => {
 	//Adding to Glary sub collection
 	glaryRef.add(session);
 	//Creating an array in profile which will hold all the landmarks
-	// accountRef.update({
-	// 	landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
-	// });
+	accountRef.update({
+		landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
+	});
 	res.json(session);
 });
 /**
@@ -64,7 +64,6 @@ router.get("/allUsergallery", (req, res) => {
 	Ref.get()
 		.then((querySnapshot) => {
 			querySnapshot.forEach((doc) => {
-				console.log(doc.id, " => ", doc.data());
 				json.push(doc.data());
 			});
 			return res.json(json);
