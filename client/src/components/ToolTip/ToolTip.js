@@ -6,8 +6,8 @@ import {
   Container,
   Tooltip,
 } from "react-bootstrap";
-import Location from "./Location";
-import SampleForm from "./SampleForm";
+import Location from "../Location/Location";
+import SampleForm from "../Forms/SampleForm";
 import "./main.css";
 class Toolltip extends React.Component {
   render() {
