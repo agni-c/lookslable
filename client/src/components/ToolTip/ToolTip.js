@@ -8,12 +8,16 @@ import {
 } from "react-bootstrap";
 import Location from "../Location/Location";
 import SampleForm from "../Forms/SampleForm";
-import "./main.css";
+import "./styles.css";
 class Toolltip extends React.Component {
   render() {
     const popover = (
       <Container>
-        <Popover id="popover-basic" className="popover">
+        <Popover
+          id="popover-basic"
+          className="popover"
+          style={{ maxWidth: "90%" }}
+        >
           <Popover.Title as="h3">Location</Popover.Title>
           <Popover.Content>
             <Location />
@@ -24,7 +28,7 @@ class Toolltip extends React.Component {
     );
     return (
       <>
-        <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+        <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
           <Button variant="outline-success">Add</Button>
         </OverlayTrigger>
       </>
