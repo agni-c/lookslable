@@ -411,3 +411,40 @@
 [info] i  functions: Finished "app" in ~1s
 [debug] [2020-05-03T17:01:03.304Z] [worker-app-5b51ed31-ee4b-4130-8fd6-b86bef1baa48]: IDLE 
 [debug] [2020-05-03T17:01:03.305Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-14T07:40:57.489Z] ----------------------------------------------------------------------
+[debug] [2020-05-14T07:40:57.491Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only function,hosting
+[debug] [2020-05-14T07:40:57.491Z] CLI Version:   8.2.0
+[debug] [2020-05-14T07:40:57.492Z] Platform:      win32
+[debug] [2020-05-14T07:40:57.492Z] Node Version:  v12.15.0
+[debug] [2020-05-14T07:40:57.493Z] Time:          Thu May 14 2020 13:10:57 GMT+0530 (India Standard Time)
+[debug] [2020-05-14T07:40:57.493Z] ----------------------------------------------------------------------
+[debug] [2020-05-14T07:40:57.493Z] 
+[debug] [2020-05-14T07:40:57.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-14T07:40:57.501Z] > authorizing via signed-in user
+[debug] [2020-05-14T07:40:57.501Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-05-14T07:40:57.504Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-14T07:42:19.359Z] ----------------------------------------------------------------------
+[debug] [2020-05-14T07:42:19.363Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only function,hosting
+[debug] [2020-05-14T07:42:19.364Z] CLI Version:   8.2.0
+[debug] [2020-05-14T07:42:19.364Z] Platform:      win32
+[debug] [2020-05-14T07:42:19.364Z] Node Version:  v12.15.0
+[debug] [2020-05-14T07:42:19.365Z] Time:          Thu May 14 2020 13:12:19 GMT+0530 (India Standard Time)
+[debug] [2020-05-14T07:42:19.365Z] ----------------------------------------------------------------------
+[debug] [2020-05-14T07:42:19.365Z] 
+[debug] [2020-05-14T07:42:19.388Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-14T07:42:19.389Z] > authorizing via signed-in user
+[debug] [2020-05-14T07:42:19.389Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-05-14T07:42:19.392Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-14T07:42:27.956Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 14 May 2020 07:42:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1610","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-14T07:42:27.959Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-05-14T07:42:31.279Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 14 May 2020 07:42:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-14T07:42:31.283Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship/webApps/-/config  
+ 
+[debug] [2020-05-14T07:42:33.491Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 14 May 2020 07:42:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: ./client/build
+[info] +  hosting: Local server: http://localhost:5000
+[info] [hosting] Rewriting / to https://us-central1-spring-internship.cloudfunctions.net/app for live Function app
+[info] [hosting] Rewriting / to https://us-central1-spring-internship.cloudfunctions.net/app for live Function app
