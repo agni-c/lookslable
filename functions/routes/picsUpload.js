@@ -28,6 +28,7 @@ router.post("/", filesUpload, (req, res) => {
 	});
 	//obj which will be saved to db (after parsing form-data)
 	const session = {
+		puid: uid,
 		images: imageURLs,
 		names: imageNames,
 		landmark: req.body.landmark,
