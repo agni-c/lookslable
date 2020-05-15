@@ -45,20 +45,24 @@ class HeroMain extends Component {
 				};
 				console.log(profile);
 
-				try {
-					//REVIEW  PROFILE LINK
-					await fetch(
-						`${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
-						options
-					);
-					console.log(process.env.REACT_APP_DEVELOPMENT);
-				} catch (error) {
-					console.log(error);
-				}
-				// console.log(res);
-			}
-		});
-	}
+        try {
+          //REVIEW  PROFILE LINK
+          await fetch(
+            `${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
+            options
+          );
+          await fetch(
+            `${process.env.REACT_APP_DEVELOPMENT}/api/upload/uid`,
+            options
+          );
+          console.log(process.env.REACT_APP_DEVELOPMENT);
+        } catch (error) {
+          console.log(error);
+        }
+        // console.log(res);
+      }
+    });
+  }
 
 	render() {
 		return (
