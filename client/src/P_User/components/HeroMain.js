@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./main.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import firebase from "firebase";
+import Gallery from "../../components/Gallery/Gallery";
 import ToollTip from "../../components/ToolTip/ToolTip";
 import Tooltipform from "../../components/ToolTip/ToolTipForm";
 import {
@@ -71,7 +72,7 @@ class HeroMain extends Component {
 									<Nav.Link eventKey='second'>My bookings</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
-									<Nav.Link eventKey='third'>Upload Image</Nav.Link>
+									<Nav.Link eventKey='third'>Uploaded Images</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
 									<Nav.Link eventKey='fourth'>Support</Nav.Link>
@@ -104,15 +105,7 @@ class HeroMain extends Component {
 									<p>Lorem</p>
 								</Tab.Pane>
 								<Tab.Pane eventKey='third'>
-									<Alert
-										variant='success'
-										className='center'
-										style={{ width: "540px" }}>
-										<Alert.Heading>History</Alert.Heading>
-										<p>Photographer : Lorem</p>
-										<hr />
-										<p className='mb-0'>DriveLink</p>
-									</Alert>
+									<Gallery />
 								</Tab.Pane>
 								<Tab.Pane eventKey='fourth'>
 									{/* <WebCam /> */}
