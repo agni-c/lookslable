@@ -16,15 +16,15 @@ const profileRef = db.collection("User Profile");
 //----------------------------------------
 
 //Creating A user profile
-//TODO profile
+
 router.post("/", (req, res) => {
 	const profile = req.body;
 	// req.session.uid = profile.uid;
 	//session
 	uid = profile.uid;
-	sessionstorage.setItem("uid", uid);
+	req.session.uid = uid;
 	const docRef = profileRef.doc(uid);
-
+	console.log(req.session.uid);
 	docRef.set(profile, { merge: true });
 	res.end();
 });

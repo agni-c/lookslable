@@ -8,9 +8,27 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 const db = admin.firestore();
 db.settings({ timestampsInSnapshots: true });
-//-------------
+//-------------session-------------
 
-//middlewares
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+// const { Firestore } = require("@google-cloud/firestore");
+var MemoryStore = require("memorystore")(session);
+
+app.set("trust proxy", 1); // trust first proxy
+app.use(
+	session({
+		saveUninitialized: true,
+		cookie: { maxAge: 86400000 },
+		store: new MemoryStore({
+			checkPeriod: 86400000, // prune expired entries every 24h
+		}),
+		secret: "keyboard cat",
+		resave: false,
+	})
+);
+//-----------------------------
+//middlewares  Can you hear ;me?
 app.use(cors());
 
 app.use(express.json({ limit: "50mb" }));

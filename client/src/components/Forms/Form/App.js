@@ -7,8 +7,10 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div className='contain'>
+				<div>Testing</div>
 				<form
-					action='http://localhost:5000/spring-internship/us-central1/app/api/upload'
+					// REVIEW upload link
+					action={`${process.env.REACT_APP_DEVELOPMENT}/api/upload`}
 					method='post'
 					enctype='multipart/form-data'>
 					<Form.Group>
@@ -21,7 +23,6 @@ export default class App extends React.Component {
 								accept='image/*'
 								id='upload'
 								name='uploads'
-								multiple
 								required
 							/>
 						</Col>

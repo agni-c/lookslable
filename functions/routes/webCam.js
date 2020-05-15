@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-var sessionstorage = require("sessionstorage");
+// var sessionstorage = require("sessionstorage");
 const fireStore = require("@google-cloud/firestore");
 const { v4 } = require("uuid");
 const { Storage } = require("@google-cloud/storage");
@@ -20,7 +20,7 @@ const profileRef = db.collection("User Profile");
  * returns json data from firestore
  */
 router.get("/", (request, response) => {
-	let uid = sessionstorage.getItem("uid");
+	let uid = request.session.uid;
 	const webCamRef = profileRef.doc(uid).collection("Web Cam");
 	// response.json(uid);
 	webCamRef
@@ -44,7 +44,7 @@ router.get("/", (request, response) => {
  */
 
 router.post("/", (request, response) => {
-	let uid = sessionstorage.getItem("uid");
+	let uid = request.session.uid;
 	const data = request.body;
 
 	// const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
@@ -60,7 +60,7 @@ router.post("/", (request, response) => {
 	// console.log(data.timestamp);
 
 	data._id = v4().split("-").pop();
-	sessionstorage.setItem("selfieId", data._id);
+	request.session.selfieId = data._id;
 	//----------------
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);
 
@@ -89,7 +89,8 @@ router.post("/", (request, response) => {
 });
 
 router.post("/form", filesUpload, (req, res) => {
-	const selfieId = sessionstorage.getItem("selfieId");
+	const selfieId = req.session.selfieId;
+	const uid = req.session.uid;
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
 	//set the form in an object
 	const infoData = {
