@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import "./main.css";
 import AppForm from "./Form/App";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import firebase from "firebase";
 import ToollTip from "../../components/ToolTip";
+import Location from "../../routes/Location/Location";
+import Support from "../../routes/Support/Support";
+import UploadedImages from "../../routes/UploadedImages/UploadedImages";
+import MyBookings from "../../routes/MyBookings/MyBookings";
+
 import {
   Tab,
   Tabs,
@@ -56,14 +61,108 @@ class HeroMain extends Component {
       }
     });
   }
-
-  render() {
+  Homedata = () => {
     return (
-      <Router>
+      <>
         <Container md="auto" className="center">
           <h1>Welcome Photographer!</h1>
         </Container>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Container>
+          <Row>
+            <Link to="/user/location">
+              <Col md>
+                <Card
+                  bg="info"
+                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                  style={{ width: "18rem" }}
+                >
+                  <Card.Header style={{ color: "white" }}>Location</Card.Header>
+                  <Card.Body style={{ color: "white" }}>
+                    <Card.Title>Success Card Title </Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Link>
+            <Link to="user/my-bookings">
+              <Col md>
+                <Card
+                  bg="danger"
+                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                  style={{ width: "18rem" }}
+                >
+                  <Card.Header style={{ color: "white" }}>
+                    My Bookings
+                  </Card.Header>
+                  <Card.Body style={{ color: "white" }}>
+                    <Card.Title>Success Card Title </Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Link>
+            <Link to="user/uploaded-images">
+              <Col md>
+                <Card
+                  bg="dark"
+                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                  style={{ width: "18rem" }}
+                >
+                  <Card.Header style={{ color: "white" }}>Header</Card.Header>
+                  <Card.Body style={{ color: "white" }}>
+                    <Card.Title>Uploaded Images </Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Link>
+            <Link to="user/support">
+              <Col md>
+                <Card bg="warning" style={{ width: "18rem" }}>
+                  <Card.Header style={{ color: "white" }}>Support</Card.Header>
+                  <Card.Body style={{ color: "white" }}>
+                    <Card.Title>Success Card Title </Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Link>
+          </Row>
+        </Container>
+      </>
+    );
+  };
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={this.Homedata} />
+          <Route path="/user/location" exact component={Location} />
+          <Route path="/user/my-bookings" exact component={MyBookings} />
+          <Route path="/user/support" exact component={Support} />
+          <Route
+            path="/user/uploaded-images"
+            exact
+            component={UploadedImages}
+          />
+        </Switch>
+      </BrowserRouter>
+    );
+    {
+      /* <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
             <Col sm={3}>
               <Nav variant="pills" className="flex-column">
@@ -80,14 +179,22 @@ class HeroMain extends Component {
                   <Nav.Link eventKey="fourth">Support</Nav.Link>
                 </Nav.Item>
               </Nav>
-            </Col>
-
+            </Col> */
+    }
+    {
+      /* 
             <Col sm={9} className="back">
               <Tab.Content>
-                <Tab.Pane eventKey="first">
-                  {/* <Button variant="outline-dark">Add</Button> */}
-                  {/* <LocationPop /> */}
-                  {/* <Location /> */}
+                <Tab.Pane eventKey="first"> */
+    }
+    {
+      /* <Button variant="outline-dark">Add</Button> */
+    }
+    {
+      /* <LocationPop /> */
+    }
+    {
+      /* <Location />
                   <ToollTip />
                 </Tab.Pane>
                 <br />
@@ -109,17 +216,22 @@ class HeroMain extends Component {
                 <Tab.Pane eventKey="third">
                   <AppForm />
                 </Tab.Pane>
-                <Tab.Pane eventKey="fourth">
-                  {/* <WebCam /> */}
-                  <p>Contact Us </p>
+                <Tab.Pane eventKey="fourth"> */
+    }
+    {
+      /* <WebCam /> */
+    }
+    {
+      /* <p>Contact Us </p>
                   <Button variant="outline-primary">Call</Button>
-                </Tab.Pane>
-              </Tab.Content>
+                </Tab.Pane> */
+    }
+    {
+      /* </Tab.Content>
             </Col>
           </Row>
-        </Tab.Container>
-      </Router>
-    );
+        </Tab.Container> */
+    }
   }
 }
 
