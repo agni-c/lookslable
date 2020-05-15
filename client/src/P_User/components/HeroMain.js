@@ -51,6 +51,10 @@ class HeroMain extends Component {
             `${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
             options
           );
+          await fetch(
+            `${process.env.REACT_APP_DEVELOPMENT}/api/upload/uid`,
+            options
+          );
           console.log(process.env.REACT_APP_DEVELOPMENT);
         } catch (error) {
           console.log(error);

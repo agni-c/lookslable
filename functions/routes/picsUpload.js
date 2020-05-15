@@ -6,13 +6,12 @@ var admin = require("firebase-admin");
 
 const db = admin.firestore();
 const profileRef = db.collection("User Profile");
-
+let uid = null;
 /*
  * This module uploads files to cloud storage of google
  * returns json after saving file reference with form data
  */
 router.post("/", filesUpload, (req, res) => {
-	let uid = req.session.uid;
 	const glaryRef = profileRef.doc(uid).collection("Glary");
 	const accountRef = profileRef.doc(uid);
 	const files = req.files;
@@ -47,7 +46,7 @@ router.post("/", filesUpload, (req, res) => {
  * get all the p user data
  */
 router.get("/usergallery", (req, res) => {
-	let uid = req.session.uid;
+	
 	console.log("Hi this is user gallery", uid);
 
 	const glaryRef = profileRef.doc(uid).collection("Glary");
@@ -72,5 +71,10 @@ router.get("/allUsergallery", (req, res) => {
 		})
 		.catch((err) => console.log(err));
 });
+
+router.post('/uid',(req,res)=>{
+	console.log(req.body);
+	uid = req.body.uid;
+})
 
 module.exports = router;
