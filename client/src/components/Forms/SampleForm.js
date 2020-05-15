@@ -6,7 +6,7 @@ const SampleForm = () => {
 	return (
 		<div className='contain'>
 			<form
-				action={`${process.env.DOMAIN}/api/webcam/form`}
+				action='https://spring-internship.web.app/api/webcam/form'
 				method='post'
 				enctype='multipart/form-data'>
 				<Form.Group as={Row}>

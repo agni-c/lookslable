@@ -22,9 +22,9 @@ router.post("/", (req, res) => {
 	// req.session.uid = profile.uid;
 	//session
 	uid = profile.uid;
-	sessionstorage.setItem("uid", uid);
+	req.session.uid = uid;
 	const docRef = profileRef.doc(uid);
-
+	console.log(req.session.uid);
 	docRef.set(profile, { merge: true });
 	res.end();
 });

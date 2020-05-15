@@ -59,7 +59,7 @@ export default class WebCam extends Component {
 		};
 
 		try {
-			await fetch(`${process.env.DOMAIN}/api/webcam`, options);
+			await fetch("https://spring-internship.web.app/api/webcam", options);
 		} catch (error) {
 			console.log(error);
 		}

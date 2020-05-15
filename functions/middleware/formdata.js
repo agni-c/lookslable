@@ -17,7 +17,7 @@ exports.filesUpload = function (req, res, next) {
 	});
 
 	const fields = {};
-	const files = [];
+	let files = {};
 	const fileWrites = [];
 	// Note: os.tmpdir() points to an in-memory file system on GCF
 	// Thus, any files in it must fit in the instance's memory.
@@ -44,12 +44,12 @@ exports.filesUpload = function (req, res, next) {
 				file.on("end", () => remoteStream.end());
 				remoteStream.on("finish", () => {
 					// TODO can I push this file withoud writing in function?
-					files.push({
+					files = {
 						fieldname,
 						originalname: filename,
 						encoding,
 						mimetype,
-					});
+					};
 					resolve();
 				});
 

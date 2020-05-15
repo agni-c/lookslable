@@ -45,7 +45,7 @@ class HeroMain extends Component {
 				console.log(profile);
 
 				try {
-					await fetch(`${process.env.DOMAIN}/api/profile`, options);
+					await fetch(`https://spring-internship.web.app/api/profile`, options);
 				} catch (error) {
 					console.log(error);
 				}
