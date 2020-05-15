@@ -43,7 +43,6 @@ exports.filesUpload = function (req, res, next) {
 			new Promise((resolve, reject) => {
 				file.on("end", () => remoteStream.end());
 				remoteStream.on("finish", () => {
-					// TODO can I push this file withoud writing in function?
 					files = {
 						fieldname,
 						originalname: filename,

@@ -16,7 +16,7 @@ const profileRef = db.collection("User Profile");
 //----------------------------------------
 
 //Creating A user profile
-//TODO profile
+
 router.post("/", (req, res) => {
 	const profile = req.body;
 	// req.session.uid = profile.uid;

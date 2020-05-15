@@ -46,7 +46,12 @@ class HeroMain extends Component {
 				console.log(profile);
 
 				try {
-					await fetch(`https://spring-internship.web.app/api/profile`, options);
+					//REVIEW  PROFILE LINK
+					await fetch(
+						`${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
+						options
+					);
+					console.log(process.env.REACT_APP_DEVELOPMENT);
 				} catch (error) {
 					console.log(error);
 				}

@@ -9,7 +9,8 @@ export default class App extends React.Component {
 			<div className='contain'>
 				<div>Testing</div>
 				<form
-					action='https://spring-internship.web.app/api/upload'
+					// REVIEW upload link
+					action={`${process.env.REACT_APP_DEVELOPMENT}/api/upload`}
 					method='post'
 					enctype='multipart/form-data'>
 					<Form.Group>

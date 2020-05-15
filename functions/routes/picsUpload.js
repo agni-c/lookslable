@@ -12,7 +12,6 @@ const profileRef = db.collection("User Profile");
  * returns json after saving file reference with form data
  */
 router.post("/", filesUpload, (req, res) => {
-	//TODO make a reference to image array attribute
 	let uid = req.session.uid;
 	const glaryRef = profileRef.doc(uid).collection("Glary");
 	const accountRef = profileRef.doc(uid);

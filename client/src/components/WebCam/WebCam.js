@@ -36,49 +36,50 @@ import { Button } from "react-bootstrap";
 // export default WebCam;
 
 export default class WebCam extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { screenshot: null };
-  }
-  videoConstraints = {
-    width: 300,
-    height: 300,
-    facingMode: "user",
-  };
+	constructor(props) {
+		super(props);
+		this.state = { screenshot: null };
+	}
+	videoConstraints = {
+		width: 300,
+		height: 300,
+		facingMode: "user",
+	};
 
-  async screenshot() {
-    var image64 = this.refs.webcam.getScreenshot();
-    const screenshot = { image64 };
-    this.setState({ screenshot: screenshot });
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(screenshot),
-    };
+	async screenshot() {
+		var image64 = this.refs.webcam.getScreenshot();
+		const screenshot = { image64 };
+		this.setState({ screenshot: screenshot });
+		const options = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(screenshot),
+		};
 
-    try {
-      await fetch("https://spring-internship.web.app/api/webcam", options);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  render() {
-    return (
-      <div>
-        <Webcam
-          audio={false}
-          ref="webcam"
-          height={300}
-          width={300}
-          screenshotFormat="image/png"
-          videoConstraints={this.videoConstraints}
-        />
-        <br />
-        <Button onClick={this.screenshot.bind(this)}>Capture</Button>
-        {this.state.screenshot ? null : null}
-      </div>
-    );
-  }
+		try {
+			//REVIEW webcam link
+			await fetch(`${process.env.REACT_APP_DEVELOPMENT}/api/webcam`, options);
+		} catch (error) {
+			console.log(error);
+		}
+	}
+	render() {
+		return (
+			<div>
+				<Webcam
+					audio={false}
+					ref='webcam'
+					height={300}
+					width={300}
+					screenshotFormat='image/png'
+					videoConstraints={this.videoConstraints}
+				/>
+				<br />
+				<Button onClick={this.screenshot.bind(this)}>Capture</Button>
+				{this.state.screenshot ? null : null}
+			</div>
+		);
+	}
 }
