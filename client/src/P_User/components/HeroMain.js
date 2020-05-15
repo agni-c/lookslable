@@ -23,7 +23,7 @@ import {
 	Alert,
 	Tooltip,
 } from "react-bootstrap";
-//gibbrish
+//gibbrishddjjjojjooowoo
 class HeroMain extends Component {
 	componentDidMount() {
 		firebase.auth().onAuthStateChanged(async function (user) {
