@@ -1,5 +1,5 @@
 const router = require("express").Router();
-var sessionstorage = require("sessionstorage");
+// var sessionstorage = require("sessionstorage");
 const { filesUpload } = require("../middleware");
 
 var admin = require("firebase-admin");
@@ -12,24 +12,24 @@ const profileRef = db.collection("User Profile");
  * returns json after saving file reference with form data
  */
 router.post("/", filesUpload, (req, res) => {
-	//TODO make a reference to image array attribute
-	let uid = sessionstorage.getItem("uid");
+	let uid = req.session.uid;
 	const glaryRef = profileRef.doc(uid).collection("Glary");
 	const accountRef = profileRef.doc(uid);
 	const files = req.files;
 	//pushing urls and names to array
-	let imageURLs = [];
-	let imageNames = [];
-	files.forEach((file) => {
-		imageURLs.push(
-			`https://storage.googleapis.com/spring-internship.appspot.com/${file.originalname}`
-		);
-		imageNames.push(file.originalname);
-	});
+	// let imageURLs = [];
+	// let imageNames = [];
+	// files.forEach((file) => {
+	// 	imageURLs.push(
+	// 		`https://storage.googleapis.com/spring-internship.appspot.com/${file.originalname}`
+	// 	);
+	// 	imageNames.push(file.originalname);
+	// });
 	//obj which will be saved to db (after parsing form-data)
 	const session = {
-		images: imageURLs,
-		names: imageNames,
+		puid: uid,
+		images: `https://storage.googleapis.com/spring-internship.appspot.com/${files.originalname}`,
+		names: files.originalname,
 		landmark: req.body.landmark,
 		location: req.body.location,
 		price: req.body.price,
@@ -47,9 +47,11 @@ router.post("/", filesUpload, (req, res) => {
  * get all the p user data
  */
 router.get("/usergallery", (req, res) => {
-	let uid = sessionstorage.getItem("uid");
-	const glaryRef = profileRef.doc(uid).collection("Glary");
+	let uid = req.session.uid;
+	console.log("Hi this is user gallery", uid);
 
+	const glaryRef = profileRef.doc(uid).collection("Glary");
+	console.log(uid);
 	const userGlary = async () => {
 		const snapshot = await glaryRef.get();
 		const docs = snapshot.docs.map((doc) => doc.data());

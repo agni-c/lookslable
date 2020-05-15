@@ -1,0 +1,12 @@
+.popover {
+  max-width: 150%;
+
+  /* Max Width of the popover (depending on the container!) */
+}
+@media only screen and (max-width: 500px) {
+  .backc {
+    color: blueviolet;
+    margin-left: 0px;
+    max-width: 90%;
+  }
+}

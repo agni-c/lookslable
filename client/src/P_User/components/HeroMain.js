@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./main.css";
-import AppForm from "./Form/App";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import firebase from "firebase";
-import ToollTip from "../../components/ToolTip";
+import Gallery from "../../components/Gallery/Gallery";
+import ToollTip from "../../components/ToolTip/ToolTip";
+import Tooltipform from "../../components/ToolTip/ToolTipForm";
 import {
   Tab,
   Tabs,
@@ -45,10 +46,12 @@ class HeroMain extends Component {
         console.log(profile);
 
         try {
+          //REVIEW  PROFILE LINK
           await fetch(
-            "http://localhost:5000/spring-internship/us-central1/app/api/profile",
+            `${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
             options
           );
+          console.log(process.env.REACT_APP_DEVELOPMENT);
         } catch (error) {
           console.log(error);
         }
@@ -74,7 +77,7 @@ class HeroMain extends Component {
                   <Nav.Link eventKey="second">My bookings</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Upload Image</Nav.Link>
+                  <Nav.Link eventKey="third">Uploaded Images</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="fourth">Support</Nav.Link>
@@ -93,7 +96,7 @@ class HeroMain extends Component {
                 <br />
                 <Tab.Pane eventKey="first">
                   {" "}
-                  <Button variant="outline-dark">Submit Location Images</Button>
+                  <Tooltipform />
                 </Tab.Pane>
                 <br />
 
@@ -107,7 +110,7 @@ class HeroMain extends Component {
                   <p>Lorem</p>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                  <AppForm />
+                  <Gallery />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
                   {/* <WebCam /> */}

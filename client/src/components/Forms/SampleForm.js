@@ -1,12 +1,13 @@
 import React from "react";
 import { Form, Button, Col, Row, Toast } from "react-bootstrap";
-import WebCam from "./WebCam";
+import WebCam from "../WebCam/WebCam";
 
 const SampleForm = () => {
 	return (
 		<div className='contain'>
 			<form
-				action='http://localhost:5000/spring-internship/us-central1/app/api/webcam/form'
+				//REVIEW form link
+				action={`${process.env.REACT_APP_DEVELOPMENT}/api/webcam/form`}
 				method='post'
 				enctype='multipart/form-data'>
 				<Form.Group as={Row}>
@@ -63,13 +64,7 @@ const SampleForm = () => {
 				<br />
 				<br />
 
-				<Button
-					variant='outline-primary'
-					className='mb-2'
-					type='submit'
-					onClick={(e) => {
-						e.preventDefault();
-					}}>
+				<Button variant='outline-primary' className='mb-2' type='submit'>
 					Upload
 				</Button>
 			</form>
