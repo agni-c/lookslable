@@ -34,5 +34,15 @@ app.use("/api/uploaddetails",uploaddetails);
 //popular location
 const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation",popularlocation);
+
+const booking = require("./routes/booking");
+app.use("/api/booking",booking);
+
+const iuserevent = require("./routes/iuserevent");
+app.use("/api/iuserevent",iuserevent);
+
+const puserevent = require("./routes/puserevent");
+app.use("/api/puserevent",puserevent);
+
 //Listening
 exports.app = functions.https.onRequest(app);
