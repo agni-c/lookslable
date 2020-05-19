@@ -10,7 +10,9 @@ export default class App extends React.Component {
         <form
           // REVIEW upload link
 
-          action={`${process.env.REACT_APP_DEVELOPMENT}/api/upload`}
+          action={
+            "http://localhost:5000/spring-internship/us-central1/app/api/upload"
+          }
           method="post"
           enctype="multipart/form-data"
         >

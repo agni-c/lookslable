@@ -13,7 +13,7 @@ class Upload extends React.Component {
 
   //   axios
   //     .post(
-  //       "http://localhost:3000/spring-internship/us-central1/app/api/upload",
+  //       "http:///spring-internship/us-central1/app/api/upload",
   //       data
   //     )
   //     .then((res) => {

@@ -19,6 +19,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import Add from "./Add/Add";
+import SubmitLocationImages from "./SubmitLocationImages/SubmitLocationImages";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 class Location extends React.Component {
   HomeData = () => {
@@ -29,7 +30,7 @@ class Location extends React.Component {
         </Container>
         <Container>
           <Row>
-            <Link to="/user/location/add">
+            <Link to="/user/location/add" style={{ textDecoration: "none" }}>
               <Col md>
                 <Card
                   bg="info"
@@ -38,16 +39,16 @@ class Location extends React.Component {
                 >
                   <Card.Header style={{ color: "white" }}>Add</Card.Header>
                   <Card.Body style={{ color: "white" }}>
-                    <Card.Title>Success Card Title </Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
+                    <Card.Title>Add </Card.Title>
+                    <Card.Text>Some Text</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
             </Link>
-            <Link to="/user/location/submit-location-images">
+            <Link
+              to="/user/location/submit-location-images"
+              style={{ textDecoration: "none" }}
+            >
               <Col md>
                 <Card
                   bg="danger"
@@ -58,16 +59,16 @@ class Location extends React.Component {
                     Submit Location Images
                   </Card.Header>
                   <Card.Body style={{ color: "white" }}>
-                    <Card.Title>Success Card Title </Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
+                    <Card.Title> Submit Location Images </Card.Title>
+                    <Card.Text>Some Text</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
             </Link>
-            <Link to="/user/location/edit-location">
+            <Link
+              to="/user/location/edit-location"
+              style={{ textDecoration: "none" }}
+            >
               <Col md>
                 <Card
                   bg="dark"
@@ -77,26 +78,12 @@ class Location extends React.Component {
                   <Card.Header style={{ color: "white" }}>Header</Card.Header>
                   <Card.Body style={{ color: "white" }}>
                     <Card.Title>Edit Location </Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
+                    <Card.Text>Some Text</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
             </Link>
           </Row>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </Container>
       </div>
     );
@@ -108,6 +95,11 @@ class Location extends React.Component {
           <Switch>
             <Route path="/user/location" exact component={this.HomeData} />
             <Route path="/user/location/add" exact component={Add} />
+            <Route
+              path="/user/location/submit-location-images"
+              exact
+              component={SubmitLocationImages}
+            />
             {/* <Route
             path="/user/location/submit-location-images"
             exact

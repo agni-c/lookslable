@@ -1,6 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
+import axios from "axios";
 import "./styles.css";
 
 export default function Gallery() {
@@ -9,6 +10,20 @@ export default function Gallery() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  const getGallery = () => {
+    axios
+      .post(
+        "http://localhost:5000/spring-internship/us-central1/app/api/upload/usergallery"
+      )
+      .then((response) => {
+        console.log(response);
+      });
+  };
+  useEffect(() => {
+    getGallery();
+  }, []);
+
   return (
     <div>
       <Carousel

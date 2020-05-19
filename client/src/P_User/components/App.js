@@ -6,5 +6,5 @@ import "./main.css";
 import NavBar from "./NavBar";
 import HeroMain from "./HeroMain";
 export default function App() {
-	return <SignInScreen />;
+  return <SignInScreen />;
 }

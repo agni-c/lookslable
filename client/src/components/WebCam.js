@@ -41,8 +41,8 @@ export default class WebCam extends Component {
     this.state = { screenshot: null };
   }
   videoConstraints = {
-    width: 300,
-    height: 300,
+    width: 350,
+    height: 350,
     facingMode: "user",
   };
 
@@ -59,9 +59,8 @@ export default class WebCam extends Component {
     };
 
     try {
-      //REVIEW webcam link
       await fetch(
-        `http://localhost:5000/spring-internship/us-central1/app/api/webcam`,
+        "http://localhost:5000/spring-internship/us-central1/app/api/webcam",
         options
       );
     } catch (error) {
@@ -74,8 +73,8 @@ export default class WebCam extends Component {
         <Webcam
           audio={false}
           ref="webcam"
-          height={300}
-          width={300}
+          height={350}
+          width={350}
           screenshotFormat="image/png"
           videoConstraints={this.videoConstraints}
         />

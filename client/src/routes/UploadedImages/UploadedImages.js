@@ -1,7 +1,14 @@
 import React from "react";
-
+import Gallery from "../../components/Gallery/Gallery";
+import "./styles.css";
 const UploadedImages = () => {
-  return <h1>This is UploadedImages</h1>;
+  return (
+    <>
+      <div className="my-container">
+        <Gallery />
+      </div>
+    </>
+  );
 };
 
 export default UploadedImages;
