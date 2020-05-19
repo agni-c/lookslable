@@ -1,6 +1,7 @@
+/* Route => /api/upload */
 const router = require("express").Router();
 
-// var sessionstorage = require("sessionstorage");
+var sessionstorage = require("sessionstorage");
 const fireStore = require("@google-cloud/firestore");
 const { v4 } = require("uuid");
 const { Storage } = require("@google-cloud/storage");
@@ -12,15 +13,16 @@ const storage = new Storage();
 const bucket = storage.bucket("spring-internship.appspot.com");
 //REFS
 const profileRef = db.collection("User Profile");
-
+let selfieId = null;
 //----------------------------------------
 
 /**
- * get
+ * get - /api/webcam
  * returns json data from firestore
  */
-router.get("/", (request, response) => {
-	let uid = request.session.uid;
+router.get("/", (request, response, next) => {
+	let uid = sessionstorage.getItem("uid");
+	// let uid = request.session.uid;
 	const webCamRef = profileRef.doc(uid).collection("Web Cam");
 	// response.json(uid);
 	webCamRef
@@ -38,13 +40,15 @@ router.get("/", (request, response) => {
 });
 
 /**
- * web cam route
- * post
+ *
+ * post - /api/webcam
  * clicks photo saves to cloud storage saves to data base
  */
 
-router.post("/", (request, response) => {
-	let uid = request.session.uid;
+router.post("/", (request, response, next) => {
+	// let uid = request.session.uid;
+	let uid = sessionstorage.getItem("uid");
+
 	const data = request.body;
 
 	// const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
@@ -60,7 +64,7 @@ router.post("/", (request, response) => {
 	// console.log(data.timestamp);
 
 	data._id = v4().split("-").pop();
-	request.session.selfieId = data._id;
+	selfieId = data._id;
 	//----------------
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);
 
@@ -80,7 +84,9 @@ router.post("/", (request, response) => {
 			console.log(err);
 		}
 		//setting firestore image attribute to the url
-		data.image64 = `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`;
+		data.image64 = encodeURI(
+			`https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`
+		);
 		webCamRef.set(data, { merge: true }); // can send to firestore
 		console.log("upload finished");
 	});
@@ -88,9 +94,14 @@ router.post("/", (request, response) => {
 	response.end();
 });
 
-router.post("/form", filesUpload, (req, res) => {
-	const selfieId = req.session.selfieId;
-	const uid = req.session.uid;
+/**
+ * post - /api/webcam/form
+ * sends fields  to data base where selfie resides
+ */
+router.post("/form", filesUpload, (req, res, next) => {
+	// const uid = req.session.uid;
+	let uid = sessionstorage.getItem("uid");
+
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
 	//set the form in an object
 	const infoData = {

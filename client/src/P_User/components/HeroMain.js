@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./main.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import firebase from "firebase";
+
 import Gallery from "../../components/Gallery/Gallery";
 import ToollTip from "../../components/ToolTip/ToolTip";
 import Tooltipform from "../../components/ToolTip/ToolTipForm";
@@ -45,24 +46,21 @@ class HeroMain extends Component {
 				};
 				console.log(profile);
 
-        try {
-          //REVIEW  PROFILE LINK
-          await fetch(
-            `${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
-            options
-          );
-          await fetch(
-            `${process.env.REACT_APP_DEVELOPMENT}/api/upload/uid`,
-            options
-          );
-          console.log(process.env.REACT_APP_DEVELOPMENT);
-        } catch (error) {
-          console.log(error);
-        }
-        // console.log(res);
-      }
-    });
-  }
+				try {
+					//REVIEW  PROFILE LINK
+					await fetch(
+						`${process.env.REACT_APP_DEVELOPMENT}/api/profile`,
+						options
+					);
+
+					console.log(process.env.REACT_APP_DEVELOPMENT);
+				} catch (error) {
+					console.log(error);
+				}
+				// console.log(res);
+			}
+		});
+	}
 
 	render() {
 		return (
