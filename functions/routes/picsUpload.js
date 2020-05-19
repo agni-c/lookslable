@@ -1,17 +1,21 @@
 const router = require("express").Router();
-// var sessionstorage = require("sessionstorage");
+var sessionstorage = require("sessionstorage");
 const { filesUpload } = require("../middleware");
-
+const util = require("util");
 var admin = require("firebase-admin");
 
 const db = admin.firestore();
 const profileRef = db.collection("User Profile");
-let uid = null;
+
+// let uid = req.session.uid;
 /*
+ * post - /api/upload
  * This module uploads files to cloud storage of google
  * returns json after saving file reference with form data
  */
-router.post("/", filesUpload, (req, res) => {
+router.post("/", filesUpload, (req, res, next) => {
+	// let uid = req.session.uid;
+	let uid = sessionstorage.getItem("uid");
 	const glaryRef = profileRef.doc(uid).collection("Glary");
 	const accountRef = profileRef.doc(uid);
 	const files = req.files;
@@ -27,7 +31,9 @@ router.post("/", filesUpload, (req, res) => {
 	//obj which will be saved to db (after parsing form-data)
 	const session = {
 		puid: uid,
-		images: `https://storage.googleapis.com/spring-internship.appspot.com/${files.originalname}`,
+		images: encodeURI(
+			`https://storage.googleapis.com/spring-internship.appspot.com/${files.originalname}`
+		),
 		names: files.originalname,
 		landmark: req.body.landmark,
 		location: req.body.location,
@@ -42,15 +48,18 @@ router.post("/", filesUpload, (req, res) => {
 	});
 	res.json(session);
 });
+
 /**
- * get all the p user data
+ * get single p user data of gallery collection
+ * get -  /api/upload/usergallery
  */
-router.get("/usergallery", (req, res) => {
-	
+router.get("/usergallery", (req, res, next) => {
+	// let uid = req.session.uid;
+	let uid = sessionstorage.getItem("uid");
 	console.log("Hi this is user gallery", uid);
 
 	const glaryRef = profileRef.doc(uid).collection("Glary");
-	console.log(uid);
+	// console.log(uid);
 	const userGlary = async () => {
 		const snapshot = await glaryRef.get();
 		const docs = snapshot.docs.map((doc) => doc.data());
@@ -59,7 +68,11 @@ router.get("/usergallery", (req, res) => {
 	userGlary();
 });
 
-router.get("/allUsergallery", (req, res) => {
+/**
+ * get all the  user data of gallery collection
+ * get -  /api/upload/allUsergallery
+ */
+router.get("/allUsergallery", (req, res, next) => {
 	let json = new Array();
 	const Ref = db.collectionGroup("Glary");
 	Ref.get()
@@ -72,9 +85,9 @@ router.get("/allUsergallery", (req, res) => {
 		.catch((err) => console.log(err));
 });
 
-router.post('/uid',(req,res)=>{
-	console.log(req.body);
-	uid = req.body.uid;
-})
+// router.post("/uid", (req, res) => {
+// 	console.log(req.body);
+// 	uid = req.body.uid;
+// });
 
 module.exports = router;
