@@ -21,6 +21,8 @@ import {
 import Add from "./Add/Add";
 import SubmitLocationImages from "./SubmitLocationImages/SubmitLocationImages";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import EditLocation from "../../components/EditLocation/EditLocation";
+import Gallery from "../../components/Gallery/GalleryTesting/App";
 class Location extends React.Component {
   HomeData = () => {
     return (
@@ -32,11 +34,7 @@ class Location extends React.Component {
           <Row>
             <Link to="/user/location/add" style={{ textDecoration: "none" }}>
               <Col md>
-                <Card
-                  bg="info"
-                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                  style={{ width: "18rem" }}
-                >
+                <Card bg="info" style={{ width: "18rem" }}>
                   <Card.Header style={{ color: "white" }}>Add</Card.Header>
                   <Card.Body style={{ color: "white" }}>
                     <Card.Title>Add </Card.Title>
@@ -50,11 +48,7 @@ class Location extends React.Component {
               style={{ textDecoration: "none" }}
             >
               <Col md>
-                <Card
-                  bg="danger"
-                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                  style={{ width: "18rem" }}
-                >
+                <Card bg="danger" style={{ width: "18rem" }}>
                   <Card.Header style={{ color: "white" }}>
                     Submit Location Images
                   </Card.Header>
@@ -70,14 +64,28 @@ class Location extends React.Component {
               style={{ textDecoration: "none" }}
             >
               <Col md>
-                <Card
-                  bg="dark"
-                  // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                  style={{ width: "18rem" }}
-                >
-                  <Card.Header style={{ color: "white" }}>Header</Card.Header>
+                <Card bg="dark" style={{ width: "18rem" }}>
+                  <Card.Header style={{ color: "white" }}>
+                    Edit location
+                  </Card.Header>
                   <Card.Body style={{ color: "white" }}>
                     <Card.Title>Edit Location </Card.Title>
+                    <Card.Text>Some Text</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Link>
+            <Link
+              to="/user/location/uploded-images"
+              style={{ textDecoration: "none" }}
+            >
+              <Col md>
+                <Card bg="success" style={{ width: "18rem" }}>
+                  <Card.Header style={{ color: "white" }}>
+                    Uploaded Images
+                  </Card.Header>
+                  <Card.Body style={{ color: "white" }}>
+                    <Card.Title>Uploaded Images</Card.Title>
                     <Card.Text>Some Text</Card.Text>
                   </Card.Body>
                 </Card>
@@ -99,6 +107,16 @@ class Location extends React.Component {
               path="/user/location/submit-location-images"
               exact
               component={SubmitLocationImages}
+            />
+            <Route
+              path="/user/location/edit-location"
+              exact
+              component={EditLocation}
+            />
+            <Route
+              path="/user/location/uploded-images"
+              exact
+              component={Gallery}
             />
             {/* <Route
             path="/user/location/submit-location-images"

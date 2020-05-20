@@ -1,0 +1,113 @@
+.testing-101 {
+  width: 100vw;
+  height: 100vh;
+  /* background: #151515; */
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 150px;
+  margin-top: 5px;
+  flex-direction: row;
+}
+
+.example-container {
+  width: 70vw;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
+
+img {
+  position: absolute;
+  max-width: 70vw;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btnn {
+  display: none;
+  height: 20px;
+}
+.btnn {
+  border: none;
+  /* border-radius: 19px;
+  color: yellowgreen; */
+  height: 20px;
+  width: 20vw;
+  height: 20vh;
+}
+.testing-101 button {
+  position: relative;
+  top: 210px;
+  left: 375px;
+  height: 100px;
+  width: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .testing-101 {
+    width: 90vw;
+    height: 90vh;
+    /* background: #151515; */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-left: 55px;
+    margin-top: 225px;
+    flex-direction: row;
+  }
+  .testing-101 button {
+    top: 0px;
+    left: 50px;
+    height: 80px;
+    width: 150px;
+    border-radius: 50%;
+  }
+  .container-my {
+    height: 50vh;
+    width: 50vh;
+  }
+}

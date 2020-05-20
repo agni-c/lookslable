@@ -107,9 +107,11 @@ class HeroMain extends Component {
                   // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                   style={{ width: "18rem" }}
                 >
-                  <Card.Header style={{ color: "white" }}>Header</Card.Header>
+                  <Card.Header style={{ color: "white" }}>
+                    Drive Link
+                  </Card.Header>
                   <Card.Body style={{ color: "white" }}>
-                    <Card.Title>Uploaded Images </Card.Title>
+                    <Card.Title>History </Card.Title>
                     <Card.Text>Some Text</Card.Text>
                   </Card.Body>
                 </Card>

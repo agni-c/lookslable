@@ -1,14 +1,21 @@
 import React from "react";
-import Gallery from "../../components/Gallery/Gallery";
+// import App from "../../components/Gallery/GalleryTesting/App";
 import "./styles.css";
-const UploadedImages = () => {
+import { Jumbotron, Button } from "react-bootstrap";
+const DriveLink = () => {
   return (
     <>
       <div className="my-container">
-        <Gallery />
+        <Jumbotron>
+          <h1>History</h1>
+          <p>Photographer</p>
+          <p>
+            <Button variant="primary">Drive Link</Button>
+          </p>
+        </Jumbotron>
       </div>
     </>
   );
 };
 
-export default UploadedImages;
+export default DriveLink;
