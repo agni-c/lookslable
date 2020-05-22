@@ -55,12 +55,13 @@ class HeroMain extends Component {
             },
             body: JSON.stringify(profile),
           };
-          localStorage.setItem("puid", profile.uid);
-          console.log(profile.uid);
+          console.log(profile);
 
           try {
             await fetch(
-              `http://localhost:5000/spring-internship/us-central1/app/api/profile/${user.uid}`,
+              `http://localhost:5000/spring-internship/us-central1/app/api/profile/${
+                firebase.auth().currentUser.uid
+              }`,
               options
             );
           } catch (error) {
@@ -80,7 +81,6 @@ class HeroMain extends Component {
           <h1 className="center-align">
             Welcome Photographer!
           </h1>
-          {/* {console.log(uid)} */}
           <Row className="row">
             <Link
               to="/user/location"

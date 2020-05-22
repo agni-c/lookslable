@@ -13,7 +13,9 @@ const SampleForm = () => {
     <div className="contain">
       <form
         //REVIEW form link
-        action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form`}
+        action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
+          firebase.auth().currentUser
+        }`}
         method="post"
         enctype="multipart/form-data"
       >

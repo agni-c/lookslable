@@ -39,24 +39,17 @@ import GeoLocation from "./Location";
 export default class WebCam extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      screenshot: null,
-      uid: localStorage.getItem("puid"),
-    };
+    this.state = { screenshot: null };
   }
   videoConstraints = {
     width: 350,
     height: 350,
     facingMode: "user",
   };
-  clickHandler = () => {
-    console.log(this.state);
-  };
 
   async screenshot() {
     var image64 = this.refs.webcam.getScreenshot();
     const screenshot = { image64 };
-
     this.setState({ screenshot: screenshot });
     const options = {
       method: "POST",
@@ -68,7 +61,9 @@ export default class WebCam extends Component {
 
     try {
       await fetch(
-        "http://localhost:5000/spring-internship/us-central1/app/api/webcam",
+        `http://localhost:5000/spring-internship/us-central1/app/api/webcam/${
+          firebase.auth().currentUser.uid
+        }`,
         options
       );
     } catch (error) {
@@ -87,11 +82,7 @@ export default class WebCam extends Component {
           videoConstraints={this.videoConstraints}
         />
         <br />
-        <Button
-          onClick={
-            (this.screenshot.bind(this), this.clickHandler)
-          }
-        >
+        <Button onClick={this.screenshot.bind(this)}>
           Capture
         </Button>
         {this.state.screenshot ? null : null}

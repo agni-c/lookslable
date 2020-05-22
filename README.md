@@ -11,17 +11,17 @@ Index.js : Node JS server code.
 
 ## ROUTES & FUNCTIONS
 
-`/api/profile`
+`/api/profile/:uid`
 
 - Creates Profile upon authentication & Sets profile id(uid)
 
-`/api/webcam`
+`/api/webcam/:uid`
 
 - GET protocol gives you data of webcam clicked photos
 
 -POST protocol stores images to storage and logs it into database(Firestore)
 
-`/api/upload`
+`/api/upload/:uid`
 
 - Module uses Form Data to upload pictures and other fields.
 - Form data can carry a payload (10mb limit) which save files to storage and logs it to database.

@@ -17,11 +17,11 @@ let selfieId = null;
 //----------------------------------------
 
 /**
- * get - /api/webcam
+ * get - /api/webcam/:uid
  * returns json data from firestore
  */
-router.get("/", (request, response, next) => {
-	let uid = sessionstorage.getItem("uid");
+router.get("/:uid", (request, response, next) => {
+	let uid = request.params.uid;
 	// let uid = request.session.uid;
 	const webCamRef = profileRef.doc(uid).collection("Web Cam");
 	// response.json(uid);
@@ -41,27 +41,15 @@ router.get("/", (request, response, next) => {
 
 /**
  *
- * post - /api/webcam
+ * post - /api/webcam/:uid
  * clicks photo saves to cloud storage saves to data base
  */
 
-router.post("/", (request, response, next) => {
+router.post("/:uid", (request, response, next) => {
 	// let uid = request.session.uid;
-	let uid = sessionstorage.getItem("uid");
+	let uid = request.params.uid;
 
 	const data = request.body;
-
-	// const timestamp = new Date(fireStore.Timestamp.now().seconds * 1000);
-	// (date = timestamp.getDate()),
-	// 	(month = timestamp.getMonth()),
-	// 	(year = timestamp.getFullYear()),
-	// 	(hours = timestamp.getHours()),
-	// 	(minutes = timestamp.getMinutes());
-
-	// data.timestamp = `${date}/${month}/${year} || ${
-	// 	hours >= 12 ? hours - 12 : hours
-	// }:${minutes}`;
-	// console.log(data.timestamp);
 
 	data._id = v4().split("-").pop();
 	selfieId = data._id;
@@ -98,9 +86,9 @@ router.post("/", (request, response, next) => {
  * post - /api/webcam/form
  * sends fields  to data base where selfie resides
  */
-router.post("/form", filesUpload, (req, res, next) => {
+router.post("/form/:uid", filesUpload, (req, res, next) => {
 	// const uid = req.session.uid;
-	let uid = sessionstorage.getItem("uid");
+	let uid = req.params.uid;
 
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
 	//set the form in an object

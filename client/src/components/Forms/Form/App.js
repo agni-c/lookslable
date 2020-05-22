@@ -1,8 +1,6 @@
 import React from "react";
 import "./styles.css";
 import Upload from "./Upload";
-import axios from "axios";
-import firebase from "firebase";
 import {
   Container,
   Button,
@@ -10,20 +8,18 @@ import {
   Col,
   Row,
 } from "react-bootstrap";
+import firebase from "firebase";
 
 export default class App extends React.Component {
   render() {
-    // const p_uid = localStorage.getItem("puid");
-    // console.log(p_uid);
-    // this.setState({ puid: p_uid });
     return (
       <div className="contain">
         <form
           // REVIEW upload link
 
-          action={
-            "http://localhost:5000/spring-internship/us-central1/app/api/upload"
-          }
+          action={`http://localhost:5000/spring-internship/us-central1/app/api/upload/${
+            firebase.auth().currentUser.uid
+          }`}
           method="post"
           enctype="multipart/form-data"
         >
@@ -87,20 +83,29 @@ export default class App extends React.Component {
             <br />
             <br />
           </Form.Group>
-          {/* <Form.Group as={Row}>
-            <Form.Label column sm={3} for="time-intervel">
-              Time Intervel
+          <Form.Group as={Row}>
+            <Form.Label column sm={3} for="time">
+              Date and Time
             </Form.Label>
             <Col sm="9">
-              <Form.Control type="text" id="time" name="time-intervel" />
+              <Form.Control
+                type="datetime-local"
+                id="time"
+                name="time"
+              />
             </Col>
-          </Form.Group> */}
+          </Form.Group>
           <br />
           <br />
 
           <label class="location">
-            {/* <input type="radio" name="location" value="Indoor" /> Indoor
-            <br /> */}
+            <input
+              type="radio"
+              name="location"
+              value="Indoor"
+            />{" "}
+            Indoor
+            <br />
             <input
               type="radio"
               name="location"

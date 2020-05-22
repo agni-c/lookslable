@@ -9,26 +9,18 @@ const profileRef = db.collection("User Profile");
 
 // let uid = req.session.uid;
 /*
- * post - /api/upload
+ * post - /api/upload/:uid
  * This module uploads files to cloud storage of google
  * returns json after saving file reference with form data
  */
-router.post("/", filesUpload, (req, res, next) => {
+router.post("/:uid", filesUpload, (req, res, next) => {
 	// let uid = req.session.uid;
-	let uid = sessionstorage.getItem("uid");
+	// let uid = sessionstorage.getItem("uid");
+	let uid = req.params.uid;
 	const glaryRef = profileRef.doc(uid).collection("Glary");
 	const accountRef = profileRef.doc(uid);
 	const files = req.files;
-	//pushing urls and names to array
-	// let imageURLs = [];
-	// let imageNames = [];
-	// files.forEach((file) => {
-	// 	imageURLs.push(
-	// 		`https://storage.googleapis.com/spring-internship.appspot.com/${file.originalname}`
-	// 	);
-	// 	imageNames.push(file.originalname);
-	// });
-	//obj which will be saved to db (after parsing form-data)
+
 	const session = {
 		puid: uid,
 		images: encodeURI(
@@ -51,9 +43,9 @@ router.post("/", filesUpload, (req, res, next) => {
 
 /**
  * get single p user data of gallery collection
- * get -  /api/upload/usergallery
+ * get -  /api/upload/usergallery/:uid
  */
-router.get("/usergallery", (req, res, next) => {
+router.get("/usergallery/:uid", (req, res, next) => {
 	// let uid = req.session.uid;
 	let uid = sessionstorage.getItem("uid");
 	console.log("Hi this is user gallery", uid);
