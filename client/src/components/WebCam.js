@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Webcam from "react-webcam";
 import { Button } from "react-bootstrap";
+import GeoLocation from "./Location";
 
 // function WebCam() {
 //   const videoConstraints = {
@@ -38,17 +39,24 @@ import { Button } from "react-bootstrap";
 export default class WebCam extends Component {
   constructor(props) {
     super(props);
-    this.state = { screenshot: null };
+    this.state = {
+      screenshot: null,
+      uid: localStorage.getItem("puid"),
+    };
   }
   videoConstraints = {
     width: 350,
     height: 350,
     facingMode: "user",
   };
+  clickHandler = () => {
+    console.log(this.state);
+  };
 
   async screenshot() {
     var image64 = this.refs.webcam.getScreenshot();
     const screenshot = { image64 };
+
     this.setState({ screenshot: screenshot });
     const options = {
       method: "POST",
@@ -79,7 +87,13 @@ export default class WebCam extends Component {
           videoConstraints={this.videoConstraints}
         />
         <br />
-        <Button onClick={this.screenshot.bind(this)}>Capture</Button>
+        <Button
+          onClick={
+            (this.screenshot.bind(this), this.clickHandler)
+          }
+        >
+          Capture
+        </Button>
         {this.state.screenshot ? null : null}
       </div>
     );

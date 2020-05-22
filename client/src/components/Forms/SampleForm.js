@@ -1,5 +1,11 @@
 import React from "react";
-import { Form, Button, Col, Row, Toast } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Col,
+  Row,
+  Toast,
+} from "react-bootstrap";
 import WebCam from "../WebCam/WebCam";
 
 const SampleForm = () => {
@@ -12,7 +18,12 @@ const SampleForm = () => {
         enctype="multipart/form-data"
       >
         <Form.Group as={Row}>
-          <Form.Label column sm="2" size="lg" for="landmark">
+          <Form.Label
+            column
+            sm="2"
+            size="lg"
+            for="landmark"
+          >
             {" "}
             Landmark
           </Form.Label>
@@ -33,7 +44,12 @@ const SampleForm = () => {
             Price
           </Form.Label>
           <Col sm="10">
-            <Form.Control as="select" sm={10} id="price" name="price">
+            <Form.Control
+              as="select"
+              sm={10}
+              id="price"
+              name="price"
+            >
               <option value="149">149</option>
               <option value="249">249</option>
               <option value="499">499</option>
@@ -50,14 +66,28 @@ const SampleForm = () => {
             Date and Time
           </Form.Label>
           <Col sm="9">
-            <Form.Control type="datetime-local" id="time" name="time" />
+            <Form.Control
+              type="datetime-local"
+              id="time"
+              name="time"
+            />
           </Col>
         </Form.Group>
         <Form.Group>
           <label class="location">
-            <input type="radio" name="location" value="Indoor" /> Indoor
+            <input
+              type="radio"
+              name="location"
+              value="Indoor"
+            />{" "}
+            Indoor
             <br />
-            <input type="radio" name="location" value="Outdoor" /> Outdoor
+            <input
+              type="radio"
+              name="location"
+              value="Outdoor"
+            />{" "}
+            Outdoor
             <br />
           </label>
         </Form.Group>
@@ -65,7 +95,11 @@ const SampleForm = () => {
         <br />
         <br />
 
-        <Button variant="outline-primary" className="mb-2" type="submit">
+        <Button
+          variant="outline-primary"
+          className="mb-2"
+          type="submit"
+        >
           Upload
         </Button>
       </form>

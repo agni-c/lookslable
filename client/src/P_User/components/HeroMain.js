@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import "./main.css";
 import AppForm from "./Form/App";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+} from "react-router-dom";
 import firebase from "firebase";
 import ToollTip from "../../components/ToolTip";
 import Location from "../../routes/Location/Location";
@@ -31,51 +36,65 @@ import {
 
 class HeroMain extends Component {
   componentDidMount() {
-    firebase.auth().onAuthStateChanged(async function (user) {
-      if (user) {
-        const profile = {
-          name: user.displayName,
-          email: user.email,
-          photoURL: user.photoURL,
-          uid: user.uid,
-          tags: [],
-        };
-        const options = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(profile),
-        };
-        console.log(profile);
+    firebase
+      .auth()
+      .onAuthStateChanged(async function (user) {
+        if (user) {
+          const profile = {
+            name: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            uid: user.uid,
+            tags: [],
+          };
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(profile),
+          };
+          localStorage.setItem("puid", profile.uid);
+          console.log(profile.uid);
 
-        try {
-          await fetch(
-            "http://localhost:5000/spring-internship/us-central1/app/api/profile",
-            options
-          );
-        } catch (error) {
-          console.log(error);
+          try {
+            await fetch(
+              `http://localhost:5000/spring-internship/us-central1/app/api/profile/${user.uid}`,
+              options
+            );
+          } catch (error) {
+            console.log(error);
+          }
+          // console.log(res);
         }
-        // console.log(res);
-      }
-    });
+      });
   }
   Homedata = () => {
     return (
       <>
-        <Container md="auto" className="center home-container">
-          <h1 className="center-align">Welcome Photographer!</h1>
+        <Container
+          md="auto"
+          className="center home-container"
+        >
+          <h1 className="center-align">
+            Welcome Photographer!
+          </h1>
+          {/* {console.log(uid)} */}
           <Row className="row">
-            <Link to="/user/location" style={{ textDecoration: "none" }}>
+            <Link
+              to="/user/location"
+              style={{ textDecoration: "none" }}
+            >
               <Col className="column">
                 <Card
                   bg="info"
                   // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                   style={{ width: "18rem" }}
                 >
-                  <Card.Header style={{ color: "white" }}>Location</Card.Header>
+                  <Card.Header style={{ color: "white" }}>
+                    Location
+                  </Card.Header>
                   <Card.Body style={{ color: "white" }}>
                     <Card.Title>Location </Card.Title>
                     <Card.Text>Some Text</Card.Text>
@@ -83,7 +102,10 @@ class HeroMain extends Component {
                 </Card>
               </Col>
             </Link>
-            <Link to="user/my-bookings" style={{ textDecoration: "none" }}>
+            <Link
+              to="user/my-bookings"
+              style={{ textDecoration: "none" }}
+            >
               <Col className="column">
                 <Card
                   bg="danger"
@@ -100,7 +122,10 @@ class HeroMain extends Component {
                 </Card>
               </Col>
             </Link>
-            <Link to="user/uploaded-images" style={{ textDecoration: "none" }}>
+            <Link
+              to="user/uploaded-images"
+              style={{ textDecoration: "none" }}
+            >
               <Col className="column">
                 <Card
                   bg="dark"
@@ -117,10 +142,18 @@ class HeroMain extends Component {
                 </Card>
               </Col>
             </Link>
-            <Link to="user/support" style={{ textDecoration: "none" }}>
+            <Link
+              to="user/support"
+              style={{ textDecoration: "none" }}
+            >
               <Col className="column">
-                <Card bg="warning" style={{ width: "18rem" }}>
-                  <Card.Header style={{ color: "white" }}>Support</Card.Header>
+                <Card
+                  bg="warning"
+                  style={{ width: "18rem" }}
+                >
+                  <Card.Header style={{ color: "white" }}>
+                    Support
+                  </Card.Header>
                   <Card.Body style={{ color: "white" }}>
                     <Card.Title>Support</Card.Title>
                     <Card.Text>Some Text</Card.Text>
@@ -139,9 +172,21 @@ class HeroMain extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={this.Homedata} />
-          <Route path="/user/location" exact component={Location} />
-          <Route path="/user/my-bookings" exact component={MyBookings} />
-          <Route path="/user/support" exact component={Support} />
+          <Route
+            path="/user/location"
+            exact
+            component={Location}
+          />
+          <Route
+            path="/user/my-bookings"
+            exact
+            component={MyBookings}
+          />
+          <Route
+            path="/user/support"
+            exact
+            component={Support}
+          />
           <Route
             path="/user/uploaded-images"
             exact

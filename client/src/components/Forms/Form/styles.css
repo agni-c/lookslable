@@ -10,4 +10,5 @@ h2 {
 }
 .contain {
   max-width: 750px;
+  height: 100vh;
 }
