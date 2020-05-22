@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import "./styles.css";
+import firebase from "firebase";
 
 class App extends Component {
 	constructor(props) {
@@ -46,7 +47,12 @@ class App extends Component {
 		data.append("landmarks", this.state.landmark);
 		data.append("prices", this.state.price);
 		axios
-			.post("https://spring-internship.web.app/api/upload", data)
+			.post(
+				`http://localhost:5000/spring-internship/us-central1/app/api/upload/${
+					firebase.auth().currentUser.uid
+				}`,
+				data
+			)
 			.then((res) => {
 				//  print response status
 				toast.success("upload success");

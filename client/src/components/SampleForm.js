@@ -1,12 +1,14 @@
 import React from "react";
 import { Form, Button, Col, Row, Toast } from "react-bootstrap";
 import WebCam from "./WebCam";
-
+import firebase from "firebase";
 const SampleForm = () => {
 	return (
 		<div className='contain'>
 			<form
-				action='http://localhost:5000/spring-internship/us-central1/app/api/webcam/form'
+				action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
+					firebase.auth().currentUser
+				}`}
 				method='post'
 				enctype='multipart/form-data'>
 				<Form.Group as={Row}>

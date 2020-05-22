@@ -17,10 +17,10 @@ const profileRef = db.collection("User Profile");
 
 //Creating A user profile
 
-router.post("/", (req, res, next) => {
+router.post("/:uid", (req, res, next) => {
 	const profile = req.body;
 	//session
-	uid = profile.uid;
+	let uid = req.params.uid;
 	sessionstorage.setItem("uid", uid);
 	// req.session.uid = uid;
 
@@ -28,6 +28,7 @@ router.post("/", (req, res, next) => {
 	// console.log(req.session.uid);
 
 	docRef.set(profile, { merge: true });
+	console.log(uid);
 	res.end();
 });
 
