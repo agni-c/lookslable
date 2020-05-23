@@ -41,58 +41,7 @@ const SampleForm = () => {
           <br />
           <br />
         </Form.Group>
-        <Form.Group as={Row}>
-          <Form.Label column sm={2} for="price">
-            Price
-          </Form.Label>
-          <Col sm="10">
-            <Form.Control
-              as="select"
-              sm={10}
-              id="price"
-              name="price"
-            >
-              <option value="149">149</option>
-              <option value="249">249</option>
-              <option value="499">499</option>
-              <option value="999">999</option>
-              <option value="999">999</option>
-              <option value="1499">1499</option>
-            </Form.Control>
-          </Col>
-          <br />
-          <br />
-        </Form.Group>
-        <Form.Group as={Row}>
-          <Form.Label column sm={3} for="time">
-            Date and Time
-          </Form.Label>
-          <Col sm="9">
-            <Form.Control
-              type="datetime-local"
-              id="time"
-              name="time"
-            />
-          </Col>
-        </Form.Group>
-        <Form.Group>
-          <label class="location">
-            <input
-              type="radio"
-              name="location"
-              value="Indoor"
-            />{" "}
-            Indoor
-            <br />
-            <input
-              type="radio"
-              name="location"
-              value="Outdoor"
-            />{" "}
-            Outdoor
-            <br />
-          </label>
-        </Form.Group>
+
         <WebCam />
         <br />
         <br />

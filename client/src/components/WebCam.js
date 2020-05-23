@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Webcam from "react-webcam";
 import { Button } from "react-bootstrap";
 import GeoLocation from "./Location";
+import firebase from "firebase";
 
 // function WebCam() {
 //   const videoConstraints = {

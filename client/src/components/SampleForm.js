@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import {
   Form,
   Button,
@@ -7,9 +8,8 @@ import {
   Toast,
 } from "react-bootstrap";
 import WebCam from "./WebCam";
-<<<<<<< HEAD
-import GeoLocation from "./Location";
-import axios from "axios";
+import firebase from "firebase";
+
 class SampleForm extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ class SampleForm extends React.Component {
       long: null,
       price: null,
       landmark: null,
-      puid: localStorage.getItem("puid"),
+      puid: firebase.auth().currentUser.uid,
     };
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -32,6 +32,12 @@ class SampleForm extends React.Component {
   }
   testing = () => {
     console.log(this.state);
+  };
+  landmarkHandler = (value) => {
+    this.setState({ landmark: value });
+  };
+  priceHandler = (value) => {
+    this.setState({ price: value });
   };
   submitHandler = () => {
     axios
@@ -59,7 +65,9 @@ class SampleForm extends React.Component {
     return (
       <div className="contain">
         <form
-          action="http://localhost:5000/spring-internship/us-central1/app/api/webcam/form"
+          action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
+            firebase.auth().currentUser.uid
+          }`}
           method="post"
           enctype="multipart/form-data"
         >
@@ -81,9 +89,7 @@ class SampleForm extends React.Component {
                 required
                 id="landmark"
                 onChange={(event) => {
-                  this.setState({
-                    landmark: event.target.value,
-                  });
+                  this.landmarkHandler(event.target.value);
                 }}
               />
             </Col>
@@ -101,9 +107,7 @@ class SampleForm extends React.Component {
                 id="price"
                 name="price"
                 onChange={(event) => {
-                  this.setState({
-                    price: event.target.value,
-                  });
+                  this.priceHandler(event.target.value);
                 }}
               >
                 <option value="149">149</option>
@@ -117,13 +121,14 @@ class SampleForm extends React.Component {
             <br />
             <br />
           </Form.Group>
+
           <Form.Group as={Row}>
             <Form.Label column sm={3} for="time">
-              Time Intervel
+              Date and Time
             </Form.Label>
             <Col sm="9">
               <Form.Control
-                type="text"
+                type="datetime-local"
                 id="time"
                 name="time"
               />
@@ -147,20 +152,17 @@ class SampleForm extends React.Component {
               <br />
             </label>
           </Form.Group>
-
-          <br />
-          <br />
           <WebCam />
+          <br />
+          <br />
           <Button
             variant="outline-primary"
             className="mb-2"
             type="submit"
-            onClick={
-              ((e) => {
-                e.preventDefault();
-              },
-              this.testing)
-            }
+            onClick={(event) => {
+              event.preventDefault();
+              this.submitHandler();
+            }}
           >
             Upload
           </Button>
@@ -169,84 +171,5 @@ class SampleForm extends React.Component {
     );
   }
 }
-=======
-import firebase from "firebase";
-const SampleForm = () => {
-	return (
-		<div className='contain'>
-			<form
-				action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
-					firebase.auth().currentUser
-				}`}
-				method='post'
-				enctype='multipart/form-data'>
-				<Form.Group as={Row}>
-					<Form.Label column sm='2' size='lg' for='landmark'>
-						{" "}
-						Landmark
-					</Form.Label>
-					<Col sm='10'>
-						<Form.Control
-							type='text'
-							name='landmark'
-							placeholder='eg. lake gardens'
-							required
-							id='landmark'
-						/>
-					</Col>
-					<br />
-					<br />
-				</Form.Group>
-				<Form.Group as={Row}>
-					<Form.Label column sm={2} for='price'>
-						Price
-					</Form.Label>
-					<Col sm='10'>
-						<Form.Control as='select' sm={10} id='price' name='price'>
-							<option value='149'>149</option>
-							<option value='249'>249</option>
-							<option value='499'>499</option>
-							<option value='999'>999</option>
-							<option value='999'>999</option>
-							<option value='1499'>1499</option>
-						</Form.Control>
-					</Col>
-					<br />
-					<br />
-				</Form.Group>
-				<Form.Group as={Row}>
-					<Form.Label column sm={3} for='time'>
-						Date and Time
-					</Form.Label>
-					<Col sm='9'>
-						<Form.Control type='datetime-local' id='time' name='time' />
-					</Col>
-				</Form.Group>
-				<Form.Group>
-					<label class='location'>
-						<input type='radio' name='location' value='Indoor' /> Indoor
-						<br />
-						<input type='radio' name='location' value='Outdoor' /> Outdoor
-						<br />
-					</label>
-				</Form.Group>
-				<WebCam />
-				<br />
-				<br />
-
-				<Button
-					variant='outline-primary'
-					className='mb-2'
-					type='submit'
-					onClick={(e) => {
-						e.preventDefault();
-					}}>
-					Upload
-				</Button>
-			</form>
-		</div>
-	);
-};
->>>>>>> ef5d4f2c3cff2c334e36c58cc4ec6c5ada57694c
 
 export default SampleForm;

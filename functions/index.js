@@ -23,7 +23,7 @@ const profile = require("./routes/profile");
 app.use("/api/profile", profile);
 
 app.get("/", (req, res) => {
-	res.send("🌎🌎");
+  res.send("🌎🌎");
 });
 // webcam route
 const webCam = require("./routes/webCam");
@@ -33,5 +33,7 @@ app.use("/api/webcam", webCam);
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
+const landmark = require("./routes/landmark");
+app.use("/api/landmark", landmark);
 //Listening
 exports.app = functions.https.onRequest(app);
