@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.css";
+import "./EditLocation.css";
 import {
   Card,
   Button,
@@ -10,6 +10,7 @@ import {
   DropdownButton,
   Dropdown,
   Form,
+  Alert,
 } from "react-bootstrap";
 import axios from "axios";
 import firebase from "firebase";
@@ -22,6 +23,7 @@ class EditLocation extends React.Component {
       uuid: [],
       buttonClicked: false,
       priceClicked: false,
+      puid: firebase.auth().currentUser.uid,
     };
   }
   landmarkHandler = (newLandmark, index) => {
@@ -37,6 +39,32 @@ class EditLocation extends React.Component {
     price = newPrice;
     prices[index] = price;
     this.setState({ price: prices });
+  };
+  deleteHanlder = (index) => {
+    let landmarks = [...this.state.landmark];
+    landmarks.splice(index, 1);
+    this.setState({ landmark: landmarks });
+    let prices = [...this.state.price];
+    prices.splice(index, 1);
+    this.setState({ price: prices });
+    let uuids = [...this.state.uuid];
+    uuids.splice(index, 1);
+    this.setState({ uuid: uuids });
+    axios
+      .post(
+        `http://localhost:5000/spring-internship/us-central1/app/api/landmark/${this.state.puid}/`,
+        {
+          landmark: this.state.landmark,
+          price: this.state.price,
+          uuid: this.state.uuid,
+        }
+      )
+      .then(function (responce) {
+        console.log("data", responce.data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   };
   saveHandler = (index) => {
     axios
@@ -63,13 +91,10 @@ class EditLocation extends React.Component {
         }`
       )
       .then((responce) => {
-        // console.log("This is actual data", responce.data);
         const entries = Object.entries(responce.data);
-        // console.log(entries);
-        // console.log(entries);
-        // console.log(entries[0][1]);
+
         entries.map((ele, index) => {
-          // console.log(ele[1]);
+          console.log(ele);
           let land = ele[1].landmark;
           let priceRate = ele[1].price;
           let uid = ele[1].uuid;
@@ -83,24 +108,6 @@ class EditLocation extends React.Component {
             uuid: [...this.state.uuid, uid],
           });
         });
-        // entries.map((ele, index) => {
-        //   console.log(ele[1]);
-        //   let land = ele[1].landmark;
-        //   let priceRate = ele[1].price;
-        //   this.setState({
-        //     ...this.state.landmark,
-        //     landmark: land,
-        //   });
-        //   this.setState({
-        //     ...this.state.price,
-        //     price: priceRate,
-        //   });
-        // });
-        // console.log(key);
-        // this.setState({
-        //   landmark: responce.data[0].landmark,
-        // });
-        // this.setState({ price: responce.data[0].price });
       })
       .catch((err) => {
         console.log(err);
@@ -113,88 +120,108 @@ class EditLocation extends React.Component {
   render() {
     const { landmark, price } = this.state;
     return (
-      <>
+      <div className="main-content">
         <div className="content">
-          <h1>Edit Location</h1>
-          <Card style={{ minHeight: "460px" }}>
-            <Card.Header>Edit Location</Card.Header>
+          <h1 className="main-title">Edit Location</h1>
+
+          <div className="grid-container">
             {landmark.map((land, index) => {
               return (
-                <Jumbotron>
-                  <InputGroup className="mb-3">
-                    {console.log(this.state)}
-                    <FormControl
-                      disabled={!this.state.buttonClicked}
-                      placeholder={land}
-                      aria-label="Recipient's username"
-                      aria-describedby="basic-addon2"
-                      onChange={(event) => {
-                        this.landmarkHandler(
-                          event.target.value,
-                          index
-                        );
-                      }}
-                    />
+                <>
+                  <Alert
+                    key={index}
+                    variant="success"
+                    className="grid-item"
+                  >
+                    <Jumbotron fluid>
+                      <h4>Landmark: {land}</h4>
+                      <InputGroup className="mb-3">
+                        <FormControl
+                          disabled={
+                            !this.state.buttonClicked
+                          }
+                          placeholder={land}
+                          aria-label="Recipient's username"
+                          aria-describedby="basic-addon2"
+                          onChange={(event) => {
+                            this.landmarkHandler(
+                              event.target.value,
+                              index
+                            );
+                          }}
+                        />
 
-                    <InputGroup.Append>
-                      <Button
-                        variant="outline-secondary"
-                        onClick={() => {
-                          this.setState({
-                            buttonClicked: true,
-                          });
-                        }}
-                      >
-                        Edit
-                      </Button>
+                        <InputGroup.Append>
+                          <Button
+                            variant="outline-secondary"
+                            onClick={() => {
+                              this.setState({
+                                buttonClicked: true,
+                              });
+                            }}
+                          >
+                            Edit
+                          </Button>
 
-                      <Button
-                        variant="outline-secondary"
-                        onClick={() => {
-                          this.saveHandler(index);
-                        }}
-                      >
-                        Save
-                      </Button>
-                    </InputGroup.Append>
-                  </InputGroup>
-                  <Card.Body>
-                    <h5>Price : {price[index]}</h5>
+                          <Button
+                            variant="outline-success"
+                            onClick={() => {
+                              this.saveHandler(index);
+                            }}
+                          >
+                            Save
+                          </Button>
+                        </InputGroup.Append>
+                      </InputGroup>
+                      <Card.Body>
+                        <h5>Price : {price[index]}</h5>
 
-                    <Button
-                      variant="outline-secondary"
-                      onClick={() => {
-                        this.setState({
-                          priceClicked: true,
-                        });
-                      }}
-                    >
-                      Edit
-                    </Button>
+                        <Button
+                          variant="outline-secondary"
+                          onClick={() => {
+                            this.setState({
+                              priceClicked: true,
+                            });
+                          }}
+                        >
+                          Edit
+                        </Button>
 
-                    <Form.Control
-                      disabled={!this.state.priceClicked}
-                      as="select"
-                      onChange={(event) => {
-                        this.priceHandler(
-                          event.target.value,
-                          index
-                        );
-                      }}
-                    >
-                      <option>199</option>
-                      <option>299</option>
-                      <option>499</option>
-                      <option>999</option>
-                      <option>1499</option>
-                    </Form.Control>
-                  </Card.Body>
-                </Jumbotron>
+                        <Form.Control
+                          disabled={
+                            !this.state.priceClicked
+                          }
+                          as="select"
+                          onChange={(event) => {
+                            this.priceHandler(
+                              event.target.value,
+                              index
+                            );
+                          }}
+                        >
+                          <option>199</option>
+                          <option>299</option>
+                          <option>499</option>
+                          <option>999</option>
+                          <option>1499</option>
+                        </Form.Control>
+                        <Button
+                          variant="outline-danger"
+                          onClick={() => {
+                            this.deleteHanlder(index);
+                          }}
+                        >
+                          Delete Landmark
+                        </Button>
+                      </Card.Body>
+                    </Jumbotron>
+                  </Alert>
+                </>
               );
             })}
-          </Card>
+          </div>
         </div>
-      </>
+      </div>
     );
   }
 }

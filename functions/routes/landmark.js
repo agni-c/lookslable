@@ -47,6 +47,22 @@ router.get("/:puid", (req, res) => {
       }
     );
 });
+router.post("/:puid", (req, res) => {
+  var ref = database.ref("LANDMARK");
+
+  ref
+    .orderByChild("puid")
+    .equalTo(req.params.puid)
+    .once(
+      "value",
+      (snapshot) => {
+        res.json(snapshot.val());
+      },
+      (errorObject) => {
+        console.log("The read failed: " + errorObject.code);
+      }
+    );
+});
 router.post("/update/:uuid", (req, res) => {
   var ref = database.ref("LANDMARK");
   ref

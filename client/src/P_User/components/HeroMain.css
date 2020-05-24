@@ -1,0 +1,25 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
+
+.grid1-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* see notes below */
+  grid-gap: 2em;
+}
+@media only screen and (max-width: 400px) {
+  .grid1-container {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* see notes below */
+    grid-gap: 1em;
+  }
+  .center-align {
+    margin-bottom: 50px;
+    word-wrap: none;
+    /* display: none; */
+  }
+}

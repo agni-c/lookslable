@@ -3,6 +3,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase";
 import NavBar from "./P_User/components/NavBar";
 import HeroMain from "./P_User/components/HeroMain";
+import "./main-content.css";
 
 // Configure Firebase.
 const config = {
@@ -45,7 +46,9 @@ class SignInScreen extends React.Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase
       .auth()
-      .onAuthStateChanged((user) => this.setState({ isSignedIn: !!user }));
+      .onAuthStateChanged((user) =>
+        this.setState({ isSignedIn: !!user })
+      );
   }
 
   // Make sure we un-register Firebase observers when the component unmounts.
@@ -68,7 +71,7 @@ class SignInScreen extends React.Component {
     }
     return (
       <div>
-        <div>
+        <div className="main-content-bc">
           <NavBar />
           <HeroMain />
         </div>
