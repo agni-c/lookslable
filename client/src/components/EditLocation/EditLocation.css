@@ -1,0 +1,24 @@
+.content {
+}
+
+.main-title {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* see notes below */
+  grid-gap: 1em;
+}
+@media only screen and (max-width: 400px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* see notes below */
+    grid-gap: 1em;
+  }
+}

@@ -47,6 +47,22 @@ router.get("/:puid", (req, res) => {
 			}
 		);
 });
+router.post("/:puid", (req, res) => {
+	var ref = database.ref("LANDMARK");
+
+	ref
+		.orderByChild("puid")
+		.equalTo(req.params.puid)
+		.once(
+			"value",
+			(snapshot) => {
+				res.json(snapshot.val());
+			},
+			(errorObject) => {
+				console.log("The read failed: " + errorObject.code);
+			}
+		);
+});
 router.post("/update/:uuid", (req, res) => {
 	var ref = database.ref("LANDMARK");
 	ref
@@ -59,9 +75,10 @@ router.post("/update/:uuid", (req, res) => {
 				var json = JSON.stringify(snapshot);
 				var FinalJson = JSON.parse(json);
 
-				database
-					.ref("LANDMARK/" + newPostKey)
-					.update({ price: req.body.price, landmark: req.body.landmark });
+				database.ref("LANDMARK/" + newPostKey).update({
+					price: req.body.price,
+					landmark: req.body.landmark,
+				});
 				res.end("change successfull");
 			},
 			(errorObject) => {

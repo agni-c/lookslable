@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Badge, Jumbotron, Card } from "react-bootstrap";
-class Location extends React.Component {
+class GeoLocation extends React.Component {
   constructor(props) {
     super(props);
     this.state = { lat: null, long: null };
@@ -26,4 +26,4 @@ class Location extends React.Component {
   }
 }
 
-export default Location;
+export default GeoLocation;
