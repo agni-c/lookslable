@@ -7,7 +7,7 @@ const SampleForm = () => {
 		<div className='contain'>
 			<form
 				action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
-					firebase.auth().currentUser
+					firebase.auth().currentUser.uid
 				}`}
 				method='post'
 				enctype='multipart/form-data'>

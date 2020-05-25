@@ -33,5 +33,8 @@ app.use("/api/webcam", webCam);
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
+//Landmark route
+const landmark = require("./routes/landmark");
+app.use("/api/landmark", landmark);
 //Listening
 exports.app = functions.https.onRequest(app);
