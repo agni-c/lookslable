@@ -35,5 +35,9 @@ app.use("/api/upload", picsUpload);
 
 const landmark = require("./routes/landmark");
 app.use("/api/landmark", landmark);
+// booking detalis
+const bookingdetails = require("./routes/admin/bookingDetalis");
+app.use("api/admin",bookingdetails);
 //Listening
+
 exports.app = functions.https.onRequest(app);
