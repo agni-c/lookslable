@@ -8,6 +8,11 @@
   ); /* see notes below */
   grid-gap: 2em;
 }
+.backButton {
+  display: inline-block;
+  margin-left: 1190px;
+  margin-bottom: 15px;
+}
 @media only screen and (max-width: 400px) {
   .grid2-container {
     display: grid;
@@ -21,6 +26,11 @@
     margin-bottom: 50px;
     word-wrap: none;
     /* display: none; */
+  }
+  .backButton {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 15px;
   }
 }
 .center-bt {
