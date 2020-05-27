@@ -55,8 +55,7 @@ class SampleForm extends React.Component {
         }
       )
       .then(function (responce) {
-        console.log(responce);
-        console.log("I am inside");
+        toast("Successfully Submited");
       })
       .catch(function (err) {
         console.log(err);
@@ -164,7 +163,6 @@ class SampleForm extends React.Component {
             onClick={(event) => {
               event.preventDefault();
               this.submitHandler();
-              this.testing();
             }}
           >
             Upload
