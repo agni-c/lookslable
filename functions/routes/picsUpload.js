@@ -28,9 +28,9 @@ router.post("/:uid", filesUpload, (req, res, next) => {
 		),
 		names: files.originalname,
 		landmark: req.body.landmark,
-		location: req.body.location,
-		price: req.body.price,
-		time: req.body.time,
+		// location: req.body.location,
+		// price: req.body.price,
+		// time: req.body.time,
 	};
 	//Adding to Glary sub collection
 	glaryRef.add(session);
@@ -38,7 +38,8 @@ router.post("/:uid", filesUpload, (req, res, next) => {
 	accountRef.update({
 		landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
 	});
-	res.json(session);
+	// res.json(session);
+	res.redirect("back");
 });
 
 /**

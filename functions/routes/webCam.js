@@ -1,7 +1,7 @@
 /* Route => /api/upload */
 const router = require("express").Router();
 
-var sessionstorage = require("sessionstorage");
+// var sessionstorage = require("sessionstorage");
 const fireStore = require("@google-cloud/firestore");
 const { v4 } = require("uuid");
 const { Storage } = require("@google-cloud/storage");
