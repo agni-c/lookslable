@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import Upload from "./Upload";
+import axios from "axios";
 import {
   Container,
   Button,
@@ -9,71 +10,148 @@ import {
   Row,
 } from "react-bootstrap";
 import firebase from "firebase";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div className="contain">
-        <form
-          // REVIEW upload link
+const App = () => {
+  const [landmarks, setLandmarks] = useState([]);
+  const [file, setFile] = useState(null);
+  const [currentLandmark, setCurrentLandmark] = useState(
+    ""
+  );
 
-          action={`http://localhost:5000/spring-internship/us-central1/app/api/upload/${
-            firebase.auth().currentUser.uid
-          }`}
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <Form.Group>
-            <Form.Label colomn="lg" lg={2} for="upload">
-              Upload Images
-            </Form.Label>
-            <Col>
-              <input
-                type="file"
-                accept="image/*"
-                id="upload"
-                name="uploads"
-                required
-              />
-            </Col>
-          </Form.Group>
-          <br />
-          <br />
-          <Form.Group as={Row}>
-            <Form.Label
-              column
-              sm="2"
-              size="lg"
-              for="landmark"
-            >
-              {" "}
-              Landmark
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="text"
-                name="landmark"
-                placeholder="eg. lake gardens"
-                required
-                id="landmark"
-              />
-            </Col>
-            <br />
-            <br />
-          </Form.Group>
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("uploads", file);
+    formData.set("landmark", currentLandmark);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    axios
+      .post(
+        `http://localhost:5000/spring-internship/us-central1/app/api/upload/${
+          firebase.auth().currentUser.uid
+        }`,
+        formData,
+        config
+      )
+      .then((response) => {
+        testing();
+      })
+      .catch((error) => {});
+  };
 
-          <br />
-          <br />
+  const testing = () => {
+    toast("Successfully Submited");
+  };
+  const onChange = (e) => {
+    setFile(e.target.files[0]);
+    console.log("Changedd");
+  };
+  const onLandmarkChange = (value) => {
+    currentLandmarkUpdate(value);
+    // console.log(value);
+    // this.setState({ landmark: value });
+  };
+  const currentLandmarkUpdate = (value) => {
+    console.log(value);
+    setCurrentLandmark(value);
+  };
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:5000/spring-internship/us-central1/app/api/landmark/${
+          firebase.auth().currentUser.uid
+        }`
+      )
+      .then((responce) => {
+        const entries = Object.entries(responce.data);
 
-          <Button
-            variant="outline-primary"
-            className="mb-2"
-            type="submit"
+        entries.map((ele, index) => {
+          let land = ele[1].landmark;
+          setLandmarks((landmarks) => [...landmarks, land]);
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  return (
+    <div className="contain">
+      <form
+        // REVIEW upload link
+
+        // action={`http://localhost:5000/spring-internship/us-central1/app/api/upload/${
+        //   firebase.auth().currentUser.uid
+        // }`}
+        // method="post"
+        // enctype="multipart/form-data"
+        onSubmit={onFormSubmit}
+      >
+        {" "}
+        <Form.Group>
+          <Form.Label colomn="lg" lg={2} for="upload">
+            Upload Images
+          </Form.Label>
+          <Col>
+            <input
+              type="file"
+              accept="image/*"
+              id="upload"
+              name="uploads"
+              onChange={onChange}
+              required
+            />
+          </Col>
+        </Form.Group>
+        <br />
+        <br />
+        <Form.Group as={Row}>
+          <Form.Label
+            column
+            sm="2"
+            size="lg"
+            for="landmark"
           >
-            Upload
-          </Button>
-        </form>
-      </div>
-    );
-  }
-}
+            {" "}
+            Landmark
+          </Form.Label>
+          <Col sm="10">
+            <Form.Control
+              as="select"
+              name="landmark"
+              placeholder="eg. lake gardens"
+              required
+              id="landmark"
+              onChange={(e) => {
+                onLandmarkChange(e.target.value);
+              }}
+            >
+              >
+              {landmarks.map((ele, index) => {
+                return <option value={ele}>{ele}</option>;
+              })}
+            </Form.Control>
+          </Col>
+          <br />
+          <br />
+        </Form.Group>
+        <br />
+        <br />
+        <Button
+          variant="outline-primary"
+          className="mb-2"
+          type="submit"
+        >
+          Upload
+        </Button>
+        <ToastContainer />
+      </form>
+    </div>
+  );
+};
+
+export default App;

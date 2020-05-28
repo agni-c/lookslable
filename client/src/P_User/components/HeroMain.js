@@ -9,7 +9,7 @@ import {
 import firebase from "firebase";
 import Location from "../../routes/Location/Location";
 import Support from "../../routes/Support/Support";
-import UploadedImages from "../../routes/UploadedImages/UploadedImages";
+import DriveLink from "../../routes/DriveLink/DriveLink";
 import MyBookings from "../../routes/MyBookings/MyBookings";
 import StyledCard from "../../components/Card/StyledCard";
 
@@ -129,7 +129,7 @@ class HeroMain extends Component {
           <Route
             path="/user/uploaded-images"
             exact
-            component={UploadedImages}
+            component={DriveLink}
           />
         </Switch>
       </BrowserRouter>

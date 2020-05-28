@@ -7,16 +7,27 @@ import {
   Route,
   Link,
   Switch,
+  Router,
 } from "react-router-dom";
-import EditLocation from "../../components/EditLocation/EditLocation";
-import Gallery from "../../components/Gallery/GalleryTesting/App";
+import EditLocationRender from "./EditLocation/EditLocationRender";
 import StyledCard from "../../components/Card/StyledCard";
+import UploadedImagesRender from "../UploadedImages/UploadedImages";
+import HeroMain from "../../P_User/components/HeroMain";
+import { Button } from "react-bootstrap";
 class Location extends React.Component {
   HomeData = () => {
     return (
       <div>
         <div className="center-bt">
           <h1>Location</h1>
+        </div>
+
+        <div className="backButton">
+          <Link to="/">
+            <Button variant="outline-primary">
+              Go Back
+            </Button>
+          </Link>
         </div>
         <div className="grid2-container">
           <Link
@@ -79,13 +90,14 @@ class Location extends React.Component {
             <Route
               path="/user/location/edit-location"
               exact
-              component={EditLocation}
+              component={EditLocationRender}
             />
             <Route
               path="/user/location/uploded-images"
               exact
-              component={Gallery}
+              component={UploadedImagesRender}
             />
+            <Route path="/" exact component={HeroMain} />
             {/* <Route
             path="/user/location/submit-location-images"
             exact

@@ -43,8 +43,8 @@ export default class WebCam extends Component {
     this.state = { screenshot: null };
   }
   videoConstraints = {
-    width: 350,
-    height: 350,
+    width: 325,
+    height: 325,
     facingMode: "user",
   };
 
@@ -77,8 +77,8 @@ export default class WebCam extends Component {
         <Webcam
           audio={false}
           ref="webcam"
-          height={350}
-          width={350}
+          height={325}
+          width={325}
           screenshotFormat="image/png"
           videoConstraints={this.videoConstraints}
         />
