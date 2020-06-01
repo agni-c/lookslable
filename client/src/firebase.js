@@ -4,7 +4,12 @@ import firebase from "firebase";
 import NavBar from "./P_User/components/NavBar";
 import HeroMain from "./P_User/components/HeroMain";
 import "./main-content.css";
-
+import Add from "./routes/Location/Add/Add";
+import Location from "./routes/Location/Location";
+import UploadedImages from "./routes/UploadedImages/UploadedImages";
+import EditLocationRender from "./routes/Location/EditLocation/EditLocationRender";
+import SubmitLocationImages from "./routes/Location/SubmitLocationImages/SubmitLocationImages";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 // Configure Firebase.
 const config = {
   apiKey: "AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI",
@@ -46,9 +51,7 @@ class SignInScreen extends React.Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase
       .auth()
-      .onAuthStateChanged((user) =>
-        this.setState({ isSignedIn: !!user })
-      );
+      .onAuthStateChanged((user) => this.setState({ isSignedIn: !!user }));
   }
 
   // Make sure we un-register Firebase observers when the component unmounts.
@@ -70,12 +73,24 @@ class SignInScreen extends React.Component {
       );
     }
     return (
-      <div>
-        <div className="main-content-bc">
+      <Router>
+        <Route path="/">
           <NavBar />
           <HeroMain />
-        </div>
-      </div>
+        </Route>
+        <Route exact path="/user/location/add">
+          <Add />
+        </Route>
+        <Route exact path="/user/location/submit-location-images">
+          <SubmitLocationImages />
+        </Route>
+        <Route exact path="/user/location/edit-location">
+          <EditLocationRender />
+        </Route>
+        <Route exact path="/user/location/uploded-images">
+          <UploadedImages />
+        </Route>
+      </Router>
     );
   }
 }

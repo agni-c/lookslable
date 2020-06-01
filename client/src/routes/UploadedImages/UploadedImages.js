@@ -1,16 +1,33 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Gallery from "../../components/Gallery/GalleryTesting/App";
+import Location from "../Location/Location";
+
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  HashRouter,
+  Router,
+} from "react-router-dom";
 const UploadedImagesRender = () => {
-  let history = useHistory();
-  function clickHandler() {
-    history.push("/user/location");
-  }
   return (
     <>
-      <Button onClick={clickHandler}>Go Back</Button>
-      <Gallery />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/user/location" exact component={Location} />
+
+          <Route path="/user/location/uploded-images">
+            <div className="backButton">
+              <Link to="/user/location">
+                <Button variant="outline-primary">Go Back</Button>
+              </Link>
+            </div>
+            <Gallery />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };

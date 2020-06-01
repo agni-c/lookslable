@@ -1,17 +1,31 @@
 import React from "react";
 import SampleForm from "../../../components/SampleForm";
-import { useHistory } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  HashRouter,
+  Router,
+} from "react-router-dom";
+import Location from "../Location";
 import { Button } from "react-bootstrap";
 const Add = () => {
-  let history = useHistory();
-  function handleClick() {
-    history.push("/user/location");
-  }
   return (
-    <>
-      <Button onClick={handleClick}>Go Back</Button>
-      <SampleForm />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/user/location" exact component={Location} />
+
+        <Route path="/user/location/add">
+          <div className="backButton">
+            <Link to="/user/location">
+              <Button variant="outline-primary">Go Back</Button>
+            </Link>
+          </div>
+          <SampleForm />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 };
 
