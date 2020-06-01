@@ -35,3 +35,6 @@ Index.js : Node JS server code.
   `git fetch`
   `git branch --track branch-name origin/branch-name`
 - Update your repo `git pull`
+  d
+- git working is
+  `git checkout --track origin/dev-iuser `

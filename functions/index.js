@@ -33,7 +33,22 @@ app.use("/api/webcam", webCam);
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
-const landmark = require("./routes/landmark");
-app.use("/api/landmark", landmark);
+//upload form details of my location
+const uploaddetails = require("./routes/uploadDetails");
+app.use("/api/uploaddetails", uploaddetails);
+
+//popular location
+const popularlocation = require("./routes/popularLocation");
+app.use("/api/popularlocation", popularlocation);
+
+const booking = require("./routes/booking");
+app.use("/api/booking", booking);
+
+const iuserevent = require("./routes/iuserevent");
+app.use("/api/iuserevent", iuserevent);
+
+const puserevent = require("./routes/puserevent");
+app.use("/api/puserevent", puserevent);
+
 //Listening
 exports.app = functions.https.onRequest(app);

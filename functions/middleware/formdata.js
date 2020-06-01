@@ -25,7 +25,7 @@ exports.filesUpload = function (req, res, next) {
 
 	busboy.on("field", (key, value) => {
 		// You could do additional deserialization logic here, values will just be
-		// strings
+		// strings ok
 		fields[key] = value;
 	});
 
