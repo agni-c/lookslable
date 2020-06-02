@@ -5,13 +5,15 @@ router.post("/:uid", (req, res) => {
 	console.log("in");
 	var ref = database.ref("BOOKING_DETAILS");
 	var obj = {
-		Name: req.body.name,
-		Numbersofuser: req.body.numbersofuser,
-		Price: req.body.price,
-		Iuid: req.params.uid,
+		numberOfUsers: req.body.numberOfUsers,
+		price: req.body.price,
+		iUid: req.params.uid,
 		//  Puid:'111',
-		Eventdate: req.body.eventdate,
-		bookingdate: new Date().toISOString().substring(0, 10),
+		eventdate: {
+			date: req.body.date,
+			time: req.body.time,
+		},
+		bookingdate: new Date().toISOString().substring(0, 10), //timestamp
 	};
 	ref.push(obj);
 	res.end();
