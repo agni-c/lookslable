@@ -1,9 +1,8 @@
 import React from "react";
 import { Card, Button, Badge, Container, Row, Col } from "react-bootstrap";
 import "./styles.css";
-import CalenderA from "./Calender";
 import Gallery from "./Gallery";
-import PopOver from "./PopOver";
+import PopOver from "./Popover/PopOver";
 
 class CardGallery extends React.Component {
   render() {
@@ -26,21 +25,24 @@ class CardGallery extends React.Component {
               <Row>
                 <Col>
                   <br />
-                  <Badge variant="success">
-                    <PopOver text="No of Users" />
+                  {/* GPS Location goes here*/}
+                  <Badge variant="primary">
+                    <div class="icon fa-medium is-left">
+                      <i
+                        class="fas fa-map-marker"
+                        style={{ fontSize: "36px" }}
+                      ></i>
+                    </div>
                   </Badge>{" "}
                 </Col>
                 <Col>
                   <br />
-                  <Badge variant="success" style={{ padding: "15px" }}>
-                    200
+                  <Badge variant="primary" style={{ marginLeft: "120px" }}>
+                    <PopOver text="Shoot"></PopOver>
                   </Badge>{" "}
                 </Col>
                 <Col>
                   <br />
-                  <Button variant="success" className="margin-rg">
-                    Book
-                  </Button>
                 </Col>
               </Row>
             </Container>
