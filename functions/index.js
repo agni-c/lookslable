@@ -37,7 +37,10 @@ const landmark = require("./routes/landmark");
 app.use("/api/landmark", landmark);
 // booking detalis
 const bookingdetails = require("./routes/admin/bookingDetalis");
-app.use("api/admin",bookingdetails);
+app.use("/api/admin/booking",bookingdetails);
+//landmark details
+const landmarkdetails = require("./routes/admin/landmarkDetails");
+app.use("/api/admin/landmark",landmarkdetails);
 //Listening
 
 exports.app = functions.https.onRequest(app);
