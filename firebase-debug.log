@@ -1,132 +1,295 @@
-[debug] [2020-06-02T14:58:13.489Z] ----------------------------------------------------------------------
-[debug] [2020-06-02T14:58:13.494Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\purna\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
-[debug] [2020-06-02T14:58:13.495Z] CLI Version:   8.4.0
-[debug] [2020-06-02T14:58:13.495Z] Platform:      win32
-[debug] [2020-06-02T14:58:13.495Z] Node Version:  v14.1.0
-[debug] [2020-06-02T14:58:13.501Z] Time:          Tue Jun 02 2020 20:28:13 GMT+0530 (India Standard Time)
-[debug] [2020-06-02T14:58:13.501Z] ----------------------------------------------------------------------
-[debug] [2020-06-02T14:58:13.502Z] 
-[debug] [2020-06-02T14:58:13.522Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-06-02T14:58:13.524Z] > authorizing via signed-in user
-[debug] [2020-06-02T14:58:13.524Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
-[debug] [2020-06-02T14:58:13.531Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-06-02T14:58:13.532Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-06-02T14:58:13.730Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Jun 2020 14:58:13 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-06-02T14:58:13.740Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+[debug] [2020-06-04T11:27:27.206Z] ----------------------------------------------------------------------
+[debug] [2020-06-04T11:27:27.208Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rajatesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-06-04T11:27:27.208Z] CLI Version:   8.2.0
+[debug] [2020-06-04T11:27:27.208Z] Platform:      win32
+[debug] [2020-06-04T11:27:27.208Z] Node Version:  v10.18.0
+[debug] [2020-06-04T11:27:27.209Z] Time:          Thu Jun 04 2020 16:57:27 GMT+0530 (India Standard Time)
+[debug] [2020-06-04T11:27:27.209Z] ----------------------------------------------------------------------
+[debug] [2020-06-04T11:27:27.209Z] 
+[debug] [2020-06-04T11:27:27.219Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-04T11:27:27.219Z] > authorizing via signed-in user
+[debug] [2020-06-04T11:27:27.219Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-06-04T11:27:27.223Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
  {"permissions":["firebase.projects.get"]}
-[debug] [2020-06-02T14:58:15.153Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Jun 2020 14:58:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1226","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-06-02T14:58:15.156Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+[debug] [2020-06-04T11:27:28.733Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 11:27:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1204","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-04T11:27:28.736Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
  
-[debug] [2020-06-02T14:58:15.572Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 02 Jun 2020 14:58:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[warn] !  Your requested "node" version "10" doesn't match your global version "14" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"14\""}}
-[info] i  functions: Watching "C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\" for Cloud Functions..."}}
-[debug] [2020-06-02T14:58:17.644Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
-[debug] [2020-06-02T14:58:17.644Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
-[debug] [2020-06-02T14:58:17.645Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
-[debug] [2020-06-02T14:58:17.646Z] [worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: Assigning socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\16472 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\16472"}}
-[debug] [2020-06-02T14:58:17.647Z] [worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: BUSY"}}
-[debug] [2020-06-02T14:58:18.989Z] [runtime-status] [16472] Functions runtime initialized. {"cwd":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions","node_version":"14.1.0"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\",\"node_version\":\"14.1.0\"}"}}
-[debug] [2020-06-02T14:58:18.992Z] [runtime-status] [16472] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Disabled runtime features: undefined"}}
-[debug] [2020-06-02T14:58:19.002Z] [runtime-status] [16472] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:58:19.007Z] [runtime-status] [16472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:58:19.014Z] [runtime-status] [16472] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2020-06-02T14:58:19.161Z] [runtime-status] [16472] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Checked functions.config() {\"config\":{}}"}}
-[debug] [2020-06-02T14:58:19.163Z] [runtime-status] [16472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:58:19.167Z] [runtime-status] [16472] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:58:19.168Z] [runtime-status] [16472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:58:19.169Z] [runtime-status] [16472] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
-[debug] [2020-06-02T14:58:19.594Z] [runtime-status] [16472] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16472] initializeApp(DEFAULT) {\"databaseURL\":\"https://spring-internship.firebaseio.com\",\"storageBucket\":\"spring-internship.appspot.com\",\"projectId\":\"spring-internship\"}"}}
-[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
-[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/spring-internship/us-central1/app)."}}
-[debug] [2020-06-02T14:58:21.556Z] [worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-0c70c1c5-749c-4dba-a7ef-acca48f59665]: IDLE"}}
-[debug] [2020-06-02T14:59:29.712Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-02T14:59:29.714Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-02T14:59:29.715Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/uploaddetails --> app
-[debug] [2020-06-02T14:59:29.737Z] [worker-pool] addWorker(app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(app)"}}
-[debug] [2020-06-02T14:59:29.739Z] [worker-pool] Adding worker with key app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key app, total=1"}}
-[debug] [2020-06-02T14:59:29.739Z] [worker-pool] submitWork(triggerId=app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=app)"}}
-[debug] [2020-06-02T14:59:29.740Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: Assigning socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\10976 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\10976"}}
-[debug] [2020-06-02T14:59:29.740Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: BUSY"}}
-[debug] [2020-06-02T14:59:32.057Z] [runtime-status] [10976] Functions runtime initialized. {"cwd":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions","node_version":"14.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\",\"node_version\":\"14.1.0\"}"}}
-[debug] [2020-06-02T14:59:32.066Z] [runtime-status] [10976] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Disabled runtime features: undefined"}}
-[debug] [2020-06-02T14:59:32.081Z] [runtime-status] [10976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:32.089Z] [runtime-status] [10976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:32.101Z] [runtime-status] [10976] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2020-06-02T14:59:32.328Z] [runtime-status] [10976] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Checked functions.config() {\"config\":{}}"}}
-[debug] [2020-06-02T14:59:32.332Z] [runtime-status] [10976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:32.338Z] [runtime-status] [10976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:32.341Z] [runtime-status] [10976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:32.342Z] [runtime-status] [10976] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
-[debug] [2020-06-02T14:59:33.013Z] [runtime-status] [10976] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] initializeApp(DEFAULT) {\"databaseURL\":\"https://spring-internship.firebaseio.com\",\"storageBucket\":\"spring-internship.appspot.com\",\"projectId\":\"spring-internship\"}"}}
-[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
-[debug] [2020-06-02T14:59:35.760Z] [runtime-status] [10976] Trigger "app" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Trigger \"app\" has been found, beginning invocation!"}}
-[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Beginning execution of \"app\""}}
-[debug] [2020-06-02T14:59:35.764Z] [runtime-status] [10976] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] triggerDefinition {\"httpsTrigger\":{},\"name\":\"app\",\"entryPoint\":\"app\"}"}}
-[debug] [2020-06-02T14:59:35.764Z] [runtime-status] [10976] Running app in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Running app in mode HTTPS"}}
-[debug] [2020-06-02T14:59:35.777Z] [runtime-status] [10976] Attempting to listen to socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\10976 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\10976"}}
-[debug] [2020-06-02T14:59:35.792Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2020-06-02T14:59:35.850Z] [runtime-status] [10976] Ephemeral server handling OPTIONS request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Ephemeral server handling OPTIONS request"}}
-[debug] [2020-06-02T14:59:35.877Z] [runtime-status] [10976] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Ephemeral server survived."}}
-[debug] [2020-06-02T14:59:35.882Z] [work-queue] {"queueLength":1,"workRunningCount":1}
-[debug] [2020-06-02T14:59:35.883Z] [work-queue] {"queueLength":0,"workRunningCount":2}
-[debug] [2020-06-02T14:59:35.884Z] Accepted request POST /spring-internship/us-central1/app/api/uploaddetails --> app
-[debug] [2020-06-02T14:59:35.900Z] [worker-pool] addWorker(app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(app)"}}
-[debug] [2020-06-02T14:59:35.901Z] [worker-pool] Adding worker with key app, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key app, total=2"}}
-[debug] [2020-06-02T14:59:35.901Z] [worker-pool] submitWork(triggerId=app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=app)"}}
-[debug] [2020-06-02T14:59:35.903Z] [worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: Assigning socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\23380 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\23380"}}
-[debug] [2020-06-02T14:59:35.903Z] [worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: BUSY"}}
-[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Finished \"app\" in ~1s"}}
-[debug] [2020-06-02T14:59:35.908Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: IDLE"}}
-[debug] [2020-06-02T14:59:35.910Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-02T14:59:37.260Z] [runtime-status] [23380] Functions runtime initialized. {"cwd":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions","node_version":"14.1.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\",\"node_version\":\"14.1.0\"}"}}
-[debug] [2020-06-02T14:59:37.261Z] [runtime-status] [23380] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Disabled runtime features: undefined"}}
-[debug] [2020-06-02T14:59:37.266Z] [runtime-status] [23380] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:37.269Z] [runtime-status] [23380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:37.274Z] [runtime-status] [23380] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2020-06-02T14:59:37.415Z] [runtime-status] [23380] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Checked functions.config() {\"config\":{}}"}}
-[debug] [2020-06-02T14:59:37.418Z] [runtime-status] [23380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:37.424Z] [runtime-status] [23380] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:37.428Z] [runtime-status] [23380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.6.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
-[debug] [2020-06-02T14:59:37.431Z] [runtime-status] [23380] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.11.0\",\"resolution\":\"C:\\\\Users\\\\purna\\\\Desktop\\\\InternProject\\\\LooksLabel\\\\lookslabel\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
-[debug] [2020-06-02T14:59:37.934Z] [runtime-status] [23380] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] initializeApp(DEFAULT) {\"databaseURL\":\"https://spring-internship.firebaseio.com\",\"storageBucket\":\"spring-internship.appspot.com\",\"projectId\":\"spring-internship\"}"}}
-[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
-[debug] [2020-06-02T14:59:40.310Z] [runtime-status] [23380] Trigger "app" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Trigger \"app\" has been found, beginning invocation!"}}
-[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Beginning execution of \"app\""}}
-[debug] [2020-06-02T14:59:40.314Z] [runtime-status] [23380] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] triggerDefinition {\"httpsTrigger\":{},\"name\":\"app\",\"entryPoint\":\"app\"}"}}
-[debug] [2020-06-02T14:59:40.315Z] [runtime-status] [23380] Running app in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Running app in mode HTTPS"}}
-[debug] [2020-06-02T14:59:40.342Z] [runtime-status] [23380] Attempting to listen to socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\23380 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\23380"}}
-[debug] [2020-06-02T14:59:40.354Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2020-06-02T14:59:40.580Z] [runtime-status] [23380] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Ephemeral server handling POST request"}}
-[debug] [2020-06-02T14:59:40.604Z] [runtime-status] [23380] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [23380] Ephemeral server survived."}}
-[info] >  Error: Reference.push failed: first argument contains undefined in property 'MY_LOCATION.location.lon' {"user":"Error: Reference.push failed: first argument contains undefined in property 'MY_LOCATION.location.lon'","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m Error: Reference.push failed: first argument contains undefined in property 'MY_LOCATION.location.lon'"}}
-[info] >      at validateFirebaseData (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1481:15) {"user":"    at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1481:15)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1481:15)"}}
-[info] >      at C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1528:13 {"user":"    at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1528:13","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1528:13"}}
-[info] >      at each (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:554:13) {"user":"    at each (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:554:13)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at each (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:554:13)"}}
-[info] >      at validateFirebaseData (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1511:9) {"user":"    at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1511:9)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1511:9)"}}
-[info] >      at C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1528:13 {"user":"    at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1528:13","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1528:13"}}
-[info] >      at each (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:554:13) {"user":"    at each (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:554:13)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at each (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:554:13)"}}
-[info] >      at validateFirebaseData (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1511:9) {"user":"    at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1511:9)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at validateFirebaseData (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1511:9)"}}
-[info] >      at validateFirebaseDataArg (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:1469:5) {"user":"    at validateFirebaseDataArg (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1469:5)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at validateFirebaseDataArg (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:1469:5)"}}
-[info] >      at Reference.push (C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\node_modules\@firebase\database\dist\index.node.cjs.js:14003:9) {"user":"    at Reference.push (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:14003:9)","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at Reference.push (C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\node_modules\\@firebase\\database\\dist\\index.node.cjs.js:14003:9)"}}
-[info] >      at C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\routes\uploadDetails.js:23:7 {"user":"    at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\routes\\uploadDetails.js:23:7","metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"\u001b[90m> \u001b[39m     at C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\routes\\uploadDetails.js:23:7"}}
-[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Finished \"app\" in ~1s"}}
-[debug] [2020-06-02T14:59:40.682Z] [worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-ed8f4d83-9272-4d5a-b248-203425f49a10]: IDLE"}}
-[debug] [2020-06-02T14:59:40.682Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-06-02T15:07:04.426Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-02T15:07:04.427Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-02T15:07:04.428Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/uploaddetails --> app
-[debug] [2020-06-02T15:07:04.429Z] [worker-pool] submitWork(triggerId=app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=app)"}}
-[debug] [2020-06-02T15:07:04.430Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: Assigning socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\10976 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\10976"}}
-[debug] [2020-06-02T15:07:04.431Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: BUSY"}}
-[debug] [2020-06-02T15:07:04.436Z] [runtime-status] [10976] Trigger "app" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Trigger \"app\" has been found, beginning invocation!"}}
-[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Beginning execution of \"app\""}}
-[debug] [2020-06-02T15:07:04.444Z] [runtime-status] [10976] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] triggerDefinition {\"httpsTrigger\":{},\"name\":\"app\",\"entryPoint\":\"app\"}"}}
-[debug] [2020-06-02T15:07:04.446Z] [runtime-status] [10976] Running app in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Running app in mode HTTPS"}}
-[debug] [2020-06-02T15:07:04.447Z] [runtime-status] [10976] Attempting to listen to socketPath: \\?\pipe\C:\Users\purna\Desktop\InternProject\LooksLabel\lookslabel\functions\10976 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\purna\\Desktop\\InternProject\\LooksLabel\\lookslabel\\functions\\10976"}}
-[debug] [2020-06-02T15:07:04.453Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2020-06-02T15:07:04.468Z] [runtime-status] [10976] Ephemeral server handling OPTIONS request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Ephemeral server handling OPTIONS request"}}
-[debug] [2020-06-02T15:07:04.474Z] [runtime-status] [10976] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"[runtime-status] [10976] Ephemeral server survived."}}
-[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Finished \"app\" in ~1s"}}
-[debug] [2020-06-02T15:07:04.480Z] [worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-d7e6c893-601d-477c-8890-eedf055df0a3]: IDLE"}}
-[debug] [2020-06-02T15:07:04.482Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T11:27:29.244Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Jun 2020 11:27:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: Using node@10 from host.
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "D:\Internship\looksLebel\lookslabel\functions" for Cloud Functions...
+[debug] [2020-06-04T11:27:31.284Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-04T11:27:31.284Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-06-04T11:27:31.284Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-04T11:27:31.285Z] [worker-~diagnostic~-34eedd9c-00e9-4391-9057-084f85174f0f]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16036 
+[debug] [2020-06-04T11:27:31.286Z] [worker-~diagnostic~-34eedd9c-00e9-4391-9057-084f85174f0f]: BUSY 
+[debug] [2020-06-04T11:27:32.074Z] [runtime-status] [16036] Functions runtime initialized. {"cwd":"D:\\Internship\\looksLebel\\lookslabel\\functions","node_version":"10.18.0"} 
+[debug] [2020-06-04T11:27:32.075Z] [runtime-status] [16036] Disabled runtime features: undefined 
+[debug] [2020-06-04T11:27:32.080Z] [runtime-status] [16036] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:27:32.082Z] [runtime-status] [16036] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:27:32.087Z] [runtime-status] [16036] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-04T11:27:32.153Z] [runtime-status] [16036] Checked functions.config() {"config":{}} 
+[debug] [2020-06-04T11:27:32.154Z] [runtime-status] [16036] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:27:32.156Z] [runtime-status] [16036] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:27:32.157Z] [runtime-status] [16036] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:27:32.157Z] [runtime-status] [16036] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-04T11:27:32.284Z] [runtime-status] [16036] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-06-04T11:27:32.934Z] [worker-~diagnostic~-34eedd9c-00e9-4391-9057-084f85174f0f]: IDLE 
+[debug] [2020-06-04T11:28:13.552Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T11:28:13.553Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:28:13.555Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:28:13.569Z] [worker-pool] addWorker(app) 
+[debug] [2020-06-04T11:28:13.570Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-06-04T11:28:13.571Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:28:13.571Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:28:13.572Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T11:28:14.716Z] [runtime-status] [16988] Functions runtime initialized. {"cwd":"D:\\Internship\\looksLebel\\lookslabel\\functions","node_version":"10.18.0"} 
+[debug] [2020-06-04T11:28:14.721Z] [runtime-status] [16988] Disabled runtime features: undefined 
+[debug] [2020-06-04T11:28:14.730Z] [runtime-status] [16988] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:28:14.734Z] [runtime-status] [16988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:28:14.753Z] [runtime-status] [16988] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-04T11:28:14.857Z] [runtime-status] [16988] Checked functions.config() {"config":{}} 
+[debug] [2020-06-04T11:28:14.859Z] [runtime-status] [16988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:28:14.862Z] [runtime-status] [16988] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:28:14.863Z] [runtime-status] [16988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:28:14.864Z] [runtime-status] [16988] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-04T11:28:15.066Z] [runtime-status] [16988] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-04T11:28:16.357Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:28:16.360Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:28:16.360Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T11:28:16.368Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:28:16.381Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:28:16.428Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:28:16.447Z] [runtime-status] [16988] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:28:18.355Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T11:28:18.356Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T11:49:04.201Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T11:49:04.201Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:49:04.201Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:49:04.201Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:49:04.202Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:49:04.202Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T11:49:04.202Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:49:04.206Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:49:04.206Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T11:49:04.206Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:49:04.209Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:49:04.213Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:49:04.214Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:49:05.026Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T11:49:05.026Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T11:49:53.009Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T11:49:53.010Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:49:53.010Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:49:53.010Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:49:53.010Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:49:53.010Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T11:49:53.010Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:49:53.012Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:49:53.012Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T11:49:53.012Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:49:53.013Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:49:53.015Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:49:53.015Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:49:53.408Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T11:49:53.408Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T11:51:33.902Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T11:51:33.902Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:51:33.903Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:51:33.903Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:51:33.903Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:51:33.903Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T11:51:33.904Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:51:33.906Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:51:33.906Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T11:51:33.907Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:51:33.909Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:51:33.913Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:51:33.914Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:51:34.417Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T11:51:34.417Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T11:58:35.238Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T11:58:35.238Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:58:35.238Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:58:35.238Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:58:35.238Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:58:35.238Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T11:58:35.239Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:58:35.241Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:58:35.241Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T11:58:35.242Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T11:58:35.243Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:58:35.246Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:58:35.247Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:58:35.983Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-06-04T11:58:35.983Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-06-04T11:58:35.983Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T11:58:35.990Z] [worker-pool] addWorker(app) 
+[debug] [2020-06-04T11:58:35.990Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-06-04T11:58:35.990Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T11:58:35.990Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T11:58:35.990Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: BUSY 
+[debug] [2020-06-04T11:58:35.991Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T11:58:35.991Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T11:58:36.525Z] [runtime-status] [1688] Functions runtime initialized. {"cwd":"D:\\Internship\\looksLebel\\lookslabel\\functions","node_version":"10.18.0"} 
+[debug] [2020-06-04T11:58:36.526Z] [runtime-status] [1688] Disabled runtime features: undefined 
+[debug] [2020-06-04T11:58:36.642Z] [runtime-status] [1688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:58:36.662Z] [runtime-status] [1688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:58:36.675Z] [runtime-status] [1688] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-04T11:58:37.031Z] [runtime-status] [1688] Checked functions.config() {"config":{}} 
+[debug] [2020-06-04T11:58:37.032Z] [runtime-status] [1688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:58:37.032Z] [runtime-status] [1688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-04T11:58:37.033Z] [runtime-status] [1688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-04T11:58:37.033Z] [runtime-status] [1688] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-04T11:58:38.482Z] [runtime-status] [1688] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-04T11:58:44.113Z] [runtime-status] [1688] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T11:58:44.114Z] [runtime-status] [1688] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T11:58:44.115Z] [runtime-status] [1688] Running app in mode HTTPS 
+[debug] [2020-06-04T11:58:44.118Z] [runtime-status] [1688] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T11:58:44.121Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T11:58:44.140Z] [runtime-status] [1688] Ephemeral server handling GET request 
+[debug] [2020-06-04T11:58:44.145Z] [runtime-status] [1688] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T11:58:45.413Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: IDLE 
+[debug] [2020-06-04T11:58:45.413Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T12:00:20.136Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T12:00:20.137Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:00:20.137Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T12:00:20.137Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:00:20.137Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:00:20.137Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T12:00:20.138Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:00:20.140Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:00:20.140Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T12:00:20.140Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:00:20.142Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:00:20.144Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T12:00:20.145Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:00:20.546Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-06-04T12:00:20.546Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-06-04T12:00:20.547Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T12:00:20.547Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:00:20.547Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T12:00:20.547Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: BUSY 
+[debug] [2020-06-04T12:00:20.547Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T12:00:20.547Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:00:20.548Z] [runtime-status] [1688] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:00:20.549Z] [runtime-status] [1688] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:00:20.549Z] [runtime-status] [1688] Running app in mode HTTPS 
+[debug] [2020-06-04T12:00:20.549Z] [runtime-status] [1688] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T12:00:20.550Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:00:20.552Z] [runtime-status] [1688] Ephemeral server handling GET request 
+[debug] [2020-06-04T12:00:20.553Z] [runtime-status] [1688] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:00:20.949Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: IDLE 
+[debug] [2020-06-04T12:00:20.950Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T12:05:01.364Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T12:05:01.364Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:05:01.364Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T12:05:01.364Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:05:01.365Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:05:01.365Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T12:05:01.366Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:05:01.371Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:05:01.371Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T12:05:01.372Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:05:01.373Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:05:01.376Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T12:05:01.377Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:05:02.118Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-06-04T12:05:02.119Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-06-04T12:05:02.119Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T12:05:02.119Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:05:02.119Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T12:05:02.119Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: BUSY 
+[debug] [2020-06-04T12:05:02.119Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T12:05:02.120Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:05:02.120Z] [runtime-status] [1688] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:05:02.121Z] [runtime-status] [1688] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:05:02.122Z] [runtime-status] [1688] Running app in mode HTTPS 
+[debug] [2020-06-04T12:05:02.122Z] [runtime-status] [1688] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\1688 
+[debug] [2020-06-04T12:05:02.123Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:05:02.126Z] [runtime-status] [1688] Ephemeral server handling GET request 
+[debug] [2020-06-04T12:05:02.127Z] [runtime-status] [1688] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:05:02.862Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: IDLE 
+[debug] [2020-06-04T12:05:02.863Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T12:06:41.620Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T12:06:41.620Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:06:41.620Z] Accepted request GET /spring-internship/us-central1/app/api/upload/usergallery/LeTR5YNzqBN2OJkg6qni44JblUv1 --> app
+[debug] [2020-06-04T12:06:41.620Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:06:41.620Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:06:41.621Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T12:06:41.621Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:06:41.623Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:06:41.623Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T12:06:41.623Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:06:41.624Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:06:41.626Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[info] >  Hi this is user gallery null {"user":"Hi this is user gallery null"}
+[debug] [2020-06-04T12:06:41.638Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] >  Error: Value for argument "documentPath" is not a valid resource path. Path must be a non-empty string. {"user":"Error: Value for argument \"documentPath\" is not a valid resource path. Path must be a non-empty string."}
+[info] >      at Object.validateResourcePath (D:\Internship\looksLebel\lookslabel\functions\node_modules\@google-cloud\firestore\build\src\path.js:407:15) {"user":"    at Object.validateResourcePath (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\path.js:407:15)"}
+[info] >      at CollectionReference.doc (D:\Internship\looksLebel\lookslabel\functions\node_modules\@google-cloud\firestore\build\src\reference.js:1944:20) {"user":"    at CollectionReference.doc (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:1944:20)"}
+[info] >      at router.get (D:\Internship\looksLebel\lookslabel\functions\routes\picsUpload.js:56:31) {"user":"    at router.get (D:\\Internship\\looksLebel\\lookslabel\\functions\\routes\\picsUpload.js:56:31)"}
+[info] >      at Layer.handle [as handle_request] (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\layer.js:95:5) {"user":"    at Layer.handle [as handle_request] (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+[info] >      at next (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\route.js:137:13) {"user":"    at next (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\route.js:137:13)"}
+[info] >      at Route.dispatch (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\route.js:112:3) {"user":"    at Route.dispatch (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\route.js:112:3)"}
+[info] >      at Layer.handle [as handle_request] (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\layer.js:95:5) {"user":"    at Layer.handle [as handle_request] (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+[info] >      at D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\index.js:281:22 {"user":"    at D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\index.js:281:22"}
+[info] >      at param (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\index.js:354:14) {"user":"    at param (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\index.js:354:14)"}
+[info] >      at param (D:\Internship\looksLebel\lookslabel\functions\node_modules\express\lib\router\index.js:365:14) {"user":"    at param (D:\\Internship\\looksLebel\\lookslabel\\functions\\node_modules\\express\\lib\\router\\index.js:365:14)"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:06:41.654Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T12:06:41.655Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T12:07:29.583Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-04T12:07:29.584Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-04T12:07:29.584Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allusergallery --> app
+[debug] [2020-06-04T12:07:29.584Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-04T12:07:29.584Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: Assigning socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:07:29.584Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: BUSY 
+[debug] [2020-06-04T12:07:29.585Z] [runtime-status] [16988] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-04T12:07:29.586Z] [runtime-status] [16988] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-04T12:07:29.586Z] [runtime-status] [16988] Running app in mode HTTPS 
+[debug] [2020-06-04T12:07:29.586Z] [runtime-status] [16988] Attempting to listen to socketPath: \\?\pipe\D:\Internship\looksLebel\lookslabel\functions\16988 
+[debug] [2020-06-04T12:07:29.587Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-04T12:07:29.591Z] [runtime-status] [16988] Ephemeral server handling GET request 
+[debug] [2020-06-04T12:07:29.593Z] [runtime-status] [16988] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-04T12:07:30.066Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: IDLE 
+[debug] [2020-06-04T12:07:30.066Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-04T12:59:11.085Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: exited 
+[debug] [2020-06-04T12:59:11.090Z] [worker-app-b7ccef52-8551-49b7-942e-a333a674d942]: FINISHED 
+[debug] [2020-06-04T12:59:11.098Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: exited 
+[debug] [2020-06-04T12:59:11.098Z] [worker-app-d5ecd530-0146-48c1-8cf5-260b4d3331d6]: FINISHED 
+[debug] [2020-06-04T12:59:11.112Z] [worker-~diagnostic~-34eedd9c-00e9-4391-9057-084f85174f0f]: exited 
+[debug] [2020-06-04T12:59:11.112Z] [worker-~diagnostic~-34eedd9c-00e9-4391-9057-084f85174f0f]: FINISHED 
