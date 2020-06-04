@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Tabs, Tab } from "react-bootstrap";
-import CardGallery from "./CardGallery";
+import Gallery from "./Gallery";
 import "./styles.css";
 import Forms from "./Form/Forms";
 export default function HeroMain() {
@@ -14,7 +14,7 @@ export default function HeroMain() {
         onSelect={(k) => setKey(k)}
       >
         <Tab eventKey="popular" title="Popular">
-          <CardGallery title="Gallery 1" name="Bill" className="margin-bt" />
+          <Gallery />
         </Tab>
         <Tab eventKey="myLocation" title="My Location">
           <Forms />

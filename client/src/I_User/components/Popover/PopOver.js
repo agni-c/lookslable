@@ -117,7 +117,6 @@ class PopOver extends React.Component {
   render() {
     return (
       <div>
-        {console.log(this.state)}
         <OverlayTrigger trigger="click" placement="top" overlay={this.popover}>
           <h4 style={{ cursor: "pointer" }}> Shoot </h4>
         </OverlayTrigger>

@@ -24,7 +24,7 @@ class Forms extends React.Component {
         this.setState({
           location: {
             lat: position.coords.latitude,
-            long: position.coords.longitude,
+            lon: position.coords.longitude,
           },
         });
       },
