@@ -30,17 +30,13 @@ function NavBar(props) {
 							className='ml-sm-3'>
 							Login
 						</Button> */}
-					{!props.isLoggedIn && (
-						<Button
-							variant='outline-light'
-							onClick={() => {
-								firebase.auth().signOut();
-								console.log(firebase.auth().currentUser);
-							}}
-							className='ml-sm-3'>
-							Logout
-						</Button>
-					)}
+
+					<Button
+						variant='outline-light'
+						onClick={() => firebase.auth().signOut()}
+						className='ml-sm-3'>
+						Logout
+					</Button>
 				</Navbar.Collapse>
 			</Navbar>
 		</>

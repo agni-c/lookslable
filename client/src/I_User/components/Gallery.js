@@ -109,7 +109,16 @@ export default function Gallery() {
 									</Card.Title>
 									<Card.Body>
 										<Card.Img variant='top' src={ele.images} alt='something' />
-										<Card.Text>{ele.names}</Card.Text>
+										<Card.Text style={{ textAlign: "center" }}>
+											{ele.names}
+										</Card.Text>
+										<br />
+										{/* <Button
+											variant='outline-primary'
+											style={{ marginLeft: "80%" }}>
+											Shoot
+										</Button> */}
+										<PopOver puid={ele.puid} />
 									</Card.Body>
 								</Card>
 

@@ -22,52 +22,57 @@ class PopOver extends React.Component {
 			no_of_users: "",
 			phoneNo: "",
 			date: "",
-			// I_uid: firebase.auth().currentUser.uid,
+			iuid: firebase.auth().currentUser.uid,
+			currentPuid: props.puid,
 		};
 	}
 	phoneNoHandler = (value) => {
 		this.setState({
 			phoneNo: value,
 		});
+		console.log(value);
 	};
 	dateHandler = (value) => {
 		this.setState({
 			date: value,
 		});
+		console.log(value);
 	};
-	handleSumbit = () => {
-		if (firebase.auth().currentUser !== null) {
-			return <SignInScreen />;
-		} else {
-			axios
-				.post(
-					`http://localhost:5000/spring-internship/us-central1/app/api/uploaddetails/`,
-					{
-						PhoneNo: this.state.phoneNo,
-						eventdate: {
-							date: this.state.date,
-						},
-						price: "350",
-						numberOfUsers: this.state.no_of_users,
-					}
-				)
-				.then((res) => {
-					console.log(res.data);
-					console.log("Done!");
-					toast.info("Booked Successfully", {
-						position: "top-right",
-						autoClose: 5000,
-						hideProgressBar: false,
-						closeOnClick: true,
-						pauseOnHover: true,
-						draggable: true,
-						progress: undefined,
-					});
-				})
-				.catch((err) => {
-					console.log(err);
+
+	handleSubmit = () => {
+		console.log("fasak");
+		axios
+			.post(
+				`http://localhost:5000/spring-internship/us-central1/app/api/booking/${
+					firebase.auth().currentUser.uid
+				}`,
+				{
+					PhoneNo: this.state.phoneNo,
+
+					date: this.state.date,
+
+					puid: this.state.currentPuid,
+					price: "350",
+
+					numberOfUsers: this.state.no_of_users,
+				}
+			)
+			.then((res) => {
+				console.log(res.data);
+				console.log("Done!");
+				toast.info("Booked Successfully", {
+					position: "top-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
 				});
-		}
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 	popover = (
 		<Popover id='popover-top' className='pop-over'>
@@ -111,7 +116,12 @@ class PopOver extends React.Component {
 							<option>5-6</option>
 						</Form.Control>
 					</Form.Group>
-					<Button variant='primary' onClick={this.handleSubmit}>
+					<Button
+						variant='primary'
+						onClick={() => {
+							console.log("clicked");
+							this.handleSubmit();
+						}}>
 						Shoot
 					</Button>
 				</Form>
@@ -122,7 +132,16 @@ class PopOver extends React.Component {
 		return (
 			<div>
 				<OverlayTrigger trigger='click' placement='top' overlay={this.popover}>
-					<h4 style={{ cursor: "pointer" }}> Shoot </h4>
+					<Button
+						variant='outline-primary'
+						style={{
+							cursor: "pointer",
+							textAlign: "center",
+							marginLeft: "80%",
+						}}>
+						{" "}
+						Shoot{" "}
+					</Button>
 				</OverlayTrigger>
 			</div>
 		);

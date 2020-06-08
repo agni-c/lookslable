@@ -66,7 +66,7 @@ class SignInScreen extends React.Component {
 	render() {
 		let P = true;
 		let I = false;
-		if (!this.state.isSignedIn && this.state.first === 0) {
+		if (!this.state.isSignedIn) {
 			return (
 				<div>
 					<h1>My App</h1>
@@ -78,37 +78,16 @@ class SignInScreen extends React.Component {
 				</div>
 			);
 		}
-		{
-			console.log(this.state);
-		}
-		if (this.state.first === 0 && this.state.isSignedIn === true) {
-			return (
-				<div>
-					<NavBar isLoggedIn={true} showLogOut={true} />
-					<Container md='auto' className='center'>
-						<h1 className='margin-bt'>Welcome User!</h1>
-						<p>I am logged in first</p>
 
-						<HeroMain />
-					</Container>
-					{this.setState({
-						first: 1,
-					})}
-				</div>
-			);
-		}
-		if (this.first !== 0) {
-			return (
-				<div>
-					<NavBar isLoggedIn={false} showLogOut={true} />
-					<Container md='auto' className='center'>
-						<h1 className='margin-bt'>Welcome User!</h1>
-						<p>I have logged in second time</p>
-						<HeroMain />
-					</Container>
-				</div>
-			);
-		}
+		return (
+			<div>
+				<NavBar isLoggedIn={true} showLogOut={true} />
+				<Container md='auto' className='center'>
+					<h1 className='margin-bt'>Welcome User!</h1>
+					<HeroMain />
+				</Container>
+			</div>
+		);
 	}
 }
 
