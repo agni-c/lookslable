@@ -3,7 +3,7 @@ var database = require("../firebaseDAO");
 
 
 router.get("/", (req, res) => {
-  var ref = database.ref("BOOKING_DETAILS");
+  var ref = database.ref("LANDMARK");
 
   ref.on(
     "value",

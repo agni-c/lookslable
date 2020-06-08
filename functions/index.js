@@ -39,6 +39,11 @@ app.use("/api/landmark", landmark);
 // Admin
 const bookingdetails = require("./routes/admin/bookingDetalis");
 app.use("/api/admin", bookingdetails);
+app.use("/api/admin/booking",bookingdetails);
+//landmark details
+const landmarkdetails = require("./routes/admin/landmarkDetails");
+app.use("/api/admin/landmark",landmarkdetails);
+//Listening
 
 const puserProfile = require("./routes/admin/puserProfile");
 app.use("/api/admin", puserProfile);
