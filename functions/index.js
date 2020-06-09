@@ -29,24 +29,26 @@ app.get("/", (req, res) => {
 const webCam = require("./routes/webCam");
 app.use("/api/webcam", webCam);
 
-//Pics upload route
+//Pics upload route 
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
-const landmark = require("./routes/landmark");
-app.use("/api/landmark", landmark);
+//upload form details of my location
+const uploaddetails = require("./routes/uploadDetails");
+app.use("/api/uploaddetails", uploaddetails);
 
-// Admin
-const bookingdetails = require("./routes/admin/bookingDetalis");
-app.use("/api/admin", bookingdetails);
-app.use("/api/admin/booking",bookingdetails);
-//landmark details
-const landmarkdetails = require("./routes/admin/landmarkDetails");
-app.use("/api/admin/landmark",landmarkdetails);
-//Listening
+//popular location
+const popularlocation = require("./routes/popularLocation");
+app.use("/api/popularlocation", popularlocation);
 
-const puserProfile = require("./routes/admin/puserProfile");
-app.use("/api/admin", puserProfile);
+const booking = require("./routes/booking");
+app.use("/api/booking", booking);
+
+const iuserevent = require("./routes/iuserevent");
+app.use("/api/iuserevent", iuserevent);
+
+const puserevent = require("./routes/puserevent");
+app.use("/api/puserevent", puserevent);
 
 //Listening
 exports.app = functions.https.onRequest(app);
