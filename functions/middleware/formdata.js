@@ -1,10 +1,11 @@
 const Busboy = require("busboy");
+require('dotenv').config()
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage();
-const bucket = storage.bucket("spring-internship.appspot.com");
+const bucket = storage.bucket(process.env.GCS_BUCKET);
 
 exports.filesUpload = function (req, res, next) {
 	// See https://cloud.google.com/functions/docs/writing/http#multipart_data
@@ -12,7 +13,7 @@ exports.filesUpload = function (req, res, next) {
 		headers: req.headers,
 		limits: {
 			// Cloud functions impose this restriction anyway
-			fileSize: 60 * 1024 * 1024,
+			fileSize: 10 * 1024 * 1024,
 		},
 	});
 
@@ -25,7 +26,7 @@ exports.filesUpload = function (req, res, next) {
 
 	busboy.on("field", (key, value) => {
 		// You could do additional deserialization logic here, values will just be
-		// strings
+		// strings ok
 		fields[key] = value;
 	});
 

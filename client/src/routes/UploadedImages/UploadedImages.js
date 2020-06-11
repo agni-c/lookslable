@@ -1,21 +1,35 @@
 import React from "react";
-// import App from "../../components/Gallery/GalleryTesting/App";
-import "./styles.css";
-import { Jumbotron, Button } from "react-bootstrap";
-const DriveLink = () => {
+import { Button } from "react-bootstrap";
+import Gallery from "../../components/Gallery/GalleryTesting/App";
+import Location from "../Location/Location";
+
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  HashRouter,
+  Router,
+} from "react-router-dom";
+const UploadedImagesRender = () => {
   return (
     <>
-      <div className="my-container">
-        <Jumbotron>
-          <h1>History</h1>
-          <p>Photographer</p>
-          <p>
-            <Button variant="primary">Drive Link</Button>
-          </p>
-        </Jumbotron>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/user/location" exact component={Location} />
+
+          <Route path="/user/location/uploded-images">
+            <div className="backButton">
+              <Link to="/user/location">
+                <Button variant="outline-primary">Go Back</Button>
+              </Link>
+            </div>
+            <Gallery />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
 
-export default DriveLink;
+export default UploadedImagesRender;

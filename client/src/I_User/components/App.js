@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import { Container } from "react-bootstrap";
+import firebase from "firebase";
+import { Navbar, Button, Nav, Container } from "react-bootstrap";
+import SignInScreen from "../components/firebase";
 import NavBar from "./NavBar";
 import HeroMain from "./HeroMain";
+
 export default function App() {
-  return (
-    <div>
-      <NavBar />
-      <Container md="auto" className="center">
-        <h1 className="margin-bt">Welcome User!</h1>
-        <HeroMain />
-      </Container>
-    </div>
-  );
+	// return <SignInScreen />;
+	// const [showSignIn, setShowSignIn] = useState(false);
+	// const [showLogoutBtn, setShowLogoutBtn] = useState(false);
+	// const signInHandler = () => {
+	// 	setShowLogoutBtn(true);
+	// 	setShowSignIn(true);
+	// };
+	return (
+		<>
+			<SignInScreen />
+		</>
+	);
 }

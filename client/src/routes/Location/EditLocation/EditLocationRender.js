@@ -1,5 +1,6 @@
 import React from "react";
-import SampleForm from "../../../components/SampleForm";
+import EditLocation from "../../../components/EditLocation/EditLocation";
+import Location from "../Location";
 import {
   BrowserRouter,
   Route,
@@ -8,25 +9,24 @@ import {
   HashRouter,
   Router,
 } from "react-router-dom";
-import Location from "../Location";
 import { Button } from "react-bootstrap";
-const Add = () => {
+const EditLocationRender = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/user/location" exact component={Location} />
 
-        <Route path="/user/location/add">
+        <Route path="/user/location/edit-location">
           <div className="backButton">
             <Link to="/user/location">
               <Button variant="outline-primary">Go Back</Button>
             </Link>
           </div>
-          <SampleForm />
+          <EditLocation />
         </Route>
       </Switch>
     </BrowserRouter>
   );
 };
 
-export default Add;
+export default EditLocationRender;

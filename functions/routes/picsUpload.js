@@ -1,4 +1,4 @@
-const router = require("express").Router();
+ const router = require("express").Router();
 var sessionstorage = require("sessionstorage");
 const { filesUpload } = require("../middleware");
 const util = require("util");
@@ -14,32 +14,34 @@ const profileRef = db.collection("User Profile");
  * returns json after saving file reference with form data
  */
 router.post("/:uid", filesUpload, (req, res, next) => {
-	// let uid = req.session.uid;
-	// let uid = sessionstorage.getItem("uid");
-	let uid = req.params.uid;
-	const glaryRef = profileRef.doc(uid).collection("Glary");
-	const accountRef = profileRef.doc(uid);
-	const files = req.files;
+  // let uid = req.session.uid;
+  // let uid = sessionstorage.getItem("uid");
+  let uid = req.params.uid;
+  const glaryRef = profileRef.doc(uid).collection("Glary");
+  const accountRef = profileRef.doc(uid);
+  const files = req.files;
 
-	const session = {
-		puid: uid,
-		images: encodeURI(
-			`https://storage.googleapis.com/spring-internship.appspot.com/${files.originalname}`
-		),
-		names: files.originalname,
-		landmark: req.body.landmark,
-		// location: req.body.location,
-		// price: req.body.price,
-		// time: req.body.time,
-	};
-	//Adding to Glary sub collection
-	glaryRef.add(session);
-	//Creating an array in profile which will hold all the landmarks
-	accountRef.update({
-		landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
-	});
-	// res.json(session);
-	res.redirect("back");
+  const session = {
+    puid: uid,
+    images: encodeURI(
+      `https://storage.googleapis.com/spring-internship.appspot.com/${files.originalname}`
+    ),
+    names: files.originalname,
+    landmark: req.body.landmark,
+    // location: req.body.location,
+    // price: req.body.price,
+    // time: req.body.time,
+  };
+  //Adding to Glary sub collection
+  glaryRef.add(session);
+  //Creating an array in profile which will hold all the landmarks
+  accountRef.update({
+    landmark: admin.firestore.FieldValue.arrayUnion(
+      session.landmark
+    ),
+  });
+  res.end();
+  // res.json(session);
 });
 
 /**
@@ -47,18 +49,18 @@ router.post("/:uid", filesUpload, (req, res, next) => {
  * get -  /api/upload/usergallery/:uid
  */
 router.get("/usergallery/:uid", (req, res, next) => {
-	// let uid = req.session.uid;
-	let uid = sessionstorage.getItem("uid");
-	console.log("Hi this is user gallery", uid);
+  // let uid = req.session.uid;
+  let uid = sessionstorage.getItem("uid");
+  console.log("Hi this is user gallery", uid);
 
-	const glaryRef = profileRef.doc(uid).collection("Glary");
-	// console.log(uid);
-	const userGlary = async () => {
-		const snapshot = await glaryRef.get();
-		const docs = snapshot.docs.map((doc) => doc.data());
-		res.json(docs);
-	};
-	userGlary();
+  const glaryRef = profileRef.doc(uid).collection("Glary");
+  // console.log(uid);
+  const userGlary = async () => {
+    const snapshot = await glaryRef.get();
+    const docs = snapshot.docs.map((doc) => doc.data());
+    res.json(docs);
+  };
+  userGlary();
 });
 
 /**
@@ -66,16 +68,16 @@ router.get("/usergallery/:uid", (req, res, next) => {
  * get -  /api/upload/allUsergallery
  */
 router.get("/allUsergallery", (req, res, next) => {
-	let json = new Array();
-	const Ref = db.collectionGroup("Glary");
-	Ref.get()
-		.then((querySnapshot) => {
-			querySnapshot.forEach((doc) => {
-				json.push(doc.data());
-			});
-			return res.json(json);
-		})
-		.catch((err) => console.log(err));
+  let json = new Array();
+  const Ref = db.collectionGroup("Glary");
+  Ref.get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        json.push(doc.data());
+      });
+      return res.json(json);
+    })
+    .catch((err) => console.log(err));
 });
 
 // router.post("/uid", (req, res) => {

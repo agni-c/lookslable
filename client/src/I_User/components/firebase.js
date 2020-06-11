@@ -1,15 +1,11 @@
 import React from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase";
-import NavBar from "./P_User/components/NavBar";
-import HeroMain from "./P_User/components/HeroMain";
-import "./main-content.css";
-import Add from "./routes/Location/Add/Add";
-import Location from "./routes/Location/Location";
-import UploadedImages from "./routes/UploadedImages/UploadedImages";
-import EditLocationRender from "./routes/Location/EditLocation/EditLocationRender";
-import SubmitLocationImages from "./routes/Location/SubmitLocationImages/SubmitLocationImages";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+
+import NavBar from "./NavBar";
+import HeroMain from "./HeroMain";
+import { Container } from "react-bootstrap";
+
 // Configure Firebase.
 const config = {
 	apiKey: "AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI",
@@ -22,9 +18,17 @@ const config = {
 	measurementId: "G-S2BPC07SW6",
 	// ...
 };
-firebase.initializeApp(config);
+if (!firebase.apps.length) {
+	firebase.initializeApp(config);
+}
 
 class SignInScreen extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			first: 0,
+		};
+	}
 	// The component's Local state.
 	state = {
 		isSignedIn: false, // Local signed-in state.
@@ -74,25 +78,15 @@ class SignInScreen extends React.Component {
 				</div>
 			);
 		}
+
 		return (
-			<Router>
-				<Route path='/'>
-					<NavBar />
+			<div>
+				<NavBar isLoggedIn={true} showLogOut={true} />
+				<Container md='auto' className='center'>
+					<h1 className='margin-bt'>Welcome User!</h1>
 					<HeroMain />
-				</Route>
-				<Route exact path='/user/location/add'>
-					<Add />
-				</Route>
-				<Route exact path='/user/location/submit-location-images'>
-					<SubmitLocationImages />
-				</Route>
-				<Route exact path='/user/location/edit-location'>
-					<EditLocationRender />
-				</Route>
-				<Route exact path='/user/location/uploded-images'>
-					<UploadedImages />
-				</Route>
-			</Router>
+				</Container>
+			</div>
 		);
 	}
 }
