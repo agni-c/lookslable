@@ -130,7 +130,7 @@ const App = () => {
                 onLandmarkChange(e.target.value);
               }}
             >
-              >
+              
               {landmarks.map((ele, index) => {
                 return <option value={ele}>{ele}</option>;
               })}

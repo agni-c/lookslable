@@ -12,6 +12,7 @@ const storage = new Storage();
 const bucket = storage.bucket("spring-internship.appspot.com");
 //REFS
 const profileRef = db.collection("User Profile");
+const IprofileRef = db.collection("Iuser");
 
 //----------------------------------------
 
@@ -25,6 +26,23 @@ router.post("/:uid", (req, res, next) => {
 	// req.session.uid = uid;
 
 	const docRef = profileRef.doc(uid);
+	// console.log(req.session.uid);
+
+	docRef.set(profile, { merge: true });
+	console.log(uid);
+	res.end();
+});
+
+//Creating A Iuser profile
+
+router.post("/iuser/:uid", (req, res, next) => {
+	const profile = req.body;
+	//session
+	let uid = req.params.uid;
+	sessionstorage.setItem("uid", uid);
+	// req.session.uid = uid;
+
+	const docRef = IprofileRef.doc(uid);
 	// console.log(req.session.uid);
 
 	docRef.set(profile, { merge: true });

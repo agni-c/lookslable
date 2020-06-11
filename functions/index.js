@@ -41,14 +41,20 @@ app.use("/api/uploaddetails", uploaddetails);
 const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation", popularlocation);
 
+//booking route
 const booking = require("./routes/booking");
 app.use("/api/booking", booking);
 
+//I user event
 const iuserevent = require("./routes/iuserevent");
 app.use("/api/iuserevent", iuserevent);
 
+//puser event
 const puserevent = require("./routes/puserevent");
 app.use("/api/puserevent", puserevent);
 
+//landmark
+const landmark = require('./routes/landmark');
+app.use('/api/landmark',landmark);
 //Listening
 exports.app = functions.https.onRequest(app);
