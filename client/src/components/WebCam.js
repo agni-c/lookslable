@@ -4,38 +4,8 @@ import { Button } from "react-bootstrap";
 import GeoLocation from "./Location";
 import firebase from "firebase";
 
-// function WebCam() {
-//   const videoConstraints = {
-//     width: 350,
-//     height: 350,
-//     facingMode: "user",
-//   };
-//   const webcamRef = React.useRef(null);
-//   const capture = React.useCallback(() => {
-//     const imageSrc = webcamRef.current.getScreenshot();
-//   }, [webcamRef]);
-//   console.log(webcamRef);
 
-//   return (
-//     <>
-//       <Webcam
-//         ref="webcam"
-//         audio={false}
-//         height={350}
-//         ref={webcamRef}
-//         screenshotFormat="image/jpeg"
-//         width={350}
-//         videoConstraints={videoConstraints}
-//       />
-//       <br />
-//       <Button variant="outline-success" onClick={capture}>
-//         Capture photo
-//       </Button>
-//     </>
-//   );
-// }
 
-// export default WebCam;
 
 export default class WebCam extends Component {
   constructor(props) {

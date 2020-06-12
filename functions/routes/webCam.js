@@ -86,21 +86,24 @@ router.post("/:uid", (request, response, next) => {
  * post - /api/webcam/form
  * sends fields  to data base where selfie resides
  */
-router.post("/form/:uid", filesUpload, (req, res, next) => {
+router.put("/form/:uid", (req, res, next) => {
 	// const uid = req.session.uid;
 	let uid = req.params.uid;
-
+    console.log(uid)
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
 	//set the form in an object
 	const infoData = {
 		landmark: req.body.landmark,
-		location: req.body.location,
+		location: {
+			lat: req.body.lat,
+			lon: req.body.lon
+		},
 		price: req.body.price,
-		time: req.body.time,
+		// time: req.body.time,
 	};
 	//save it to doc where webcam pic resides
 
-	webCamRef.set(infoData, { merge: true });
+	webCamRef.set(infoData, { merge: true ,});
 	res.end();
 });
 

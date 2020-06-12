@@ -11,7 +11,7 @@ import EditLocationRender from "./routes/Location/EditLocation/EditLocationRende
 import SubmitLocationImages from "./routes/Location/SubmitLocationImages/SubmitLocationImages";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 // Configure Firebase.
-const config = {
+ const config = {
 	apiKey: "AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI",
 	authDomain: "spring-internship.firebaseapp.com",
 	databaseURL: "https://spring-internship.firebaseio.com",
@@ -98,3 +98,4 @@ class SignInScreen extends React.Component {
 }
 
 export default SignInScreen;
+export {config}

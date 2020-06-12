@@ -43,22 +43,27 @@ class SampleForm extends React.Component {
   };
   test = () => <div>Testing</div>;
   submitHandler = () => {
+    
+    let fieldData ={
+      lat: this.state.lat,
+      lon: this.state.long,
+      landmark: this.state.landmark,
+      price: this.state.price,
+      puid: this.state.puid,
+    }
     axios
-      .post(
-        "http://localhost:5000/spring-internship/us-central1/app/api/landmark",
-        {
-          lat: this.state.lat,
-          long: this.state.long,
-          landmark: this.state.landmark,
-          price: this.state.price,
-          puid: this.state.puid,
-        }
+      .put(
+        `http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
+            firebase.auth().currentUser.uid
+          }`,fieldData
+        
       )
       .then(function (responce) {
         toast("Successfully Submited");
       })
       .catch(function (err) {
         console.log(err);
+        console.log(fieldData);
       });
   };
   showToast = () => {
@@ -68,11 +73,11 @@ class SampleForm extends React.Component {
     return (
       <div className="contain">
         <form
-          action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
-            firebase.auth().currentUser.uid
-          }`}
-          method="post"
-          enctype="multipart/form-data"
+          // action={`http://localhost:5000/spring-internship/us-central1/app/api/webcam/form/${
+          //   firebase.auth().currentUser.uid
+          // }`}
+          // method="post"
+          // enctype="multipart/form-data"
         >
           <Form.Group as={Row}>
             <Form.Label
@@ -93,6 +98,7 @@ class SampleForm extends React.Component {
                 id="landmark"
                 onChange={(event) => {
                   this.landmarkHandler(event.target.value);
+                  console.log(event.target.value)
                 }}
               />
             </Col>

@@ -1,20 +1,28 @@
 import * as React from "react";
 
-import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
-import { UserList } from "./users";
-import { PostList, PostEdit, PostCreate } from "./posts";
-import jsonServerProvider from "ra-data-json-server";
+import { Admin, Resource, ListGuesser, EditGuesser,ImageField  } from "react-admin";
+import {
+  FirebaseDataProvider,
+  FirebaseAuthProvider
+} from "react-admin-firebase";
 
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+import {config} from "../firebase"
+import Firebase from 'firebase'
+const options ={
+  rootRef: `http://localhost:5000/spring-internship/us-central1/app/api/profile/puser`
+}
+
+const dataProvider = FirebaseDataProvider(config , options );
+// const authProvider = FirebaseAuthProvider(config );
+
+
+
 const AdminApp = () => (
   <Admin dataProvider={dataProvider}>
-    <Resource name="users" list={UserList} />
-    <Resource
-      name="posts"
-      list={PostList}
-      edit={PostEdit}
-      create={PostCreate}
-    />
+     <Resource
+          name="Puser"
+          
+        />
   </Admin>
 );
 

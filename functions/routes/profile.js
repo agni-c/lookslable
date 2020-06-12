@@ -39,7 +39,7 @@ router.post("/iuser/:uid", (req, res, next) => {
 	const profile = req.body;
 	//session
 	let uid = req.params.uid;
-	sessionstorage.setItem("uid", uid);
+	// sessionstorage.setItem("uid", uid);
 	// req.session.uid = uid;
 
 	const docRef = IprofileRef.doc(uid);
@@ -50,4 +50,29 @@ router.post("/iuser/:uid", (req, res, next) => {
 	res.end();
 });
 
+router.get("/puser", async(req,res)=>{
+	const pUser = async () => {
+		try {
+			const snapshot = await profileRef.get();
+		const docs = snapshot.docs.map((doc) => doc.data());
+		res.json(docs);
+		} catch (error) {
+			console.log(error)
+		}
+	  };
+	  pUser();
+})
+
+router.get("/iuser", async(req,res)=>{
+	const iUser = async () => {
+		try {
+			const snapshot = await IprofileRef.get();
+		const docs = snapshot.docs.map((doc) => doc.data());
+		res.json(docs);
+		} catch (error) {
+			console.log(error)
+		}
+	  };
+	  iUser();
+})
 module.exports = router;

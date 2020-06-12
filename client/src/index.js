@@ -8,7 +8,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDom.render(
   <Router >
-    <App />
+    <AdminApp />
+    {/* <App /> */}
   </Router>,
   document.getElementById("root")
 );
