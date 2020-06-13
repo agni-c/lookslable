@@ -37,4 +37,4 @@ Index.js : Node JS server code.
 - Update your repo `git pull`
   d
 - git working is
-  `git checkout --track origin/dev-iuser `
+  `git checkout --track origin/dev-iuser`

@@ -1,21 +1,17 @@
-import * as React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import axios from 'axios';
+import './App.css';
 
-import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
-import { UserList } from "./users";
-import { PostList, PostEdit, PostCreate } from "./posts";
-import jsonServerProvider from "ra-data-json-server";
-
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
-const AdminApp = () => (
-  <Admin dataProvider={dataProvider}>
-    <Resource name="users" list={UserList} />
-    <Resource
-      name="posts"
-      list={PostList}
-      edit={PostEdit}
-      create={PostCreate}
-    />
-  </Admin>
-);
+class AdminApp extends React.Component {
+  render() {
+    return (
+      <div className='App'>
+        <Dashboard></Dashboard>
+      </div>
+    );
+  }
+}
 
 export default AdminApp;
