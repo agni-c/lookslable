@@ -1,17 +1,16 @@
-var router = require("express").Router();
-var database = require("../firebaseDAO");
+var router = require('express').Router();
+var database = require('../firebaseDAO');
 
+router.get('/', (req, res) => {
+  var ref = database.ref('BOOKING_DETAILS');
 
-router.get("/", (req, res) => {
-  var ref = database.ref("BOOKING_DETAILS");
-
-  ref.on(
-    "value",
+  ref.once(
+    'value',
     (snapshot) => {
-    res.send(snapshot.val());
+      res.send(snapshot.val());
     },
     (errorObject) => {
-      console.log("The read failed: " + errorObject.code);
+      console.log('The read failed: ' + errorObject.code);
     }
   );
 });

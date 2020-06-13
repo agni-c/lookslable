@@ -1,5 +1,6 @@
 {
   "projects": {
+    "spring-internship": "spring-internship",
     "default": "spring-internship"
   }
 }

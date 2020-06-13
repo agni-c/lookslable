@@ -1,29 +1,17 @@
-import * as React from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Dashboard from "./Dashboard";
+import axios from "axios";
+import "./App.css";
 
-import { Admin, Resource, ListGuesser, EditGuesser,ImageField  } from "react-admin";
-import {
-  FirebaseDataProvider,
-  FirebaseAuthProvider
-} from "react-admin-firebase";
-
-import {config} from "../firebase"
-import Firebase from 'firebase'
-const options ={
-  rootRef: `http://localhost:5000/spring-internship/us-central1/app/api/profile/puser`
+class AdminApp extends React.Component {
+	render() {
+		return (
+			<div className="App">
+				<Dashboard></Dashboard>
+			</div>
+		);
+	}
 }
-
-const dataProvider = FirebaseDataProvider(config , options );
-// const authProvider = FirebaseAuthProvider(config );
-
-
-
-const AdminApp = () => (
-  <Admin dataProvider={dataProvider}>
-     <Resource
-          name="Puser"
-          
-        />
-  </Admin>
-);
 
 export default AdminApp;
