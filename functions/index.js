@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 const webCam = require("./routes/webCam");
 app.use("/api/webcam", webCam);
 
-//Pics upload route 
+//Pics upload route
 const picsUpload = require("./routes/picsUpload");
 app.use("/api/upload", picsUpload);
 
@@ -54,7 +54,20 @@ const puserevent = require("./routes/puserevent");
 app.use("/api/puserevent", puserevent);
 
 //landmark
-const landmark = require('./routes/landmark');
-app.use('/api/landmark',landmark);
+const landmark = require("./routes/landmark");
+app.use("/api/landmark", landmark);
+
+//puser profile
+const PuserProfile = require("./routes/admin/puserProfile");
+app.use("/api/admin/puserprofile", PuserProfile);
+
+const iuserProfile = require("./routes/admin/iUserProfile");
+app.use("/api/admin/iuserprofile", iuserProfile);
+
+const bookingDetails = require("./routes/admin/bookingDetails");
+app.use("/api/admin/bookingdetails", bookingDetails);
+
+const landmarkDetails = require("./routes/admin/landmarkDetails");
+app.use("/api/admin/landmarkdetails", landmarkDetails);
 //Listening
 exports.app = functions.https.onRequest(app);
