@@ -1,0 +1,51 @@
+[debug] [2020-06-13T16:15:04.748Z] ----------------------------------------------------------------------
+[debug] [2020-06-13T16:15:04.753Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-06-13T16:15:04.754Z] CLI Version:   8.0.2
+[debug] [2020-06-13T16:15:04.754Z] Platform:      win32
+[debug] [2020-06-13T16:15:04.754Z] Node Version:  v12.16.2
+[debug] [2020-06-13T16:15:04.757Z] Time:          Sat Jun 13 2020 21:45:04 GMT+0530 (India Standard Time)
+[debug] [2020-06-13T16:15:04.758Z] ----------------------------------------------------------------------
+[debug] [2020-06-13T16:15:04.759Z] 
+[debug] [2020-06-13T16:15:04.788Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-13T16:15:04.790Z] > authorizing via signed-in user
+[debug] [2020-06-13T16:15:04.791Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-06-13T16:15:04.802Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-06-13T16:15:06.470Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Jun 2020 16:12:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1303","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-13T16:15:06.475Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-06-13T16:15:07.081Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Jun 2020 16:12:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\lookslable\functions" for Cloud Functions...
+[debug] [2020-06-13T16:15:09.253Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-13T16:15:09.254Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-06-13T16:15:09.254Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-13T16:15:09.255Z] [worker-~diagnostic~-ba9874a5-d00a-4c10-8e6e-6316f8858316]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\lookslable\functions\11000 
+[debug] [2020-06-13T16:15:09.256Z] [worker-~diagnostic~-ba9874a5-d00a-4c10-8e6e-6316f8858316]: BUSY 
+[debug] [2020-06-13T16:15:10.605Z] [runtime-status] [11000] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions","node_version":"12.16.2"} 
+[debug] [2020-06-13T16:15:10.612Z] [runtime-status] [11000] Disabled runtime features: undefined 
+[debug] [2020-06-13T16:15:10.634Z] [runtime-status] [11000] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-13T16:15:10.640Z] [runtime-status] [11000] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-13T16:15:10.648Z] [runtime-status] [11000] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-13T16:15:10.821Z] [runtime-status] [11000] Checked functions.config() {"config":{}} 
+[debug] [2020-06-13T16:15:10.822Z] [runtime-status] [11000] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-13T16:15:10.826Z] [runtime-status] [11000] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-13T16:15:10.828Z] [runtime-status] [11000] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-13T16:15:10.829Z] [runtime-status] [11000] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\lookslable\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-13T16:15:11.211Z] [runtime-status] [11000] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[warn] !  Error: A bucket name is needed to use Cloud Storage.
+    at Storage.bucket (C:\Users\Nikunj Savaliya\Desktop\lookslable\functions\node_modules\@google-cloud\storage\build\src\storage.js:138:19)
+    at Object.<anonymous> (C:\Users\Nikunj Savaliya\Desktop\lookslable\functions\middleware\formdata.js:8:24)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Nikunj Savaliya\Desktop\lookslable\functions\routes\webCam.js:8:25)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-06-13T16:15:12.916Z] [worker-~diagnostic~-ba9874a5-d00a-4c10-8e6e-6316f8858316]: exited 
+[debug] [2020-06-13T16:15:12.916Z] [worker-~diagnostic~-ba9874a5-d00a-4c10-8e6e-6316f8858316]: FINISHED 
