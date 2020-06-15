@@ -22,9 +22,11 @@ app.use(express.json({ limit: "50mb" }));
 const profile = require("./routes/profile");
 app.use("/api/profile", profile);
 
+//Testing purposes
 app.get("/", (req, res) => {
 	res.send("🌎🌎");
 });
+
 // webcam route
 const webCam = require("./routes/webCam");
 app.use("/api/webcam", webCam);
@@ -61,13 +63,17 @@ app.use("/api/landmark", landmark);
 const PuserProfile = require("./routes/admin/puserProfile");
 app.use("/api/admin/puserprofile", PuserProfile);
 
+//Iuser profile
 const iuserProfile = require("./routes/admin/iUserProfile");
 app.use("/api/admin/iuserprofile", iuserProfile);
 
+// booking details
 const bookingDetails = require("./routes/admin/bookingDetails");
 app.use("/api/admin/bookingdetails", bookingDetails);
 
+//landmark Details
 const landmarkDetails = require("./routes/admin/landmarkDetails");
 app.use("/api/admin/landmarkdetails", landmarkDetails);
+
 //Listening
 exports.app = functions.https.onRequest(app);
