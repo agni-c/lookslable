@@ -1,16 +1,10 @@
 const router = require("express").Router();
-const firebase = require("firebase");
-const admin = require("firebase-admin");
-var database = require("./firebaseAppI");
-let count = 0;
-let jsonsimage = new Array();
-let jsonsid = new Array();
-let array = new Array();
-let jsons = new Array();
-let db = firebase.firestore();
-let adds = new Array();
+var admin = require("firebase-admin");
+
+const db = admin.firestore();
+const profileRef = db.collection("User Profile");
+
 router.get("/", (req, res) => {
-	//TODO add a query to only show approved photos
 	let json = new Array();
 	const Ref = db.collectionGroup("Glary");
 	Ref.get()

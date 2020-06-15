@@ -72,5 +72,9 @@ app.use('/api/admin/bookingdetails', bookingDetails);
 const landmarkDetails = require('./routes/admin/landmarkDetails');
 app.use('/api/admin/landmarkdetails', landmarkDetails);
 
+//Approved Photos
+const approvedPhotos = require('./routes/admin/approvedPhotos');
+app.use('/api/admin/approved-photos', approvedPhotos);
+
 //Listening
 exports.app = functions.https.onRequest(app);
