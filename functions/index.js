@@ -43,17 +43,26 @@ app.use("/api/uploaddetails", uploaddetails);
 const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation", popularlocation);
 
-//booking route
 const booking = require("./routes/booking");
 app.use("/api/booking", booking);
 
-//I user event
 const iuserevent = require("./routes/iuserevent");
 app.use("/api/iuserevent", iuserevent);
 
-//puser event
 const puserevent = require("./routes/puserevent");
 app.use("/api/puserevent", puserevent);
+//puser profile
+const PuserProfile = require("./routes/admin/puserProfile");
+app.use("/api/admin/puserprofile", PuserProfile);
+
+const iuserProfile = require("./routes/admin/iUserProfile");
+app.use("/api/admin/iuserprofile", iuserProfile);
+
+const bookingDetalis = require("./routes/admin/bookingDetalis");
+app.use("/api/admin/bookingdetails", bookingDetalis);
+
+const landmarkDetails = require("./routes/admin/landmarkDetails");
+app.use("/api/admin/landmarkdetails", landmarkDetails);
 
 //landmark
 const landmark = require("./routes/landmark");

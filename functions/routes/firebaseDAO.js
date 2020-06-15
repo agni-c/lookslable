@@ -12,6 +12,6 @@ const firebaseConfig = {
 };
 if (!firebase.apps.length) {
 	firebase.initializeApp(firebaseConfig);
- }
+}
 var database = firebase.database();
 module.exports = database;

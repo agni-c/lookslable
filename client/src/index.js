@@ -7,9 +7,9 @@ import AdminApp from "./admin/App";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDom.render(
-  <Router >
-    <AdminApp />
-    {/* <App /> */}
-  </Router>,
-  document.getElementById("root")
+	<Router>
+		<AdminApp />
+		{/* <App /> */}
+	</Router>,
+	document.getElementById("root")
 );

@@ -33,7 +33,7 @@ export default function IuserFragment() {
   }, []);
   return (
     <MaterialTable
-      title='P User Data'
+      title='I User Data'
       columns={state.columns}
       data={state.data}
       editable={{
