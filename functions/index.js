@@ -56,6 +56,9 @@ app.use("/api/puserevent", puserevent);
 const landmark = require("./routes/landmark");
 app.use("/api/landmark", landmark);
 
+const rating = require("./routes/rating");
+app.use("/api/rating", rating);
+
 //puser profile
 const PuserProfile = require("./routes/admin/puserProfile");
 app.use("/api/admin/puserprofile", PuserProfile);

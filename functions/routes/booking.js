@@ -4,6 +4,8 @@ var database = require("./firebaseAppI");
 router.post("/:iuid", (req, res) => {
 	console.log("in");
 	var ref = database.ref("BOOKING_DETAILS");
+	console.log(req.body.data);
+
 	var obj = {
 		numberOfUsers: req.body.numberOfUsers,
 		price: req.body.price,

@@ -41,12 +41,14 @@ class PopOver extends React.Component {
 
 	handleSubmit = () => {
 		console.log("fasak");
+		console.log(firebase.auth().currentUser);
 		axios
 			.post(
 				`http://localhost:5000/spring-internship/us-central1/app/api/booking/${
 					firebase.auth().currentUser.uid
 				}`,
 				{
+					data: firebase.auth().currentUser,
 					PhoneNo: this.state.phoneNo,
 
 					date: this.state.date,
