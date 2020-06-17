@@ -1,2 +1,0 @@
-export const P_USER_SUCCESS = 'P_USER_SUCCESS';
-export const P_USER_FETCHERR = 'P_USER_FETCH_ERR';
