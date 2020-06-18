@@ -1,38 +1,11 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
+import { BookingsAdminContext } from '../../context/bookingsAdmin';
 import MaterialTable from 'material-table';
 import {} from '@material-ui/icons';
 
 export default function BookingFragment() {
-  const [state, setState] = React.useState({
-    columns: [],
-    data: [],
-  });
+  const [state, setState] = useContext(BookingsAdminContext);
 
-  const api = async () => {
-    const response = await axios
-      .get(
-        'http://localhost:5000/spring-internship/us-central1/app/api/admin/bookingdetails'
-      )
-      .then(function (response) {
-        return response;
-      });
-    const data = Object.values(response.data);
-    console.log(data);
-
-    const columns = [
-      { title: 'IUID', field: 'iuid' },
-      { title: 'PUID', field: 'puid' },
-      { title: 'Booking Date', field: 'bookingdate' },
-      { title: 'Price', field: 'price' },
-      { title: 'Number of Users', field: 'numberOfUsers' },
-    ];
-    setState({ columns, data });
-  };
-
-  useEffect(() => {
-    api();
-  }, []);
   return (
     <MaterialTable
       title='Booking Details'

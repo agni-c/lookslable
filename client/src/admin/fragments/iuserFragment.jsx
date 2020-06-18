@@ -1,36 +1,10 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
+import { IuserAdminContext } from '../../context/iUserAdmin';
 import MaterialTable from 'material-table';
 import {} from '@material-ui/icons';
 
 export default function IuserFragment() {
-  const [state, setState] = React.useState({
-    columns: [],
-    data: [],
-  });
-
-  const api = async () => {
-    const response = await axios
-      .get(
-        'http://localhost:5000/spring-internship/us-central1/app/api/admin/iuserprofile'
-      )
-      .then(function (response) {
-        return response;
-      });
-    const data = response.data;
-    const columns = [
-      { title: 'UID', field: 'uid' },
-      { title: 'Name', field: 'name' },
-      { title: 'Email', field: 'email' },
-      { title: 'Photo', field: 'photoURL' },
-      { title: 'Tags', field: 'tags' },
-    ];
-    setState({ columns, data });
-  };
-
-  useEffect(() => {
-    api();
-  }, []);
+  const [state, setState] = useContext(IuserAdminContext);
   return (
     <MaterialTable
       title='I User Data'

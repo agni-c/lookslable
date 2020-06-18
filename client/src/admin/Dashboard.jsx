@@ -8,7 +8,7 @@ import PuserFragment from './fragments/puserFragment';
 import IuserFragment from './fragments/iuserFragment';
 import BookingFragment from './fragments/bookingFragment';
 import LandMarkFragment from './fragments/landMarkFragment';
-import ApprovedPhotos from './fragments/approvedPhotosFragment2';
+import ApprovedPhotos from './fragments/approvedPhotosFragment';
 import {
   List,
   ListItem,
