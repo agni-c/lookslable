@@ -1,36 +1,10 @@
-import React, { useEffect, useContext } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
+import { PuserAdminContext } from "../../context/pUserAdmin";
 import MaterialTable from "material-table";
 import {} from "@material-ui/icons";
-import PuserContext from "./../../context/Puser/puserContext";
+
 export default function PuserFragment() {
-	const puserContext = useContext(PuserContext);
-	console.log(puserContext);
-	const [state, setState] = React.useState({
-		columns: puserContext.columns,
-		data: puserContext.data,
-	});
-
-	// const api = async () => {
-	// 	const response = await axios
-	// 		.get(
-	// 			"http://localhost:5000/spring-internship/us-central1/app/api/admin/puserprofile"
-	// 		)
-	// 		.then(function (response) {
-	// 			return response;
-	// 		});
-	// 	const data = response.data;
-	// 	const columns = [
-	// 		{ title: "UID", field: "uid", type: "string" },
-	// 		{ title: "Name", field: "name" },
-	// 		{ title: "Email", field: "email" },
-	// 	];
-	// 	setState({ columns, data });
-	// };
-
-	useEffect(() => {
-		puserContext.setPuserData();
-	}, []);
+	const [state, setState] = useContext(PuserAdminContext);
 	return (
 		<MaterialTable
 			title="P User Data"
