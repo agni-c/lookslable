@@ -4,7 +4,7 @@ import {
   Route,
   Link,
   Switch,
-  Redirect,
+  browserHistory,
 } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Login from './Login';
@@ -27,20 +27,15 @@ class AdminApp extends React.Component {
                 <ApprovedPhotoAdminProvider>
                   <LandmarkAdminProvider>
                     <BookingsAdminProvider>
-                      {/* <Route
-                        exact
-                        path='/admin/dashboard'
-                        component={Dashboard}
-                      /> */}
-                      <Dashboard />
+                      <Route exact path='/dashboard' component={Dashboard} />
+                      {/* <Dashboard /> */}
                     </BookingsAdminProvider>
                   </LandmarkAdminProvider>
                 </ApprovedPhotoAdminProvider>
               </IuserAdminProvider>
             </PuserAdminProvider>
-            {/* <Redirect to='/login' /> */}
           </div>
-          <Route exact path='/admin/login' component={Login} />
+          <Route exact path='/' component={Login} />
         </Router>
       </Switch>
     );
