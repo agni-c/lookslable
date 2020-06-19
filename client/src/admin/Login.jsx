@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SHA256 from 'crypto-js/sha256';
+import Sha256 from 'crypto-js/sha256';
 
 // import { Redirect } from 'react-router-dom';
 import {
@@ -38,8 +38,8 @@ const Login = () => {
 
     if (validData) {
       if (
-        SHA256(user.toString()).toString() === SHA256('admin').toString() &&
-        SHA256(password.toString()).toString() === SHA256('admin').toString()
+        Sha256(user.toString()).toString() === Sha256('admin').toString() &&
+        Sha256(password.toString()).toString() === Sha256('admin').toString()
       ) {
         window.location = '/dashboard';
       } else {
