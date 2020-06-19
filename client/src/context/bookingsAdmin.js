@@ -7,6 +7,7 @@ export const BookingsAdminProvider = ({ children }) => {
   const [state, setState] = useState({
     columns: [],
     data: [],
+    loading: true,
   });
 
   const api = async () => {
@@ -15,10 +16,10 @@ export const BookingsAdminProvider = ({ children }) => {
         'http://localhost:5000/spring-internship/us-central1/app/api/admin/bookingdetails'
       )
       .then(function (response) {
+        setState({ loading: false });
         return response;
       });
     const data = Object.values(response.data);
-    console.log(data);
 
     const columns = [
       { title: 'IUID', field: 'iuid' },

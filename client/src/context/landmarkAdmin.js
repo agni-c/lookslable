@@ -7,6 +7,7 @@ export const LandmarkAdminProvider = ({ children }) => {
   const [state, setState] = useState({
     columns: [],
     data: [],
+    loading: true,
   });
 
   const api = async () => {
@@ -15,10 +16,10 @@ export const LandmarkAdminProvider = ({ children }) => {
         'http://localhost:5000/spring-internship/us-central1/app/api/admin/landmarkdetails'
       )
       .then(function (response) {
+        setState({ loading: false });
         return response;
       });
     const data = Object.values(response.data);
-    console.log(data);
 
     const columns = [
       { title: 'UUID', field: 'uuid' },

@@ -73,7 +73,7 @@ export default function ClippedDrawer() {
 
           <div className={classes.drawerContainer}>
             <List>
-              <Link to='/puser'>
+              <Link to='/dashboard/puser'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
@@ -83,7 +83,7 @@ export default function ClippedDrawer() {
               </Link>
             </List>
             <List>
-              <Link to='/iuser'>
+              <Link to='/dashboard/iuser'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
@@ -93,7 +93,7 @@ export default function ClippedDrawer() {
               </Link>
             </List>
             <List>
-              <Link to='/bookings'>
+              <Link to='/dashboard/bookings'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
@@ -103,7 +103,7 @@ export default function ClippedDrawer() {
               </Link>
             </List>
             <List>
-              <Link to='/landmark'>
+              <Link to='/dashboard/landmark'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
@@ -113,7 +113,7 @@ export default function ClippedDrawer() {
               </Link>
             </List>
             <List>
-              <Link to='/approvedphotos'>
+              <Link to='/dashboard/approvedphotos'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
@@ -125,24 +125,32 @@ export default function ClippedDrawer() {
             <Divider />
           </div>
         </Drawer>
-        <main className={classes.content}>
+        <main className={classes.content} style={{ height: '100vh' }}>
           <Toolbar />
           {/* <PuserFragment /> */}
           {/* <BookingFragment /> */}
           <Switch>
-            <Route exact path='/puser' component={PuserFragment} />
+            <Route exact path='/dashboard/puser' component={PuserFragment} />
           </Switch>
           <Switch>
-            <Route path='/iuser' exact component={IuserFragment} />
+            <Route path='/dashboard/iuser' exact component={IuserFragment} />
           </Switch>
           <Switch>
-            <Route path='/bookings' component={BookingFragment} />
+            <Route path='/dashboard/bookings' component={BookingFragment} />
           </Switch>
           <Switch>
-            <Route exact path='/landmark' component={LandMarkFragment} />
+            <Route
+              exact
+              path='/dashboard/landmark'
+              component={LandMarkFragment}
+            />
           </Switch>
           <Switch>
-            <Route exact path='/approvedphotos' component={ApprovedPhotos} />
+            <Route
+              exact
+              path='/dashboard/approvedphotos'
+              component={ApprovedPhotos}
+            />
           </Switch>
         </main>
       </div>
