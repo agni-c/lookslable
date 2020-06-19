@@ -1034,3 +1034,552 @@
 [info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"app"},"message":"Finished \"app\" in ~1s"}}
 [debug] [2020-06-08T08:48:33.601Z] [worker-app-86bebabb-1e01-4fd2-8325-438f1829ccee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-app-86bebabb-1e01-4fd2-8325-438f1829ccee]: IDLE"}}
 [debug] [2020-06-08T08:48:33.602Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:42:30.869Z] ----------------------------------------------------------------------
+[debug] [2020-06-19T06:42:30.872Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-06-19T06:42:30.873Z] CLI Version:   8.2.0
+[debug] [2020-06-19T06:42:30.873Z] Platform:      win32
+[debug] [2020-06-19T06:42:30.873Z] Node Version:  v12.15.0
+[debug] [2020-06-19T06:42:30.874Z] Time:          Fri Jun 19 2020 12:12:30 GMT+0530 (India Standard Time)
+[debug] [2020-06-19T06:42:30.875Z] ----------------------------------------------------------------------
+[debug] [2020-06-19T06:42:30.875Z] 
+[debug] [2020-06-19T06:42:30.886Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-19T06:42:30.887Z] > authorizing via signed-in user
+[debug] [2020-06-19T06:42:30.887Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-06-19T06:42:30.892Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-06-19T06:42:33.259Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 19 Jun 2020 06:42:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1354","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-19T06:42:33.264Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-06-19T06:42:34.225Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 19 Jun 2020 06:42:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Vishal\Desktop\internship\lookslabel\functions" for Cloud Functions...
+[debug] [2020-06-19T06:42:36.332Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-19T06:42:36.333Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-06-19T06:42:36.334Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-19T06:42:36.336Z] [worker-~diagnostic~-ff1b5026-171f-4c29-97af-37a3d969320d]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\4268 
+[debug] [2020-06-19T06:42:36.337Z] [worker-~diagnostic~-ff1b5026-171f-4c29-97af-37a3d969320d]: BUSY 
+[debug] [2020-06-19T06:42:37.005Z] [runtime-status] [4268] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-19T06:42:37.006Z] [runtime-status] [4268] Disabled runtime features: undefined 
+[debug] [2020-06-19T06:42:37.035Z] [runtime-status] [4268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-19T06:42:37.090Z] [runtime-status] [4268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:42:37.096Z] [runtime-status] [4268] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-19T06:42:38.061Z] [runtime-status] [4268] Checked functions.config() {"config":{}} 
+[debug] [2020-06-19T06:42:38.063Z] [runtime-status] [4268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:42:38.069Z] [runtime-status] [4268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-19T06:42:38.071Z] [runtime-status] [4268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:42:38.072Z] [runtime-status] [4268] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-19T06:42:41.700Z] [runtime-status] [4268] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-06-19T06:42:56.578Z] [worker-~diagnostic~-ff1b5026-171f-4c29-97af-37a3d969320d]: IDLE 
+[debug] [2020-06-19T06:44:57.809Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:44:57.810Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:44:57.810Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:44:57.816Z] [worker-pool] addWorker(app) 
+[debug] [2020-06-19T06:44:57.816Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-06-19T06:44:57.816Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:44:57.817Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:44:57.817Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:44:58.635Z] [runtime-status] [17520] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-19T06:44:58.638Z] [runtime-status] [17520] Disabled runtime features: undefined 
+[debug] [2020-06-19T06:44:58.645Z] [runtime-status] [17520] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-19T06:44:58.649Z] [runtime-status] [17520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:44:58.653Z] [runtime-status] [17520] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-19T06:44:58.757Z] [runtime-status] [17520] Checked functions.config() {"config":{}} 
+[debug] [2020-06-19T06:44:58.759Z] [runtime-status] [17520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:44:58.761Z] [runtime-status] [17520] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-19T06:44:58.763Z] [runtime-status] [17520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-19T06:44:58.763Z] [runtime-status] [17520] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-19T06:44:59.019Z] [runtime-status] [17520] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-19T06:45:00.433Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:45:00.436Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:45:00.436Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:45:00.442Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:45:00.450Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:45:00.499Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:45:00.511Z] [runtime-status] [17520] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~3s
+[debug] [2020-06-19T06:45:03.723Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:45:03.724Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:46:57.307Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:46:57.307Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:46:57.307Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:46:57.308Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:46:57.308Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:46:57.308Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:46:57.309Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:46:57.312Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:46:57.312Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:46:57.312Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:46:57.314Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:46:57.322Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:46:57.323Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:46:57.807Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:46:57.808Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:47:09.471Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:47:09.472Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:47:09.472Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:47:09.473Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:47:09.473Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:47:09.474Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:47:09.475Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:47:09.479Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:47:09.480Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:47:09.482Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:47:09.486Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:47:09.500Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:47:09.501Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:47:09.966Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:47:09.967Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:48:22.176Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:48:22.176Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:48:22.176Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:48:22.176Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:48:22.176Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:48:22.176Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:48:22.177Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:48:22.179Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:48:22.179Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:48:22.179Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:48:22.181Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:48:22.184Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:48:22.184Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:48:22.776Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:48:22.777Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:48:29.336Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:48:29.337Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:48:29.337Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:48:29.337Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:48:29.338Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:48:29.338Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:48:29.338Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:48:29.340Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:48:29.341Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:48:29.341Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:48:29.344Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:48:29.347Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:48:29.348Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:48:29.783Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:48:29.784Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:49:18.811Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:49:18.811Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:49:18.811Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:49:18.812Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:49:18.812Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:49:18.812Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:49:18.812Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:49:18.814Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:49:18.814Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:49:18.815Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:49:18.816Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:49:18.821Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:49:18.821Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:49:19.592Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:49:19.592Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T06:50:16.071Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T06:50:16.072Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T06:50:16.072Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T06:50:16.072Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T06:50:16.072Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:50:16.072Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T06:50:16.073Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T06:50:16.075Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T06:50:16.076Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T06:50:16.077Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T06:50:16.081Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T06:50:16.088Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T06:50:16.089Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T06:50:16.709Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T06:50:16.710Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:45:43.403Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:45:43.404Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:45:43.404Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:45:43.404Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:45:43.405Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:45:43.405Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:45:43.406Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:45:43.409Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:45:43.409Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:45:43.410Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:45:43.412Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:45:43.421Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:45:43.422Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:45:44.970Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:45:44.971Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:45:50.592Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:45:50.592Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:45:50.593Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:45:50.593Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:45:50.597Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:45:50.597Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:45:50.599Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:45:50.604Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:45:50.604Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:45:50.605Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:45:50.608Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:45:50.619Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:45:50.620Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:45:51.019Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:45:51.019Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:48:55.919Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:48:55.920Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:48:55.920Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:48:55.920Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:48:55.921Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:48:55.921Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:48:55.922Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:48:55.925Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:48:55.926Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:48:55.926Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:48:55.929Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:48:55.935Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:48:55.936Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:48:56.484Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:48:56.485Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:49:50.532Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:49:50.533Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:49:50.533Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:49:50.533Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:49:50.533Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:49:50.533Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:49:50.534Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:49:50.536Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:49:50.536Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:49:50.537Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:49:50.538Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:49:50.543Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:49:50.553Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:49:50.945Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:49:50.946Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:53:21.446Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:53:21.446Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:53:21.446Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:53:21.446Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:53:21.447Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:53:21.447Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:53:21.448Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:53:21.450Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:53:21.450Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:53:21.451Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:53:21.453Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:53:21.463Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:53:21.464Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:53:22.205Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:53:22.206Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:54:31.665Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:54:31.665Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:54:31.666Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:54:31.666Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:54:31.666Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:54:31.666Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:54:31.671Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:54:31.674Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:54:31.674Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:54:31.674Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:54:31.675Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:54:31.679Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:54:31.680Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T07:54:32.557Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:54:32.557Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T07:59:40.676Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T07:59:40.676Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T07:59:40.677Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T07:59:40.677Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T07:59:40.677Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:59:40.678Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T07:59:40.679Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T07:59:40.681Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T07:59:40.682Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T07:59:40.682Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T07:59:40.684Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T07:59:40.688Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T07:59:40.689Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~5s
+[debug] [2020-06-19T07:59:46.345Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T07:59:46.345Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:09:56.836Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:09:56.836Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:09:56.837Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:09:56.837Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:09:56.837Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:09:56.837Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:09:56.839Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:09:56.840Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:09:56.841Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:09:56.841Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:09:56.843Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:09:56.850Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:09:56.851Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:09:57.644Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:09:57.645Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:10:29.465Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:10:29.469Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:10:29.470Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:10:29.470Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:10:29.470Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:10:29.471Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:10:29.472Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:10:29.474Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:10:29.475Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:10:29.475Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:10:29.477Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:10:29.485Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:10:29.485Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:10:29.862Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:10:29.863Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:10:37.362Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:10:37.362Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:10:37.362Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:10:37.363Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:10:37.363Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:10:37.363Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:10:37.364Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:10:37.365Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:10:37.366Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:10:37.366Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:10:37.367Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:10:37.386Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:10:37.386Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:10:37.780Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:10:37.780Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:23:12.116Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:23:12.116Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:23:12.117Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:23:12.117Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:23:12.117Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:23:12.117Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:23:12.118Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:23:12.153Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:23:12.153Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:23:12.154Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:23:12.157Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:23:12.162Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:23:12.163Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:23:13.405Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:23:13.405Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:24:47.006Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:24:47.006Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:24:47.006Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:24:47.007Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:24:47.007Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:24:47.007Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:24:47.008Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:24:47.024Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:24:47.025Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:24:47.025Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:24:47.027Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:24:47.047Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:24:47.047Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:24:47.530Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:24:47.531Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:24:56.042Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:24:56.042Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:24:56.078Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:24:56.078Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:24:56.078Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:24:56.079Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:24:56.079Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:24:56.081Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:24:56.081Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:24:56.082Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:24:56.083Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:24:56.099Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:24:56.100Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:24:56.502Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:24:56.503Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:33:37.626Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:33:37.626Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:33:37.627Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:33:37.627Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:33:37.627Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:33:37.627Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:33:37.629Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:33:37.633Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:33:37.665Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:33:37.666Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:33:37.669Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:33:37.674Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:33:37.676Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:33:38.513Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:33:38.513Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:37:41.162Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:37:41.162Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:37:41.163Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:37:41.163Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:37:41.170Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:37:41.171Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:37:41.171Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:37:41.176Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:37:41.176Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:37:41.192Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:37:41.194Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:37:41.205Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:37:41.226Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:37:42.176Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:37:42.176Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:38:04.097Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:38:04.097Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:38:04.097Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:38:04.097Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:38:04.098Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:38:04.098Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:38:04.099Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:38:04.102Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:38:04.102Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:38:04.168Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:38:04.170Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:38:04.175Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:38:04.176Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:38:04.632Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:38:04.632Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:40:01.340Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:40:01.341Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:40:01.341Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:40:01.341Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:40:01.341Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:40:01.341Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:40:01.342Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:40:01.345Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:40:01.345Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:40:01.346Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:40:01.348Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:40:01.352Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:40:01.353Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:40:01.921Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:40:01.921Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:43:08.416Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:43:08.417Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:43:08.417Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:43:08.417Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:43:08.417Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:43:08.417Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:43:08.418Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:43:08.421Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:43:08.421Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:43:08.421Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:43:08.422Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:43:08.452Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:43:08.453Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:43:09.424Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:43:09.425Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:44:42.138Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:44:42.138Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:44:42.139Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:44:42.139Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:44:42.139Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:44:42.139Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:44:42.140Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:44:42.142Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:44:42.143Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:44:42.354Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:44:42.357Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:44:42.360Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:44:42.361Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:44:42.831Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:44:42.831Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:44:46.346Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:44:46.346Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:44:46.346Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:44:46.347Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:44:46.347Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:44:46.347Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:44:46.347Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:44:46.349Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:44:46.349Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:44:46.349Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:44:46.351Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:44:46.354Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:44:46.369Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:44:46.769Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:44:46.770Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:52:07.061Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:52:07.061Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:52:07.061Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:52:07.070Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:52:07.071Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:52:07.071Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:52:07.071Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:52:07.073Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:52:07.073Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:52:07.108Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:52:07.173Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:52:07.215Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:52:07.217Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:52:08.279Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:52:08.279Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-19T08:54:40.457Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-19T08:54:40.457Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-19T08:54:40.457Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-06-19T08:54:40.457Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-19T08:54:40.458Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:54:40.458Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: BUSY 
+[debug] [2020-06-19T08:54:40.459Z] [runtime-status] [17520] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-06-19T08:54:40.460Z] [runtime-status] [17520] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-19T08:54:40.460Z] [runtime-status] [17520] Running app in mode HTTPS 
+[debug] [2020-06-19T08:54:40.461Z] [runtime-status] [17520] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\17520 
+[debug] [2020-06-19T08:54:40.462Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-19T08:54:40.464Z] [runtime-status] [17520] Ephemeral server handling GET request 
+[debug] [2020-06-19T08:54:40.483Z] [runtime-status] [17520] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-06-19T08:54:41.095Z] [worker-app-fdf7fcb3-b023-4041-a84f-3249781ae1d8]: IDLE 
+[debug] [2020-06-19T08:54:41.096Z] [work-queue] {"queueLength":0,"workRunningCount":0}
