@@ -125,7 +125,7 @@ export default function ClippedDrawer() {
             <Divider />
           </div>
         </Drawer>
-        <main className={classes.content}>
+        <main className={classes.content} style={{ height: '100vh' }}>
           <Toolbar />
           {/* <PuserFragment /> */}
           {/* <BookingFragment /> */}

@@ -7,6 +7,7 @@ export const IuserAdminProvider = ({ children }) => {
   const [state, setState] = useState({
     columns: [],
     data: [],
+    loading: true,
   });
   // console.log(state.data);
 
@@ -16,6 +17,7 @@ export const IuserAdminProvider = ({ children }) => {
         'http://localhost:5000/spring-internship/us-central1/app/api/admin/iuserprofile'
       )
       .then(function (response) {
+        setState({ loading: false });
         return response;
       });
     const data = response.data;
