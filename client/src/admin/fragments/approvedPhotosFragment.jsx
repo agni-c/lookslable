@@ -46,10 +46,19 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard() {
   const classes = useStyles();
   const [state, setState] = useContext(ApprovedPhotosAdminContext);
-  const [expanded, setExpanded] = React.useState(false);
 
-  const addToFavourites = (e) => {
-    console.log(e);
+  const addToFavourites = (id, puid) => {
+    axios
+      .post(
+        'http://localhost:5000/spring-internship/us-central1/app/api/admin/trendingPhotos',
+        {
+          puid: puid,
+          id: id,
+        }
+      )
+      .then(function (response) {
+        console.log(response);
+      });
   };
 
   {
@@ -96,7 +105,7 @@ export default function RecipeReviewCard() {
               <CardActions disableSpacing>
                 <IconButton
                   aria-label='add to favorites'
-                  onClick={() => addToFavourites(tile.id, tile)}
+                  onClick={() => addToFavourites(tile.id, tile.puid)}
                 >
                   <FavoriteIcon />
                 </IconButton>
