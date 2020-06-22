@@ -39,6 +39,9 @@ app.use('/api/upload', picsUpload);
 const uploaddetails = require('./routes/uploadDetails');
 app.use('/api/uploaddetails', uploaddetails);
 
+const trendingphotos = require('./routes/admin/trendingPhotos');
+app.use('/api/admin/trendingPhotos', trendingphotos);
+
 //popular location
 const popularlocation = require('./routes/popularLocation');
 app.use('/api/popularlocation', popularlocation);
