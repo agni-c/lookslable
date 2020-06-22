@@ -27,6 +27,7 @@ router.post('/:uid', filesUpload, (req, res, next) => {
     ),
     names: files.originalname,
     landmark: req.body.landmark,
+    trending : 0
     // location: req.body.location,
     // price: req.body.price,
     // time: req.body.time,
