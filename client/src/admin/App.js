@@ -27,15 +27,15 @@ class AdminApp extends React.Component {
                 <ApprovedPhotoAdminProvider>
                   <LandmarkAdminProvider>
                     <BookingsAdminProvider>
-                      <Route exact path='/dashboard' component={Dashboard} />
-                      {/* <Dashboard /> */}
+                      {/* <Route exact path='/' component={Dashboard} /> */}
+                      <Dashboard />
                     </BookingsAdminProvider>
                   </LandmarkAdminProvider>
                 </ApprovedPhotoAdminProvider>
               </IuserAdminProvider>
             </PuserAdminProvider>
           </div>
-          <Route exact path='/' component={Login} />
+          {/* <Route exact path='/' component={Login} /> */}
         </Router>
       </Switch>
     );

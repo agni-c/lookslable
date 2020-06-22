@@ -48,8 +48,8 @@ export default function RecipeReviewCard() {
   const [state, setState] = useContext(ApprovedPhotosAdminContext);
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const addToFavourites = (e) => {
+    console.log(e);
   };
 
   {
@@ -94,12 +94,15 @@ export default function RecipeReviewCard() {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label='add to favorites'>
+                <IconButton
+                  aria-label='add to favorites'
+                  onClick={() => addToFavourites(tile.id, tile)}
+                >
                   <FavoriteIcon />
                 </IconButton>
-                <IconButton aria-label='share'>
+                {/* <IconButton aria-label='share'>
                   <ShareIcon />
-                </IconButton>
+                </IconButton> */}
                 {/* <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
