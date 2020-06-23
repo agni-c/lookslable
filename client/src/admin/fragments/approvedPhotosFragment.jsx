@@ -46,10 +46,19 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard() {
   const classes = useStyles();
   const [state, setState] = useContext(ApprovedPhotosAdminContext);
-  const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const addToFavourites = (id, puid) => {
+    axios
+      .post(
+        'http://localhost:5000/spring-internship/us-central1/app/api/admin/trendingPhotos',
+        {
+          puid: puid,
+          id: id,
+        }
+      )
+      .then(function (response) {
+        console.log(response);
+      });
   };
 
   {
@@ -94,12 +103,15 @@ export default function RecipeReviewCard() {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label='add to favorites'>
+                <IconButton
+                  aria-label='add to favorites'
+                  onClick={() => addToFavourites(tile.id, tile.puid)}
+                >
                   <FavoriteIcon />
                 </IconButton>
-                <IconButton aria-label='share'>
+                {/* <IconButton aria-label='share'>
                   <ShareIcon />
-                </IconButton>
+                </IconButton> */}
                 {/* <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
