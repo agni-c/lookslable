@@ -1,11 +1,11 @@
- const router = require("express").Router();
-var sessionstorage = require("sessionstorage");
-const { filesUpload } = require("../middleware");
-const util = require("util");
-var admin = require("firebase-admin");
-
+const router = require('express').Router();
+var sessionstorage = require('sessionstorage');
+const { filesUpload } = require('../middleware');
+const util = require('util');
+var admin = require('firebase-admin');
+const { v4 } = require('uuid');
 const db = admin.firestore();
-const profileRef = db.collection("User Profile");
+const profileRef = db.collection('User Profile');
 
 // let uid = req.session.uid;
 /*
@@ -13,14 +13,13 @@ const profileRef = db.collection("User Profile");
  * This module uploads files to cloud storage of google
  * returns json after saving file reference with form data
  */
-router.post("/:uid", filesUpload, (req, res, next) => {
+router.post('/:uid', filesUpload, (req, res, next) => {
   // let uid = req.session.uid;
   // let uid = sessionstorage.getItem("uid");
   let uid = req.params.uid;
-  const glaryRef = profileRef.doc(uid).collection("Glary");
+  const glaryRef = profileRef.doc(uid).collection('Glary');
   const accountRef = profileRef.doc(uid);
   const files = req.files;
-
   const session = {
     puid: uid,
     images: encodeURI(
@@ -28,6 +27,7 @@ router.post("/:uid", filesUpload, (req, res, next) => {
     ),
     names: files.originalname,
     landmark: req.body.landmark,
+    trending : 0
     // location: req.body.location,
     // price: req.body.price,
     // time: req.body.time,
@@ -36,9 +36,7 @@ router.post("/:uid", filesUpload, (req, res, next) => {
   glaryRef.add(session);
   //Creating an array in profile which will hold all the landmarks
   accountRef.update({
-    landmark: admin.firestore.FieldValue.arrayUnion(
-      session.landmark
-    ),
+    landmark: admin.firestore.FieldValue.arrayUnion(session.landmark),
   });
   res.end();
   // res.json(session);
@@ -48,12 +46,12 @@ router.post("/:uid", filesUpload, (req, res, next) => {
  * get single p user data of gallery collection
  * get -  /api/upload/usergallery/:uid
  */
-router.get("/usergallery/:uid", (req, res, next) => {
+router.get('/usergallery/:uid', (req, res, next) => {
   // let uid = req.session.uid;
-  let uid = sessionstorage.getItem("uid");
-  console.log("Hi this is user gallery", uid);
+  let uid = sessionstorage.getItem('uid');
+  console.log('Hi this is user gallery', uid);
 
-  const glaryRef = profileRef.doc(uid).collection("Glary");
+  const glaryRef = profileRef.doc(uid).collection('Glary');
   // console.log(uid);
   const userGlary = async () => {
     const snapshot = await glaryRef.get();
@@ -67,13 +65,18 @@ router.get("/usergallery/:uid", (req, res, next) => {
  * get all the  user data of gallery collection
  * get -  /api/upload/allUsergallery
  */
-router.get("/allUsergallery", (req, res, next) => {
+router.get('/allUsergallery', (req, res, next) => {
   let json = new Array();
-  const Ref = db.collectionGroup("Glary");
+  const Ref = db.collectionGroup('Glary');
   Ref.get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        json.push(doc.data());
+        var obj = {
+          id: doc.id,
+        };
+        var data = Object.assign(doc.data(), obj);
+        json.push(data);
+        // console.log(json);
       });
       return res.json(json);
     })

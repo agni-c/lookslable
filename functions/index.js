@@ -39,6 +39,9 @@ app.use('/api/upload', picsUpload);
 const uploaddetails = require('./routes/uploadDetails');
 app.use('/api/uploaddetails', uploaddetails);
 
+const trendingphotos = require('./routes/admin/trendingPhotos');
+app.use('/api/admin/trendingPhotos', trendingphotos);
+
 //popular location
 const popularlocation = require('./routes/popularLocation');
 app.use('/api/popularlocation', popularlocation);
@@ -55,6 +58,9 @@ app.use('/api/puserevent', puserevent);
 //landmark
 const landmark = require('./routes/landmark');
 app.use('/api/landmark', landmark);
+
+const rating = require("./routes/rating");
+app.use("/api/rating", rating);
 
 //puser profile
 const PuserProfile = require('./routes/admin/puserProfile');
