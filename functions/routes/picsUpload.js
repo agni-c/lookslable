@@ -27,7 +27,7 @@ router.post('/:uid', filesUpload, (req, res, next) => {
     ),
     names: files.originalname,
     landmark: req.body.landmark,
-    trending : 0
+    trending: 0,
     // location: req.body.location,
     // price: req.body.price,
     // time: req.body.time,
@@ -67,7 +67,7 @@ router.get('/usergallery/:uid', (req, res, next) => {
  */
 router.get('/allUsergallery', (req, res, next) => {
   let json = new Array();
-  const Ref = db.collectionGroup('Glary');
+  const Ref = db.collectionGroup('Glary').where('trending', '==', true);
   Ref.get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -81,6 +81,8 @@ router.get('/allUsergallery', (req, res, next) => {
       return res.json(json);
     })
     .catch((err) => console.log(err));
+
+  //--------------------------
 });
 
 // router.post("/uid", (req, res) => {

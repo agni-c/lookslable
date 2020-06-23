@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AdminApp from "./admin/App";
+import Iuser from "./I_User/components/App";
+import Puser from "./P_User/components/App";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<Router>
+			<Link to="/admin">
+				<Button>Admin</Button>
+			</Link>
+			<Link to="/iuser">
+				<Button>I USER</Button>
+			</Link>
+			<Link to="/puser">
+				<Button>P USER</Button>
+			</Link>
+
+			<Route path="/admin" component={AdminApp} />
+			<Route path="/iuser" component={Iuser} />
+			<Route path="/puser" component={Puser} />
+		</Router>
+	);
+};
 
 export default App;
