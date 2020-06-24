@@ -22,9 +22,9 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 	measurementId: "G-S2BPC07SW6",
 	// ...
 };
-if (!firebase.app.length){
+
 firebase.initializeApp(config);
-}
+
 class SignInScreen extends React.Component {
 	// The component's Local state.
 	state = {

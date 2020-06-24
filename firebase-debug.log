@@ -1,194 +1,164 @@
-[debug] [2020-06-23T04:13:28.344Z] ----------------------------------------------------------------------
-[debug] [2020-06-23T04:13:28.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
-[debug] [2020-06-23T04:13:28.346Z] CLI Version:   8.2.0
-[debug] [2020-06-23T04:13:28.346Z] Platform:      win32
-[debug] [2020-06-23T04:13:28.347Z] Node Version:  v12.15.0
-[debug] [2020-06-23T04:13:28.347Z] Time:          Tue Jun 23 2020 09:43:28 GMT+0530 (India Standard Time)
-[debug] [2020-06-23T04:13:28.348Z] ----------------------------------------------------------------------
-[debug] [2020-06-23T04:13:28.348Z] 
-[debug] [2020-06-23T04:13:28.401Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-06-23T04:13:28.402Z] > authorizing via signed-in user
-[debug] [2020-06-23T04:13:28.402Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
-[debug] [2020-06-23T04:13:28.405Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-06-23T04:13:28.405Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2020-06-24T05:41:36.468Z] ----------------------------------------------------------------------
+[debug] [2020-06-24T05:41:36.470Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vishal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-06-24T05:41:36.470Z] CLI Version:   8.2.0
+[debug] [2020-06-24T05:41:36.471Z] Platform:      win32
+[debug] [2020-06-24T05:41:36.471Z] Node Version:  v12.15.0
+[debug] [2020-06-24T05:41:36.472Z] Time:          Wed Jun 24 2020 11:11:36 GMT+0530 (India Standard Time)
+[debug] [2020-06-24T05:41:36.472Z] ----------------------------------------------------------------------
+[debug] [2020-06-24T05:41:36.472Z] 
+[debug] [2020-06-24T05:41:36.479Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-24T05:41:36.479Z] > authorizing via signed-in user
+[debug] [2020-06-24T05:41:36.480Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-06-24T05:41:36.482Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-06-24T05:41:36.483Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2020-06-23T04:13:28.795Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Jun 2020 04:13:30 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-06-23T04:13:28.853Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+[debug] [2020-06-24T05:41:37.167Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Jun 2020 05:41:39 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-24T05:41:37.200Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
  {"permissions":["firebase.projects.get"]}
-[debug] [2020-06-23T04:13:30.936Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Jun 2020 04:13:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1352","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-06-23T04:13:30.936Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+[debug] [2020-06-24T05:41:39.079Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Jun 2020 05:41:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1323","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-24T05:41:39.080Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
  
-[debug] [2020-06-23T04:13:31.762Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Jun 2020 04:13:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-24T05:41:39.876Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Jun 2020 05:41:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [warn] !  Your requested "node" version "10" doesn't match your global version "12"
 [info] +  functions: functions emulator started at http://localhost:5000
 [info] i  functions: Watching "C:\Users\Vishal\Desktop\internship\lookslabel\functions" for Cloud Functions...
-[debug] [2020-06-23T04:13:33.810Z] [worker-pool] addWorker(~diagnostic~) 
-[debug] [2020-06-23T04:13:33.811Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
-[debug] [2020-06-23T04:13:33.811Z] [worker-pool] submitWork(triggerId=) 
-[debug] [2020-06-23T04:13:33.811Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\24708 
-[debug] [2020-06-23T04:13:33.811Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: BUSY 
-[debug] [2020-06-23T04:13:34.162Z] [runtime-status] [24708] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
-[debug] [2020-06-23T04:13:34.163Z] [runtime-status] [24708] Disabled runtime features: undefined 
-[debug] [2020-06-23T04:13:34.166Z] [runtime-status] [24708] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T04:13:34.167Z] [runtime-status] [24708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:13:34.169Z] [runtime-status] [24708] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-06-23T04:13:34.209Z] [runtime-status] [24708] Checked functions.config() {"config":{}} 
-[debug] [2020-06-23T04:13:34.209Z] [runtime-status] [24708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:13:34.210Z] [runtime-status] [24708] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T04:13:34.211Z] [runtime-status] [24708] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:13:34.211Z] [runtime-status] [24708] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-06-23T04:13:34.315Z] [runtime-status] [24708] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[debug] [2020-06-24T05:41:41.934Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-24T05:41:41.935Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-06-24T05:41:41.935Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-24T05:41:41.936Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\19136 
+[debug] [2020-06-24T05:41:41.937Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: BUSY 
+[debug] [2020-06-24T05:41:42.666Z] [runtime-status] [19136] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-24T05:41:42.667Z] [runtime-status] [19136] Disabled runtime features: undefined 
+[debug] [2020-06-24T05:41:42.672Z] [runtime-status] [19136] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:41:42.674Z] [runtime-status] [19136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:41:42.676Z] [runtime-status] [19136] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-24T05:41:43.513Z] [runtime-status] [19136] Checked functions.config() {"config":{}} 
+[debug] [2020-06-24T05:41:43.513Z] [runtime-status] [19136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:41:43.514Z] [runtime-status] [19136] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:41:43.515Z] [runtime-status] [19136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:41:43.515Z] [runtime-status] [19136] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-24T05:41:45.715Z] [runtime-status] [19136] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
 [info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
-[debug] [2020-06-23T04:13:35.252Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: IDLE 
-[debug] [2020-06-23T04:16:10.015Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-23T04:16:10.016Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-23T04:16:10.016Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
-[debug] [2020-06-23T04:16:10.069Z] [worker-pool] addWorker(app) 
-[debug] [2020-06-23T04:16:10.069Z] [worker-pool] Adding worker with key app, total=1 
-[debug] [2020-06-23T04:16:10.069Z] [worker-pool] submitWork(triggerId=app) 
-[debug] [2020-06-23T04:16:10.069Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\21832 
-[debug] [2020-06-23T04:16:10.069Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: BUSY 
-[debug] [2020-06-23T04:16:13.623Z] [runtime-status] [21832] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
-[debug] [2020-06-23T04:16:13.624Z] [runtime-status] [21832] Disabled runtime features: undefined 
-[debug] [2020-06-23T04:16:13.666Z] [runtime-status] [21832] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T04:16:13.671Z] [runtime-status] [21832] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:16:13.673Z] [runtime-status] [21832] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-06-23T04:16:14.230Z] [runtime-status] [21832] Checked functions.config() {"config":{}} 
-[debug] [2020-06-23T04:16:14.231Z] [runtime-status] [21832] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:16:14.232Z] [runtime-status] [21832] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T04:16:14.232Z] [runtime-status] [21832] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T04:16:14.232Z] [runtime-status] [21832] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-06-23T04:16:16.103Z] [runtime-status] [21832] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[debug] [2020-06-24T05:41:55.200Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: IDLE 
+[debug] [2020-06-24T05:47:52.981Z] File C:\Users\Vishal\Desktop\internship\lookslabel\functions\index.js changed, reloading triggers 
+[debug] [2020-06-24T05:47:53.984Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-06-24T05:47:53.984Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: FINISHING 
+[debug] [2020-06-24T05:47:53.998Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-24T05:47:53.998Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-06-24T05:47:53.998Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-24T05:47:53.999Z] [worker-~diagnostic~-54f33884-daaf-44e4-9b3f-aa44ca4c5350]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\10652 
+[debug] [2020-06-24T05:47:53.999Z] [worker-~diagnostic~-54f33884-daaf-44e4-9b3f-aa44ca4c5350]: BUSY 
+[debug] [2020-06-24T05:47:54.008Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: exited 
+[debug] [2020-06-24T05:47:54.008Z] [worker-~diagnostic~-d1cf6917-eff5-4ae8-ad22-34707344cb46]: FINISHED 
+[debug] [2020-06-24T05:47:55.031Z] [runtime-status] [10652] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-24T05:47:55.034Z] [runtime-status] [10652] Disabled runtime features: undefined 
+[debug] [2020-06-24T05:47:55.039Z] [runtime-status] [10652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:47:55.042Z] [runtime-status] [10652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:47:55.045Z] [runtime-status] [10652] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-24T05:47:55.110Z] [runtime-status] [10652] Checked functions.config() {"config":{}} 
+[debug] [2020-06-24T05:47:55.110Z] [runtime-status] [10652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:47:55.112Z] [runtime-status] [10652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:47:55.113Z] [runtime-status] [10652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:47:55.113Z] [runtime-status] [10652] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-06-23T04:16:27.301Z] [runtime-status] [21832] Trigger "app" has been found, beginning invocation! 
+[warn] !  Error: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+    at FirebaseAppError.FirebaseError [as constructor] (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\utils\error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\utils\error.js:88:28)
+    at new FirebaseAppError (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\utils\error.js:123:28)
+    at FirebaseNamespaceInternals.app (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\firebase-namespace.js:101:19)
+    at FirebaseNamespace.app (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\firebase-namespace.js:452:30)
+    at FirebaseNamespace.ensureApp (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\firebase-namespace.js:468:24)
+    at Proxy.fn (C:\Users\Vishal\Desktop\internship\lookslabel\functions\node_modules\firebase-admin\lib\firebase-namespace.js:327:30)
+    at Object.<anonymous> (C:\Users\Vishal\Desktop\internship\lookslabel\functions\index.js:15:18)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-06-24T05:47:55.732Z] [worker-~diagnostic~-54f33884-daaf-44e4-9b3f-aa44ca4c5350]: exited 
+[debug] [2020-06-24T05:47:55.733Z] [worker-~diagnostic~-54f33884-daaf-44e4-9b3f-aa44ca4c5350]: FINISHED 
+[debug] [2020-06-24T05:49:01.265Z] File C:\Users\Vishal\Desktop\internship\lookslabel\functions\index.js changed, reloading triggers 
+[debug] [2020-06-24T05:49:02.267Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0 
+[debug] [2020-06-24T05:49:02.278Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-06-24T05:49:02.279Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-06-24T05:49:02.279Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-06-24T05:49:02.279Z] [worker-~diagnostic~-40df38e8-6492-4d61-8d83-323e9f4e6104]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\668 
+[debug] [2020-06-24T05:49:02.280Z] [worker-~diagnostic~-40df38e8-6492-4d61-8d83-323e9f4e6104]: BUSY 
+[debug] [2020-06-24T05:49:03.228Z] [runtime-status] [668] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-24T05:49:03.230Z] [runtime-status] [668] Disabled runtime features: undefined 
+[debug] [2020-06-24T05:49:03.235Z] [runtime-status] [668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:49:03.238Z] [runtime-status] [668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:49:03.241Z] [runtime-status] [668] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-24T05:49:03.322Z] [runtime-status] [668] Checked functions.config() {"config":{}} 
+[debug] [2020-06-24T05:49:03.324Z] [runtime-status] [668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:49:03.326Z] [runtime-status] [668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T05:49:03.327Z] [runtime-status] [668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T05:49:03.328Z] [runtime-status] [668] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-24T05:49:03.535Z] [runtime-status] [668] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-24T05:49:08.488Z] [worker-~diagnostic~-40df38e8-6492-4d61-8d83-323e9f4e6104]: IDLE 
+[debug] [2020-06-24T06:10:30.609Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-06-24T06:10:30.612Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-24T06:10:30.614Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
+[debug] [2020-06-24T06:10:30.643Z] [worker-pool] addWorker(app) 
+[debug] [2020-06-24T06:10:30.643Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-06-24T06:10:30.644Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-24T06:10:30.645Z] [worker-app-d21ed4db-728d-42c9-9bbd-4cac25955aed]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\1700 
+[debug] [2020-06-24T06:10:30.645Z] [worker-app-d21ed4db-728d-42c9-9bbd-4cac25955aed]: BUSY 
+[debug] [2020-06-24T06:10:36.229Z] [runtime-status] [1700] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-24T06:10:36.236Z] [runtime-status] [1700] Disabled runtime features: undefined 
+[debug] [2020-06-24T06:10:36.250Z] [runtime-status] [1700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:36.258Z] [runtime-status] [1700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:36.266Z] [runtime-status] [1700] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-24T06:10:36.907Z] [runtime-status] [1700] Checked functions.config() {"config":{}} 
+[debug] [2020-06-24T06:10:36.910Z] [runtime-status] [1700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:36.913Z] [runtime-status] [1700] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:36.915Z] [runtime-status] [1700] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:36.916Z] [runtime-status] [1700] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-24T06:10:38.666Z] [runtime-status] [1700] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-24T06:10:47.407Z] [runtime-status] [1700] Trigger "app" has been found, beginning invocation! 
 [info] i  functions: Beginning execution of "app"
-[debug] [2020-06-23T04:16:27.303Z] [runtime-status] [21832] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
-[debug] [2020-06-23T04:16:27.303Z] [runtime-status] [21832] Running app in mode HTTPS 
-[debug] [2020-06-23T04:16:27.305Z] [runtime-status] [21832] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\21832 
-[debug] [2020-06-23T04:16:27.321Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-06-23T04:16:27.363Z] [runtime-status] [21832] Ephemeral server handling OPTIONS request 
-[debug] [2020-06-23T04:16:27.367Z] [runtime-status] [21832] Ephemeral server survived. 
+[debug] [2020-06-24T06:10:47.411Z] [runtime-status] [1700] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-24T06:10:47.412Z] [runtime-status] [1700] Running app in mode HTTPS 
+[debug] [2020-06-24T06:10:47.423Z] [runtime-status] [1700] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\1700 
+[debug] [2020-06-24T06:10:47.518Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-24T06:10:47.554Z] [runtime-status] [1700] Ephemeral server handling OPTIONS request 
+[debug] [2020-06-24T06:10:47.566Z] [runtime-status] [1700] Ephemeral server survived. 
+[debug] [2020-06-24T06:10:47.568Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-06-24T06:10:47.569Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-06-24T06:10:47.569Z] Accepted request POST /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
+[debug] [2020-06-24T06:10:47.577Z] [worker-pool] addWorker(app) 
+[debug] [2020-06-24T06:10:47.578Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-06-24T06:10:47.578Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-06-24T06:10:47.578Z] [worker-app-666fab1e-de5e-4daf-86af-4dd385316d68]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\3328 
+[debug] [2020-06-24T06:10:47.579Z] [worker-app-666fab1e-de5e-4daf-86af-4dd385316d68]: BUSY 
 [info] i  functions: Finished "app" in ~1s
-[debug] [2020-06-23T04:16:27.370Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: IDLE 
-[debug] [2020-06-23T04:16:27.370Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-06-23T04:16:27.392Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-23T04:16:27.392Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-23T04:16:27.392Z] Accepted request POST /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
-[debug] [2020-06-23T04:16:27.392Z] [worker-pool] submitWork(triggerId=app) 
-[debug] [2020-06-23T04:16:27.392Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\21832 
-[debug] [2020-06-23T04:16:27.392Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: BUSY 
-[debug] [2020-06-23T04:16:27.393Z] [runtime-status] [21832] Trigger "app" has been found, beginning invocation! 
+[debug] [2020-06-24T06:10:47.582Z] [worker-app-d21ed4db-728d-42c9-9bbd-4cac25955aed]: IDLE 
+[debug] [2020-06-24T06:10:47.583Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-06-24T06:10:48.499Z] [runtime-status] [3328] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
+[debug] [2020-06-24T06:10:48.502Z] [runtime-status] [3328] Disabled runtime features: undefined 
+[debug] [2020-06-24T06:10:48.509Z] [runtime-status] [3328] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:48.512Z] [runtime-status] [3328] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:48.517Z] [runtime-status] [3328] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-06-24T06:10:48.611Z] [runtime-status] [3328] Checked functions.config() {"config":{}} 
+[debug] [2020-06-24T06:10:48.613Z] [runtime-status] [3328] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:48.616Z] [runtime-status] [3328] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:48.617Z] [runtime-status] [3328] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-06-24T06:10:48.618Z] [runtime-status] [3328] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-06-24T06:10:48.880Z] [runtime-status] [3328] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-06-24T06:10:50.257Z] [runtime-status] [3328] Trigger "app" has been found, beginning invocation! 
 [info] i  functions: Beginning execution of "app"
-[debug] [2020-06-23T04:16:27.394Z] [runtime-status] [21832] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
-[debug] [2020-06-23T04:16:27.394Z] [runtime-status] [21832] Running app in mode HTTPS 
-[debug] [2020-06-23T04:16:27.394Z] [runtime-status] [21832] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\21832 
-[debug] [2020-06-23T04:16:27.395Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-06-23T04:16:27.707Z] [runtime-status] [21832] Ephemeral server handling POST request 
+[debug] [2020-06-24T06:10:50.259Z] [runtime-status] [3328] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-06-24T06:10:50.260Z] [runtime-status] [3328] Running app in mode HTTPS 
+[debug] [2020-06-24T06:10:50.267Z] [runtime-status] [3328] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\3328 
+[debug] [2020-06-24T06:10:50.273Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-06-24T06:10:51.027Z] [runtime-status] [3328] Ephemeral server handling POST request 
 [info] >  K4mSMbimtIhCZ5LF5TPmkNxjZlN2 {"user":"K4mSMbimtIhCZ5LF5TPmkNxjZlN2"}
-[debug] [2020-06-23T04:16:27.977Z] [runtime-status] [21832] Ephemeral server survived. 
+[debug] [2020-06-24T06:10:51.866Z] [runtime-status] [3328] Ephemeral server survived. 
 [info] i  functions: Finished "app" in ~1s
-[debug] [2020-06-23T04:16:27.981Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: IDLE 
-[debug] [2020-06-23T04:16:27.981Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-06-24T06:10:51.878Z] [worker-app-666fab1e-de5e-4daf-86af-4dd385316d68]: IDLE 
+[debug] [2020-06-24T06:10:51.878Z] [work-queue] {"queueLength":0,"workRunningCount":0}
 [warn] !  Google API requested!
    - URL: "https://oauth2.googleapis.com/token"
    - Be careful, this may be a production service.
-[debug] [2020-06-23T06:02:52.011Z] File C:\Users\Vishal\Desktop\internship\lookslabel\functions\routes\admin\trendingPhotos.js changed, reloading triggers 
-[debug] [2020-06-23T06:02:53.015Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
-[debug] [2020-06-23T06:02:53.016Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: FINISHING 
-[debug] [2020-06-23T06:02:53.017Z] [worker-pool] Shutting down IDLE worker (app) 
-[debug] [2020-06-23T06:02:53.017Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: FINISHING 
-[debug] [2020-06-23T06:02:53.034Z] [worker-pool] addWorker(~diagnostic~) 
-[debug] [2020-06-23T06:02:53.034Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
-[debug] [2020-06-23T06:02:53.034Z] [worker-pool] submitWork(triggerId=) 
-[debug] [2020-06-23T06:02:53.035Z] [worker-~diagnostic~-ff169df9-a0e1-41b3-8dca-bcc61bd9a98d]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\19204 
-[debug] [2020-06-23T06:02:53.035Z] [worker-~diagnostic~-ff169df9-a0e1-41b3-8dca-bcc61bd9a98d]: BUSY 
-[debug] [2020-06-23T06:02:53.036Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: exited 
-[debug] [2020-06-23T06:02:53.036Z] [worker-~diagnostic~-9a40c4c2-a44e-45ed-8fde-36eef0358437]: FINISHED 
-[debug] [2020-06-23T06:02:53.037Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: exited 
-[debug] [2020-06-23T06:02:53.037Z] [worker-app-ea03e791-0fa5-4843-a74c-4ce43fc22f60]: FINISHED 
-[debug] [2020-06-23T06:02:54.587Z] [runtime-status] [19204] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
-[debug] [2020-06-23T06:02:54.589Z] [runtime-status] [19204] Disabled runtime features: undefined 
-[debug] [2020-06-23T06:02:54.593Z] [runtime-status] [19204] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T06:02:54.595Z] [runtime-status] [19204] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T06:02:54.596Z] [runtime-status] [19204] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-06-23T06:02:55.003Z] [runtime-status] [19204] Checked functions.config() {"config":{}} 
-[debug] [2020-06-23T06:02:55.004Z] [runtime-status] [19204] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T06:02:55.005Z] [runtime-status] [19204] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T06:02:55.006Z] [runtime-status] [19204] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T06:02:55.007Z] [runtime-status] [19204] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-06-23T06:02:59.594Z] [runtime-status] [19204] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
-[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-06-23T06:03:01.854Z] [worker-~diagnostic~-ff169df9-a0e1-41b3-8dca-bcc61bd9a98d]: IDLE 
-[debug] [2020-06-23T08:26:55.318Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-23T08:26:55.336Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-23T08:26:55.337Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
-[debug] [2020-06-23T08:26:55.339Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
-[debug] [2020-06-23T08:26:55.339Z] [worker-pool] Cleaned up workers for app: 1 --> 0 
-[debug] [2020-06-23T08:26:55.348Z] [worker-pool] addWorker(app) 
-[debug] [2020-06-23T08:26:55.348Z] [worker-pool] Adding worker with key app, total=1 
-[debug] [2020-06-23T08:26:55.348Z] [worker-pool] submitWork(triggerId=app) 
-[debug] [2020-06-23T08:26:55.348Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:26:55.348Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: BUSY 
-[debug] [2020-06-23T08:27:02.218Z] [runtime-status] [20284] Functions runtime initialized. {"cwd":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions","node_version":"12.15.0"} 
-[debug] [2020-06-23T08:27:02.221Z] [runtime-status] [20284] Disabled runtime features: undefined 
-[debug] [2020-06-23T08:27:02.230Z] [runtime-status] [20284] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T08:27:02.234Z] [runtime-status] [20284] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T08:27:02.239Z] [runtime-status] [20284] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
-[debug] [2020-06-23T08:27:02.351Z] [runtime-status] [20284] Checked functions.config() {"config":{}} 
-[debug] [2020-06-23T08:27:02.354Z] [runtime-status] [20284] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T08:27:02.357Z] [runtime-status] [20284] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
-[debug] [2020-06-23T08:27:02.566Z] [runtime-status] [20284] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
-[debug] [2020-06-23T08:27:02.567Z] [runtime-status] [20284] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Vishal\\Desktop\\internship\\lookslabel\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
-[debug] [2020-06-23T08:27:02.575Z] [runtime-status] [20284] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
-[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
-[debug] [2020-06-23T08:27:06.965Z] [runtime-status] [20284] Trigger "app" has been found, beginning invocation! 
-[info] i  functions: Beginning execution of "app"
-[debug] [2020-06-23T08:27:06.968Z] [runtime-status] [20284] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
-[debug] [2020-06-23T08:27:06.969Z] [runtime-status] [20284] Running app in mode HTTPS 
-[debug] [2020-06-23T08:27:06.981Z] [runtime-status] [20284] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:27:07.180Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-06-23T08:27:07.264Z] [runtime-status] [20284] Ephemeral server handling OPTIONS request 
-[debug] [2020-06-23T08:27:07.264Z] [runtime-status] [20284] Ephemeral server survived. 
-[info] i  functions: Finished "app" in ~1s
-[debug] [2020-06-23T08:27:07.268Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: IDLE 
-[debug] [2020-06-23T08:27:07.269Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-06-23T08:27:07.269Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-23T08:27:07.270Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-23T08:27:07.270Z] Accepted request POST /spring-internship/us-central1/app/api/profile/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
-[debug] [2020-06-23T08:27:07.276Z] [worker-pool] submitWork(triggerId=app) 
-[debug] [2020-06-23T08:27:07.276Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:27:07.277Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: BUSY 
-[debug] [2020-06-23T08:27:07.278Z] [runtime-status] [20284] Trigger "app" has been found, beginning invocation! 
-[info] i  functions: Beginning execution of "app"
-[debug] [2020-06-23T08:27:07.281Z] [runtime-status] [20284] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
-[debug] [2020-06-23T08:27:07.282Z] [runtime-status] [20284] Running app in mode HTTPS 
-[debug] [2020-06-23T08:27:07.282Z] [runtime-status] [20284] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:27:07.284Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-06-23T08:27:07.474Z] [runtime-status] [20284] Ephemeral server handling POST request 
-[info] >  K4mSMbimtIhCZ5LF5TPmkNxjZlN2 {"user":"K4mSMbimtIhCZ5LF5TPmkNxjZlN2"}
-[debug] [2020-06-23T08:27:07.761Z] [runtime-status] [20284] Ephemeral server survived. 
-[info] i  functions: Finished "app" in ~1s
-[debug] [2020-06-23T08:27:07.769Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: IDLE 
-[debug] [2020-06-23T08:27:07.770Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[warn] !  Google API requested!
-   - URL: "https://oauth2.googleapis.com/token"
-   - Be careful, this may be a production service.
-[debug] [2020-06-23T08:27:12.927Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-06-23T08:27:12.945Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-06-23T08:27:12.946Z] Accepted request GET /spring-internship/us-central1/app/api/landmark/K4mSMbimtIhCZ5LF5TPmkNxjZlN2 --> app
-[debug] [2020-06-23T08:27:12.946Z] [worker-pool] submitWork(triggerId=app) 
-[debug] [2020-06-23T08:27:12.946Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: Assigning socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:27:12.946Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: BUSY 
-[debug] [2020-06-23T08:27:12.946Z] [runtime-status] [20284] Trigger "app" has been found, beginning invocation! 
-[info] i  functions: Beginning execution of "app"
-[debug] [2020-06-23T08:27:12.947Z] [runtime-status] [20284] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
-[debug] [2020-06-23T08:27:12.947Z] [runtime-status] [20284] Running app in mode HTTPS 
-[debug] [2020-06-23T08:27:12.948Z] [runtime-status] [20284] Attempting to listen to socketPath: \\?\pipe\C:\Users\Vishal\Desktop\internship\lookslabel\functions\20284 
-[debug] [2020-06-23T08:27:12.949Z] [functions] Runtime ready! Sending request! 
-[debug] [2020-06-23T08:27:12.951Z] [runtime-status] [20284] Ephemeral server handling GET request 
-[debug] [2020-06-23T08:27:12.959Z] [runtime-status] [20284] Ephemeral server survived. 
-[info] >  [2020-06-23T08:27:13.298Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /LANDMARK to your security rules for better performance.  {"user":"[2020-06-23T08:27:13.298Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /LANDMARK to your security rules for better performance. "}
-[info] i  functions: Finished "app" in ~1s
-[debug] [2020-06-23T08:27:13.331Z] [worker-app-a2afe348-157b-4305-afdd-6e7ec5223f0d]: IDLE 
-[debug] [2020-06-23T08:27:13.331Z] [work-queue] {"queueLength":0,"workRunningCount":0}
