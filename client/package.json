@@ -34,6 +34,7 @@
     "shortid": "^2.2.15"
   },
   "scripts": {
+    "functions": "firebase serve --only functions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

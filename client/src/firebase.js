@@ -11,7 +11,7 @@ import EditLocationRender from "./routes/Location/EditLocation/EditLocationRende
 import SubmitLocationImages from "./routes/Location/SubmitLocationImages/SubmitLocationImages";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 // Configure Firebase.
- const config = {
+const config = {
 	apiKey: "AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI",
 	authDomain: "spring-internship.firebaseapp.com",
 	databaseURL: "https://spring-internship.firebaseio.com",
@@ -22,8 +22,8 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 	measurementId: "G-S2BPC07SW6",
 	// ...
 };
-if (!firebase.app.length){
-firebase.initializeApp(config);
+if (!firebase.app.length) {
+	firebase.initializeApp(config);
 }
 class SignInScreen extends React.Component {
 	// The component's Local state.
@@ -77,20 +77,20 @@ class SignInScreen extends React.Component {
 		}
 		return (
 			<Router>
-				<Route path='/'>
+				<Route path="/puser">
 					<NavBar />
 					<HeroMain />
 				</Route>
-				<Route exact path='/user/location/add'>
+				<Route exact path="/user/location/add">
 					<Add />
 				</Route>
-				<Route exact path='/user/location/submit-location-images'>
+				<Route exact path="/user/location/submit-location-images">
 					<SubmitLocationImages />
 				</Route>
-				<Route exact path='/user/location/edit-location'>
+				<Route exact path="/user/location/edit-location">
 					<EditLocationRender />
 				</Route>
-				<Route exact path='/user/location/uploded-images'>
+				<Route exact path="/user/location/uploded-images">
 					<UploadedImages />
 				</Route>
 			</Router>
@@ -99,4 +99,4 @@ class SignInScreen extends React.Component {
 }
 
 export default SignInScreen;
-export {config}
+export { config };
