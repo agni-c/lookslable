@@ -1,11 +1,11 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Support = () => {
   let history = useHistory();
   function clickHandler() {
-    history.push("/");
+    history.push('/puser');
   }
   return (
     <>

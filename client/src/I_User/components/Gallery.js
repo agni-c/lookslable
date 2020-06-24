@@ -1,19 +1,19 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React from 'react';
+import { useState, useEffect } from 'react';
 import {
-	Carousel,
-	Card,
-	Button,
-	Badge,
-	Container,
-	Row,
-	Col,
-} from "react-bootstrap";
-import Landmark from "./Landmark";
-import axios from "axios";
-import PopOver from "./Popover/PopOver";
-import "./styles.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+  Carousel,
+  Card,
+  Button,
+  Badge,
+  Container,
+  Row,
+  Col,
+} from 'react-bootstrap';
+import Landmark from './Landmark';
+import axios from 'axios';
+import PopOver from './Popover/PopOver';
+import './styles.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 export default function Gallery() {
   const [index, setIndex] = useState(0);
   const [dataRecieved, setDataRecieved] = useState(false);
@@ -59,7 +59,7 @@ export default function Gallery() {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:5000/spring-internship/us-central1/app/api/upload/allUsergallery"
+        'http://localhost:5000/spring-internship/us-central1/app/api/upload/allUsergallery'
       )
       .then((response) => {
         // const someData = response.data.filter((data, index) => {
@@ -73,31 +73,31 @@ export default function Gallery() {
         setDataRecieved(true);
         // //For getting puids
 
-				// const puids = response.data.filter((data, index) => {
-				//   return data.puid !== "1";
-				// });
+        // const puids = response.data.filter((data, index) => {
+        //   return data.puid !== "1";
+        // });
 
-				// let outputPuidsArray = [...new Set(puids.map((puid) => puid.puid))];
-				// let finalOutputPuidsArray = outputPuidsArray.filter((ele, index) => {
-				//   return ele !== undefined;
-				// });
-				// finalOutputPuidsArray.forEach((ele, index) => {
-				//   setPUids((pUids) => [...pUids, ele]);
-				// });
+        // let outputPuidsArray = [...new Set(puids.map((puid) => puid.puid))];
+        // let finalOutputPuidsArray = outputPuidsArray.filter((ele, index) => {
+        //   return ele !== undefined;
+        // });
+        // finalOutputPuidsArray.forEach((ele, index) => {
+        //   setPUids((pUids) => [...pUids, ele]);
+        // });
 
-				// //for getting landmarks from puids
+        // //for getting landmarks from puids
 
-				// let outputLandmarks = [
-				//   ...new Set(puids.map((landmark) => landmark.landmark)),
-				// ];
-				// outputLandmarks.forEach((ele, index) => {
-				//   setLandmarks((landmarks) => [...landmarks, ele]);
-				// });
+        // let outputLandmarks = [
+        //   ...new Set(puids.map((landmark) => landmark.landmark)),
+        // ];
+        // outputLandmarks.forEach((ele, index) => {
+        //   setLandmarks((landmarks) => [...landmarks, ele]);
+        // });
 
-				// const finalDataArray = puids.filter((ele, index) => {
-				//   return ele.puid !== pUids[index];
-				// });
-				// console.log(finalDataArray);
+        // const finalDataArray = puids.filter((ele, index) => {
+        //   return ele.puid !== pUids[index];
+        // });
+        // console.log(finalDataArray);
 
         // let y = finalDataArray.reduce((acc, ele) => {
         //   acc[ele] = ele;
@@ -143,30 +143,32 @@ export default function Gallery() {
               return (
                 <>
                   <br />
-                  <Card style={{ color: "black" }}>
-                    <Card.Title style={{ textAlign: "center" }}>
+                  <Card style={{ color: 'black' }}>
+                    <Card.Title style={{ textAlign: 'center' }}>
                       {ele.landmark}
                     </Card.Title>
-                    <Link to={`/${ele.landmark}`}>
+                    <Link to={`/iuser/${ele.landmark}`}>
                       <Badge
                         pill
-                        variant="success"
-                        style={{ width: "50%", cursor: "pointer" }}
+                        variant='success'
+                        style={{ width: '50%', cursor: 'pointer' }}
                         onClick={() => {
                           setCurrLandmark(ele.landmark);
                         }}
                       >
                         {ele.landmark}
-                      </Badge>{" "}
+                      </Badge>{' '}
                     </Link>
 
                     <Card.Body>
                       <Card.Img
-                        variant="top"
+                        variant='top'
                         src={ele.images}
-                        alt="something"
+                        alt='something'
+                        style={{ position: 'relative' }}
                       />
                       <Card.Text>{ele.names}</Card.Text>
+                      <PopOver />
                     </Card.Body>
                   </Card>
                   <br />
@@ -179,8 +181,8 @@ export default function Gallery() {
   };
   return (
     <Router>
-      <Route path="/" exact component={HomeData}></Route>
-      <Route path="/:landmark">
+      <Route path='/iuser' exact component={HomeData}></Route>
+      <Route path='/iuser/:landmark'>
         <Landmark rawData={data} landmark={currLandmark} />
       </Route>
     </Router>
