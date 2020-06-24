@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./HeroMain.css";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import firebase from "firebase";
-import Location from "../../routes/Location/Location";
-import Support from "../../routes/Support/Support";
-import DriveLink from "../../routes/DriveLink/DriveLink";
-import MyBookings from "../../routes/MyBookings/MyBookings";
-import StyledCard from "../../components/Card/StyledCard";
+import React, { Component } from 'react';
+import './HeroMain.css';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import firebase from 'firebase';
+import Location from '../../routes/Location/Location';
+import Support from '../../routes/Support/Support';
+import DriveLink from '../../routes/DriveLink/DriveLink';
+import MyBookings from '../../routes/MyBookings/MyBookings';
+import StyledCard from '../../components/Card/StyledCard';
 
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
 
 class HeroMain extends Component {
   componentDidMount() {
@@ -22,10 +22,10 @@ class HeroMain extends Component {
           tags: [],
         };
         const options = {
-          method: "POST",
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
           },
           body: JSON.stringify(profile),
         };
@@ -47,31 +47,34 @@ class HeroMain extends Component {
   Homedata = () => {
     return (
       <>
-        <Container className="center home-container">
-          <h1 className="center-align">Welcome Photographer!</h1>
+        <Container className='center home-container'>
+          <h1 className='center-align'>Welcome Photographer!</h1>
           <br />
-          <div className="grid1-container">
+          <div className='grid1-container'>
             <Link
-              to="/user/location"
+              to='/puser/location'
               style={{
-                textDecoration: "none",
-                padding: "0 0 0 0 ",
+                textDecoration: 'none',
+                padding: '0 0 0 0 ',
               }}
             >
               <StyledCard
-                name="Location"
-                content="Lorem Lorem"
-                className="grid-content"
+                name='Location'
+                content='Lorem Lorem'
+                className='grid-content'
               />
             </Link>
-            <Link to="user/my-bookings" style={{ textDecoration: "none" }}>
-              <StyledCard name="My Bookings" content="Lorem Lorem" />
+            <Link to='/puser/my-bookings' style={{ textDecoration: 'none' }}>
+              <StyledCard name='My Bookings' content='Lorem Lorem' />
             </Link>
-            <Link to="user/uploaded-images" style={{ textDecoration: "none" }}>
-              <StyledCard name="Drive Link" content="Lorem Lorem" />
+            <Link
+              to='/puser/uploaded-images'
+              style={{ textDecoration: 'none' }}
+            >
+              <StyledCard name='Drive Link' content='Lorem Lorem' />
             </Link>
-            <Link to="user/support" style={{ textDecoration: "none" }}>
-              <StyledCard name="Support" content="Lorem Lorem" />
+            <Link to='/puser/support' style={{ textDecoration: 'none' }}>
+              <StyledCard name='Support' content='Lorem Lorem' />
             </Link>
           </div>
         </Container>
@@ -83,11 +86,11 @@ class HeroMain extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={this.Homedata} />
-          <Route path="/user/location" exact component={Location} />
-          <Route path="/user/my-bookings" exact component={MyBookings} />
-          <Route path="/user/support" exact component={Support} />
-          <Route path="/user/uploaded-images" exact component={DriveLink} />
+          <Route path='/puser' exact component={this.Homedata} />
+          <Route path='/puser/location' exact component={Location} />
+          <Route path='/puser/my-bookings' exact component={MyBookings} />
+          <Route path='/puser/support' exact component={Support} />
+          <Route path='/puser/uploaded-images' exact component={DriveLink} />
         </Switch>
       </BrowserRouter>
     );

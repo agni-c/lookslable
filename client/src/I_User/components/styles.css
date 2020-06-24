@@ -1,4 +1,4 @@
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css");
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css');
 .margin-bt {
   margin-bottom: 50px;
 }
@@ -14,4 +14,8 @@ body {
 
 .colApp {
   background: #343a40;
+}
+
+.customBtn {
+  height: 50px;
 }
