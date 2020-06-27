@@ -16,30 +16,32 @@ import { LandmarkAdminProvider } from "../context/landmarkAdmin";
 import { ApprovedPhotoAdminProvider } from "../context/approvedPhotosAdmin";
 import "./App.css";
 
-class AdminApp extends React.Component {
-	render() {
-		return (
-			<Switch>
-				<Router>
-					<div className="App">
-						<PuserAdminProvider>
-							<IuserAdminProvider>
-								<ApprovedPhotoAdminProvider>
-									<LandmarkAdminProvider>
-										<BookingsAdminProvider>
-											{/* <Route exact path='/' component={Dashboard} /> */}
-											<Dashboard />
-										</BookingsAdminProvider>
-									</LandmarkAdminProvider>
-								</ApprovedPhotoAdminProvider>
-							</IuserAdminProvider>
-						</PuserAdminProvider>
-					</div>
-					{/* <Route exact path='/' component={Login} /> */}
-				</Router>
-			</Switch>
-		);
-	}
-}
+const AdminApp = () => {
+	return (
+		<Switch>
+			<Router>
+				<div className="App">
+					<PuserAdminProvider>
+						<IuserAdminProvider>
+							<ApprovedPhotoAdminProvider>
+								<LandmarkAdminProvider>
+									<BookingsAdminProvider>
+										<Route
+											exact
+											path="/admin/dashboard"
+											component={Dashboard}
+										/>
+										{/* <Dashboard /> */}
+									</BookingsAdminProvider>
+								</LandmarkAdminProvider>
+							</ApprovedPhotoAdminProvider>
+						</IuserAdminProvider>
+					</PuserAdminProvider>
+				</div>
+				<Route exact path="/admin" component={Login} />
+			</Router>
+		</Switch>
+	);
+};
 
 export default AdminApp;

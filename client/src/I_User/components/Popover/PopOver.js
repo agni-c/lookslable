@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import firebase from "firebase";
 import SignInScreen from "./../firebase";
+import { popUpShoot } from "../../../api";
 
 class PopOver extends React.Component {
 	constructor(props) {
@@ -30,7 +31,7 @@ class PopOver extends React.Component {
 		this.setState({
 			phoneNo: value,
 		});
-		console.log(value);
+		console.log(this.state.phoneNo);
 	};
 	dateHandler = (value) => {
 		this.setState({
@@ -39,74 +40,64 @@ class PopOver extends React.Component {
 		console.log(value);
 	};
 
-	handleSubmit = () => {
-		console.log("fasak");
-		console.log(firebase.auth().currentUser);
-		axios
-			.post(
-				`http://localhost:5000/spring-internship/us-central1/app/api/booking/${
-					firebase.auth().currentUser.uid
-				}`,
-				{
-					data: firebase.auth().currentUser,
-					PhoneNo: this.state.phoneNo,
+	handleSubmit = async () => {
+		// console.log("fasak");
+		// console.log(this.state.currentPuid);
+		console.log(this.state.phoneNo);
 
-					date: this.state.date,
-
-					puid: this.state.currentPuid,
-					price: "350",
-
-					numberOfUsers: this.state.no_of_users,
-				}
-			)
-			.then((res) => {
-				console.log(res.data);
-				console.log("Done!");
-				toast.info("Booked Successfully", {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-					progress: undefined,
-				});
-			})
-			.catch((err) => {
-				console.log(err);
+		popUpShoot(
+			firebase.auth().currentUser,
+			this.state.phoneNo,
+			this.state.date,
+			this.state.currentPuid,
+			"350",
+			this.state.no_of_users
+		).then(() => {
+			toast.info("Booked Successfully", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
 			});
+			console.log("Done!");
+		});
+
+		// console.log(res.data);
 	};
 	popover = (
-		<Popover id='popover-top' className='pop-over'>
-			<Popover.Title as='h3'>Number of users</Popover.Title>
+		<Popover id="popover-top" className="pop-over">
+			<Popover.Title as="h3">Number of users</Popover.Title>
 			<Popover.Content>
-				<Form className='form-c'>
-					<Form.Group controlId='formGridPhoneNo1'>
+				<Form className="form-c">
+					<Form.Group controlId="formGridPhoneNo1">
 						<Form.Label>Phone No</Form.Label>
 						<Form.Control
 							onChange={(e) => {
-								this.phoneNoHandler(e.target.value);
+								this.setState({ phoneNo: e.target.value });
 							}}
-							className='colApp'
-							type='number'
-							placeholder='+91 '
+							className="colApp"
+							type="number"
+							placeholder="+91 "
 						/>
 					</Form.Group>
-					<Form.Group controlId='formGridDate1'>
+					<Form.Group controlId="formGridDate1">
 						<Form.Label>Date & Time</Form.Label>
 						<Form.Control
-							className='colApp'
-							type='dateTime-local'
-							placeholder='Date'
+							className="colApp"
+							type="dateTime-local"
+							placeholder="Date"
 							onChange={(e) => {
 								this.dateHandler(e.target.value);
 							}}
 						/>
 					</Form.Group>
-					<Form.Group controlId='exampleForm.ControlSelect1'>
+					<Form.Group controlId="exampleForm.ControlSelect1">
 						<Form.Label>No Of Users</Form.Label>
 						<Form.Control
-							as='select'
+							as="select"
 							onChange={(e) => {
 								this.setState({
 									no_of_users: e.target.value,
@@ -119,7 +110,7 @@ class PopOver extends React.Component {
 						</Form.Control>
 					</Form.Group>
 					<Button
-						variant='primary'
+						variant="primary"
 						onClick={() => {
 							console.log("clicked");
 							this.handleSubmit();
@@ -133,9 +124,9 @@ class PopOver extends React.Component {
 	render() {
 		return (
 			<div>
-				<OverlayTrigger trigger='click' placement='top' overlay={this.popover}>
+				<OverlayTrigger trigger="click" placement="top" overlay={this.popover}>
 					<Button
-						variant='outline-primary'
+						variant="outline-primary"
 						style={{
 							cursor: "pointer",
 							textAlign: "center",
