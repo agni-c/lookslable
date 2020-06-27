@@ -1,19 +1,19 @@
-var router = require('express').Router();
-var firebase = require('firebase');
-var database = require('./firebaseAppI');
-router.post('/', (req, res) => {
-  console.log('in');
-  var ref = database.ref('BOOKING_DETAILS');
+var router = require("express").Router();
+var firebase = require("firebase");
+var database = require("./firebaseAppI");
+router.post("/", (req, res) => {
+  console.log("in");
+  var ref = database.ref("BOOKING_DETAILS");
   ref
-    .orderByChild('iuid')
-    .equalTo('oFf5YC7ARfcTM19y10XNyvdg1JQ2')
+    .orderByChild("iuid")
+    .equalTo("oFf5YC7ARfcTM19y10XNyvdg1JQ2")
     .once(
-      'value',
+      "value",
       (snapshot) => {
         res.json(snapshot.val());
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
       }
     );
 });

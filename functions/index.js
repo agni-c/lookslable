@@ -67,6 +67,12 @@ app.use("/api/rating", rating);
 const PuserProfile = require('./routes/admin/puserProfile');
 app.use('/api/admin/puserprofile', PuserProfile);
 
+const removeBooking = require('./routes/admin/removeBooking');
+app.use('/api/admin/removebooking', removeBooking);
+
+const removeLandmark = require('./routes/admin/removeLandmark');
+app.use('/api/admin/removelandmark', removeLandmark);
+
 //Iuser profile
 const iuserProfile = require('./routes/admin/iUserProfile');
 app.use('/api/admin/iuserprofile', iuserProfile);
