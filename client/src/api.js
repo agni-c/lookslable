@@ -10,8 +10,10 @@ axios.defaults.baseURL =
 
 export async function iuserevent() {
 	const response = await axios.get(`/iuserevent`);
-	var data = Object.values(response.data);
-	return data;
+	if (response.data != null || response.data != undefined) {
+		var data = Object.values(response.data);
+		return data;
+	}
 }
 export async function addToFavourites(id, puid) {
 	const response = await axios.post(`/admin/trendingPhotos`, {
@@ -67,13 +69,13 @@ export async function allUserGallery() {
 export async function postIuserProfile() {
 	return firebase.auth().onAuthStateChanged(async function (user) {
 		if (user) {
-			const profile = JSON.stringify({
+			const profile = {
 				name: user.displayName,
 				email: user.email,
 				photoURL: user.photoURL,
 				uid: user.uid,
 				tags: [],
-			});
+			};
 
 			await axios.post(
 				`/profile/iuser/${firebase.auth().currentUser.uid}`,
@@ -88,13 +90,13 @@ export async function postIuserProfile() {
 export async function postPuserProfile() {
 	firebase.auth().onAuthStateChanged(async function (user) {
 		if (user) {
-			const profile = JSON.stringify({
+			const profile = {
 				name: user.displayName,
 				email: user.email,
 				photoURL: user.photoURL,
 				uid: user.uid,
 				tags: [],
-			});
+			};
 
 			await axios.post(`/profile/${firebase.auth().currentUser.uid}`, profile);
 			console.log(`Puser profile Saved`);
