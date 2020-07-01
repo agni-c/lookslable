@@ -117,7 +117,8 @@ export async function getEditLocation() {
 	const response = await axios.get(
 		`/landmark/${firebase.auth().currentUser.uid}`
 	);
-	return response;
+	  if(response.data != null || response.data != undefined){
+	   return response;}
 }
 
 export async function uploadFormDATA(formData, config) {
