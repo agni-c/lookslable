@@ -77,22 +77,24 @@ class SignInScreen extends React.Component {
 		}
 		return (
 			<Router>
-				<Route path="/puser">
-					<NavBar />
-					<HeroMain />
-				</Route>
-				<Route exact path="/user/location/add">
-					<Add />
-				</Route>
-				<Route exact path="/user/location/submit-location-images">
-					<SubmitLocationImages />
-				</Route>
-				<Route exact path="/user/location/edit-location">
-					<EditLocationRender />
-				</Route>
-				<Route exact path="/user/location/uploded-images">
-					<UploadedImages />
-				</Route>
+				<Switch>
+					<Route path="/puser">
+						<NavBar />
+						<HeroMain />
+					</Route>
+					<Route exact path="/puser/location/add">
+						<Add />
+					</Route>
+					<Route exact path="/puser/location/submit-location-images">
+						<SubmitLocationImages />
+					</Route>
+					<Route exact path="/puser/location/edit-location">
+						<EditLocationRender />
+					</Route>
+					<Route exact path="/puser/location/uploded-images">
+						<UploadedImages />
+					</Route>
+				</Switch>
 			</Router>
 		);
 	}

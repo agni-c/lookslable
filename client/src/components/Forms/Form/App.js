@@ -43,6 +43,7 @@ const App = () => {
 		console.log(value);
 		setCurrentLandmark(value);
 	};
+<<<<<<< HEAD
 	useEffect(async () => {
 // 		const responce = await getEditLocation();
 //   if(responce.data){
@@ -54,6 +55,19 @@ const App = () => {
 // 		});
 //   }
 		
+=======
+	useEffect(() => {
+		(async () => {
+			const responce = await getEditLocation();
+
+			const entries = Object.entries(responce.data);
+
+			entries.map((ele, index) => {
+				let land = ele[1].landmark;
+				setLandmarks((landmarks) => [...landmarks, land]);
+			});
+		})();
+>>>>>>> b0a419d106fbf3a2a76aa975a6081b13e576cbf9
 	}, []);
 	return (
 		<div className="contain">
