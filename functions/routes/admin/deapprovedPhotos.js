@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
     .collection("Glary")
     .doc(req.body.id);
   var obj = {
-    trending: true,
+    trending: false,
   };
   glaryRef.update(obj, { merge: true });
   res.end();

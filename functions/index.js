@@ -7,7 +7,7 @@ require("dotenv").config();
 //-----------
 const admin = require("firebase-admin");
 admin.initializeApp({
-	storageBucket: "spring-internship.appspot.com",
+  storageBucket: "spring-internship.appspot.com",
 });
 
 const db = admin.firestore();
@@ -26,7 +26,7 @@ app.use("/api/profile", profile);
 
 //Testing purposes
 app.get("/", (req, res) => {
-	res.send("🌎🌎");
+  res.send("🌎🌎");
 });
 
 // webcam route
@@ -44,6 +44,8 @@ app.use("/api/uploaddetails", uploaddetails);
 const trendingphotos = require("./routes/admin/trendingPhotos");
 app.use("/api/admin/trendingPhotos", trendingphotos);
 
+const deapprovedphoto = require("./routes/admin/deapprovedPhotos");
+app.use("/api/admin/deapprovedphoto", deapprovedphoto);
 //popular location
 const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation", popularlocation);

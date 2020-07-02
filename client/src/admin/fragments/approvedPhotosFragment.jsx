@@ -1,4 +1,4 @@
-import { addToFavourites } from "../../api";
+import { addToFavourites, addToUnFavourites } from "../../api";
 import React, { useState, useContext } from "react";
 import { ApprovedPhotosAdminContext } from "../../context/approvedPhotosAdmin";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -20,84 +20,117 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		maxWidth: 345,
-	},
-	media: {
-		height: 0,
-		paddingTop: "56.25%", // 16:9
-	},
-	expand: {
-		transform: "rotate(0deg)",
-		marginLeft: "auto",
-		transition: theme.transitions.create("transform", {
-			duration: theme.transitions.duration.shortest,
-		}),
-	},
-	expandOpen: {
-		transform: "rotate(180deg)",
-	},
-	avatar: {
-		backgroundColor: red[500],
-	},
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 0,
+    paddingTop: "56.25%", // 16:9
+  },
+  expand: {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: "rotate(180deg)",
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
 }));
 
 export default function RecipeReviewCard() {
-	const classes = useStyles();
-	const [state, setState] = useContext(ApprovedPhotosAdminContext);
+  const classes = useStyles();
+  const [state, setState] = useContext(ApprovedPhotosAdminContext);
+  const [favourites, setFavourites] = useState(
+    state.tiledata.map((tile) => {
+      if (tile.trending === true) {
+        return tile.id;
+      }
+    })
+  );
+  const [unfavourites, setUnFavourites] = useState([]);
+  console.log(favourites);
+  const handleClick = (id) => {
+    setFavourites([...favourites, id]);
+  };
+  const handleClick1 = (fid) => {
+    console.log("handle click 1" + favourites);
+    setFavourites(favourites.filter((id) => id != fid));
+    console.log(favourites);
+  };
 
-	{
-		if (state.loading == true) {
-			return <CircularProgress />;
-		} else {
-			return (
-				<div
-					className="card-container"
-					style={{
-						display: "flex",
-						flexWrap: "wrap",
-						justifyContent: "space-between",
-					}}>
-					{state.tiledata.map((tile) => (
-						<Card className={classes.root} key={shortid.generate()}>
-							<CardHeader
-								avatar={
-									<Avatar aria-label="recipe" className={classes.avatar}>
-										R
-									</Avatar>
-								}
-								action={
-									<IconButton aria-label="settings">
-										<MoreVertIcon />
-									</IconButton>
-								}
-								title={tile.names}
-								subheader={`price: ${tile.price}`}
-							/>
-							<CardMedia
-								className={classes.media}
-								image={tile.images}
-								title={`Location: ${tile.location}`}
-							/>
-							<CardContent>
-								<Typography variant="body2" color="textSecondary" component="p">
-									{`Location: ${tile.location}`}
-									<br />
-									{`PUID: ${tile.puid}`}
-								</Typography>
-							</CardContent>
-							<CardActions disableSpacing>
-								<IconButton
-									aria-label="add to favorites"
-									onClick={() => addToFavourites(tile.id, tile.puid)}>
-									<FavoriteIcon />
-								</IconButton>
-								{/* <IconButton aria-label='share'>
+  {
+    if (state.loading == true) {
+      return <CircularProgress />;
+    } else {
+      return (
+        <div
+          className="card-container"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+          }}
+        >
+          {state.tiledata.map((tile) => (
+            <Card className={classes.root} key={tile.id}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    R
+                  </Avatar>
+                }
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={tile.names}
+                subheader={`price: ${tile.price}`}
+              />
+              <CardMedia
+                className={classes.media}
+                image={tile.images}
+                title={`Location: ${tile.location}`}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {`Location: ${tile.location}`}
+                  <br />
+                  {`PUID: ${tile.puid}`}
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton
+                  style={tile.trending ? { color: "red" } : { color: "" }}
+                  aria-label="add to favorites"
+                  onClick={() => {
+                    if (favourites.indexOf(tile.id) >= 0) {
+                      addToUnFavourites(tile.id, tile.puid);
+                      handleClick1(tile.id);
+                    } else {
+                      addToFavourites(tile.id, tile.puid);
+                      handleClick(tile.id);
+                    }
+                  }}
+                >
+                  <FavoriteIcon
+                    style={{
+                      color: favourites.indexOf(tile.id) >= 0 ? "red" : "",
+                    }}
+                  />
+                </IconButton>
+                {/* <IconButton aria-label='share'>
                   <ShareIcon />
                 </IconButton> */}
-								{/* <IconButton
+                {/* <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
                   })}
@@ -107,8 +140,8 @@ export default function RecipeReviewCard() {
                 >
                   <ExpandMoreIcon />
                 </IconButton> */}
-							</CardActions>
-							{/* <Collapse in='expanded' timeout='auto' unmountOnExit>
+              </CardActions>
+              {/* <Collapse in='expanded' timeout='auto' unmountOnExit>
                 <CardContent>
                   <Typography paragraph>Method:</Typography>
                   <Typography paragraph>
@@ -141,10 +174,10 @@ export default function RecipeReviewCard() {
                   </Typography>
                 </CardContent>
               </Collapse> */}
-						</Card>
-					))}
-				</div>
-			);
-		}
-	}
+            </Card>
+          ))}
+        </div>
+      );
+    }
+  }
 }
