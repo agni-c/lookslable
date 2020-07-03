@@ -165,3 +165,11 @@ export async function popUpShoot(data, phNo, date, puid, price, noOfUsers) {
     numberOfUsers: noOfUsers,
   });
 }
+export async function AssigningPUser(bookingdate, iuid, puid, time) {
+  await axios.put(`/admin/asignpuser`, {
+    bookingdate: bookingdate,
+    iuid: iuid,
+    time: time,
+    puid: puid,
+  });
+}

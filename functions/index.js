@@ -92,5 +92,8 @@ app.use("/api/admin/landmarkdetails", landmarkDetails);
 const approvedPhotos = require("./routes/admin/approvedPhotos");
 app.use("/api/admin/approved-photos", approvedPhotos);
 
+const asignpuser = require("./routes/admin/asigningPuser");
+app.use("/api/admin/asignpuser", asignpuser);
+
 //Listening
 exports.app = functions.https.onRequest(app);
