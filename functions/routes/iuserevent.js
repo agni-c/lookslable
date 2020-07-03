@@ -1,7 +1,7 @@
 var router = require("express").Router();
 var firebase = require("firebase");
 var database = require("./firebaseAppI");
-router.post("/", (req, res) => {
+router.get("/", (req, res) => {
   console.log("in");
   var ref = database.ref("BOOKING_DETAILS");
   ref

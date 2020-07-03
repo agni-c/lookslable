@@ -1,24 +1,26 @@
-import React, { useState, useContext } from 'react';
-import { ApprovedPhotosAdminContext } from '../../context/approvedPhotosAdmin';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import shortid from 'shortid';
-import axios from 'axios';
-import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { addToFavourites, addToUnFavourites } from "../../api";
+import React, { useState, useContext } from "react";
+import { ApprovedPhotosAdminContext } from "../../context/approvedPhotosAdmin";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import shortid from "shortid";
+import axios from "axios";
+import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Collapse from "@material-ui/core/Collapse";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import { red } from "@material-ui/core/colors";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareIcon from "@material-ui/icons/Share";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,17 +28,17 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
   },
   avatar: {
     backgroundColor: red[500],
@@ -46,19 +48,22 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard() {
   const classes = useStyles();
   const [state, setState] = useContext(ApprovedPhotosAdminContext);
-
-  const addToFavourites = (id, puid) => {
-    axios
-      .post(
-        'http://localhost:5000/spring-internship/us-central1/app/api/admin/trendingPhotos',
-        {
-          puid: puid,
-          id: id,
-        }
-      )
-      .then(function (response) {
-        console.log(response);
-      });
+  const [favourites, setFavourites] = useState(
+    state.tiledata.map((tile) => {
+      if (tile.trending === true) {
+        return tile.id;
+      }
+    })
+  );
+  const [unfavourites, setUnFavourites] = useState([]);
+  console.log(favourites);
+  const handleClick = (id) => {
+    setFavourites([...favourites, id]);
+  };
+  const handleClick1 = (fid) => {
+    console.log("handle click 1" + favourites);
+    setFavourites(favourites.filter((id) => id != fid));
+    console.log(favourites);
   };
 
   {
@@ -67,23 +72,23 @@ export default function RecipeReviewCard() {
     } else {
       return (
         <div
-          className='card-container'
+          className="card-container"
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
           }}
         >
           {state.tiledata.map((tile) => (
-            <Card className={classes.root} key={shortid.generate()}>
+            <Card className={classes.root} key={tile.id}>
               <CardHeader
                 avatar={
-                  <Avatar aria-label='recipe' className={classes.avatar}>
+                  <Avatar aria-label="recipe" className={classes.avatar}>
                     R
                   </Avatar>
                 }
                 action={
-                  <IconButton aria-label='settings'>
+                  <IconButton aria-label="settings">
                     <MoreVertIcon />
                   </IconButton>
                 }
@@ -96,7 +101,7 @@ export default function RecipeReviewCard() {
                 title={`Location: ${tile.location}`}
               />
               <CardContent>
-                <Typography variant='body2' color='textSecondary' component='p'>
+                <Typography variant="body2" color="textSecondary" component="p">
                   {`Location: ${tile.location}`}
                   <br />
                   {`PUID: ${tile.puid}`}
@@ -104,10 +109,23 @@ export default function RecipeReviewCard() {
               </CardContent>
               <CardActions disableSpacing>
                 <IconButton
-                  aria-label='add to favorites'
-                  onClick={() => addToFavourites(tile.id, tile.puid)}
+                  style={tile.trending ? { color: "red" } : { color: "" }}
+                  aria-label="add to favorites"
+                  onClick={() => {
+                    if (favourites.indexOf(tile.id) >= 0) {
+                      addToUnFavourites(tile.id, tile.puid);
+                      handleClick1(tile.id);
+                    } else {
+                      addToFavourites(tile.id, tile.puid);
+                      handleClick(tile.id);
+                    }
+                  }}
                 >
-                  <FavoriteIcon />
+                  <FavoriteIcon
+                    style={{
+                      color: favourites.indexOf(tile.id) >= 0 ? "red" : "",
+                    }}
+                  />
                 </IconButton>
                 {/* <IconButton aria-label='share'>
                   <ShareIcon />

@@ -1,11 +1,11 @@
 const Busboy = require("busboy");
-require('dotenv').config()
+require("dotenv").config();
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage();
-const bucket = storage.bucket(process.env.GCS_BUCKET);
+const bucket = storage.bucket("spring-internship.appspot.com");
 
 exports.filesUpload = function (req, res, next) {
 	// See https://cloud.google.com/functions/docs/writing/http#multipart_data

@@ -5,7 +5,6 @@ const router = require("express").Router();
 const fireStore = require("@google-cloud/firestore");
 const { v4 } = require("uuid");
 const { Storage } = require("@google-cloud/storage");
-const { filesUpload } = require("../middleware/formdata");
 //Firestore init--------------------------
 var admin = require("firebase-admin");
 const db = admin.firestore();
@@ -89,21 +88,21 @@ router.post("/:uid", (request, response, next) => {
 router.put("/form/:uid", (req, res, next) => {
 	// const uid = req.session.uid;
 	let uid = req.params.uid;
-    console.log(uid)
+	console.log(uid);
 	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
 	//set the form in an object
 	const infoData = {
 		landmark: req.body.landmark,
 		location: {
 			lat: req.body.lat,
-			lon: req.body.lon
+			lon: req.body.lon,
 		},
 		price: req.body.price,
 		// time: req.body.time,
 	};
 	//save it to doc where webcam pic resides
 
-	webCamRef.set(infoData, { merge: true ,});
+	webCamRef.set(infoData, { merge: true });
 	res.end();
 });
 

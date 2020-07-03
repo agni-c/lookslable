@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { pUserProfile } from "../api";
 
 export const PuserAdminContext = React.createContext();
 
@@ -19,37 +20,45 @@ export const PuserAdminContext = React.createContext();
 //   }
 // };
 export const PuserAdminProvider = ({ children }) => {
-  const [state, setState] = useState({
-    columns: [],
-    data: [],
-    loading: true,
-  });
-  // console.log(state.data);
+	const [state, setState] = useState({
+		columns: [],
+		data: [],
+		loading: true,
+	});
+	// console.log(state.data);
 
-  const api = async () => {
-    const response = await axios
-      .get(
-        'http://localhost:5000/spring-internship/us-central1/app/api/admin/puserprofile'
-      )
-      .then(function (response) {
-        setState({ loading: false });
-        return response;
-      });
-    const data = response.data;
-    const columns = [
-      { title: 'UID', field: 'uid', type: 'string' },
-      { title: 'Name', field: 'name' },
-      { title: 'Email', field: 'email' },
-    ];
-    setState({ columns, data });
-  };
+	// const api = async () => {
+	//   const response = await axios
+	//     .get(
+	//       'http://localhost:5000/spring-internship/us-central1/app/api/admin/puserprofile'
+	//     )
+	//     .then(function (response) {
+	//       setState({ loading: false });
+	//       return response;
+	//     });
+	//   const data = response.data;
+	//   const columns = [
+	//     { title: 'UID', field: 'uid', type: 'string' },
+	//     { title: 'Name', field: 'name' },
+	//     { title: 'Email', field: 'email' },
+	//   ];
+	//   setState({ columns, data });
+	// };
 
-  useEffect(() => {
-    api();
-  }, []);
-  return (
-    <PuserAdminContext.Provider value={[state, setState]}>
-      {children}
-    </PuserAdminContext.Provider>
-  );
+	useEffect(() => {
+		(async () => {
+			const data = await pUserProfile();
+			const columns = [
+				{ title: "UID", field: "uid", type: "string" },
+				{ title: "Name", field: "name" },
+				{ title: "Email", field: "email" },
+			];
+			setState({ columns, data, loading: false });
+		})();
+	}, []);
+	return (
+		<PuserAdminContext.Provider value={[state, setState]}>
+			{children}
+		</PuserAdminContext.Provider>
+	);
 };

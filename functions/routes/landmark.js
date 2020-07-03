@@ -18,7 +18,7 @@ router.post("/", (req, res) => {
 		puid: req.body.puid,
 		location: {
 			lat: req.body.lat,
-			long: req.body.long,
+			//long: req.body.long,
 		},
 		landmark: req.body.landmark,
 		price: req.body.price,

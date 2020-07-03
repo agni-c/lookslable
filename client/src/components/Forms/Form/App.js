@@ -2,25 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 import Upload from "./Upload";
 import axios from "axios";
-import {
-  Container,
-  Button,
-  Form,
-  Col,
-  Row,
-} from "react-bootstrap";
+import { Container, Button, Form, Col, Row } from "react-bootstrap";
 import firebase from "firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getEditLocation, uploadFormDATA } from "../../../api";
 
 const App = () => {
   const [landmarks, setLandmarks] = useState([]);
   const [file, setFile] = useState(null);
-  const [currentLandmark, setCurrentLandmark] = useState(
-    ""
-  );
+  const [currentLandmark, setCurrentLandmark] = useState("");
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("uploads", file);
@@ -30,18 +23,8 @@ const App = () => {
         "content-type": "multipart/form-data",
       },
     };
-    axios
-      .post(
-        `http://localhost:5000/spring-internship/us-central1/app/api/upload/${
-          firebase.auth().currentUser.uid
-        }`,
-        formData,
-        config
-      )
-      .then((response) => {
-        testing();
-      })
-      .catch((error) => {});
+
+    await uploadFormDATA(formData, config);
   };
 
   const testing = () => {
@@ -61,23 +44,16 @@ const App = () => {
     setCurrentLandmark(value);
   };
   useEffect(() => {
-    axios
-      .get(
-        `http://localhost:5000/spring-internship/us-central1/app/api/landmark/${
-          firebase.auth().currentUser.uid
-        }`
-      )
-      .then((responce) => {
-        const entries = Object.entries(responce.data);
+    (async () => {
+      const responce = await getEditLocation();
 
-        entries.map((ele, index) => {
-          let land = ele[1].landmark;
-          setLandmarks((landmarks) => [...landmarks, land]);
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+      const entries = Object.entries(responce.data);
+
+      entries.map((ele, index) => {
+        let land = ele[1].landmark;
+        setLandmarks((landmarks) => [...landmarks, land]);
       });
+    })();
   }, []);
   return (
     <div className="contain">
@@ -110,12 +86,7 @@ const App = () => {
         <br />
         <br />
         <Form.Group as={Row}>
-          <Form.Label
-            column
-            sm="2"
-            size="lg"
-            for="landmark"
-          >
+          <Form.Label column sm="2" size="lg" for="landmark">
             {" "}
             Landmark
           </Form.Label>
@@ -130,7 +101,6 @@ const App = () => {
                 onLandmarkChange(e.target.value);
               }}
             >
-              
               {landmarks.map((ele, index) => {
                 return <option value={ele}>{ele}</option>;
               })}
@@ -141,11 +111,7 @@ const App = () => {
         </Form.Group>
         <br />
         <br />
-        <Button
-          variant="outline-primary"
-          className="mb-2"
-          type="submit"
-        >
+        <Button variant="outline-primary" className="mb-2" type="submit">
           Upload
         </Button>
         <ToastContainer />

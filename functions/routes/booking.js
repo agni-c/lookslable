@@ -11,7 +11,7 @@ router.post("/:iuid", (req, res) => {
 		price: req.body.price,
 		iuid: req.params.iuid,
 		puid: req.body.puid,
-
+		phoneNo: req.body.phoneNo,
 		bookingdate: req.body.date.toString().substring(0, 10),
 		time: req.body.date.toString().substring(11, 17),
 		timestamp: new Date().toISOString().substring(0, 10), //timestamp
