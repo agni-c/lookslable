@@ -12,19 +12,30 @@ const App = () => {
   const [landmarks, setLandmarks] = useState([]);
   const [file, setFile] = useState(null);
   const [currentLandmark, setCurrentLandmark] = useState("");
+  const [formData, setFormData] = useState({
+    landmark: "",
+    upload: "",
+  });
 
   const onFormSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("uploads", file);
-    formData.set("landmark", currentLandmark);
+    // const formData = new FormData();
+    // formData.append("uploads", file);
+    // formData.set("landmark", currentLandmark);
+    console.log("uuuuooopppp" + currentLandmark);
+    const lm = currentLandmark;
+
+    setFormData({ landmark: lm, upload: file });
     const config = {
       headers: {
         "content-type": "multipart/form-data",
       },
     };
+    console.log(currentLandmark);
 
-    await uploadFormDATA(formData, config);
+    console.log(formData.landmark);
+
+    await uploadFormDATA(file, currentLandmark, config);
   };
 
   const testing = () => {
@@ -93,6 +104,7 @@ const App = () => {
           <Col sm="10">
             <Form.Control
               as="select"
+              value="Select Your Landmark"
               name="landmark"
               placeholder="eg. lake gardens"
               required
@@ -101,6 +113,7 @@ const App = () => {
                 onLandmarkChange(e.target.value);
               }}
             >
+              <option value="default">Select Your Landmark</option>
               {landmarks.map((ele, index) => {
                 return <option value={ele}>{ele}</option>;
               })}

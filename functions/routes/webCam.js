@@ -20,22 +20,22 @@ let selfieId = null;
  * returns json data from firestore
  */
 router.get("/:uid", (request, response, next) => {
-	let uid = request.params.uid;
-	// let uid = request.session.uid;
-	const webCamRef = profileRef.doc(uid).collection("Web Cam");
-	// response.json(uid);
-	webCamRef
-		.get()
-		.then((snapshot) => {
-			let data = snapshot.docs.map((doc) => {
-				let x = doc.data();
-				return x;
-			});
-			return response.status(200).json(data);
-		})
-		.catch((err) => {
-			err;
-		});
+  let uid = request.params.uid;
+  // let uid = request.session.uid;
+  const webCamRef = profileRef.doc(uid).collection("Web Cam");
+  // response.json(uid);
+  webCamRef
+    .get()
+    .then((snapshot) => {
+      let data = snapshot.docs.map((doc) => {
+        let x = doc.data();
+        return x;
+      });
+      return response.status(200).json(data);
+    })
+    .catch((err) => {
+      err;
+    });
 });
 
 /**
@@ -45,65 +45,67 @@ router.get("/:uid", (request, response, next) => {
  */
 
 router.post("/:uid", (request, response, next) => {
-	// let uid = request.session.uid;
-	let uid = request.params.uid;
+  // let uid = request.session.uid;
 
-	const data = request.body;
+  let uid = request.params.uid;
 
-	data._id = v4().split("-").pop();
-	selfieId = data._id;
-	//----------------
-	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);
+  const data = request.body;
+  console.log("in backend" + data);
 
-	//converting data-url to image
-	let imgString = data.image64.split(";base64,").pop();
+  data._id = v4().split("-").pop();
+  selfieId = data._id;
+  //----------------
+  const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(data._id);
 
-	const bufferImg = Buffer.from(imgString, "base64");
+  //converting data-url to image
+  let imgString = data.image64.split(";base64,").pop();
 
-	// Upload the image to the bucket
-	const file = bucket.file(`${data._id}.png`);
-	const file_stream = file.createWriteStream({
-		contentType: "image/png",
-		resumable: false,
-	});
-	file_stream.write(bufferImg, (err) => {
-		if (err) {
-			console.log(err);
-		}
-		//setting firestore image attribute to the url
-		data.image64 = encodeURI(
-			`https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`
-		);
-		webCamRef.set(data, { merge: true }); // can send to firestore
-		console.log("upload finished");
-	});
-	file_stream.end();
-	response.end();
+  const bufferImg = Buffer.from(imgString, "base64");
+
+  // Upload the image to the bucket
+  const file = bucket.file(`${data._id}.png`);
+  const file_stream = file.createWriteStream({
+    contentType: "image/png",
+    resumable: false,
+  });
+  file_stream.write(bufferImg, (err) => {
+    if (err) {
+      console.log(err);
+    }
+    //setting firestore image attribute to the url
+    data.image64 = encodeURI(
+      `https://storage.googleapis.com/spring-internship.appspot.com/${data._id}.png`
+    );
+    webCamRef.set(data, { merge: true }); // can send to firestore
+    console.log("upload finished");
+  });
+  file_stream.end();
+  response.end();
 });
 
 /**
  * post - /api/webcam/form
  * sends fields  to data base where selfie resides
  */
-router.put("/form/:uid", (req, res, next) => {
-	// const uid = req.session.uid;
-	let uid = req.params.uid;
-	console.log(uid);
-	const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
-	//set the form in an object
-	const infoData = {
-		landmark: req.body.landmark,
-		location: {
-			lat: req.body.lat,
-			lon: req.body.lon,
-		},
-		price: req.body.price,
-		// time: req.body.time,
-	};
-	//save it to doc where webcam pic resides
-
-	webCamRef.set(infoData, { merge: true });
-	res.end();
+router.post("/form/:uid", (req, res, next) => {
+  // const uid = req.session.uid;
+  let uid = req.params.uid;
+  console.log(uid);
+  const webCamRef = profileRef.doc(uid).collection("Web Cam").doc(selfieId);
+  //set the form in an object
+  const infoData = {
+    landmark: req.body.landmark,
+    location: {
+      lat: req.body.lat,
+      lon: req.body.lon,
+    },
+    price: req.body.price,
+    // time: req.body.time,
+  };
+  //save it to doc where webcam pic resides
+  console.log("infodata" + infoData);
+  webCamRef.set(infoData, { merge: true });
+  res.end();
 });
 
 module.exports = router;

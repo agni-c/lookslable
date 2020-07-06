@@ -66,6 +66,9 @@ app.use("/api/landmark", landmark);
 const rating = require("./routes/rating");
 app.use("/api/rating", rating);
 
+const uploadlink = require("./routes/uploadlink");
+app.use("/api/uploadlink", uploadlink);
+
 //puser profile
 const PuserProfile = require("./routes/admin/puserProfile");
 app.use("/api/admin/puserprofile", PuserProfile);

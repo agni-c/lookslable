@@ -19,7 +19,6 @@ export default function BookingFragment() {
       d.pname = pData.data.find((p) => p.uid === d.puid).name;
     });
   }
-
   {
     if (state.loading === true || state.data === []) {
       return <CircularProgress />;
