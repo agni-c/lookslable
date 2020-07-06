@@ -1,12 +1,13 @@
 var router = require("express").Router();
 var firebase = require("firebase");
 var database = require("./firebaseAppI");
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   console.log("in");
   var ref = database.ref("BOOKING_DETAILS");
+  console.log("in backend" + req.body.iuid);
   ref
     .orderByChild("iuid")
-    .equalTo("oFf5YC7ARfcTM19y10XNyvdg1JQ2")
+    .equalTo(req.body.iuid)
     .once(
       "value",
       (snapshot) => {

@@ -8,10 +8,23 @@ axios.defaults.baseURL =
 // axios.defaults.baseURL =
 // 	"https://us-central1-spring-internship.cloudfunctions.net/app/api";
 
-export async function iuserevent() {
-  const response = await axios.get(`/iuserevent`);
-  if (response.data != null || response.data != undefined) {
-    var data = Object.values(response.data);
+export async function iuserevent(iuid) {
+  console.log("in api" + iuid);
+  const response = await axios.post(`/iuserevent`, {
+    iuid: iuid,
+  });
+  if (response.data != null && response.data != undefined) {
+    const data = Object.values(response.data);
+    return data;
+  }
+}
+export async function puserevent(puid) {
+  console.log("in api" + puid);
+  const response = await axios.post(`/puserevent`, {
+    puid: puid,
+  });
+  if (response.data != null && response.data != undefined) {
+    const data = Object.values(response.data);
     return data;
   }
 }
@@ -130,7 +143,10 @@ export async function getEditLocation() {
   }
 }
 
-export async function uploadFormDATA(formData, config) {
+export async function uploadFormDATA(file, landmark, config) {
+  const formData = new FormData();
+  formData.append("uploads", file);
+  formData.append("landmark", landmark);
   const response = await axios.post(
     `/upload/${firebase.auth().currentUser.uid}`,
     formData,
@@ -155,7 +171,15 @@ export async function landmarkRealTime(fieldData) {
 export async function webCamScreenShot(screenShot) {
   await axios.post(`/webcam/${firebase.auth().currentUser.uid}`, screenShot);
 }
-export async function popUpShoot(data, phNo, date, puid, price, noOfUsers) {
+export async function popUpShoot(
+  data,
+  phNo,
+  date,
+  puid,
+  price,
+  noOfUsers,
+  landmark
+) {
   axios.post(`/booking/${firebase.auth().currentUser.uid}`, {
     data: data,
     phoneNo: phNo,
@@ -163,6 +187,7 @@ export async function popUpShoot(data, phNo, date, puid, price, noOfUsers) {
     puid: puid,
     price: price,
     numberOfUsers: noOfUsers,
+    landmark: landmark,
   });
 }
 export async function AssigningPUser(bookingdate, iuid, puid, time) {
