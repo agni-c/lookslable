@@ -9,6 +9,14 @@ export default function LandMarkFragment() {
   const [state, setState] = useContext(LandmarkAdminContext);
 
   {
+    if (state.data) {
+      state.data.map((d) => {
+        d.locationLink = `http://www.google.com/maps/place/${d.location.lat},${d.location.long}`;
+      });
+    }
+  }
+
+  {
     if (state.loading === true) {
       return <CircularProgress />;
     } else {

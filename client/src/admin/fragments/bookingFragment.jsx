@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
-import { BookingsAdminContext } from "../../context/bookingsAdmin";
-import { PuserAdminContext } from "../../context/pUserAdmin";
-import { IuserAdminContext } from "../../context/iUserAdmin";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import MaterialTable from "material-table";
-import {} from "@material-ui/icons";
-import { AssigningPUser } from "../../api";
-import { useEffect } from "react";
+import React, { useContext } from 'react';
+import { BookingsAdminContext } from '../../context/bookingsAdmin';
+import { PuserAdminContext } from '../../context/pUserAdmin';
+import { IuserAdminContext } from '../../context/iUserAdmin';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import MaterialTable from 'material-table';
+import {} from '@material-ui/icons';
+import { AssigningPUser } from '../../api';
+import { useEffect } from 'react';
 
 export default function BookingFragment() {
   const [state, setState] = useContext(BookingsAdminContext);
@@ -25,7 +26,7 @@ export default function BookingFragment() {
     } else {
       return (
         <MaterialTable
-          title="Booking Details"
+          title='Booking Details'
           columns={state.columns}
           data={state.data}
           editable={{
