@@ -33,7 +33,7 @@ router.post('/:uid', (req, res, next) => {
   // console.log(req.session.uid);
 
   docRef.set(profile, { merge: true });
-  //docRef.update(completeprofile, { merge: true });
+  docRef.update(completeprofile, { merge: true });
   console.log(uid);
   res.end();
 });

@@ -54,18 +54,6 @@ const popularlocation = require('./routes/popularLocation');
 app.use('/api/popularlocation', popularlocation);
 
 //booking deatils upload
-const booking = require('./routes/booking');
-app.use('/api/booking', booking);
-
-//give the perticuler i-user event
-const iuserevent = require('./routes/iuserevent');
-app.use('/api/iuserevent', iuserevent);
-
-//give the perticuler p-user event
-const puserevent = require('./routes/puserevent');
-app.use('/api/puserevent', puserevent);
-
-//landmark
 const landmark = require('./routes/landmark');
 app.use('/api/landmark', landmark);
 
@@ -76,7 +64,6 @@ app.use('/api/rating', rating);
 //upolad drive link
 const uploadlink = require('./routes/uploadlink');
 app.use('/api/uploadlink', uploadlink);
-
 //iuserprofile
 const iuserProfile = require('./routes/admin/iUserProfile');
 app.use('/api/iuserprofile', iuserProfile);
