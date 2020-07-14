@@ -53,6 +53,7 @@ export const PuserAdminProvider = ({ children }) => {
         { title: 'UID', field: 'uid', type: 'string' },
         { title: 'Name', field: 'name' },
         { title: 'Email', field: 'email' },
+        { title: 'Phone Number', field: 'phoneNo' },
         {
           title: 'Average Rating',
           field: 'avgRating',
