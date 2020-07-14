@@ -22,9 +22,6 @@ router.post('/:uid', (req, res, next) => {
   const profile = req.body;
   //session
   let uid = req.params.uid;
-  let completeprofile = {
-    complete: false,
-  };
 
   sessionstorage.setItem('uid', uid);
   // req.session.uid = uid;
@@ -33,7 +30,7 @@ router.post('/:uid', (req, res, next) => {
   // console.log(req.session.uid);
 
   docRef.set(profile, { merge: true });
-  docRef.update(completeprofile, { merge: true });
+
   console.log(uid);
   res.end();
 });
