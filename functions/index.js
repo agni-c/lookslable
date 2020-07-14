@@ -41,21 +41,27 @@ app.use("/api/upload", picsUpload);
 const uploaddetails = require("./routes/uploadDetails");
 app.use("/api/uploaddetails", uploaddetails);
 
+// set trending photos
 const trendingphotos = require("./routes/admin/trendingPhotos");
 app.use("/api/admin/trendingPhotos", trendingphotos);
 
+// remove seted trending photos
 const deapprovedphoto = require("./routes/admin/deapprovedPhotos");
 app.use("/api/admin/deapprovedphoto", deapprovedphoto);
+
 //popular location
 const popularlocation = require("./routes/popularLocation");
 app.use("/api/popularlocation", popularlocation);
 
+//booking deatils upload
 const booking = require("./routes/booking");
 app.use("/api/booking", booking);
 
+//give the perticuler i-user event
 const iuserevent = require("./routes/iuserevent");
 app.use("/api/iuserevent", iuserevent);
 
+//give the perticuler p-user event
 const puserevent = require("./routes/puserevent");
 app.use("/api/puserevent", puserevent);
 
@@ -63,25 +69,41 @@ app.use("/api/puserevent", puserevent);
 const landmark = require("./routes/landmark");
 app.use("/api/landmark", landmark);
 
+// rating
 const rating = require("./routes/rating");
 app.use("/api/rating", rating);
 
+//upolad drive link
 const uploadlink = require("./routes/uploadlink");
 app.use("/api/uploadlink", uploadlink);
+
+//iuserprofile
+const iuserProfile = require("./routes/admin/iUserProfile");
+app.use("/api/iuserprofile", iuserProfile);
+
+// after signup puser form
+const puserform = require("./routes/puserForm");
+app.use("/api/puserform", puserform);
+
+//profile fo puser is complete or not
+const pusercompleteprofile = require("./routes/puserCompleteProfile");
+app.use("/api/pusercompleteprofile", pusercompleteprofile);
 
 //puser profile
 const PuserProfile = require("./routes/admin/puserProfile");
 app.use("/api/admin/puserprofile", PuserProfile);
 
+//remove booking
 const removeBooking = require("./routes/admin/removeBooking");
 app.use("/api/admin/removebooking", removeBooking);
 
+//remove landmark
 const removeLandmark = require("./routes/admin/removeLandmark");
 app.use("/api/admin/removelandmark", removeLandmark);
 
 //Iuser profile
-const iuserProfile = require("./routes/admin/iUserProfile");
-app.use("/api/admin/iuserprofile", iuserProfile);
+const iuserProfiles = require("./routes/admin/iUserProfile");
+app.use("/api/admin/iuserprofile", iuserProfiles);
 
 // booking details
 const bookingDetails = require("./routes/admin/bookingDetails");
@@ -95,6 +117,7 @@ app.use("/api/admin/landmarkdetails", landmarkDetails);
 const approvedPhotos = require("./routes/admin/approvedPhotos");
 app.use("/api/admin/approved-photos", approvedPhotos);
 
+// asssign booking to puser
 const asignpuser = require("./routes/admin/asigningPuser");
 app.use("/api/admin/asignpuser", asignpuser);
 
