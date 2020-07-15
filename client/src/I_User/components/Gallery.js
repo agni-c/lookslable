@@ -1,6 +1,6 @@
-import { allUserGallery } from '../../api';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import { allUserGallery } from "../../api";
+import React from "react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   Card,
@@ -9,16 +9,17 @@ import {
   Container,
   Row,
   Col,
-} from 'react-bootstrap';
-import Landmark from './Landmark';
-import axios from 'axios';
-import PopOver from './Popover/PopOver';
-import './styles.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+} from "react-bootstrap";
+import Landmark from "./Landmark";
+import axios from "axios";
+import PopOver from "./Popover/PopOver";
+import "./styles.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 export default function Gallery() {
   const [index, setIndex] = useState(0);
   const [dataRecieved, setDataRecieved] = useState(false);
   const [data, setData] = useState([{}]);
+  const [rawdata, setRawData] = useState([{}]);
   const [image, setImage] = useState([]);
   const [pUids, setPUids] = useState([]);
   const [landmarks, setLandmarks] = useState([]);
@@ -61,7 +62,16 @@ export default function Gallery() {
     (async () => {
       const data = await allUserGallery();
       console.log(data);
-      data.forEach((ele, index) => {
+      setRawData(data);
+      const seen = new Set();
+      const uniqueData = data.filter((el) => {
+        const duplicate = seen.has(el.landmark);
+        seen.add(el.landmark);
+        return !duplicate;
+      });
+      console.log(uniqueData);
+
+      uniqueData.forEach((ele, index) => {
         setData((data) => [...data, ele]);
         setImage((image) => [...image, ele.images]);
       });
@@ -94,29 +104,29 @@ export default function Gallery() {
               return (
                 <>
                   <br />
-                  <Card style={{ color: 'black' }}>
-                    <Card.Title style={{ textAlign: 'center' }}>
+                  <Card style={{ color: "black" }}>
+                    <Card.Title style={{ textAlign: "center" }}>
                       Landmark:{ele.landmark}
                     </Card.Title>
                     <Link to={`/iuser/${ele.landmark}`}>
                       <Badge
                         pill
-                        variant='success'
-                        style={{ width: '50%', cursor: 'pointer' }}
+                        variant="success"
+                        style={{ width: "50%", cursor: "pointer" }}
                         onClick={() => {
                           setCurrLandmark(ele.landmark);
                         }}
                       >
                         {ele.landmark}
-                      </Badge>{' '}
+                      </Badge>{" "}
                     </Link>
 
                     <Card.Body>
                       <Card.Img
-                        variant='top'
+                        variant="top"
                         src={ele.images}
-                        alt='something'
-                        style={{ position: 'relative' }}
+                        alt="something"
+                        style={{ position: "relative" }}
                       />
                       <Card.Text>{ele.names}</Card.Text>
                       <PopOver puid={ele.puid} landmark={ele.landmark} />
@@ -132,9 +142,9 @@ export default function Gallery() {
   };
   return (
     <Router>
-      <Route path='/iuser' exact component={HomeData}></Route>
-      <Route path='/iuser/:landmark'>
-        <Landmark rawData={data} landmark={currLandmark} />
+      <Route path="/iuser" exact component={HomeData}></Route>
+      <Route path="/iuser/:ldataandmark">
+        <Landmark rawData={rawdata} landmark={currLandmark} />
       </Route>
     </Router>
   );

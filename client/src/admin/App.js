@@ -1,10 +1,10 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
-	Route,
-	Link,
-	Switch,
-	browserHistory,
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  browserHistory,
 } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
@@ -15,33 +15,36 @@ import { IuserAdminProvider } from "../context/iUserAdmin";
 import { LandmarkAdminProvider } from "../context/landmarkAdmin";
 import { ApprovedPhotoAdminProvider } from "../context/approvedPhotosAdmin";
 import "./App.css";
+import { MyLocationAdminProvider } from "../context/myLocationAdmin";
 
 const AdminApp = () => {
-	return (
-		<Switch>
-			<Router>
-				<div className="App">
-					<PuserAdminProvider>
-						<IuserAdminProvider>
-							<ApprovedPhotoAdminProvider>
-								<LandmarkAdminProvider>
-									<BookingsAdminProvider>
-										<Route
-											exact
-											path="/admin/dashboard"
-											component={Dashboard}
-										/>
-										{/* <Dashboard /> */}
-									</BookingsAdminProvider>
-								</LandmarkAdminProvider>
-							</ApprovedPhotoAdminProvider>
-						</IuserAdminProvider>
-					</PuserAdminProvider>
-				</div>
-				<Route exact path="/admin" component={Login} />
-			</Router>
-		</Switch>
-	);
+  return (
+    <Switch>
+      <Router>
+        <div className="App">
+          <PuserAdminProvider>
+            <IuserAdminProvider>
+              <ApprovedPhotoAdminProvider>
+                <LandmarkAdminProvider>
+                  <BookingsAdminProvider>
+                    <MyLocationAdminProvider>
+                      <Route
+                        exact
+                        path="/admin/dashboard"
+                        component={Dashboard}
+                      />
+                      {/* <Dashboard /> */}
+                    </MyLocationAdminProvider>
+                  </BookingsAdminProvider>
+                </LandmarkAdminProvider>
+              </ApprovedPhotoAdminProvider>
+            </IuserAdminProvider>
+          </PuserAdminProvider>
+        </div>
+        <Route exact path="/admin" component={Login} />
+      </Router>
+    </Switch>
+  );
 };
 
 export default AdminApp;
