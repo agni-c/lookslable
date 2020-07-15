@@ -6378,3 +6378,71 @@
 [info] i  functions: Finished "app" in ~1s
 [debug] [2020-07-14T06:33:02.523Z] [worker-app-4741fa0b-0d2e-4c65-a265-c1ea340d58f5]: IDLE 
 [debug] [2020-07-14T06:33:02.523Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-07-14T06:33:50.149Z] File C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\routes\profile.js changed, reloading triggers 
+[debug] [2020-07-14T06:33:51.150Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-07-14T06:33:51.150Z] [worker-~diagnostic~-b9a7930f-b0e0-46f8-98ce-5121668a6d78]: FINISHING 
+[debug] [2020-07-14T06:33:51.151Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-07-14T06:33:51.151Z] [worker-app-7e8e6425-16aa-4d5c-b5ed-76f5a63b01b0]: FINISHING 
+[debug] [2020-07-14T06:33:51.152Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-07-14T06:33:51.152Z] [worker-app-4741fa0b-0d2e-4c65-a265-c1ea340d58f5]: FINISHING 
+[debug] [2020-07-14T06:33:51.152Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-07-14T06:33:51.153Z] [worker-app-03b13ff2-b07f-41e4-8422-3655e207d744]: FINISHING 
+[debug] [2020-07-14T06:33:51.153Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-07-14T06:33:51.154Z] [worker-app-66c205d8-2557-4bf7-a2a1-4742269568b4]: FINISHING 
+[debug] [2020-07-14T06:33:51.155Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-07-14T06:33:51.155Z] [worker-app-67f87558-0214-4ec6-9590-1efe8266a5a6]: FINISHING 
+[debug] [2020-07-14T06:33:51.179Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-14T06:33:51.179Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-07-14T06:33:51.179Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-14T06:33:51.179Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\18016 
+[debug] [2020-07-14T06:33:51.179Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: BUSY 
+[debug] [2020-07-14T06:33:51.185Z] [worker-~diagnostic~-b9a7930f-b0e0-46f8-98ce-5121668a6d78]: exited 
+[debug] [2020-07-14T06:33:51.185Z] [worker-~diagnostic~-b9a7930f-b0e0-46f8-98ce-5121668a6d78]: FINISHED 
+[debug] [2020-07-14T06:33:51.186Z] [worker-app-7e8e6425-16aa-4d5c-b5ed-76f5a63b01b0]: exited 
+[debug] [2020-07-14T06:33:51.186Z] [worker-app-7e8e6425-16aa-4d5c-b5ed-76f5a63b01b0]: FINISHED 
+[debug] [2020-07-14T06:33:51.187Z] [worker-app-03b13ff2-b07f-41e4-8422-3655e207d744]: exited 
+[debug] [2020-07-14T06:33:51.187Z] [worker-app-03b13ff2-b07f-41e4-8422-3655e207d744]: FINISHED 
+[debug] [2020-07-14T06:33:51.187Z] [worker-app-4741fa0b-0d2e-4c65-a265-c1ea340d58f5]: exited 
+[debug] [2020-07-14T06:33:51.188Z] [worker-app-4741fa0b-0d2e-4c65-a265-c1ea340d58f5]: FINISHED 
+[debug] [2020-07-14T06:33:51.190Z] [worker-app-66c205d8-2557-4bf7-a2a1-4742269568b4]: exited 
+[debug] [2020-07-14T06:33:51.190Z] [worker-app-66c205d8-2557-4bf7-a2a1-4742269568b4]: FINISHED 
+[debug] [2020-07-14T06:33:51.199Z] [worker-app-67f87558-0214-4ec6-9590-1efe8266a5a6]: exited 
+[debug] [2020-07-14T06:33:51.199Z] [worker-app-67f87558-0214-4ec6-9590-1efe8266a5a6]: FINISHED 
+[debug] [2020-07-14T06:33:52.953Z] [runtime-status] [18016] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-14T06:33:52.966Z] [runtime-status] [18016] Disabled runtime features: undefined 
+[debug] [2020-07-14T06:33:52.992Z] [runtime-status] [18016] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-14T06:33:52.999Z] [runtime-status] [18016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:33:53.009Z] [runtime-status] [18016] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-14T06:33:53.256Z] [runtime-status] [18016] Checked functions.config() {"config":{}} 
+[debug] [2020-07-14T06:33:53.259Z] [runtime-status] [18016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:33:53.263Z] [runtime-status] [18016] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-14T06:33:53.266Z] [runtime-status] [18016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:33:53.266Z] [runtime-status] [18016] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-14T06:33:53.686Z] [runtime-status] [18016] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-14T06:33:55.900Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: IDLE 
+[debug] [2020-07-14T06:48:44.019Z] File C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\index.js changed, reloading triggers 
+[debug] [2020-07-14T06:48:45.020Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-07-14T06:48:45.020Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: FINISHING 
+[debug] [2020-07-14T06:48:45.021Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-07-14T06:48:45.022Z] [worker-pool] Cleaned up workers for app: 5 --> 0 
+[debug] [2020-07-14T06:48:45.037Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-14T06:48:45.037Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-07-14T06:48:45.037Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-14T06:48:45.037Z] [worker-~diagnostic~-7654a6de-3a8f-441b-9f95-3fd3ea3e6d91]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\17720 
+[debug] [2020-07-14T06:48:45.038Z] [worker-~diagnostic~-7654a6de-3a8f-441b-9f95-3fd3ea3e6d91]: BUSY 
+[debug] [2020-07-14T06:48:45.044Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: exited 
+[debug] [2020-07-14T06:48:45.044Z] [worker-~diagnostic~-507a3113-79c9-4737-9bec-34a393ce8a3c]: FINISHED 
+[debug] [2020-07-14T06:48:47.949Z] [runtime-status] [17720] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-14T06:48:47.957Z] [runtime-status] [17720] Disabled runtime features: undefined 
+[debug] [2020-07-14T06:48:47.972Z] [runtime-status] [17720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-14T06:48:47.978Z] [runtime-status] [17720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:48:47.986Z] [runtime-status] [17720] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-14T06:48:48.110Z] [runtime-status] [17720] Checked functions.config() {"config":{}} 
+[debug] [2020-07-14T06:48:48.111Z] [runtime-status] [17720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:48:48.114Z] [runtime-status] [17720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-14T06:48:48.116Z] [runtime-status] [17720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-14T06:48:48.116Z] [runtime-status] [17720] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-14T06:48:48.523Z] [runtime-status] [17720] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-14T06:48:52.091Z] [worker-~diagnostic~-7654a6de-3a8f-441b-9f95-3fd3ea3e6d91]: IDLE 

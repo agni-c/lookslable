@@ -41,6 +41,8 @@ app.use('/api/upload', picsUpload);
 const uploaddetails = require('./routes/uploadDetails');
 app.use('/api/uploaddetails', uploaddetails);
 
+//
+
 // set trending photos
 const trendingphotos = require('./routes/admin/trendingPhotos');
 app.use('/api/admin/trendingPhotos', trendingphotos);
@@ -52,6 +54,17 @@ app.use('/api/admin/deapprovedphoto', deapprovedphoto);
 //popular location
 const popularlocation = require('./routes/popularLocation');
 app.use('/api/popularlocation', popularlocation);
+
+const booking = require('./routes/booking');
+app.use('/api/booking', booking);
+
+//give the perticuler i-user event
+const iuserevent = require('./routes/iuserevent');
+app.use('/api/iuserevent', iuserevent);
+
+//give the perticuler p-user event
+const puserevent = require('./routes/puserevent');
+app.use('/api/puserevent', puserevent);
 
 //booking deatils upload
 const landmark = require('./routes/landmark');
