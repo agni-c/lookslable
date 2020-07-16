@@ -1,22 +1,23 @@
 // import React, { useContext } from 'react';
 // import { MyLocationAdminContext } from '../../context/myLocationAdmin';
 // import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import Paper from "@material-ui/core/Paper";
 // import Tabs from '@material-ui/core/Tabs';
 // import Tab from '@material-ui/core/Tab';
-import React, { useContext } from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { IuserAdminContext } from '../../context/iUserAdmin';
-import MaterialTable from 'material-table';
-import { MyLocationAdminContext } from '../../context/myLocationAdmin';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React, { useContext } from "react";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { IuserAdminContext } from "../../context/iUserAdmin";
+import MaterialTable from "material-table";
+import { MyLocationAdminContext } from "../../context/myLocationAdmin";
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import { myLocationPhoto, myLocationVideo } from "../../api";
 
 const useStyles = makeStyles({
   root: {
@@ -28,7 +29,7 @@ function TabPanel(props) {
 
   return (
     <div
-      role='tabpanel'
+      role="tabpanel"
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
@@ -52,7 +53,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
 
@@ -66,13 +67,13 @@ export default function CenteredTabs() {
     setValue(newValue);
   };
 
-  const photodata = [];
-  const videodata = [];
+  // const photodata = [];
+  // const videodata = [];
 
-  {
-    photodata.push(state.pdata);
-    videodata.push(state.vdata);
-  }
+  // {
+  //   photodata.push(state.pdata);
+  //   videodata.push(state.vdata);
+  // }
 
   const PhotoTable = () => {
     {
@@ -81,18 +82,18 @@ export default function CenteredTabs() {
       } else {
         return (
           <MaterialTable
-            title='Photo'
+            title="Photo"
             columns={state.pcolumns}
-            data={photodata}
+            data={state.pdata}
             editable={{
               onRowAdd: (newData) =>
                 new Promise((resolve) => {
                   setTimeout(() => {
                     resolve();
                     setState((prevState) => {
-                      const data = [...prevState.data];
-                      data.push(newData);
-                      return { ...prevState, data };
+                      const pdata = [...prevState.pdata];
+                      pdata.push(newData);
+                      return { ...prevState, pdata };
                     });
                   }, 600);
                 }),
@@ -102,11 +103,21 @@ export default function CenteredTabs() {
                     resolve();
                     if (oldData) {
                       setState((prevState) => {
-                        const data = [...prevState.data];
-                        data[data.indexOf(oldData)] = newData;
-                        return { ...prevState, data };
+                        const pdata = [...prevState.pdata];
+                        // console.log(newData);
+                        pdata[pdata.indexOf(oldData)] = newData;
+                        myLocationPhoto(
+                          newData.bfirst,
+                          newData.bsecond,
+                          newData.bthird,
+                          newData.pfirst,
+                          newData.psecond,
+                          newData.pthird
+                        );
+                        return { ...prevState, pdata };
                       });
                     }
+                    // console.log(state.data);
                   }, 600);
                 }),
               onRowDelete: (oldData) =>
@@ -114,9 +125,9 @@ export default function CenteredTabs() {
                   setTimeout(() => {
                     resolve();
                     setState((prevState) => {
-                      const data = [...prevState.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      return { ...prevState, data };
+                      const pdata = [...prevState.pdata];
+                      pdata.splice(pdata.indexOf(oldData), 1);
+                      return { ...prevState, pdata };
                     });
                   }, 600);
                 }),
@@ -133,18 +144,18 @@ export default function CenteredTabs() {
       } else {
         return (
           <MaterialTable
-            title='Video'
+            title="Video"
             columns={state.vcolumns}
-            data={videodata}
+            data={state.vdata}
             editable={{
               onRowAdd: (newData) =>
                 new Promise((resolve) => {
                   setTimeout(() => {
                     resolve();
                     setState((prevState) => {
-                      const data = [...prevState.data];
-                      data.push(newData);
-                      return { ...prevState, data };
+                      const vdata = [...prevState.vdata];
+                      vdata.push(newData);
+                      return { ...prevState, vdata };
                     });
                   }, 600);
                 }),
@@ -154,9 +165,17 @@ export default function CenteredTabs() {
                     resolve();
                     if (oldData) {
                       setState((prevState) => {
-                        const data = [...prevState.data];
-                        data[data.indexOf(oldData)] = newData;
-                        return { ...prevState, data };
+                        const vdata = [...prevState.vdata];
+                        vdata[vdata.indexOf(oldData)] = newData;
+                        myLocationVideo(
+                          newData.bfirst,
+                          newData.bsecond,
+                          newData.bthird,
+                          newData.pfirst,
+                          newData.psecond,
+                          newData.pthird
+                        );
+                        return { ...prevState, vdata };
                       });
                     }
                   }, 600);
@@ -166,9 +185,9 @@ export default function CenteredTabs() {
                   setTimeout(() => {
                     resolve();
                     setState((prevState) => {
-                      const data = [...prevState.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      return { ...prevState, data };
+                      const vdata = [...prevState.vdata];
+                      vdata.splice(vdata.indexOf(oldData), 1);
+                      return { ...prevState, vdata };
                     });
                   }, 600);
                 }),
@@ -184,12 +203,12 @@ export default function CenteredTabs() {
       <Tabs
         value={value}
         onChange={handleChange}
-        indicatorColor='primary'
-        textColor='primary'
+        indicatorColor="primary"
+        textColor="primary"
         centered
       >
-        <Tab label='Photo' />
-        <Tab label='Video' />
+        <Tab label="Photo" />
+        <Tab label="Video" />
       </Tabs>
       <TabPanel value={value} index={0}>
         <PhotoTable />

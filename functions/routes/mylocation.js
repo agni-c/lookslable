@@ -9,14 +9,31 @@ router.get("/", (req, res) => {
     res.send(snapshot.val());
   });
 });
-router.put("/", (req, res) => {
+router.put("/photo", (req, res) => {
   console.log("in");
-  var ref = database.ref("MYLOCATION/Video/basic");
+  var ref = database.ref("MYLOCATION/Photo");
 
   ref.update({
-    First: "hello",
-    Second: "nikunj",
-    Third: "How",
+    bfirst: req.body.bfirst,
+    bsecond: req.body.bsecond,
+    bthird: req.body.bthird,
+    pfirst: req.body.pfirst,
+    psecond: req.body.psecond,
+    pthird: req.body.pthird,
+  });
+  res.end();
+});
+router.put("/video", (req, res) => {
+  console.log("in");
+  var ref = database.ref("MYLOCATION/Video");
+
+  ref.update({
+    bfirst: req.body.bfirst,
+    bsecond: req.body.bsecond,
+    bthird: req.body.bthird,
+    pfirst: req.body.pfirst,
+    psecond: req.body.psecond,
+    pthird: req.body.pthird,
   });
   res.end();
 });

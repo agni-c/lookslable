@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { LandmarkAdminContext } from '../../context/landmarkAdmin';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import axios from 'axios';
-import MaterialTable from 'material-table';
-import {} from '@material-ui/icons';
+import React, { useContext } from "react";
+import { LandmarkAdminContext } from "../../context/landmarkAdmin";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import axios from "axios";
+import MaterialTable from "material-table";
+import {} from "@material-ui/icons";
 
 export default function LandMarkFragment() {
   const [state, setState] = useContext(LandmarkAdminContext);
@@ -22,7 +22,7 @@ export default function LandMarkFragment() {
     } else {
       return (
         <MaterialTable
-          title='Landmark Details'
+          title="Landmark Details"
           columns={state.columns}
           data={state.data}
           editable={{
@@ -44,6 +44,7 @@ export default function LandMarkFragment() {
                   if (oldData) {
                     setState((prevState) => {
                       const data = [...prevState.data];
+                      console.log(newData);
                       data[data.indexOf(oldData)] = newData;
                       return { ...prevState, data };
                     });
@@ -59,6 +60,7 @@ export default function LandMarkFragment() {
                     data.splice(data.indexOf(oldData), 1);
                     return { ...prevState, data };
                   });
+                  console.log(state.data);
                 }, 600);
               }),
           }}
