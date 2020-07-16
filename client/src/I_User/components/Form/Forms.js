@@ -1,4 +1,5 @@
 import React from "react";
+import { customBooking } from "../../../api";
 import { Tabs, Tab, Badge } from "react-bootstrap";
 import { Form, Button, Col } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
@@ -18,6 +19,8 @@ class Forms extends React.Component {
         lat: "",
         lon: "",
       },
+      // time: "",
+      details: "",
     };
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -31,6 +34,14 @@ class Forms extends React.Component {
       (err) => console.log(err)
     );
   }
+
+  detailsHandler = (value) => {
+    this.setState({
+      details: value,
+    });
+
+    console.log(this.state.details);
+  };
 
   addressHandler = (value) => {
     this.setState({
@@ -48,48 +59,64 @@ class Forms extends React.Component {
     });
   };
   // timeHandler = (value) => {
-  //   console.log(value);
+  //   this.setState({
+  //     time: value,
+  //   });
   // };
 
   handleSubmit = () => {
-    axios
-      .post(
-        `http://localhost:5000/spring-internship/us-central1/app/api/uploaddetails`,
-        {
-          address: this.state.address,
-          phoneno: this.state.phoneNo,
-          date: this.state.date,
-          lat: this.state.location.lat,
-          lon: this.state.location.lon,
-          order: this.state.key1,
-          price: this.state.key2,
-        }
-      )
-      .then((res) => {
-        console.log(res.data);
-        console.log("Done!");
-        toast.info("Booked Successfully", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("Something Went wrong!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      });
+    (async () => {
+      await customBooking(
+        this.state.address,
+        this.state.phoneNo,
+        this.state.date,
+        this.state.location.lat,
+        this.state.location.lon,
+        this.state.key1,
+        this.state.key2,
+        this.state.details
+      );
+    })();
+
+    // axios
+    //   .post(
+    //     `http://localhost:5000/spring-internship/us-central1/app/api/uploaddetails`,
+    //     {
+    //       address: this.state.address,
+    //       phoneno: this.state.phoneNo,
+    //       date: this.state.date,
+    //       lat: this.state.location.lat,
+    //       lon: this.state.location.lon,
+    //       order: this.state.key1,
+    //       price: this.state.key2,
+    //       details: this.state.details,
+    //     }
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     console.log("Done!");
+    //     toast.info("Booked Successfully", {
+    //       position: "top-right",
+    //       autoClose: 5000,
+    //       hideProgressBar: false,
+    //       closeOnClick: true,
+    //       pauseOnHover: true,
+    //       draggable: true,
+    //       progress: undefined,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     toast.error("Something Went wrong!", {
+    //       position: "top-right",
+    //       autoClose: 5000,
+    //       hideProgressBar: false,
+    //       closeOnClick: true,
+    //       pauseOnHover: true,
+    //       draggable: true,
+    //       progress: undefined,
+    //     });
+    //   });
   };
   render() {
     return (
@@ -142,7 +169,7 @@ class Forms extends React.Component {
                     }}
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridTime1">
+                {/* <Form.Group controlId="formGridTime1">
                   <Form.Label>Time</Form.Label>
                   <Form.Control
                     // onChange={(e) => {
@@ -151,6 +178,16 @@ class Forms extends React.Component {
                     type="time-local"
                     className="colApp"
                     placeholder="Time"
+                  />
+                </Form.Group> */}
+                <Form.Group controlId="formGridAddress1">
+                  <Form.Label>Details</Form.Label>
+                  <Form.Control
+                    onChange={(e) => {
+                      this.detailsHandler(e.target.value);
+                    }}
+                    className="colApp"
+                    placeholder="Details"
                   />
                 </Form.Group>
               </Tab>
@@ -186,9 +223,25 @@ class Forms extends React.Component {
                     placeholder="Date"
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridTime2">
+                {/* <Form.Group controlId="formGridTime2">
                   <Form.Label>Time</Form.Label>
-                  <Form.Control className="colApp" placeholder="Time" />
+                  <Form.Control
+                    className="colApp"
+                    placeholder="Time"
+                    onChange={(e) => {
+                      this.timeHandler(e.target.value);
+                    }}
+                  />
+                </Form.Group> */}
+                <Form.Group controlId="formGridAddress1">
+                  <Form.Label>Details</Form.Label>
+                  <Form.Control
+                    onChange={(e) => {
+                      this.detailsHandler(e.target.value);
+                    }}
+                    className="colApp"
+                    placeholder="Details"
+                  />
                 </Form.Group>
               </Tab>
             </Tabs>

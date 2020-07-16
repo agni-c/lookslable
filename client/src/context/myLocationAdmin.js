@@ -20,7 +20,8 @@ export const MyLocationAdminProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const data = await mylocation();
-      const vdata = data.Video;
+      const vdata = [];
+      vdata.push(data.Video);
       const vcolumns = [
         { title: "Basic First", field: "bfirst" },
         { title: "Basic Second", field: "bsecond" },
@@ -29,7 +30,8 @@ export const MyLocationAdminProvider = ({ children }) => {
         { title: "Premium Second", field: "psecond" },
         { title: "Premium Third", field: "pthird" },
       ];
-      const pdata = data.Photo;
+      const pdata = [];
+      pdata.push(data.Photo);
       const pcolumns = [
         { title: "Basic First", field: "bfirst" },
         { title: "Basic Second", field: "bsecond" },
