@@ -1,27 +1,81 @@
-import React from "react";
-import { customBooking } from "../../../api";
-import { Tabs, Tab, Badge } from "react-bootstrap";
-import { Form, Button, Col } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
-import "./form.css";
+import React from 'react';
+import { customBooking, mylocation } from '../../../api';
+import { Tabs, Tab, Badge } from 'react-bootstrap';
+import { Form, Button, Col } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import './form.css';
 class Forms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      key1: "video",
-      key2: "basic",
-      address: "",
-      phoneNo: "",
-      date: "",
+      price: '',
+      key1: 'video',
+      key2: 'basic',
+      address: '',
+      phoneNo: '',
+      date: '',
       location: {
-        lat: "",
-        lon: "",
+        lat: '',
+        lon: '',
       },
       // time: "",
-      details: "",
+      details: '',
+      locationData: {
+        Video: {
+          pprice: '',
+          pfirst: '',
+          psecond: '',
+          pthird: '',
+          bprice: '',
+          bfirst: '',
+          bsecond: '',
+          bthird: '',
+        },
+        Photo: {
+          pprice: '',
+          pfirst: '',
+          psecond: '',
+          pthird: '',
+          bprice: '',
+          bfirst: '',
+          bsecond: '',
+          bthird: '',
+        },
+      },
     };
+
+    {
+      (async () => {
+        const locationData = await mylocation();
+        this.setState({
+          locationData: {
+            Video: {
+              pprice: locationData.Video.pprice,
+              pfirst: locationData.Video.pfirst,
+              psecond: locationData.Video.psecond,
+              pthird: locationData.Video.pthird,
+              bprice: locationData.Video.bprice,
+              bfirst: locationData.Video.bfirst,
+              bsecond: locationData.Video.bsecond,
+              bthird: locationData.Video.bthird,
+            },
+            Photo: {
+              pprice: locationData.Photo.pprice,
+              pfirst: locationData.Photo.pfirst,
+              psecond: locationData.Photo.psecond,
+              pthird: locationData.Photo.pthird,
+              bprice: locationData.Photo.bprice,
+              bfirst: locationData.Photo.bfirst,
+              bsecond: locationData.Photo.bsecond,
+              bthird: locationData.Photo.bthird,
+            },
+          },
+        });
+        console.log(this.state.locationData.Video.bprice);
+      })();
+    }
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         this.setState({
@@ -126,44 +180,44 @@ class Forms extends React.Component {
             <br />
             <br />
           </Form.Row>
-          <div className="tabs-content">
+          <div className='tabs-content'>
             <Tabs
-              variant="pills"
-              id="controlled-tab-example"
+              variant='pills'
+              id='controlled-tab-example'
               activeKey={this.state.key}
               onSelect={(k) => {
                 this.setState({ key1: k });
               }}
-              style={{ marginLeft: "100px" }}
+              style={{ marginLeft: '100px' }}
             >
-              <Tab eventKey="video" title="Video">
-                <Form.Group controlId="formGridAddress1">
+              <Tab eventKey='video' title='Video'>
+                <Form.Group controlId='formGridAddress1'>
                   <Form.Label>Address</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.addressHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="1234 Main St"
+                    className='colApp'
+                    placeholder='1234 Main St'
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridPhoneNo1">
+                <Form.Group controlId='formGridPhoneNo1'>
                   <Form.Label>Phone No</Form.Label>
                   <Form.Control
-                    className="colApp"
-                    type="number"
-                    placeholder="+91 "
+                    className='colApp'
+                    type='number'
+                    placeholder='+91 '
                     onChange={(e) => {
                       this.phoneNoHandler(e.target.value);
                     }}
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridDate1">
+                <Form.Group controlId='formGridDate1'>
                   <Form.Label>Date</Form.Label>
                   <Form.Control
-                    className="colApp"
-                    type="dateTime-local"
-                    placeholder="Date"
+                    className='colApp'
+                    type='dateTime-local'
+                    placeholder='Date'
                     onChange={(e) => {
                       this.dateHandler(e.target.value);
                     }}
@@ -180,118 +234,199 @@ class Forms extends React.Component {
                     placeholder="Time"
                   />
                 </Form.Group> */}
-                <Form.Group controlId="formGridAddress1">
+                <Form.Group controlId='formGridAddress1'>
                   <Form.Label>Details</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.detailsHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="Details"
+                    className='colApp'
+                    placeholder='Details'
                   />
                 </Form.Group>
+                <div className='tabs-content'>
+                  <Tabs
+                    variant='pills'
+                    id='controlled-tab-example'
+                    activeKey={this.state.key}
+                    onSelect={(k) => {
+                      this.setState({ key2: k });
+                    }}
+                    style={{ marginLeft: '100px' }}
+                  >
+                    <Tab eventKey='basic' title='Basic'>
+                      <h4>{this.state.locationData.Video.bfirst}</h4>
+                      <h4>{this.state.locationData.Video.bsecond}</h4>
+                      <h4>{this.state.locationData.Video.bthird}</h4>
+                      <h3>
+                        <Badge variant='success' as='h4'>
+                          Price :
+                        </Badge>
+                        {'  '}
+                        <Badge variant='success'>
+                          {this.state.locationData.Video.bprice}
+                        </Badge>{' '}
+                      </h3>
+                    </Tab>
+                    <Tab eventKey='premium' title='Premium'>
+                      <h4>{this.state.locationData.Video.pfirst}</h4>
+                      <h4>{this.state.locationData.Video.psecond}</h4>
+                      <h4>{this.state.locationData.Video.pthird}</h4>
+                      <h3>
+                        <Badge variant='success' as='h4'>
+                          Price :
+                        </Badge>
+                        {'  '}
+                        <Badge variant='success'>
+                          {this.state.locationData.Video.pprice}
+                        </Badge>{' '}
+                      </h3>
+                    </Tab>
+                  </Tabs>
+                </div>
               </Tab>
-              <Tab eventKey="photo" title="Photo">
-                <Form.Group controlId="formGridAddress2">
+              <Tab eventKey='photo' title='Photo'>
+                <Form.Group controlId='formGridAddress2'>
                   <Form.Label>Address</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.addressHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="1234 Main St"
+                    className='colApp'
+                    placeholder='1234 Main St'
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridPhoneNo2">
+                <Form.Group controlId='formGridPhoneNo2'>
                   <Form.Label>Phone No</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.phoneNoHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="+91 "
+                    className='colApp'
+                    placeholder='+91 '
                   />
                 </Form.Group>
-                <Form.Group controlId="formGridDate2">
+                <Form.Group controlId='formGridDate2'>
                   <Form.Label>Date</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.dateHandler(e.target.value);
                     }}
-                    className="colApp"
-                    type="dateTime-local"
-                    placeholder="Date"
+                    className='colApp'
+                    type='dateTime-local'
+                    placeholder='Date'
                   />
                 </Form.Group>
                 {/* <Form.Group controlId="formGridTime2">
                   <Form.Label>Time</Form.Label>
                   <Form.Control
-                    className="colApp"
-                    placeholder="Time"
-                    onChange={(e) => {
-                      this.timeHandler(e.target.value);
-                    }}
+                  className="colApp"
+                  placeholder="Time"
+                  onChange={(e) => {
+                    this.timeHandler(e.target.value);
+                  }}
                   />
                 </Form.Group> */}
-                <Form.Group controlId="formGridAddress1">
+                <Form.Group controlId='formGridAddress1'>
                   <Form.Label>Details</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.detailsHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="Details"
+                    className='colApp'
+                    placeholder='Details'
                   />
                 </Form.Group>
+                <div className='tabs-content'>
+                  <Tabs
+                    variant='pills'
+                    id='controlled-tab-example'
+                    activeKey={this.state.key}
+                    onSelect={(k) => {
+                      this.setState({ key2: k });
+                    }}
+                    style={{ marginLeft: '100px' }}
+                  >
+                    <Tab eventKey='basic' title='Basic'>
+                      <h4>{this.state.locationData.Photo.bfirst}</h4>
+                      <h4>{this.state.locationData.Photo.bsecond}</h4>
+                      <h4>{this.state.locationData.Photo.bthird}</h4>
+                      <h3>
+                        <Badge variant='success' as='h4'>
+                          Price :
+                        </Badge>
+                        {'  '}
+                        <Badge variant='success'>
+                          {this.state.locationData.Photo.bprice}
+                        </Badge>{' '}
+                      </h3>
+                    </Tab>
+                    <Tab eventKey='premium' title='Premium'>
+                      <h4>{this.state.locationData.Photo.pfirst}</h4>
+                      <h4>{this.state.locationData.Photo.psecond}</h4>
+                      <h4>{this.state.locationData.Photo.pthird}</h4>
+                      <h3>
+                        <Badge variant='success' as='h4'>
+                          Price :
+                        </Badge>
+                        {'  '}
+                        <Badge variant='success'>
+                          {this.state.locationData.Photo.pprice}
+                        </Badge>{' '}
+                      </h3>
+                    </Tab>
+                  </Tabs>
+                </div>
               </Tab>
             </Tabs>
           </div>
-          <Form.Row>
-            <br />
-            <br />
-          </Form.Row>
-          <div className="tabs-content">
+          {/* <div className='tabs-content'>
             <Tabs
-              variant="pills"
-              id="controlled-tab-example"
+              variant='pills'
+              id='controlled-tab-example'
               activeKey={this.state.key}
               onSelect={(k) => {
                 this.setState({ key2: k });
               }}
-              style={{ marginLeft: "100px" }}
+              style={{ marginLeft: '100px' }}
             >
-              <Tab eventKey="basic" title="Basic">
+              <Tab eventKey='basic' title='Basic'>
                 <h4>Lorem</h4>
                 <h4>Lorem</h4>
                 <h4>Lorem</h4>
                 <h3>
-                  <Badge variant="success" as="h4">
+                  <Badge variant='success' as='h4'>
                     Price :
                   </Badge>
-                  {"  "}
-                  <Badge variant="success">349</Badge>{" "}
+                  {'  '}
+                  <Badge variant='success'>349</Badge>{' '}
                 </h3>
               </Tab>
-              <Tab eventKey="premium" title="Premium">
+              <Tab eventKey='premium' title='Premium'>
                 <h4>Lorem</h4>
                 <h4>Lorem</h4>
                 <h4>Lorem</h4>
                 <h3>
-                  <Badge variant="success" as="h4">
+                  <Badge variant='success' as='h4'>
                     Price :
                   </Badge>
-                  {"  "}
-                  <Badge variant="success">549</Badge>{" "}
+                  {'  '}
+                  <Badge variant='success'>549</Badge>{' '}
                 </h3>
               </Tab>
             </Tabs>
-          </div>
+          </div> */}
+          <Form.Row>
+            <br />
+            <br />
+          </Form.Row>
+
           <br />
           {console.log(this.state)}
           <Button
-            variant="primary"
-            type="submit"
-            style={{ marginLeft: "135px" }}
+            variant='primary'
+            type='submit'
+            style={{ marginLeft: '135px' }}
             onClick={(e) => {
               e.preventDefault();
               this.handleSubmit();
