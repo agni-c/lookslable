@@ -17,9 +17,11 @@ router.put("/photo", (req, res) => {
     bfirst: req.body.bfirst,
     bsecond: req.body.bsecond,
     bthird: req.body.bthird,
+    bprice: req.body.bprice,
     pfirst: req.body.pfirst,
     psecond: req.body.psecond,
     pthird: req.body.pthird,
+    pprice: req.body.pprice,
   });
   res.end();
 });
@@ -31,9 +33,11 @@ router.put("/video", (req, res) => {
     bfirst: req.body.bfirst,
     bsecond: req.body.bsecond,
     bthird: req.body.bthird,
+    bprice: req.body.bprice,
     pfirst: req.body.pfirst,
     psecond: req.body.psecond,
     pthird: req.body.pthird,
+    pprice: req.body.pprice,
   });
   res.end();
 });
