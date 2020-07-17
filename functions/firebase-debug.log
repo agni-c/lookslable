@@ -16524,3 +16524,244 @@ SyntaxError: Identifier 'booking' has already been declared
 [debug] [2020-07-16T12:57:38.773Z] [worker-app-daf43ade-e4c2-489f-b919-f94cd1abab05]: FINISHED 
 [debug] [2020-07-16T12:57:40.028Z] [worker-app-1d269a80-eb0c-4199-9986-664ff72450b3]: exited 
 [debug] [2020-07-16T12:57:40.028Z] [worker-app-1d269a80-eb0c-4199-9986-664ff72450b3]: FINISHED 
+[debug] [2020-07-17T07:58:26.823Z] ----------------------------------------------------------------------
+[debug] [2020-07-17T07:58:26.827Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-07-17T07:58:26.827Z] CLI Version:   8.0.2
+[debug] [2020-07-17T07:58:26.827Z] Platform:      win32
+[debug] [2020-07-17T07:58:26.827Z] Node Version:  v12.16.2
+[debug] [2020-07-17T07:58:26.831Z] Time:          Fri Jul 17 2020 13:28:26 GMT+0530 (India Standard Time)
+[debug] [2020-07-17T07:58:26.831Z] ----------------------------------------------------------------------
+[debug] [2020-07-17T07:58:26.831Z] 
+[debug] [2020-07-17T07:58:26.890Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-17T07:58:26.891Z] > authorizing via signed-in user
+[debug] [2020-07-17T07:58:26.892Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-07-17T07:58:26.897Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-17T07:58:26.898Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-17T07:58:28.208Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 17 Jul 2020 07:55:32 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-17T07:58:28.282Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-07-17T07:58:30.421Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 17 Jul 2020 07:55:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1311","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-17T07:58:30.424Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-07-17T07:58:31.483Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 17 Jul 2020 07:55:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-07-17T07:58:34.632Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-17T07:58:34.633Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-07-17T07:58:34.633Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-17T07:58:34.635Z] [worker-~diagnostic~-1adad071-7c99-4e7b-a34d-1bce2469275c]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\13016 
+[debug] [2020-07-17T07:58:34.636Z] [worker-~diagnostic~-1adad071-7c99-4e7b-a34d-1bce2469275c]: BUSY 
+[debug] [2020-07-17T07:58:47.654Z] [runtime-status] [13016] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T07:58:47.657Z] [runtime-status] [13016] Disabled runtime features: undefined 
+[debug] [2020-07-17T07:58:47.724Z] [runtime-status] [13016] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T07:58:47.749Z] [runtime-status] [13016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T07:58:47.755Z] [runtime-status] [13016] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T07:58:48.967Z] [runtime-status] [13016] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T07:58:48.970Z] [runtime-status] [13016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T07:58:48.973Z] [runtime-status] [13016] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T07:58:48.976Z] [runtime-status] [13016] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T07:58:48.976Z] [runtime-status] [13016] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T07:58:51.597Z] [runtime-status] [13016] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-07-17T07:59:04.573Z] [worker-~diagnostic~-1adad071-7c99-4e7b-a34d-1bce2469275c]: IDLE 
+[debug] [2020-07-17T08:01:52.899Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-07-17T08:01:52.900Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-07-17T08:01:52.901Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-07-17T08:01:52.982Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:52.983Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-07-17T08:01:52.983Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:52.983Z] [worker-app-e747eb15-7da9-4669-8550-acd3b8d2148c]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\15656 
+[debug] [2020-07-17T08:01:52.984Z] [worker-app-e747eb15-7da9-4669-8550-acd3b8d2148c]: BUSY 
+[debug] [2020-07-17T08:01:52.985Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-07-17T08:01:52.985Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-07-17T08:01:52.986Z] Accepted request GET /spring-internship/us-central1/app/api/admin/bookingdetails --> app
+[debug] [2020-07-17T08:01:52.996Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:52.997Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-07-17T08:01:52.997Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:52.998Z] [worker-app-bcaf3b1c-d9d5-4a14-a724-6eef82005f25]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\19380 
+[debug] [2020-07-17T08:01:52.998Z] [worker-app-bcaf3b1c-d9d5-4a14-a724-6eef82005f25]: BUSY 
+[debug] [2020-07-17T08:01:52.999Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-07-17T08:01:52.999Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-07-17T08:01:52.999Z] Accepted request GET /spring-internship/us-central1/app/api/admin/landmarkdetails --> app
+[debug] [2020-07-17T08:01:53.034Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:53.034Z] [worker-pool] Adding worker with key app, total=3 
+[debug] [2020-07-17T08:01:53.035Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:53.035Z] [worker-app-1a506505-9ee4-4af9-b535-f99062c70a9d]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\12908 
+[debug] [2020-07-17T08:01:53.036Z] [worker-app-1a506505-9ee4-4af9-b535-f99062c70a9d]: BUSY 
+[debug] [2020-07-17T08:01:53.039Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-07-17T08:01:53.040Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-07-17T08:01:53.040Z] Accepted request GET /spring-internship/us-central1/app/api/admin/approved-photos --> app
+[debug] [2020-07-17T08:01:53.074Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:53.075Z] [worker-pool] Adding worker with key app, total=4 
+[debug] [2020-07-17T08:01:53.075Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:53.076Z] [worker-app-5371b5b7-646b-4e25-9913-822c489e2f4c]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16076 
+[debug] [2020-07-17T08:01:53.076Z] [worker-app-5371b5b7-646b-4e25-9913-822c489e2f4c]: BUSY 
+[debug] [2020-07-17T08:01:53.078Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-07-17T08:01:53.079Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-07-17T08:01:53.079Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-07-17T08:01:53.090Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:53.090Z] [worker-pool] Adding worker with key app, total=5 
+[debug] [2020-07-17T08:01:53.090Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:53.091Z] [worker-app-3ba50931-4fd5-4d75-b9b9-e028f23b8148]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\7444 
+[debug] [2020-07-17T08:01:53.091Z] [worker-app-3ba50931-4fd5-4d75-b9b9-e028f23b8148]: BUSY 
+[debug] [2020-07-17T08:01:53.093Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-07-17T08:01:53.094Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-07-17T08:01:53.094Z] Accepted request GET /spring-internship/us-central1/app/api/admin/puserprofile --> app
+[debug] [2020-07-17T08:01:53.108Z] [worker-pool] addWorker(app) 
+[debug] [2020-07-17T08:01:53.108Z] [worker-pool] Adding worker with key app, total=6 
+[debug] [2020-07-17T08:01:53.108Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-07-17T08:01:53.109Z] [worker-app-ac81aac2-8728-4482-aa5e-237c4950b96f]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16144 
+[debug] [2020-07-17T08:01:53.109Z] [worker-app-ac81aac2-8728-4482-aa5e-237c4950b96f]: BUSY 
+[debug] [2020-07-17T08:02:11.858Z] [runtime-status] [7444] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.859Z] [runtime-status] [15656] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.859Z] [runtime-status] [16144] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.860Z] [runtime-status] [16076] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.861Z] [runtime-status] [19380] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.862Z] [runtime-status] [12908] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-17T08:02:11.863Z] [runtime-status] [7444] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:11.863Z] [runtime-status] [16076] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:11.864Z] [runtime-status] [15656] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:11.865Z] [runtime-status] [16144] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:11.866Z] [runtime-status] [19380] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:11.867Z] [runtime-status] [12908] Disabled runtime features: undefined 
+[debug] [2020-07-17T08:02:12.089Z] [runtime-status] [12908] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.089Z] [runtime-status] [19380] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.090Z] [runtime-status] [7444] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.091Z] [runtime-status] [16144] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.091Z] [runtime-status] [16076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.092Z] [runtime-status] [15656] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.199Z] [runtime-status] [16076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.200Z] [runtime-status] [19380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.200Z] [runtime-status] [7444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.201Z] [runtime-status] [16144] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.202Z] [runtime-status] [15656] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.204Z] [runtime-status] [12908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:12.277Z] [runtime-status] [12908] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:12.277Z] [runtime-status] [16144] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:12.278Z] [runtime-status] [16076] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:12.279Z] [runtime-status] [15656] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:12.279Z] [runtime-status] [19380] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:12.279Z] [runtime-status] [7444] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-17T08:02:13.836Z] [runtime-status] [7444] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.836Z] [runtime-status] [12908] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.837Z] [runtime-status] [16144] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.838Z] [runtime-status] [19380] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.838Z] [runtime-status] [15656] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.839Z] [runtime-status] [7444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.840Z] [runtime-status] [16076] Checked functions.config() {"config":{}} 
+[debug] [2020-07-17T08:02:13.840Z] [runtime-status] [12908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.841Z] [runtime-status] [16144] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.842Z] [runtime-status] [19380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.842Z] [runtime-status] [15656] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.843Z] [runtime-status] [16076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.844Z] [runtime-status] [7444] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.844Z] [runtime-status] [12908] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.845Z] [runtime-status] [16144] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.846Z] [runtime-status] [19380] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.846Z] [runtime-status] [12908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.847Z] [runtime-status] [12908] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:13.847Z] [runtime-status] [16144] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.848Z] [runtime-status] [16144] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:13.849Z] [runtime-status] [16076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.849Z] [runtime-status] [16076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.850Z] [runtime-status] [16076] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:13.850Z] [runtime-status] [7444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.852Z] [runtime-status] [7444] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:13.852Z] [runtime-status] [19380] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.853Z] [runtime-status] [19380] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:13.853Z] [runtime-status] [15656] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.853Z] [runtime-status] [15656] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-17T08:02:13.854Z] [runtime-status] [15656] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-17T08:02:16.527Z] [runtime-status] [19380] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[debug] [2020-07-17T08:02:16.527Z] [runtime-status] [7444] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-17T08:02:16.528Z] [runtime-status] [16076] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-17T08:02:16.529Z] [runtime-status] [12908] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-17T08:02:16.534Z] [runtime-status] [15656] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-17T08:02:16.536Z] [runtime-status] [16144] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-07-17T08:02:25.610Z] [runtime-status] [12908] Trigger "app" has been found, beginning invocation! 
+[debug] [2020-07-17T08:02:25.610Z] [runtime-status] [15656] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.624Z] [runtime-status] [12908] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.625Z] [runtime-status] [12908] Running app in mode HTTPS 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.627Z] [runtime-status] [15656] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.628Z] [runtime-status] [15656] Running app in mode HTTPS 
+[debug] [2020-07-17T08:02:25.628Z] [runtime-status] [16144] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.711Z] [runtime-status] [16144] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.711Z] [runtime-status] [16144] Running app in mode HTTPS 
+[debug] [2020-07-17T08:02:25.712Z] [runtime-status] [16076] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.730Z] [runtime-status] [16076] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.731Z] [runtime-status] [16076] Running app in mode HTTPS 
+[debug] [2020-07-17T08:02:25.731Z] [runtime-status] [16076] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16076 
+[debug] [2020-07-17T08:02:25.793Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:25.802Z] [runtime-status] [7444] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.889Z] [runtime-status] [7444] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.913Z] [runtime-status] [7444] Running app in mode HTTPS 
+[debug] [2020-07-17T08:02:25.914Z] [runtime-status] [7444] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\7444 
+[debug] [2020-07-17T08:02:25.918Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:25.921Z] [runtime-status] [19380] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-07-17T08:02:25.972Z] [runtime-status] [19380] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-07-17T08:02:25.972Z] [runtime-status] [19380] Running app in mode HTTPS 
+[debug] [2020-07-17T08:02:25.973Z] [runtime-status] [19380] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\19380 
+[debug] [2020-07-17T08:02:25.975Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:25.977Z] [runtime-status] [12908] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\12908 
+[debug] [2020-07-17T08:02:25.980Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:25.997Z] [runtime-status] [16144] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16144 
+[debug] [2020-07-17T08:02:26.000Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:26.004Z] [runtime-status] [15656] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\15656 
+[debug] [2020-07-17T08:02:26.006Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-07-17T08:02:26.025Z] [runtime-status] [16076] Ephemeral server handling GET request 
+[debug] [2020-07-17T08:02:26.029Z] [runtime-status] [12908] Ephemeral server handling GET request 
+[debug] [2020-07-17T08:02:26.030Z] [runtime-status] [16144] Ephemeral server handling GET request 
+[debug] [2020-07-17T08:02:26.030Z] [runtime-status] [7444] Ephemeral server handling GET request 
+[debug] [2020-07-17T08:02:26.031Z] [runtime-status] [19380] Ephemeral server handling GET request 
+[info] >  working {"user":"working"}
+[debug] [2020-07-17T08:02:26.054Z] [runtime-status] [15656] Ephemeral server handling GET request 
+[debug] [2020-07-17T08:02:26.054Z] [runtime-status] [7444] Ephemeral server survived. 
+[debug] [2020-07-17T08:02:26.055Z] [runtime-status] [12908] Ephemeral server survived. 
+[debug] [2020-07-17T08:02:26.056Z] [runtime-status] [19380] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-07-17T08:02:26.069Z] [runtime-status] [16076] Ephemeral server survived. 
+[debug] [2020-07-17T08:02:26.071Z] [runtime-status] [15656] Ephemeral server survived. 
+[debug] [2020-07-17T08:02:26.078Z] [runtime-status] [16144] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-07-17T08:02:27.529Z] [worker-app-bcaf3b1c-d9d5-4a14-a724-6eef82005f25]: IDLE 
+[debug] [2020-07-17T08:02:27.530Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-07-17T08:02:27.550Z] [worker-app-e747eb15-7da9-4669-8550-acd3b8d2148c]: IDLE 
+[debug] [2020-07-17T08:02:27.551Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-07-17T08:02:27.573Z] [worker-app-1a506505-9ee4-4af9-b535-f99062c70a9d]: IDLE 
+[debug] [2020-07-17T08:02:27.574Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-07-17T08:02:27.775Z] [worker-app-ac81aac2-8728-4482-aa5e-237c4950b96f]: IDLE 
+[debug] [2020-07-17T08:02:27.776Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~2s
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-07-17T08:02:27.787Z] [worker-app-5371b5b7-646b-4e25-9913-822c489e2f4c]: IDLE 
+[debug] [2020-07-17T08:02:27.787Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-07-17T08:02:27.787Z] [worker-app-3ba50931-4fd5-4d75-b9b9-e028f23b8148]: IDLE 
+[debug] [2020-07-17T08:02:27.787Z] [work-queue] {"queueLength":0,"workRunningCount":0}
