@@ -1,20 +1,14 @@
 .margin-bt {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 .margin-rg {
-	margin-right: 80px;
-}
-body {
-	background: #cfcdcd;
-}
-body {
-	color: #eee;
+  margin-right: 80px;
 }
 
 .colApp {
-	background: #cfcdcd;
+  background: #cfcdcd;
 }
 
 .customBtn {
-	height: 50px;
+  height: 50px;
 }

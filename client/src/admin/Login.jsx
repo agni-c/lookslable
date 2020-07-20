@@ -39,8 +39,8 @@ const Login = () => {
 
 		if (validData) {
 			if (
-				Sha256(user.toString()).toString() === Sha256("admin").toString() &&
-				Sha256(password.toString()).toString() === Sha256("admin").toString()
+				Sha256(user.toString()).toString() === Sha256("").toString() &&
+				Sha256(password.toString()).toString() === Sha256("").toString()
 			) {
 				history.push("/admin/dashboard");
 			} else {

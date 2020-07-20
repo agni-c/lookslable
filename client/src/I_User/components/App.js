@@ -15,7 +15,7 @@ export default function App() {
   // 	setShowSignIn(true);
   // };
   return (
-    <div style={{ backgroundColor: '#222831' }}>
+    <div style={{ width: '100%', height: 'auto', backgroundColor: '#222831' }}>
       <SignInScreen />
     </div>
   );

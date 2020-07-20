@@ -133,6 +133,16 @@ export default function ClippedDrawer() {
                 </ListItem>
               </Link>
             </List>
+            <List>
+              <Link to="/dashboard/custombookings">
+                <ListItem button>
+                  <ListItemIcon>
+                    <Portrait />
+                  </ListItemIcon>
+                  <ListItemText primary="Custom Bookings" />
+                </ListItem>
+              </Link>
+            </List>
             <Divider />
           </div>
         </Drawer>
@@ -167,6 +177,13 @@ export default function ClippedDrawer() {
             <Route
               exact
               path="/dashboard/mylocation"
+              component={MyLocationFragment}
+            />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path="/dashboard/custombookings"
               component={MyLocationFragment}
             />
           </Switch>
