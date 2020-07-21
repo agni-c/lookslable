@@ -77,7 +77,7 @@ const mylocation = require("./routes/mylocation");
 app.use("/api/mylocation", mylocation);
 
 //custom booking
-const custombooking = require("./routes/customBooking.");
+const custombooking = require("./routes/customBooking");
 app.use("/api/custombooking", custombooking);
 
 // rating

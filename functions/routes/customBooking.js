@@ -6,6 +6,7 @@ require("dotenv").config();
 router.post("/", (req, res) => {
   //giving the reference
   var ref = database.ref("CUSTOM_BOOKING");
+  console.log(req.body);
   //create the object
   var obj = {
     address: req.body.address,
@@ -15,11 +16,19 @@ router.post("/", (req, res) => {
     lon: req.body.lon,
     key1: req.body.key1,
     key2: req.body.key2,
+    name: req.body.user.displayName,
     //details: req.body.details,
   };
 
   ref.push(obj);
   res.end();
+});
+router.get("/", (req, res) => {
+  //giving the reference
+  var ref = database.ref("CUSTOM_BOOKING");
+  ref.once("value", (snapshot) => {
+    res.send(snapshot.val());
+  });
 });
 
 module.exports = router;

@@ -11,7 +11,11 @@ router.post("/", (req, res) => {
     .once(
       "value",
       (snapshot) => {
-        res.json(snapshot.val());
+        if (snapshot.exists()) {
+          res.json(snapshot.val());
+        } else {
+          res.json("data not found");
+        }
       },
       (errorObject) => {
         console.log("The read failed: " + errorObject.code);

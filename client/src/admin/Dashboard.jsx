@@ -9,6 +9,7 @@ import IuserFragment from "./fragments/iuserFragment";
 import BookingFragment from "./fragments/bookingFragment";
 import LandMarkFragment from "./fragments/landMarkFragment";
 import ApprovedPhotos from "./fragments/approvedPhotosFragment";
+import CustomBookingFragment from "./fragments/customBookingFregment";
 import {
   List,
   ListItem,
@@ -133,6 +134,17 @@ export default function ClippedDrawer() {
                 </ListItem>
               </Link>
             </List>
+            <List>
+              <Link to="/dashboard/custombookings">
+                <ListItem button>
+                  <ListItemIcon>
+                    <Portrait />
+                  </ListItemIcon>
+                  <ListItemText primary="Custom Bookings" />
+                </ListItem>
+              </Link>
+            </List>
+
             <Divider />
           </div>
         </Drawer>
@@ -147,7 +159,11 @@ export default function ClippedDrawer() {
             <Route path="/dashboard/iuser" exact component={IuserFragment} />
           </Switch>
           <Switch>
-            <Route path="/dashboard/bookings" component={BookingFragment} />
+            <Route
+              path="/dashboard/bookings"
+              exact
+              component={BookingFragment}
+            />
           </Switch>
           <Switch>
             <Route
@@ -168,6 +184,13 @@ export default function ClippedDrawer() {
               exact
               path="/dashboard/mylocation"
               component={MyLocationFragment}
+            />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path="/dashboard/custombookings"
+              component={CustomBookingFragment}
             />
           </Switch>
         </main>

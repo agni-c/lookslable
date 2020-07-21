@@ -5,9 +5,7 @@ router.get("/", (req, res) => {
   console.log("in");
   var ref = database.ref("MYLOCATION");
   console.log(req.body.data);
-  ref.once("value", (snapshot) => {
-    res.send(snapshot.val());
-  });
+  ref.once("value", (snapshot) => {});
 });
 router.put("/photo", (req, res) => {
   console.log("in");

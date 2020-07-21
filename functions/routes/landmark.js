@@ -1,21 +1,21 @@
-var router = require('express').Router();
+var router = require("express").Router();
 
-var firebase = require('firebase');
+var firebase = require("firebase");
 
-var database = require('./firebaseDAO');
-const { v4 } = require('uuid');
+var database = require("./firebaseDAO");
+const { v4 } = require("uuid");
 
 /**
  * post - api/landmark/
  * desc= takes data about location and landmark and saves it to database (realTime)
  */
-router.post('/', (req, res) => {
-  console.log('called');
-  var ref = database.ref('LANDMARK');
+router.post("/", (req, res) => {
+  console.log("called");
+  var ref = database.ref("LANDMARK");
   console.log(req.body.long);
 
   var obj = {
-    uuid: v4().split('-').pop(),
+    uuid: v4().split("-").pop(),
     puid: req.body.puid,
     location: {
       lat: req.body.lat,
@@ -32,19 +32,23 @@ router.post('/', (req, res) => {
  * get - api/landmark/:puid
  * desc= takes data about location and landmark and saves it to database (realTime)
  */
-router.get('/:puid', (req, res) => {
-  var ref = database.ref('LANDMARK');
+router.get("/:puid", (req, res) => {
+  var ref = database.ref("LANDMARK");
 
   ref
-    .orderByChild('puid')
+    .orderByChild("puid")
     .equalTo(req.params.puid)
     .once(
-      'value',
+      "value",
       (snapshot) => {
-        res.json(snapshot.val());
+        if (snapshot.exists()) {
+          res.json(snapshot.val());
+        } else {
+          res.json("data not found");
+        }
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
       }
     );
 });
@@ -54,23 +58,23 @@ router.get('/:puid', (req, res) => {
  * get - api/landmark/:puid
  * desc= takes data about location and landmark and saves it to database (realTime)
  */
-router.put('/:uuid', (req, res) => {
-  var ref = database.ref('LANDMARK');
+router.put("/:uuid", (req, res) => {
+  var ref = database.ref("LANDMARK");
   ref
-    .orderByChild('uuid')
+    .orderByChild("uuid")
     .equalTo(req.params.uuid)
     .on(
-      'child_added',
+      "child_added",
       (snapshot) => {
         var newPostKey = snapshot.key;
-        database.ref('LANDMARK/' + newPostKey).update({
+        database.ref("LANDMARK/" + newPostKey).update({
           price: req.body.price,
           landmark: req.body.landmark,
         });
-        res.end('change successfull');
+        res.end("change successfull");
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
       }
     );
 });
@@ -81,21 +85,21 @@ router.put('/:uuid', (req, res) => {
  * desc= takes data about location and landmark and saves it to database (realTime)
  */
 
-router.delete('/:uuid', (req, res) => {
-  var ref = database.ref('LANDMARK');
+router.delete("/:uuid", (req, res) => {
+  var ref = database.ref("LANDMARK");
   ref
-    .orderByChild('uuid')
+    .orderByChild("uuid")
     .equalTo(req.params.uuid)
     .on(
-      'child_added',
+      "child_added",
       (snapshot) => {
         var newPostKey = snapshot.key;
-        var ref = database.ref('LANDMARK/' + newPostKey);
+        var ref = database.ref("LANDMARK/" + newPostKey);
         ref.remove();
-        res.end('change successfull');
+        res.end("change successfull");
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
       }
     );
 });

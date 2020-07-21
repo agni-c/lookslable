@@ -16,6 +16,8 @@ export async function iuserevent(iuid) {
   if (response.data != null && response.data != undefined) {
     const data = Object.values(response.data);
     return data;
+  } else {
+    return false;
   }
 }
 export async function puserevent(puid) {
@@ -26,6 +28,8 @@ export async function puserevent(puid) {
   if (response.data != null && response.data != undefined) {
     const data = Object.values(response.data);
     return data;
+  } else {
+    return false;
   }
 }
 export async function addToFavourites(id, puid) {
@@ -33,10 +37,16 @@ export async function addToFavourites(id, puid) {
     puid: puid,
     id: id,
   });
-  return response;
+
+  if (response.data != null && response.data != undefined) {
+    const data = Object.values(response.data);
+    return response;
+  } else {
+    return false;
+  }
 }
 export async function addToUnFavourites(id, puid) {
-  const response = await axios.post(`/admin/deapprovedphoto`, {
+  await axios.post(`/admin/deapprovedphoto`, {
     puid: puid,
     id: id,
   });
@@ -44,45 +54,58 @@ export async function addToUnFavourites(id, puid) {
 
 export async function approvedPhotos() {
   const response = await axios.get(`/admin/approved-photos`);
-
-  const data = response.data;
-  return data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 export async function bookingDetails() {
   const response = await axios.get(`/admin/bookingdetails`);
-
-  const data = Object.values(response.data);
-  return data;
+  if (response.data != null && response.data != undefined) {
+    const data = Object.values(response.data);
+    return data;
+  } else {
+    return false;
+  }
 }
 
 export async function iUserAdmin() {
   const response = await axios.get(`/admin/iuserprofile`);
-
-  const data = response.data;
-  return data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 
 export async function landmarkDetails() {
   const response = await axios.get(`/admin/landmarkdetails`);
-
-  const data = Object.values(response.data);
-
-  return data;
+  if (response.data != null && response.data != undefined) {
+    const data = Object.values(response.data);
+    return data;
+  } else {
+    return false;
+  }
 }
 
 export async function pUserProfile() {
   const response = await axios.get(`/admin/puserprofile`);
-
-  const data = response.data;
-  return data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 //I user
 
 export async function allUserGallery() {
   const response = await axios.get(`/upload/allUsergallery`);
-
-  const data = response.data;
-  return data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 
 export async function postIuserProfile() {
@@ -152,7 +175,11 @@ export async function uploadFormDATA(file, landmark, config) {
     formData,
     config
   );
-  return response;
+  if (response.data != null && response.data != undefined) {
+    return response;
+  } else {
+    return false;
+  }
 }
 export async function webCamFormDATA(formData, config) {
   const response = await axios.post(
@@ -160,7 +187,11 @@ export async function webCamFormDATA(formData, config) {
     formData,
     config
   );
-  return response;
+  if (response.data != null && response.data != undefined) {
+    return response;
+  } else {
+    return false;
+  }
 }
 export async function landmarkFirestore(fieldData) {
   await axios.put(`/webcam/form/${firebase.auth().currentUser.uid}`, fieldData);
@@ -227,7 +258,11 @@ export async function verifyPuserProfile(puid) {
   const response = await axios.post(`/pusercompleteprofile`, {
     puid: puid,
   });
-  return response.data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 export async function updatePuserProfile(
   phoneNumber,
@@ -243,11 +278,19 @@ export async function updatePuserProfile(
     Address: address,
     DriveLink: driveLink,
   });
-  return response.data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 export async function mylocation(screenShot) {
   const response = await axios.get(`/mylocation`);
-  return response.data;
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 export async function myLocationPhoto(
   bfirst,
@@ -299,7 +342,8 @@ export async function customBooking(
   lon,
   key1,
   key2,
-  details
+  details,
+  user
 ) {
   await axios.post(`/custombooking`, {
     address: address,
@@ -310,5 +354,14 @@ export async function customBooking(
     key1: key1,
     key2: key2,
     details: details,
+    user: user,
   });
+}
+export async function customBookingDetails() {
+  var response = await axios.get(`/custombooking`);
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
 }

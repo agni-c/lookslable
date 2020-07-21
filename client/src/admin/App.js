@@ -14,6 +14,7 @@ import { BookingsAdminProvider } from "../context/bookingsAdmin";
 import { IuserAdminProvider } from "../context/iUserAdmin";
 import { LandmarkAdminProvider } from "../context/landmarkAdmin";
 import { ApprovedPhotoAdminProvider } from "../context/approvedPhotosAdmin";
+import { CustomBookingsAdminProvider } from "../context/customBookingAdmin";
 import "./App.css";
 import { MyLocationAdminProvider } from "../context/myLocationAdmin";
 
@@ -27,14 +28,16 @@ const AdminApp = () => {
               <ApprovedPhotoAdminProvider>
                 <LandmarkAdminProvider>
                   <BookingsAdminProvider>
-                    <MyLocationAdminProvider>
-                      <Route
-                        exact
-                        path="/admin/dashboard"
-                        component={Dashboard}
-                      />
-                      {/* <Dashboard /> */}
-                    </MyLocationAdminProvider>
+                    <CustomBookingsAdminProvider>
+                      <MyLocationAdminProvider>
+                        <Route
+                          exact
+                          path="/admin/dashboard"
+                          component={Dashboard}
+                        />
+                        {/* <Dashboard /> */}
+                      </MyLocationAdminProvider>
+                    </CustomBookingsAdminProvider>
                   </BookingsAdminProvider>
                 </LandmarkAdminProvider>
               </ApprovedPhotoAdminProvider>

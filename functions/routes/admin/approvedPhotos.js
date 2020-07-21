@@ -1,12 +1,12 @@
-const router = require('express').Router();
-var admin = require('firebase-admin');
+const router = require("express").Router();
+var admin = require("firebase-admin");
 
 const db = admin.firestore();
-const profileRef = db.collection('User Profile');
+const profileRef = db.collection("User Profile");
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   let json = new Array();
-  const Ref = db.collectionGroup('Glary');
+  const Ref = db.collectionGroup("Glary");
   Ref.get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
