@@ -1,10 +1,11 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import HeroMain from './HeroMain';
 import { Container } from 'react-bootstrap';
+import MyEvents from './MyEvents';
 
 // Configure Firebase.
 const config = {
@@ -69,8 +70,14 @@ class SignInScreen extends React.Component {
     if (!this.state.isSignedIn) {
       return (
         <div>
-          <h1>My App</h1>
-          <p>Please sign-in:</p>
+          <h1
+            style={{ color: '#ed3181', textAlign: 'center', marginTop: '20px' }}
+          >
+            Pozular
+          </h1>
+          <p style={{ color: '#ed3181', textAlign: 'center' }}>
+            Please sign-in:
+          </p>
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
             firebaseAuth={firebase.auth()}
@@ -80,15 +87,27 @@ class SignInScreen extends React.Component {
     }
 
     return (
-      <div>
-        <NavBar isLoggedIn={true} showLogOut={true} />
-        <Container md='auto' className='center'>
-          <h1 className='margin-bt' style={{ color: '#ed3181' }}>
-            Welcome User!
-          </h1>
-          <HeroMain />
-        </Container>
-      </div>
+      <Router>
+        <Switch>
+          <div>
+            <NavBar isLoggedIn={true} showLogOut={true} />
+            <Route exact path='/iuser/myevents'>
+              <MyEvents />
+            </Route>
+            <Route exact path='/iuser'>
+              <Container md='auto' className='center'>
+                <h1 style={{ color: '#ed3181', marginTop: '50px' }}>
+                  Welcome,
+                </h1>{' '}
+                <h1 className='margin-bt' style={{ color: '#fff' }}>
+                  {firebase.auth().currentUser.displayName}
+                </h1>
+                <HeroMain />
+              </Container>
+            </Route>
+          </div>
+        </Switch>
+      </Router>
     );
   }
 }

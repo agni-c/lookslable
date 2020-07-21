@@ -59,7 +59,7 @@ const MyEvents = () => {
   }, []);
   if (state.data) {
     return (
-      <>
+      <div style={{ padding: '5px' }}>
         {state.data.map((d) => (
           <Card style={{ margin: "5vh" }}>
             <CardContent>
@@ -105,7 +105,7 @@ const MyEvents = () => {
             </CardContent>
           </Card>
         ))}
-      </>
+      </div>
     );
   } else {
     return <h1>Hello</h1>;

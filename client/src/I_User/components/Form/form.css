@@ -1,3 +1,40 @@
 .tabs-content {
   /* margin-left: 50px; */
 }
+
+.nav-tabs .nav-item.nav-link.active {
+  background-color: #ed3181;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-item.nav-link {
+  color: #fff;
+}
+
+.navbar-toggler {
+  height: 40px;
+}
+
+.collapsing {
+  padding: 20px;
+  width: 1060px;
+  background-color: #343a40;
+  transition: none;
+}
+
+.collapse {
+  /* padding: 20px; */
+  padding-left: 20px;
+  background-color: #343a40;
+}
+
+@media only screen and (max-width: 600px) {
+  .collapse {
+    padding: 20px;
+    /* padding-left: 20px; */
+    background-color: #343a40;
+  }
+}

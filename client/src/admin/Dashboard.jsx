@@ -144,7 +144,6 @@ export default function ClippedDrawer() {
                 </ListItem>
               </Link>
             </List>
-
             <Divider />
           </div>
         </Drawer>
