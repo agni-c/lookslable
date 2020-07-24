@@ -95,6 +95,9 @@ app.use("/api/iuserprofile", iuserProfile);
 const puserform = require("./routes/puserForm");
 app.use("/api/puserform", puserform);
 
+const iuseruploadlink = require("./routes/iuserUploadLink");
+app.use("/api/iuseruploadlink", iuseruploadlink);
+
 //profile fo puser is complete or not
 const pusercompleteprofile = require("./routes/puserCompleteProfile");
 app.use("/api/pusercompleteprofile", pusercompleteprofile);
