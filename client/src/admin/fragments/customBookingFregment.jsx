@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
-import { BookingsAdminContext } from "../../context/bookingsAdmin";
-import { PuserAdminContext } from "../../context/pUserAdmin";
-import { IuserAdminContext } from "../../context/iUserAdmin";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { customBookingsAdminContext } from "../../context/customBookingAdmin";
+import React, { useContext } from 'react';
+import { BookingsAdminContext } from '../../context/bookingsAdmin';
+import { PuserAdminContext } from '../../context/pUserAdmin';
+import { IuserAdminContext } from '../../context/iUserAdmin';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { customBookingsAdminContext } from '../../context/customBookingAdmin';
 
-import MaterialTable from "material-table";
-import {} from "@material-ui/icons";
-import { AssigningPUser } from "../../api";
+import MaterialTable from 'material-table';
+import {} from '@material-ui/icons';
+import { AssigningPUser, AssigningPUserCustomBooking } from '../../api';
 //import { useEffect } from "react";
 
 export default function CustomBookingFragment() {
@@ -23,7 +23,7 @@ export default function CustomBookingFragment() {
     } else {
       return (
         <MaterialTable
-          title="Booking Details"
+          title='Booking Details'
           columns={state.columns}
           data={state.data}
           editable={{
@@ -47,7 +47,12 @@ export default function CustomBookingFragment() {
                       const data = [...prevState.data];
                       data[data.indexOf(oldData)] = newData;
                       console.log(newData.bookingdate);
-
+                      AssigningPUserCustomBooking(
+                        newData.date,
+                        newData.iuid,
+                        newData.puid,
+                        newData.PhoneNo
+                      );
                       return { ...prevState, data };
                     });
                   }

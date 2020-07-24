@@ -1,15 +1,17 @@
-var router = require("express").Router();
-var firebase = require("firebase");
-var database = require("./firebaseAppI");
-router.get("/", (req, res) => {
-  console.log("in");
-  var ref = database.ref("MYLOCATION");
+var router = require('express').Router();
+var firebase = require('firebase');
+var database = require('./firebaseAppI');
+router.get('/', (req, res) => {
+  console.log('in');
+  var ref = database.ref('MYLOCATION');
   console.log(req.body.data);
-  ref.once("value", (snapshot) => {});
+  ref.once('value', (snapshot) => {
+    res.send(snapshot.val());
+  });
 });
-router.put("/photo", (req, res) => {
-  console.log("in");
-  var ref = database.ref("MYLOCATION/Photo");
+router.put('/photo', (req, res) => {
+  console.log('in');
+  var ref = database.ref('MYLOCATION/Photo');
 
   ref.update({
     bfirst: req.body.bfirst,
@@ -23,9 +25,9 @@ router.put("/photo", (req, res) => {
   });
   res.end();
 });
-router.put("/video", (req, res) => {
-  console.log("in");
-  var ref = database.ref("MYLOCATION/Video");
+router.put('/video', (req, res) => {
+  console.log('in');
+  var ref = database.ref('MYLOCATION/Video');
 
   ref.update({
     bfirst: req.body.bfirst,

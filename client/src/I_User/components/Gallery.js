@@ -112,12 +112,17 @@ export default function Gallery() {
                       <Badge
                         pill
                         variant='success'
-                        style={{ width: '50%', cursor: 'pointer' }}
+                        style={{
+                          width: '100%',
+                          height: '20px',
+                          cursor: 'pointer',
+                          backgroundColor: '#ed3181',
+                        }}
                         onClick={() => {
                           setCurrLandmark(ele.landmark);
                         }}
                       >
-                        {ele.landmark}
+                        Click Here For More Photos
                       </Badge>{' '}
                     </Link>
 
@@ -128,7 +133,7 @@ export default function Gallery() {
                         alt='something'
                         style={{ position: 'relative' }}
                       />
-                      {/* <PopOver puid={ele.puid} landmark={ele.landmark} /> */}
+                      <PopOver puid={ele.puid} landmark={ele.landmark} />
                     </Card.Body>
                   </Card>
                   <br />

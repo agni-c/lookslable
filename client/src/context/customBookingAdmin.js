@@ -1,9 +1,9 @@
-import { customBookingDetails } from "../api";
-import React, { useEffect, useContext, useState } from "react";
-import axios from "axios";
-import ReactStars from "react-rating-stars-component";
-import { PuserAdminContext } from "../context/pUserAdmin";
-import { IuserAdminContext } from "../context/iUserAdmin";
+import { customBookingDetails } from '../api';
+import React, { useEffect, useContext, useState } from 'react';
+import axios from 'axios';
+import ReactStars from 'react-rating-stars-component';
+import { PuserAdminContext } from '../context/pUserAdmin';
+import { IuserAdminContext } from '../context/iUserAdmin';
 
 export const customBookingsAdminContext = React.createContext();
 
@@ -23,13 +23,15 @@ export const CustomBookingsAdminProvider = ({ children }) => {
         //{ title: "Iname", field: "iname" },
         //{ title: "PUID", field: "puid" },
         //{ title: "Pname", field: "pname" },
-        { title: "Contact No", field: "PhoneNo" },
-        { title: "Booking Date", field: "date" },
-        { title: "Address", field: "address" },
-        { title: "Photos/Video", field: "key1" },
-        { title: "Basic/Primium", field: "key2" },
-        { title: "Lat", field: "lat" },
-        { title: "Lon", field: "lon" },
+        { title: 'PUID', field: 'puid' },
+        { title: 'Name', field: 'name' },
+        { title: 'Contact No', field: 'PhoneNo' },
+        { title: 'Booking Date', field: 'date' },
+        { title: 'Address', field: 'address' },
+        { title: 'Photos/Video', field: 'key1' },
+        { title: 'Basic/Primium', field: 'key2' },
+        { title: 'Lat', field: 'lat' },
+        { title: 'Lon', field: 'lon' },
       ];
       setState({ columns, data });
     })();

@@ -22,6 +22,7 @@ import {
   uploadDriveLink,
   getIuserProfile,
   iUserAdmin,
+  landmarkInfo,
 } from '../../api';
 import firebase from 'firebase';
 import Card from '@material-ui/core/Card';
@@ -77,6 +78,7 @@ const MyBookings = () => {
 
   const handleDriveLink = (iuid, puid, time, bookingdate) => {
     (async () => {
+      console.log(iuid + ' ' + puid + ' ' + time + ' ' + bookingdate);
       await uploadDriveLink(iuid, puid, time, bookingdate, driveLink);
     })();
   };
@@ -123,7 +125,7 @@ const MyBookings = () => {
             <Card style={{ margin: '5vh' }}>
               <CardContent>
                 <Typography variant='h5' component='h2'>
-                  Landmark: {d.landmark}
+                  {d.landmark}
                 </Typography>
                 <Typography>Booking Date: {d.bookingdate}</Typography>
                 <Typography>Booking Time: {d.time}</Typography>
@@ -131,6 +133,9 @@ const MyBookings = () => {
                 <Typography>Number of User: {d.numberOfUsers}</Typography>
                 <Typography>Price: {d.price}</Typography>
                 <Typography>Phone No: {d.phoneNo}</Typography>
+                <Typography>
+                  Drive Link: <a href={d.driveLink}>{d.driveLink} </a>
+                </Typography>
               </CardContent>
               <CardActions>
                 <input
@@ -145,6 +150,7 @@ const MyBookings = () => {
                   onClick={() =>
                     handleDriveLink(d.iuid, d.puid, d.time, d.bookingdate)
                   }
+                  style={{ width: '200px' }}
                 >
                   Upload Drive Link
                 </Button>
