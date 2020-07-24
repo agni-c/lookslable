@@ -1,15 +1,15 @@
-import axios from "axios";
-import firebase from "firebase";
+import axios from 'axios';
+import firebase from 'firebase';
 
-require("dotenv").config();
+require('dotenv').config();
 // Axios defaults.baseURL method => sets default host URL (as prefix)
 axios.defaults.baseURL =
-  "http://localhost:5000/spring-internship/us-central1/app/api";
+  'http://localhost:5000/spring-internship/us-central1/app/api';
 // axios.defaults.baseURL =
 // 	"https://us-central1-spring-internship.cloudfunctions.net/app/api";
 
 export async function iuserevent(iuid) {
-  console.log("in api" + iuid);
+  console.log('in api' + iuid);
   const response = await axios.post(`/iuserevent`, {
     iuid: iuid,
   });
@@ -21,7 +21,7 @@ export async function iuserevent(iuid) {
   }
 }
 export async function puserevent(puid) {
-  console.log("in api" + puid);
+  console.log('in api' + puid);
   const response = await axios.post(`/puserevent`, {
     puid: puid,
   });
@@ -168,8 +168,8 @@ export async function getEditLocation() {
 
 export async function uploadFormDATA(file, landmark, config) {
   const formData = new FormData();
-  formData.append("uploads", file);
-  formData.append("landmark", landmark);
+  formData.append('uploads', file);
+  formData.append('landmark', landmark);
   const response = await axios.post(
     `/upload/${firebase.auth().currentUser.uid}`,
     formData,
@@ -211,7 +211,7 @@ export async function popUpShoot(
   noOfUsers,
   landmark
 ) {
-  axios.post(`/booking/${firebase.auth().currentUser.uid}`, {
+  return axios.post(`/booking/${firebase.auth().currentUser.uid}`, {
     data: data,
     phoneNo: phNo,
     date: date,
@@ -226,6 +226,14 @@ export async function AssigningPUser(bookingdate, iuid, puid, time) {
     bookingdate: bookingdate,
     iuid: iuid,
     time: time,
+    puid: puid,
+  });
+}
+export async function AssigningPUserCustomBooking(date, iuid, puid, PhoneNo) {
+  await axios.put(`/admin/asignpuser/custombooking`, {
+    date: date,
+    iuid: iuid,
+    PhoneNo: PhoneNo,
     puid: puid,
   });
 }
@@ -345,7 +353,7 @@ export async function customBooking(
   details,
   user
 ) {
-  await axios.post(`/custombooking`, {
+  return await axios.post(`/custombooking`, {
     address: address,
     PhoneNo: PhoneNo,
     date: date,

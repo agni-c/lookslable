@@ -1,48 +1,50 @@
-import React from "react";
-import { customBooking, mylocation } from "../../../api";
-import { Tabs, Tab, Badge } from "react-bootstrap";
-import { Form, Button, Col } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
-import firebase from "firebase";
-import "./form.css";
+import React from 'react';
+import { customBooking, mylocation } from '../../../api';
+import { Tabs, Tab, Badge } from 'react-bootstrap';
+import { Form, Button, Col } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import './form.css';
+import firebase from 'firebase';
+import { Alert, AlertTitle } from '@material-ui/lab';
 class Forms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      price: "",
-      key1: "video",
-      key2: "basic",
-      address: "",
-      phoneNo: "",
-      date: "",
+      valid: '',
+      price: '',
+      key1: 'video',
+      key2: 'basic',
+      address: '',
+      phoneNo: '',
+      date: '',
       location: {
-        lat: "",
-        lon: "",
+        lat: '',
+        lon: '',
       },
       // time: "",
-      details: "",
+      details: '',
       locationData: {
         Video: {
-          pprice: "",
-          pfirst: "",
-          psecond: "",
-          pthird: "",
-          bprice: "",
-          bfirst: "",
-          bsecond: "",
-          bthird: "",
+          pprice: '',
+          pfirst: '',
+          psecond: '',
+          pthird: '',
+          bprice: '',
+          bfirst: '',
+          bsecond: '',
+          bthird: '',
         },
         Photo: {
-          pprice: "",
-          pfirst: "",
-          psecond: "",
-          pthird: "",
-          bprice: "",
-          bfirst: "",
-          bsecond: "",
-          bthird: "",
+          pprice: '',
+          pfirst: '',
+          psecond: '',
+          pthird: '',
+          bprice: '',
+          bfirst: '',
+          bsecond: '',
+          bthird: '',
         },
       },
     };
@@ -120,19 +122,40 @@ class Forms extends React.Component {
   // };
 
   handleSubmit = () => {
-    (async () => {
-      await customBooking(
-        this.state.address,
-        this.state.phoneNo,
-        this.state.date,
-        this.state.location.lat,
-        this.state.location.lon,
-        this.state.key1,
-        this.state.key2,
-        this.state.details,
-        firebase.auth().currentUser
-      );
-    })();
+    if (
+      this.state.address === '' &&
+      this.state.phoneNo === '' &&
+      this.state.date === '' &&
+      this.state.details === ''
+    ) {
+      alert('Enter All Credentials');
+    } else {
+      (async () => {
+        const response = await customBooking(
+          this.state.address,
+          this.state.phoneNo,
+          this.state.date,
+          this.state.location.lat,
+          this.state.location.lon,
+          this.state.key1,
+          this.state.key2,
+          this.state.details,
+          firebase.auth().currentUser
+        );
+        if (response.data === true) {
+          toast.info('Booked Successfully', {
+            position: 'top-right',
+            backgroundColor: '#ed3181',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      })();
+    }
 
     // axios
     //   .post(
@@ -151,15 +174,7 @@ class Forms extends React.Component {
     //   .then((res) => {
     //     console.log(res.data);
     //     console.log("Done!");
-    //     toast.info("Booked Successfully", {
-    //       position: "top-right",
-    //       autoClose: 5000,
-    //       hideProgressBar: false,
-    //       closeOnClick: true,
-    //       pauseOnHover: true,
-    //       draggable: true,
-    //       progress: undefined,
-    //     });
+
     //   })
     //   .catch((err) => {
     //     console.log(err);
@@ -182,242 +197,242 @@ class Forms extends React.Component {
             <br />
             <br />
           </Form.Row>
-          <div className="tabs-content">
+          <div className='tabs-content'>
             <Tabs
-              className="myClass"
-              id="controlled-tab-example"
+              className='myClass'
+              id='controlled-tab-example'
               activeKey={this.state.key}
               onSelect={(k) => {
                 this.setState({ key1: k });
               }}
-              style={{ marginLeft: "100px" }}
+              style={{ marginLeft: '100px' }}
             >
-              <Tab eventKey="video" title="Video">
+              <Tab eventKey='video' title='Video'>
                 <Form.Group
-                  controlId="formGridAddress1"
-                  style={{ color: "white" }}
+                  controlId='formGridAddress1'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Address</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.addressHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="1234 Main St"
+                    className='colApp'
+                    placeholder='1234 Main St'
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridPhoneNo1"
-                  style={{ color: "white" }}
+                  controlId='formGridPhoneNo1'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Phone No</Form.Label>
                   <Form.Control
-                    className="colApp"
-                    type="number"
-                    placeholder="+91 "
+                    className='colApp'
+                    type='number'
+                    placeholder='+91 '
                     onChange={(e) => {
                       this.phoneNoHandler(e.target.value);
                     }}
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridDate1"
-                  style={{ color: "white" }}
+                  controlId='formGridDate1'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Date</Form.Label>
                   <Form.Control
-                    className="colApp"
-                    type="dateTime-local"
-                    placeholder="Date"
+                    className='colApp'
+                    type='dateTime-local'
+                    placeholder='Date'
                     onChange={(e) => {
                       this.dateHandler(e.target.value);
                     }}
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridAddress1"
-                  style={{ color: "white" }}
+                  controlId='formGridAddress1'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Details</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.detailsHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="Details"
+                    className='colApp'
+                    placeholder='Details'
                   />
-                  <div className="tabs-content" style={{ marginTop: "50px" }}>
+                  <div className='tabs-content' style={{ marginTop: '50px' }}>
                     <Tabs
-                      id="controlled-tab-example"
+                      id='controlled-tab-example'
                       activeKey={this.state.key}
                       onSelect={(k) => {
                         this.setState({ key2: k });
                       }}
                       style={{
-                        marginLeft: "100px",
+                        marginLeft: '100px',
                       }}
                     >
                       <Tab
-                        eventKey="basic"
-                        title="Basic"
-                        style={{ marginTop: "50px", marginBottom: "10px" }}
+                        eventKey='basic'
+                        title='Basic'
+                        style={{ marginTop: '50px', marginBottom: '10px' }}
                       >
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.bfirst}
                         </h4>
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.bsecond}
                         </h4>
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.bthird}
                         </h4>
-                        <h3 style={{ textAlign: "center", color: "#fff" }}>
-                          <Badge as="h4" style={{ backgroundColor: "#ed3181" }}>
+                        <h3 style={{ textAlign: 'center', color: '#fff' }}>
+                          <Badge as='h4' style={{ backgroundColor: '#ed3181' }}>
                             Price :
                           </Badge>
-                          {"  "}
-                          <Badge style={{ backgroundColor: "#ed3181" }}>
+                          {'  '}
+                          <Badge style={{ backgroundColor: '#ed3181' }}>
                             {this.state.locationData.Video.bprice}
-                          </Badge>{" "}
+                          </Badge>{' '}
                         </h3>
                       </Tab>
                       <Tab
-                        eventKey="premium"
-                        title="Premium"
-                        style={{ marginTop: "50px", marginBottom: "10px" }}
+                        eventKey='premium'
+                        title='Premium'
+                        style={{ marginTop: '50px', marginBottom: '10px' }}
                       >
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.pfirst}
                         </h4>
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.psecond}
                         </h4>
-                        <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                        <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                           {this.state.locationData.Video.pthird}
                         </h4>
-                        <h3 style={{ textAlign: "center", color: "#fff" }}>
-                          <Badge as="h4" style={{ backgroundColor: "#ed3181" }}>
+                        <h3 style={{ textAlign: 'center', color: '#fff' }}>
+                          <Badge as='h4' style={{ backgroundColor: '#ed3181' }}>
                             Price :
                           </Badge>
-                          {"  "}
-                          <Badge style={{ backgroundColor: "#ed3181" }}>
+                          {'  '}
+                          <Badge style={{ backgroundColor: '#ed3181' }}>
                             {this.state.locationData.Video.pprice}
-                          </Badge>{" "}
+                          </Badge>{' '}
                         </h3>
                       </Tab>
                     </Tabs>
                   </div>
                 </Form.Group>
               </Tab>
-              <Tab eventKey="photo" title="Photo">
+              <Tab eventKey='photo' title='Photo'>
                 <Form.Group
-                  controlId="formGridAddress2"
-                  style={{ color: "white" }}
+                  controlId='formGridAddress2'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Address</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.addressHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="1234 Main St"
+                    className='colApp'
+                    placeholder='1234 Main St'
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridPhoneNo2"
-                  style={{ color: "white" }}
+                  controlId='formGridPhoneNo2'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Phone No</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.phoneNoHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="+91 "
+                    className='colApp'
+                    placeholder='+91 '
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridDate2"
-                  style={{ color: "white" }}
+                  controlId='formGridDate2'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Date</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.dateHandler(e.target.value);
                     }}
-                    className="colApp"
-                    type="dateTime-local"
-                    placeholder="Date"
+                    className='colApp'
+                    type='dateTime-local'
+                    placeholder='Date'
                   />
                 </Form.Group>
                 <Form.Group
-                  controlId="formGridAddress1"
-                  style={{ color: "white" }}
+                  controlId='formGridAddress1'
+                  style={{ color: 'white' }}
                 >
                   <Form.Label>Details</Form.Label>
                   <Form.Control
                     onChange={(e) => {
                       this.detailsHandler(e.target.value);
                     }}
-                    className="colApp"
-                    placeholder="Details"
+                    className='colApp'
+                    placeholder='Details'
                   />
                 </Form.Group>
-                <div className="tabs-content" style={{ marginTop: "50px" }}>
+                <div className='tabs-content' style={{ marginTop: '50px' }}>
                   <Tabs
-                    id="controlled-tab-example"
+                    id='controlled-tab-example'
                     activeKey={this.state.key}
                     onSelect={(k) => {
                       this.setState({ key2: k });
                     }}
-                    style={{ marginLeft: "100px" }}
+                    style={{ marginLeft: '100px' }}
                   >
                     <Tab
-                      eventKey="basic"
-                      title="Basic"
-                      style={{ marginTop: "50px", marginBottom: "10px" }}
+                      eventKey='basic'
+                      title='Basic'
+                      style={{ marginTop: '50px', marginBottom: '10px' }}
                     >
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.bfirst}
                       </h4>
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.bsecond}
                       </h4>
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.bthird}
                       </h4>
-                      <h3 style={{ textAlign: "center", color: "#fff" }}>
-                        <Badge style={{ backgroundColor: "#ed3181" }} as="h4">
+                      <h3 style={{ textAlign: 'center', color: '#fff' }}>
+                        <Badge style={{ backgroundColor: '#ed3181' }} as='h4'>
                           Price :
                         </Badge>
-                        {"  "}
-                        <Badge style={{ backgroundColor: "#ed3181" }}>
+                        {'  '}
+                        <Badge style={{ backgroundColor: '#ed3181' }}>
                           {this.state.locationData.Photo.bprice}
-                        </Badge>{" "}
+                        </Badge>{' '}
                       </h3>
                     </Tab>
                     <Tab
-                      eventKey="premium"
-                      title="Premium"
-                      style={{ marginTop: "50px", marginBottom: "0" }}
+                      eventKey='premium'
+                      title='Premium'
+                      style={{ marginTop: '50px', marginBottom: '0' }}
                     >
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.pfirst}
                       </h4>
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.psecond}
                       </h4>
-                      <h4 style={{ textAlign: "center", color: "#ed3181" }}>
+                      <h4 style={{ textAlign: 'center', color: '#ed3181' }}>
                         {this.state.locationData.Photo.pthird}
                       </h4>
-                      <h3 style={{ textAlign: "center", color: "#fff" }}>
-                        <Badge style={{ backgroundColor: "#ed3181" }} as="h4">
+                      <h3 style={{ textAlign: 'center', color: '#fff' }}>
+                        <Badge style={{ backgroundColor: '#ed3181' }} as='h4'>
                           Price :
                         </Badge>
-                        {"  "}
-                        <Badge style={{ backgroundColor: "#ed3181" }}>
+                        {'  '}
+                        <Badge style={{ backgroundColor: '#ed3181' }}>
                           {this.state.locationData.Photo.pprice}
-                        </Badge>{" "}
+                        </Badge>{' '}
                       </h3>
                     </Tab>
                   </Tabs>
@@ -468,14 +483,14 @@ class Forms extends React.Component {
 
           <br />
           {console.log(this.state)}
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Button
-              type="submit"
+              type='submit'
               style={{
-                backgroundColor: "#ed3181",
-                height: "40px",
-                marginBottom: "50px",
-                border: "none",
+                backgroundColor: '#ed3181',
+                height: '40px',
+                marginBottom: '50px',
+                border: 'none',
               }}
               onClick={(e) => {
                 e.preventDefault();

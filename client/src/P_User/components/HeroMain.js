@@ -58,21 +58,21 @@ const HeroMain = () => {
             >
               <StyledCard
                 name='Location'
-                content='Lorem Lorem'
+                // content='Lorem Lorem'
                 className='grid-content'
               />
             </Link>
             <Link to='/puser/my-bookings' style={{ textDecoration: 'none' }}>
-              <StyledCard name='My Bookings' content='Lorem Lorem' />
+              <StyledCard name='My Bookings' />
             </Link>
-            <Link
+            {/* <Link
               to='/puser/uploaded-images'
               style={{ textDecoration: 'none' }}
             >
               <StyledCard name='Drive Link' content='Lorem Lorem' />
-            </Link>
+            </Link> */}
             <Link to='/puser/support' style={{ textDecoration: 'none' }}>
-              <StyledCard name='Support' content='Lorem Lorem' />
+              <StyledCard name='Support' />
             </Link>
           </div>
         </Container>
@@ -100,7 +100,7 @@ const HeroMain = () => {
             <Route path='/puser/location' exact component={Location} />
             <Route path='/puser/my-bookings' exact component={MyBookings} />
             <Route path='/puser/support' exact component={Support} />
-            <Route path='/puser/uploaded-images' exact component={DriveLink} />
+            {/* <Route path='/puser/uploaded-images' exact component={DriveLink} /> */}
           </Switch>
         </BrowserRouter>
       );
