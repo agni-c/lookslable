@@ -17,6 +17,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleRating from '../../rating/Dashboard';
 // import Ratings from '../../components/Ratings';
 import ReactStars from 'react-rating-stars-component';
+import { Modal } from '@material-ui/core';
+import LinkPopOver from './LinkPopOver';
 
 const useStyles = makeStyles({
   root: {
@@ -39,6 +41,15 @@ const MyEvents = () => {
   const classes = useStyles();
   const [state, setState] = useState({ data: [] });
   const [value, setValue] = useState(3);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   // const api = async () => {
   // 	const response = await axios
@@ -54,14 +65,13 @@ const MyEvents = () => {
   // 	console.log(state.bookingdate);
   // };
 
-  {
-  }
   useEffect(() => {
     (async () => {
       var uid = firebase.auth().currentUser.uid;
       const event = await iuserevent(uid);
       const landmark = await landmarkDetails();
       console.log(landmark);
+      console.log(event);
       if (landmark) {
         event.map((e) => {
           landmark.map((l) => {
@@ -140,6 +150,7 @@ const MyEvents = () => {
                           );
                         }}
                       />
+                      <LinkPopOver data={d} />
                     </>
                   );
                 }

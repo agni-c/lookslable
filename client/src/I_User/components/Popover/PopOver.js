@@ -85,32 +85,6 @@ class PopOver extends React.Component {
           alignItems: 'center',
         }}
       >
-        {/* <OverlayTrigger
-          trigger='click'
-          placement='top'
-          overlay={this.popover}
-          // rootCloseEvent='click'
-          show={this.state.showState}
-        >
-          <Button
-            variant='contained'
-            style={{
-              backgroundColor: '#ed3181',
-              color: '#fff',
-              height: '40px',
-            }}
-          >
-            Shoot
-          </Button>
-        </OverlayTrigger> */}
-        {/* <Button
-          onClick={() => this.setState({ show: true })}
-          ref={(button) => {
-            this.target = button;
-          }}
-        >
-          Click me!
-        </Button> */}
         <Button
           onClick={() => this.setState({ show: true })}
           ref={(button) => {
