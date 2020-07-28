@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { bookingDetails } from '../../api';
-import { Button, Popover, Typography } from '@material-ui/core';
+import { Button, Popover, Typography, Paper } from '@material-ui/core';
 
 const LinkPopOver = (props) => {
   const [data, setdata] = useState(props.data);
@@ -34,8 +34,21 @@ const LinkPopOver = (props) => {
   useEffect(async () => {
     const booking = await bookingDetails();
     booking.map((b) => {
-      if (b.iuid === data.iuid) {
-        setLink1(b.link);
+      if (
+        b.bookingdate === data.bookingdate &&
+        b.time === data.time &&
+        b.iuid === data.iuid
+      ) {
+        setLink1(b.link1);
+        setLink2(b.link2);
+        setLink3(b.link3);
+        setLink4(b.link4);
+        setLink5(b.link5);
+        setLink6(b.link6);
+        setLink7(b.link7);
+        setLink8(b.link8);
+        setLink9(b.link9);
+        setLink10(b.link10);
       }
     });
   }, []);
@@ -62,7 +75,22 @@ const LinkPopOver = (props) => {
           horizontal: 'center',
         }}
       >
-        <h3>Link: {link1}</h3>
+        <Paper
+          elevation={2}
+          style={{ height: 'auto', width: 'auto', textAlign: 'center' }}
+        >
+          <a href={link1}>{link1}</a>
+          <br />
+          <a href={link2}>{link2}</a> <br />
+          <a href={link3}>{link3}</a> <br />
+          <a href={link4}>{link4}</a> <br />
+          <a href={link5}>{link5}</a> <br />
+          <a href={link6}>{link6}</a> <br />
+          <a href={link7}>{link7}</a> <br />
+          <a href={link8}>{link8}</a> <br />
+          <a href={link9}>{link9}</a> <br />
+          <a href={link10}>{link10}</a> <br />
+        </Paper>
       </Popover>
     </div>
   );
