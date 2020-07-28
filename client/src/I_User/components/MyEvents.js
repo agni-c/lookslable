@@ -17,7 +17,13 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Rating from '@material-ui/lab/Rating';
 import SimpleRating from "../../rating/Dashboard";
 // import Ratings from '../../components/Ratings';
+<<<<<<< HEAD
 import ReactStars from "react-rating-stars-component";
+=======
+import ReactStars from 'react-rating-stars-component';
+import { Modal } from '@material-ui/core';
+import LinkPopOver from './LinkPopOver';
+>>>>>>> 679b4a78ceffbba96499a904e34ae75de51eab51
 
 const useStyles = makeStyles({
   root: {
@@ -40,7 +46,15 @@ const MyEvents = () => {
   const classes = useStyles();
   const [state, setState] = useState({ data: [] });
   const [value, setValue] = useState(3);
-  const [link, setLink] = useState(3);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const linkHandler = (bookingdate, time, iuid) => {
     (async () => {
@@ -48,14 +62,13 @@ const MyEvents = () => {
     })();
   };
 
-  {
-  }
   useEffect(() => {
     (async () => {
       var uid = firebase.auth().currentUser.uid;
       const event = await iuserevent(uid);
       const landmark = await landmarkDetails();
       console.log(landmark);
+      console.log(event);
       if (landmark) {
         event.map((e) => {
           landmark.map((l) => {
@@ -134,26 +147,7 @@ const MyEvents = () => {
                           );
                         }}
                       />
-
-                      <CardActions>
-                        <input
-                          type="text"
-                          onChange={(e) => {
-                            setLink(e.target.value);
-                          }}
-                        />
-
-                        <Button
-                          size="small"
-                          onClick={() =>
-                            linkHandler(d.bookingdate, d.time, d.iuid)
-                          }
-                          style={{ width: "200px" }}
-                        >
-                          Upload Drive Link
-                        </Button>
-                        {/* <Button size='small'>Give Rating</Button> */}
-                      </CardActions>
+                      <LinkPopOver data={d} />
                     </>
                   );
                 }
