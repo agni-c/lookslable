@@ -134,5 +134,8 @@ app.use("/api/admin/approved-photos", approvedPhotos);
 const asignpuser = require("./routes/admin/asigningPuser");
 app.use("/api/admin/asignpuser", asignpuser);
 
+const uploadlinks = require("./routes/admin/uploadLinks");
+app.use("/api/admin/uploadlinks", uploadlinks);
+
 //Listening
 exports.app = functions.https.onRequest(app);

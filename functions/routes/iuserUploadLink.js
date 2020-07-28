@@ -1,7 +1,7 @@
 var router = require("express").Router();
 var database = require("./firebaseDAO");
 
-router.post("/", (req, res) => {
+router.put("/", (req, res) => {
   var ref = database.ref("BOOKING_DETAILS");
   ref
     .orderByChild("iuid")
@@ -9,6 +9,7 @@ router.post("/", (req, res) => {
     .once(
       "value",
       (snapshot) => {
+        console.log(snapshot.val());
         const data = Object.values(snapshot.val());
         const keys = Object.keys(snapshot.val());
 
