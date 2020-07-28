@@ -8653,14 +8653,22 @@
 [info] >  ] {"user":"]"}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:48:36.562Z] [worker-app-60c5fed9-3a4d-4418-9ef0-d23fe12b0987]: exited 
 [debug] [2020-07-23T08:48:36.562Z] [worker-app-60c5fed9-3a4d-4418-9ef0-d23fe12b0987]: FINISHED 
 [debug] [2020-07-23T08:48:36.562Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -8821,14 +8829,22 @@
 [info] >  ] {"user":"]"}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:49:53.927Z] [worker-app-3124a11c-cd73-442c-a7cb-f3d1b7c0a2a1]: exited 
 [debug] [2020-07-23T08:49:53.927Z] [worker-app-3124a11c-cd73-442c-a7cb-f3d1b7c0a2a1]: FINISHED 
 [debug] [2020-07-23T08:49:53.927Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -9641,27 +9657,43 @@
 [info] >  ] {"user":"]"}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:52:08.314Z] [worker-app-af9877c6-4358-43ea-ad54-3e988d6aac8e]: exited 
 [debug] [2020-07-23T08:52:08.314Z] [worker-app-af9877c6-4358-43ea-ad54-3e988d6aac8e]: FINISHED 
 [debug] [2020-07-23T08:52:08.314Z] [work-queue] {"queueLength":0,"workRunningCount":1}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:52:30.272Z] [worker-app-f403d967-ad55-411e-84af-cb5fa0aa6323]: exited 
 [debug] [2020-07-23T08:52:30.272Z] [worker-app-f403d967-ad55-411e-84af-cb5fa0aa6323]: FINISHED 
 [debug] [2020-07-23T08:52:30.272Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -9814,14 +9846,22 @@
 [info] >  [ '-MCunE51z2PBYJpAdhZk' ] {"user":"[ '-MCunE51z2PBYJpAdhZk' ]"}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:54:36.048Z] [worker-app-2a103241-67b2-48db-99d1-dadab13555e5]: exited 
 [debug] [2020-07-23T08:54:36.048Z] [worker-app-2a103241-67b2-48db-99d1-dadab13555e5]: FINISHED 
 [debug] [2020-07-23T08:54:36.048Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -9918,14 +9958,22 @@
 [info] >  [2020-07-23T08:56:28.021Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "iuid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-07-23T08:56:28.021Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"iuid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:57:26.389Z] [worker-app-30fd2f4b-cf49-4549-8b15-d27a315a8131]: exited 
 [debug] [2020-07-23T08:57:26.389Z] [worker-app-30fd2f4b-cf49-4549-8b15-d27a315a8131]: FINISHED 
 [debug] [2020-07-23T08:57:26.389Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -10021,14 +10069,22 @@
 [info] >  [2020-07-23T08:58:32.259Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "iuid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-07-23T08:58:32.259Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"iuid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T08:59:30.583Z] [worker-app-b9711048-94d7-437f-abf4-b01b8d1931a2]: exited 
 [debug] [2020-07-23T08:59:30.583Z] [worker-app-b9711048-94d7-437f-abf4-b01b8d1931a2]: FINISHED 
 [debug] [2020-07-23T08:59:30.584Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -13288,31 +13344,56 @@
 [debug] [2020-07-23T16:26:35.602Z] [functions] Runtime ready! Sending request! 
 [debug] [2020-07-23T16:26:35.609Z] [runtime-status] [11024] Ephemeral server handling GET request 
 [debug] [2020-07-23T16:26:35.616Z] [runtime-status] [11024] Ephemeral server survived. 
-[info] >  events.js:287 {"user":"events.js:287\r"}
-[info] >        throw er; // Unhandled 'error' event {"user":"      throw er; // Unhandled 'error' event\r"}
-[info] >        ^ {"user":"      ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443 {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
-[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26) {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74) {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
-[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22) {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
-[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18) {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
-[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14) {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
-[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32) {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
-[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14) {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at: {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      [... lines matching original stack trace ...] {"user":"    [... lines matching original stack trace ...]\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) { {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
-[info] >    code: 14, {"user":"  code: 14,\r"}
-[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443', {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
-[info] >    metadata: Metadata { internalRepr: Map {}, options: {} } {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
-[info] >  } {"user":"}\r"}
+[info] >  events.js:287
+ {"user":"events.js:287\r"}
+[info] >        throw er; // Unhandled 'error' event
+ {"user":"      throw er; // Unhandled 'error' event\r"}
+[info] >        ^
+ {"user":"      ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443
+ {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
+[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26)
+ {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74)
+ {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
+[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22)
+ {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
+[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18)
+ {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
+[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14)
+ {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
+[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32)
+ {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
+[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14)
+ {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at:
+ {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      [... lines matching original stack trace ...]
+ {"user":"    [... lines matching original stack trace ...]\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) {
+ {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
+[info] >    code: 14,
+ {"user":"  code: 14,\r"}
+[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443',
+ {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
+[info] >    metadata: Metadata { internalRepr: Map {}, options: {} }
+ {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
+[info] >  }
+ {"user":"}\r"}
 [debug] [2020-07-23T16:26:45.219Z] [work-queue] {"queueLength":1,"workRunningCount":6}
 [debug] [2020-07-23T16:26:45.220Z] [work-queue] {"queueLength":0,"workRunningCount":7}
 [debug] [2020-07-23T16:26:45.220Z] Accepted request GET /spring-internship/us-central1/app/api/admin/puserprofile --> app
@@ -13345,59 +13426,109 @@
 [debug] [2020-07-23T16:26:48.503Z] [runtime-status] [40428] Ephemeral server handling GET request 
 [info] >  working {"user":"working"}
 [debug] [2020-07-23T16:26:48.519Z] [runtime-status] [40428] Ephemeral server survived. 
-[info] >  events.js:287 {"user":"events.js:287\r"}
-[info] >        throw er; // Unhandled 'error' event {"user":"      throw er; // Unhandled 'error' event\r"}
-[info] >        ^ {"user":"      ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443 {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
-[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26) {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74) {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
-[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22) {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
-[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18) {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
-[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14) {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
-[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32) {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
-[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14) {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at: {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      [... lines matching original stack trace ...] {"user":"    [... lines matching original stack trace ...]\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) { {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
-[info] >    code: 14, {"user":"  code: 14,\r"}
-[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443', {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
-[info] >    metadata: Metadata { internalRepr: Map {}, options: {} } {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
-[info] >  } {"user":"}\r"}
+[info] >  events.js:287
+ {"user":"events.js:287\r"}
+[info] >        throw er; // Unhandled 'error' event
+ {"user":"      throw er; // Unhandled 'error' event\r"}
+[info] >        ^
+ {"user":"      ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443
+ {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
+[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26)
+ {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74)
+ {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
+[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22)
+ {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
+[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18)
+ {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
+[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14)
+ {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
+[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32)
+ {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
+[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14)
+ {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at:
+ {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      [... lines matching original stack trace ...]
+ {"user":"    [... lines matching original stack trace ...]\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) {
+ {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
+[info] >    code: 14,
+ {"user":"  code: 14,\r"}
+[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443',
+ {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
+[info] >    metadata: Metadata { internalRepr: Map {}, options: {} }
+ {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
+[info] >  }
+ {"user":"}\r"}
 [debug] [2020-07-23T16:26:48.889Z] [worker-app-e02c0907-d3ce-4004-9e15-622eaf40f949]: exited 
 [debug] [2020-07-23T16:26:48.889Z] [worker-app-e02c0907-d3ce-4004-9e15-622eaf40f949]: FINISHED 
 [debug] [2020-07-23T16:26:48.889Z] [work-queue] {"queueLength":0,"workRunningCount":5}
-[info] >  events.js:287 {"user":"events.js:287\r"}
-[info] >        throw er; // Unhandled 'error' event {"user":"      throw er; // Unhandled 'error' event\r"}
-[info] >        ^ {"user":"      ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443 {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
-[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26) {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74) {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
-[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22) {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
-[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18) {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
-[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14) {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
-[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32) {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
-[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14) {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at: {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
-[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181) {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
-[info] >      [... lines matching original stack trace ...] {"user":"    [... lines matching original stack trace ...]\r"}
-[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22) {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
-[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) { {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
-[info] >    code: 14, {"user":"  code: 14,\r"}
-[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443', {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
-[info] >    metadata: Metadata { internalRepr: Map {}, options: {} } {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
-[info] >  } {"user":"}\r"}
+[info] >  events.js:287
+ {"user":"events.js:287\r"}
+[info] >        throw er; // Unhandled 'error' event
+ {"user":"      throw er; // Unhandled 'error' event\r"}
+[info] >        ^
+ {"user":"      ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443
+ {"user":"Error: 14 UNAVAILABLE: Name resolution failed for target dns:firestore.googleapis.com:443\r"}
+[info] >      at Object.callErrorFromStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call.js:30:26)
+ {"user":"    at Object.callErrorFromStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call.js:30:26)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:49)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:49)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      at Http2CallStream.outputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:115:74)
+ {"user":"    at Http2CallStream.outputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:115:74)\r"}
+[info] >      at Http2CallStream.maybeOutputStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:154:22)
+ {"user":"    at Http2CallStream.maybeOutputStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:154:22)\r"}
+[info] >      at Http2CallStream.endCall (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:140:18)
+ {"user":"    at Http2CallStream.endCall (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:140:18)\r"}
+[info] >      at Http2CallStream.cancelWithStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:443:14)
+ {"user":"    at Http2CallStream.cancelWithStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:443:14)\r"}
+[info] >      at ChannelImplementation.tryPick (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:233:32)
+ {"user":"    at ChannelImplementation.tryPick (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:233:32)\r"}
+[info] >      at ChannelImplementation._startCallStream (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\channel.js:263:14)
+ {"user":"    at ChannelImplementation._startCallStream (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\channel.js:263:14)\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >  Emitted 'error' event on ClientReadableStreamImpl instance at:
+ {"user":"Emitted 'error' event on ClientReadableStreamImpl instance at:\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client.js:328:28)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client.js:328:28)\r"}
+[info] >      at Object.onReceiveStatus (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:304:181)
+ {"user":"    at Object.onReceiveStatus (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:304:181)\r"}
+[info] >      [... lines matching original stack trace ...]
+ {"user":"    [... lines matching original stack trace ...]\r"}
+[info] >      at Http2CallStream.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\call-stream.js:421:22)
+ {"user":"    at Http2CallStream.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\call-stream.js:421:22)\r"}
+[info] >      at BaseStreamingInterceptingCall.start (C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:276:19) {
+ {"user":"    at BaseStreamingInterceptingCall.start (C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\@grpc\\grpc-js\\build\\src\\client-interceptors.js:276:19) {\r"}
+[info] >    code: 14,
+ {"user":"  code: 14,\r"}
+[info] >    details: 'Name resolution failed for target dns:firestore.googleapis.com:443',
+ {"user":"  details: 'Name resolution failed for target dns:firestore.googleapis.com:443',\r"}
+[info] >    metadata: Metadata { internalRepr: Map {}, options: {} }
+ {"user":"  metadata: Metadata { internalRepr: Map {}, options: {} }\r"}
+[info] >  }
+ {"user":"}\r"}
 [debug] [2020-07-23T16:27:02.483Z] [worker-app-1d9081ea-e196-4c42-834e-4fcdf9f337ee]: exited 
 [debug] [2020-07-23T16:27:02.484Z] [worker-app-1d9081ea-e196-4c42-834e-4fcdf9f337ee]: FINISHED 
 [debug] [2020-07-23T16:27:02.484Z] [work-queue] {"queueLength":0,"workRunningCount":4}
@@ -13411,22 +13542,38 @@
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-23T16:27:28.425Z] [worker-app-c7fe0257-1d76-4fa3-b826-0d56f9becbf4]: exited 
 [debug] [2020-07-23T16:27:28.425Z] [worker-app-c7fe0257-1d76-4fa3-b826-0d56f9becbf4]: FINISHED 
 [debug] [2020-07-23T16:27:28.425Z] [work-queue] {"queueLength":0,"workRunningCount":1}
@@ -14354,14 +14501,22 @@
 [debug] [2020-07-24T15:57:41.379Z] [work-queue] {"queueLength":0,"workRunningCount":1}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-24T15:57:46.951Z] [worker-app-5c30da30-c6c3-4632-9282-8e7841ed8ee2]: exited 
 [debug] [2020-07-24T15:57:46.951Z] [worker-app-5c30da30-c6c3-4632-9282-8e7841ed8ee2]: FINISHED 
 [debug] [2020-07-24T15:57:46.951Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -16404,14 +16559,22 @@
 [debug] [2020-07-27T06:43:26.406Z] [runtime-status] [34560] Ephemeral server survived. 
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-27T06:44:26.785Z] [worker-app-e41da65d-d20a-486c-b4db-7b077beed704]: exited 
 [debug] [2020-07-27T06:44:26.785Z] [worker-app-e41da65d-d20a-486c-b4db-7b077beed704]: FINISHED 
 [debug] [2020-07-27T06:44:26.786Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -16613,14 +16776,22 @@
 [info] >  in backendAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"in backendAR4mnmPDQShex70wmLWIwgiSfxj2"}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-27T07:00:25.930Z] [worker-app-93ece066-e34a-49bc-947f-e7ae5bfbabfb]: exited 
 [debug] [2020-07-27T07:00:25.930Z] [worker-app-93ece066-e34a-49bc-947f-e7ae5bfbabfb]: FINISHED 
 [debug] [2020-07-27T07:00:25.930Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -16942,14 +17113,22 @@
 [info] >  (node:42936) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code. {"user":"(node:42936) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code."}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-27T07:02:46.311Z] [worker-app-372f169a-4891-4dc7-ab37-1084df38c6bd]: exited 
 [debug] [2020-07-27T07:02:46.312Z] [worker-app-372f169a-4891-4dc7-ab37-1084df38c6bd]: FINISHED 
 [debug] [2020-07-27T07:02:46.312Z] [work-queue] {"queueLength":0,"workRunningCount":3}
@@ -16957,22 +17136,38 @@
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-27T07:02:55.320Z] [worker-app-09e6b56b-e35b-4933-b5d4-5c80874780cc]: exited 
 [debug] [2020-07-27T07:02:55.321Z] [worker-app-09e6b56b-e35b-4933-b5d4-5c80874780cc]: FINISHED 
 [debug] [2020-07-27T07:02:55.323Z] [work-queue] {"queueLength":0,"workRunningCount":2}
@@ -16981,14 +17176,22 @@
 [debug] [2020-07-27T07:02:55.338Z] [work-queue] {"queueLength":0,"workRunningCount":1}
 [warn] !  functions: Your function timed out after ~60s. To configure this timeout, see
       https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation.
-[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614 {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
-[info] >                  throw new Error("Function timed out."); {"user":"                throw new Error(\"Function timed out.\");\r"}
-[info] >                  ^ {"user":"                ^\r"}
-[info] >   {"user":"\r"}
-[info] >  Error: Function timed out. {"user":"Error: Function timed out.\r"}
-[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23) {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
-[info] >      at listOnTimeout (internal/timers.js:549:17) {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
-[info] >      at processTimers (internal/timers.js:492:7) {"user":"    at processTimers (internal/timers.js:492:7)\r"}
+[info] >  C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614
+ {"user":"C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614\r"}
+[info] >                  throw new Error("Function timed out.");
+ {"user":"                throw new Error(\"Function timed out.\");\r"}
+[info] >                  ^
+ {"user":"                ^\r"}
+[info] >  
+ {"user":"\r"}
+[info] >  Error: Function timed out.
+ {"user":"Error: Function timed out.\r"}
+[info] >      at Timeout._onTimeout (C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:614:23)
+ {"user":"    at Timeout._onTimeout (C:\\Users\\Nikunj Savaliya\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:614:23)\r"}
+[info] >      at listOnTimeout (internal/timers.js:549:17)
+ {"user":"    at listOnTimeout (internal/timers.js:549:17)\r"}
+[info] >      at processTimers (internal/timers.js:492:7)
+ {"user":"    at processTimers (internal/timers.js:492:7)\r"}
 [debug] [2020-07-27T07:03:04.119Z] [worker-app-8490e760-4a94-4403-8e04-f2edfedfceca]: exited 
 [debug] [2020-07-27T07:03:04.119Z] [worker-app-8490e760-4a94-4403-8e04-f2edfedfceca]: FINISHED 
 [debug] [2020-07-27T07:03:04.120Z] [work-queue] {"queueLength":0,"workRunningCount":0}
@@ -22221,6 +22424,7 @@
  {"permissions":["firebase.projects.get"]}
 [debug] [2020-07-27T16:03:32.471Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1307","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [debug] [2020-07-27T16:03:32.473Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+<<<<<<< HEAD
  
 [debug] [2020-07-27T16:03:33.196Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [warn] !  Your requested "node" version "10" doesn't match your global version "12"
@@ -22274,3 +22478,29 @@
 [debug] [2020-07-28T07:08:40.051Z] [worker-pool] submitWork(triggerId=) 
 [debug] [2020-07-28T07:08:40.052Z] [worker-~diagnostic~-f015d5b5-3954-4cf2-8d53-db32826c80a5]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\39532 
 [debug] [2020-07-28T07:08:40.053Z] [worker-~diagnostic~-f015d5b5-3954-4cf2-8d53-db32826c80a5]: BUSY 
+=======
+ 
+[debug] [2020-07-27T16:03:33.196Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-27T16:03:35.370Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\7240 
+[debug] [2020-07-27T16:03:35.370Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: BUSY 
+[debug] [2020-07-27T16:03:36.531Z] [runtime-status] [7240] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-27T16:03:36.535Z] [runtime-status] [7240] Disabled runtime features: undefined 
+[debug] [2020-07-27T16:03:36.559Z] [runtime-status] [7240] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:36.601Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:36.607Z] [runtime-status] [7240] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-27T16:03:37.418Z] [runtime-status] [7240] Checked functions.config() {"config":{}} 
+[debug] [2020-07-27T16:03:37.420Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.423Z] [runtime-status] [7240] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.424Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.424Z] [runtime-status] [7240] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-27T16:03:39.227Z] [runtime-status] [7240] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-07-27T16:03:49.363Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: IDLE 
+>>>>>>> 4dc5ab529018613a12d265bd6e174aef64b3ed36

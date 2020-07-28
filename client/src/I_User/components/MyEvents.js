@@ -1,33 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   iuserevent,
   uploadRating,
   landmarkInfo,
   landmarkDetails,
-} from '../../api';
-import firebase from 'firebase';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+  uploadLinkIuser,
+} from "../../api";
+import firebase from "firebase";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 // import Rating from '@material-ui/lab/Rating';
-import SimpleRating from '../../rating/Dashboard';
+import SimpleRating from "../../rating/Dashboard";
 // import Ratings from '../../components/Ratings';
+<<<<<<< HEAD
+import ReactStars from "react-rating-stars-component";
+=======
 import ReactStars from 'react-rating-stars-component';
 import { Modal } from '@material-ui/core';
 import LinkPopOver from './LinkPopOver';
+>>>>>>> 679b4a78ceffbba96499a904e34ae75de51eab51
 
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
   },
   title: {
     fontSize: 14,
@@ -51,19 +56,11 @@ const MyEvents = () => {
     setOpen(false);
   };
 
-  // const api = async () => {
-  // 	const response = await axios
-  // 		.get(
-  // 			"http://localhost:5000/spring-internship/us-central1/app/api/iuserevent"
-  // 		)
-  // 		.then(function (response) {
-  // 			return response;
-  // 		});
-
-  // 	var data = Object.values(response.data);
-  // 	setState(data[0]);
-  // 	console.log(state.bookingdate);
-  // };
+  const linkHandler = (bookingdate, time, iuid) => {
+    (async () => {
+      await uploadLinkIuser(bookingdate, time, iuid, link);
+    })();
+  };
 
   useEffect(() => {
     (async () => {
@@ -93,15 +90,15 @@ const MyEvents = () => {
 
   if (state.data !== false) {
     return (
-      <div style={{ padding: '5px' }}>
+      <div style={{ padding: "5px" }}>
         {state.data.map((d) => (
-          <Card style={{ margin: '5vh' }}>
+          <Card style={{ margin: "5vh" }}>
             {/* {(async () => {
               const response = await landmarkInfo(d.landmark);
               console.log(response);
             })()} */}
             <CardContent>
-              <Typography variant='h5' component='h2'>
+              <Typography variant="h5" component="h2">
                 {d.landmark}
               </Typography>
               <Typography>Booking Date: {d.bookingdate}</Typography>
@@ -109,8 +106,8 @@ const MyEvents = () => {
               <Typography>Number of User: {d.numberOfUsers}</Typography>
               <Typography>Price: {d.price}</Typography>
               <Typography style={{}}>
-                Link:{' '}
-                <a href='#' onClick={() => window.open(`${d.locationLink}`)}>
+                Link:{" "}
+                <a href="#" onClick={() => window.open(`${d.locationLink}`)}>
                   Location
                 </a>
               </Typography>
@@ -119,11 +116,11 @@ const MyEvents = () => {
               </Typography>
 
               {(() => {
-                if (d.driveLink === 'NO') {
+                if (d.driveLink === "NO") {
                 } else {
                   return (
                     <>
-                      <Typography component='legend'>Give Ratings :</Typography>
+                      <Typography component="legend">Give Ratings :</Typography>
                       <ReactStars
                         value={d.rating}
                         edit={d.rating ? false : true}
@@ -132,13 +129,13 @@ const MyEvents = () => {
                         onChange={(newRating) => {
                           console.log(
                             d.iuid +
-                              ' ' +
+                              " " +
                               d.puid +
-                              ' ' +
+                              " " +
                               d.time +
-                              ' ' +
+                              " " +
                               newRating +
-                              ' ' +
+                              " " +
                               d.bookingdate
                           );
                           uploadRating(
@@ -161,7 +158,7 @@ const MyEvents = () => {
       </div>
     );
   } else {
-    return <h1 style={{ height: '100vh', color: 'white' }}>No record Found</h1>;
+    return <h1 style={{ height: "100vh", color: "white" }}>No record Found</h1>;
   }
 };
 

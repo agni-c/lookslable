@@ -6,7 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import MaterialTable from "material-table";
 import {} from "@material-ui/icons";
-import { AssigningPUser } from "../../api";
+import { AssigningPUser, uploadAdminLinks } from "../../api";
 import { useEffect } from "react";
 
 export default function BookingFragment() {
@@ -49,13 +49,33 @@ export default function BookingFragment() {
                     setState((prevState) => {
                       const data = [...prevState.data];
                       data[data.indexOf(oldData)] = newData;
-                      console.log(newData.bookingdate);
-                      AssigningPUser(
-                        newData.bookingdate,
-                        newData.iuid,
-                        newData.puid,
-                        newData.time
-                      );
+                      console.log("old data is" + oldData.puid);
+
+                      if (oldData.puid !== newData.puid) {
+                        AssigningPUser(
+                          newData.bookingdate,
+                          newData.iuid,
+                          newData.puid,
+                          newData.time
+                        );
+                      } else {
+                        uploadAdminLinks(
+                          newData.bookingdate,
+                          newData.iuid,
+                          newData.time,
+                          newData.link1,
+                          newData.link2,
+                          newData.link3,
+                          newData.link4,
+                          newData.link5,
+                          newData.link6,
+                          newData.link7,
+                          newData.link8,
+                          newData.link9,
+                          newData.link10
+                        );
+                      }
+
                       return { ...prevState, data };
                     });
                   }

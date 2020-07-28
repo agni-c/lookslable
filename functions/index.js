@@ -95,6 +95,9 @@ app.use("/api/iuserprofile", iuserProfile);
 const puserform = require("./routes/puserForm");
 app.use("/api/puserform", puserform);
 
+const iuseruploadlink = require("./routes/iuserUploadLink");
+app.use("/api/iuseruploadlink", iuseruploadlink);
+
 //profile fo puser is complete or not
 const pusercompleteprofile = require("./routes/puserCompleteProfile");
 app.use("/api/pusercompleteprofile", pusercompleteprofile);
@@ -130,6 +133,9 @@ app.use("/api/admin/approved-photos", approvedPhotos);
 // asssign booking to puser
 const asignpuser = require("./routes/admin/asigningPuser");
 app.use("/api/admin/asignpuser", asignpuser);
+
+const uploadlinks = require("./routes/admin/uploadLinks");
+app.use("/api/admin/uploadlinks", uploadlinks);
 
 //Listening
 exports.app = functions.https.onRequest(app);
