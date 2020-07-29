@@ -18,7 +18,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import SimpleRating from "../../rating/Dashboard";
 // import Ratings from '../../components/Ratings';
 import ReactStars from "react-rating-stars-component";
-import { Modal } from "@material-ui/core";
+import { Modal, TextField } from "@material-ui/core";
 import LinkPopOver from "./LinkPopOver";
 
 const useStyles = makeStyles({
@@ -42,6 +42,7 @@ const MyEvents = () => {
   const classes = useStyles();
   const [state, setState] = useState({ data: [] });
   const [value, setValue] = useState(3);
+  const [link, setLink] = useState("");
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -56,6 +57,7 @@ const MyEvents = () => {
     (async () => {
       await uploadLinkIuser(bookingdate, time, iuid, link);
     })();
+    setLink("");
   };
 
   useEffect(() => {
@@ -114,7 +116,7 @@ const MyEvents = () => {
               {(() => {
                 if (d.driveLink === "NO") {
                 } else {
-                  return (e
+                  return (
                     <>
                       <Typography component="legend">Give Ratings :</Typography>
                       <ReactStars
@@ -143,6 +145,44 @@ const MyEvents = () => {
                           );
                         }}
                       />
+                      {/* <input
+                        type='text'
+                        onChange={(e) => {
+                          setLink(e.target.value);
+                        }}
+                      /> */}
+                      <TextField
+                        id="outlined-basic"
+                        label="Links"
+                        variant="outlined"
+                        value={link}
+                        onChange={(e) => {
+                          setLink(e.target.value);
+                        }}
+                        // style={{ height: '20px' }}
+                      />
+
+                      <Button
+                        variant="contained"
+                        onClick={() =>
+                          linkHandler(d.bookingdate, d.time, d.iuid)
+                        }
+                        style={{
+                          margin: "20px",
+                          backgroundColor: "#ed3181",
+                          color: "#fff",
+                          height: "40px",
+                        }}
+                      >
+                        Upload
+                      </Button>
+
+                      {/* <div
+                        style={{ display: 'flex', justifyContent: 'center' }}
+                      >
+                        
+                      </div> */}
+
                       <LinkPopOver data={d} />
                     </>
                   );

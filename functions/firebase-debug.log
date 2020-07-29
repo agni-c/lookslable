@@ -22424,6 +22424,7 @@
  {"permissions":["firebase.projects.get"]}
 [debug] [2020-07-27T16:03:32.471Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1307","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [debug] [2020-07-27T16:03:32.473Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+<<<<<<< HEAD
  
 [debug] [2020-07-27T16:03:33.196Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [warn] !  Your requested "node" version "10" doesn't match your global version "12"
@@ -22448,3 +22449,58 @@
 [warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
 [info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
 [debug] [2020-07-27T16:03:49.363Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: IDLE 
+[debug] [2020-07-28T07:08:31.356Z] ----------------------------------------------------------------------
+[debug] [2020-07-28T07:08:31.379Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-07-28T07:08:31.380Z] CLI Version:   8.0.2
+[debug] [2020-07-28T07:08:31.380Z] Platform:      win32
+[debug] [2020-07-28T07:08:31.380Z] Node Version:  v12.16.2
+[debug] [2020-07-28T07:08:32.286Z] Time:          Tue Jul 28 2020 12:38:31 GMT+0530 (India Standard Time)
+[debug] [2020-07-28T07:08:32.286Z] ----------------------------------------------------------------------
+[debug] [2020-07-28T07:08:32.287Z] 
+[debug] [2020-07-28T07:08:32.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-28T07:08:32.778Z] > authorizing via signed-in user
+[debug] [2020-07-28T07:08:32.779Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-07-28T07:08:32.785Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-28T07:08:32.786Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-28T07:08:34.843Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 07:05:34 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-28T07:08:34.932Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-07-28T07:08:36.494Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 07:05:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1297","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-28T07:08:36.496Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-07-28T07:08:37.141Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 07:05:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-07-28T07:08:40.050Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-28T07:08:40.050Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-07-28T07:08:40.051Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-28T07:08:40.052Z] [worker-~diagnostic~-f015d5b5-3954-4cf2-8d53-db32826c80a5]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\39532 
+[debug] [2020-07-28T07:08:40.053Z] [worker-~diagnostic~-f015d5b5-3954-4cf2-8d53-db32826c80a5]: BUSY 
+=======
+ 
+[debug] [2020-07-27T16:03:33.196Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Jul 2020 16:00:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-07-27T16:03:35.369Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-07-27T16:03:35.370Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\7240 
+[debug] [2020-07-27T16:03:35.370Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: BUSY 
+[debug] [2020-07-27T16:03:36.531Z] [runtime-status] [7240] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-07-27T16:03:36.535Z] [runtime-status] [7240] Disabled runtime features: undefined 
+[debug] [2020-07-27T16:03:36.559Z] [runtime-status] [7240] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:36.601Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:36.607Z] [runtime-status] [7240] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-07-27T16:03:37.418Z] [runtime-status] [7240] Checked functions.config() {"config":{}} 
+[debug] [2020-07-27T16:03:37.420Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.423Z] [runtime-status] [7240] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.424Z] [runtime-status] [7240] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-07-27T16:03:37.424Z] [runtime-status] [7240] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-07-27T16:03:39.227Z] [runtime-status] [7240] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-07-27T16:03:49.363Z] [worker-~diagnostic~-1251c19e-c1b9-4fd5-aae2-7c8c8d7b06dd]: IDLE 
+>>>>>>> 4dc5ab529018613a12d265bd6e174aef64b3ed36
