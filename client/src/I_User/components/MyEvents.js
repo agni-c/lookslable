@@ -17,13 +17,9 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Rating from '@material-ui/lab/Rating';
 import SimpleRating from "../../rating/Dashboard";
 // import Ratings from '../../components/Ratings';
-<<<<<<< HEAD
 import ReactStars from "react-rating-stars-component";
-=======
-import ReactStars from 'react-rating-stars-component';
-import { Modal } from '@material-ui/core';
-import LinkPopOver from './LinkPopOver';
->>>>>>> 679b4a78ceffbba96499a904e34ae75de51eab51
+import { Modal } from "@material-ui/core";
+import LinkPopOver from "./LinkPopOver";
 
 const useStyles = makeStyles({
   root: {
@@ -118,7 +114,7 @@ const MyEvents = () => {
               {(() => {
                 if (d.driveLink === "NO") {
                 } else {
-                  return (
+                  return 
                     <>
                       <Typography component="legend">Give Ratings :</Typography>
                       <ReactStars
