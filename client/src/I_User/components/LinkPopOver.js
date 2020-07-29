@@ -31,26 +31,28 @@ const LinkPopOver = (props) => {
   const hideLinks = () => {
     setState(false);
   };
-  useEffect(async () => {
-    const booking = await bookingDetails();
-    booking.map((b) => {
-      if (
-        b.bookingdate === data.bookingdate &&
-        b.time === data.time &&
-        b.iuid === data.iuid
-      ) {
-        setLink1(b.link1);
-        setLink2(b.link2);
-        setLink3(b.link3);
-        setLink4(b.link4);
-        setLink5(b.link5);
-        setLink6(b.link6);
-        setLink7(b.link7);
-        setLink8(b.link8);
-        setLink9(b.link9);
-        setLink10(b.link10);
-      }
-    });
+  useEffect(() => {
+    (async () => {
+      const booking = await bookingDetails();
+      booking.map((b) => {
+        if (
+          b.bookingdate === data.bookingdate &&
+          b.time === data.time &&
+          b.iuid === data.iuid
+        ) {
+          setLink1(b.link1);
+          setLink2(b.link2);
+          setLink3(b.link3);
+          setLink4(b.link4);
+          setLink5(b.link5);
+          setLink6(b.link6);
+          setLink7(b.link7);
+          setLink8(b.link8);
+          setLink9(b.link9);
+          setLink10(b.link10);
+        }
+      });
+    })();
   }, []);
   return (
     <div>

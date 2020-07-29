@@ -1,15 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import { Portrait } from "@material-ui/icons";
-import MailIcon from "@material-ui/icons/Mail";
-import PuserFragment from "./fragments/puserFragment";
-import IuserFragment from "./fragments/iuserFragment";
-import BookingFragment from "./fragments/bookingFragment";
-import LandMarkFragment from "./fragments/landMarkFragment";
-import ApprovedPhotos from "./fragments/approvedPhotosFragment";
-import CustomBookingFragment from "./fragments/customBookingFregment";
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import { Portrait } from '@material-ui/icons';
+import MailIcon from '@material-ui/icons/Mail';
+import PuserFragment from './fragments/puserFragment';
+import IuserFragment from './fragments/iuserFragment';
+import BookingFragment from './fragments/bookingFragment';
+import LandMarkFragment from './fragments/landMarkFragment';
+import ApprovedPhotos from './fragments/approvedPhotosFragment';
+import CustomBookingFragment from './fragments/customBookingFregment';
 import {
   List,
   ListItem,
@@ -22,14 +22,14 @@ import {
   AppBar,
   Drawer,
   makeStyles,
-} from "@material-ui/core";
-import MyLocationFragment from "./fragments/myLocationFragment";
+} from '@material-ui/core';
+import MyLocationFragment from './fragments/myLocationFragment';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    display: 'flex',
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerContainer: {
-    overflow: "auto",
+    overflow: 'auto',
   },
   content: {
     flexGrow: 1,
@@ -57,16 +57,16 @@ export default function ClippedDrawer() {
     <Router>
       <div className={classes.root}>
         <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position='fixed' className={classes.appBar}>
           <Toolbar>
-            <Typography variant="h6" noWrap>
+            <Typography variant='h6' noWrap>
               Admin Panel
             </Typography>
           </Toolbar>
         </AppBar>
         <Drawer
           className={classes.drawer}
-          variant="permanent"
+          variant='permanent'
           classes={{
             paper: classes.drawerPaper,
           }}
@@ -75,91 +75,94 @@ export default function ClippedDrawer() {
 
           <div className={classes.drawerContainer}>
             <List>
-              <Link to="/dashboard/puser">
+              <Link to='/dashboard/puser'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="P user" />
+                  <ListItemText primary='P user' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/iuser">
+              <Link to='/dashboard/iuser'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="I user" />
+                  <ListItemText primary='I user' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/bookings">
+              <Link to='/dashboard/bookings'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="Bookings" />
+                  <ListItemText primary='Bookings' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/landmark">
+              <Link to='/dashboard/landmark'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="Landmark" />
+                  <ListItemText primary='Landmark' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/approvedphotos">
+              <Link to='/dashboard/approvedphotos'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="Approved Photos" />
+                  <ListItemText primary='Approved Photos' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/mylocation">
+              <Link to='/dashboard/mylocation'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="My Locations" />
+                  <ListItemText primary='My Locations' />
                 </ListItem>
               </Link>
             </List>
             <List>
-              <Link to="/dashboard/custombookings">
+              <Link to='/dashboard/custombookings'>
                 <ListItem button>
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary="Custom Bookings" />
+                  <ListItemText primary='Custom Bookings' />
                 </ListItem>
               </Link>
             </List>
             <Divider />
           </div>
         </Drawer>
-        <main className={classes.content} style={{ height: "100vh" }}>
+        <main
+          className={classes.content}
+          style={{ height: '100vh', width: 'auto' }}
+        >
           <Toolbar />
           {/* <PuserFragment /> */}
           {/* <BookingFragment /> */}
           <Switch>
-            <Route exact path="/dashboard/puser" component={PuserFragment} />
+            <Route exact path='/dashboard/puser' component={PuserFragment} />
           </Switch>
           <Switch>
-            <Route path="/dashboard/iuser" exact component={IuserFragment} />
+            <Route path='/dashboard/iuser' exact component={IuserFragment} />
           </Switch>
           <Switch>
             <Route
-              path="/dashboard/bookings"
+              path='/dashboard/bookings'
               exact
               component={BookingFragment}
             />
@@ -167,28 +170,28 @@ export default function ClippedDrawer() {
           <Switch>
             <Route
               exact
-              path="/dashboard/landmark"
+              path='/dashboard/landmark'
               component={LandMarkFragment}
             />
           </Switch>
           <Switch>
             <Route
               exact
-              path="/dashboard/approvedphotos"
+              path='/dashboard/approvedphotos'
               component={ApprovedPhotos}
             />
           </Switch>
           <Switch>
             <Route
               exact
-              path="/dashboard/mylocation"
+              path='/dashboard/mylocation'
               component={MyLocationFragment}
             />
           </Switch>
           <Switch>
             <Route
               exact
-              path="/dashboard/custombookings"
+              path='/dashboard/custombookings'
               component={CustomBookingFragment}
             />
           </Switch>
