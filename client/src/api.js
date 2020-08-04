@@ -277,6 +277,19 @@ export async function uploadDriveLink(
     driveLink: driveLink,
   });
 }
+export async function uploadDriveLinkCustombooking(
+  iuid,
+  puid,
+  date,
+  driveLink
+) {
+  await axios.put(`/uploadlink/custom`, {
+    date: date,
+    iuid: iuid,
+    puid: puid,
+    driveLink: driveLink,
+  });
+}
 export async function uploadLinkIuser(bookingdate, time, iuid, link) {
   await axios.put(`/iuseruploadlink`, {
     bookingdate: bookingdate,
@@ -290,6 +303,15 @@ export async function uploadRating(iuid, puid, time, bookingdate, rating) {
     bookingdate: bookingdate,
     iuid: iuid,
     time: time,
+    puid: puid,
+    rating: rating,
+  });
+}
+export async function uploadRatingCustomBooking(iuid, puid, date, rating) {
+  await axios.post(`/rating`, {
+    date: date,
+    iuid: iuid,
+
     puid: puid,
     rating: rating,
   });

@@ -30,5 +30,31 @@ router.put("/", (req, res) => {
     );
   res.send("updated");
 });
+router.put("/custom", (req, res) => {
+  var ref = database.ref("CUSTOM_BOOKING");
+  ref
+    .orderByChild("iuid")
+    .equalTo(req.body.iuid)
+    .once(
+      "value",
+      (snapshot) => {
+        console.log(snapshot.val());
+        const data = Object.values(snapshot.val());
+        const keys = Object.keys(snapshot.val());
+
+        for (var i in data) {
+          if (data[i].date === req.body.date) {
+            database.ref("CUSTOM_BOOKING/" + keys[i]).update({
+              link: req.body.link,
+            });
+          }
+        }
+      },
+      (errorObject) => {
+        console.log("The read failed: " + errorObject.code);
+      }
+    );
+  res.send("updated");
+});
 
 module.exports = router;
