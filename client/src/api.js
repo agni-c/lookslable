@@ -7,7 +7,7 @@ require("dotenv").config();
 axios.defaults.baseURL =
   "http://localhost:5000/spring-internship/us-central1/app/api";
 // axios.defaults.baseURL =
-// 	"https://us-central1-spring-internship.cloudfunctions.net/app/api";
+//   "https://us-central1-spring-internship.cloudfunctions.net/app/api";
 
 export async function iuserevent(iuid) {
   console.log("in api" + iuid);

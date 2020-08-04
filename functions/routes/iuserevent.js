@@ -1,15 +1,15 @@
-var router = require('express').Router();
-var firebase = require('firebase');
-var database = require('./firebaseAppI');
-router.post('/', (req, res) => {
-  console.log('in');
-  var ref = database.ref('BOOKING_DETAILS');
-  console.log('in backend' + req.body.iuid);
+var router = require("express").Router();
+var firebase = require("firebase");
+var database = require("./firebaseAppI");
+router.post("/", (req, res) => {
+  console.log("in");
+  var ref = database.ref("BOOKING_DETAILS");
+  console.log("in backend" + req.body.iuid);
   ref
-    .orderByChild('iuid')
+    .orderByChild("iuid")
     .equalTo(req.body.iuid)
     .once(
-      'value',
+      "value",
       (snapshot) => {
         if (snapshot.exists()) {
           res.json(snapshot.val());
@@ -18,9 +18,29 @@ router.post('/', (req, res) => {
         }
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
       }
     );
 });
-
+router.post("/custom", (req, res) => {
+  console.log("in");
+  var ref = database.ref("CUSTOM_BOOKING");
+  console.log("in backend" + req.body.iuid);
+  ref
+    .orderByChild("iuid")
+    .equalTo(req.body.iuid)
+    .once(
+      "value",
+      (snapshot) => {
+        if (snapshot.exists()) {
+          res.json(snapshot.val());
+        } else {
+          res.json(null);
+        }
+      },
+      (errorObject) => {
+        console.log("The read failed: " + errorObject.code);
+      }
+    );
+});
 module.exports = router;

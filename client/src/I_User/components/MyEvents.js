@@ -44,6 +44,7 @@ const MyEvents = () => {
   const [value, setValue] = useState(3);
   const [link, setLink] = useState("");
   const [open, setOpen] = React.useState(false);
+  const [event, setEvent] = useState(true);
 
   const handleOpen = () => {
     setOpen(true);
@@ -67,13 +68,15 @@ const MyEvents = () => {
       const landmark = await landmarkDetails();
       console.log(landmark);
       console.log(event);
-      if (landmark) {
+      if (landmark && event) {
         event.map((e) => {
           landmark.map((l) => {
             console.log(l);
             e.locationLink = `http://www.google.com/maps/place/${l.location.lat},${l.location.long}`;
           });
         });
+      } else {
+        setEvent(false);
       }
       // event.map(async (e) => {
       //   // const data = await landmarkInfo();
@@ -86,7 +89,7 @@ const MyEvents = () => {
     })();
   }, []);
 
-  if (state.data !== false) {
+  if (state.data !== false && event) {
     return (
       <div style={{ padding: "5px" }}>
         {state.data.map((d) => (
