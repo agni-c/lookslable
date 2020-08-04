@@ -965,3 +965,1459 @@
 [info] i  functions: Finished "app" in ~1s
 [debug] [2020-08-04T06:04:19.113Z] [worker-app-adb9b8ef-8b84-44b6-bd6d-3c24a4ed9915]: IDLE 
 [debug] [2020-08-04T06:04:19.114Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T08:37:34.774Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T08:37:34.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-08-04T08:37:34.783Z] CLI Version:   8.0.2
+[debug] [2020-08-04T08:37:34.784Z] Platform:      win32
+[debug] [2020-08-04T08:37:34.784Z] Node Version:  v12.16.2
+[debug] [2020-08-04T08:37:34.788Z] Time:          Tue Aug 04 2020 14:07:34 GMT+0530 (India Standard Time)
+[debug] [2020-08-04T08:37:34.789Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T08:37:34.789Z] 
+[debug] [2020-08-04T08:37:34.886Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-04T08:37:34.888Z] > authorizing via signed-in user
+[debug] [2020-08-04T08:37:34.889Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-08-04T08:37:34.899Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-08-04T08:37:34.900Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-08-04T08:37:37.156Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 04 Aug 2020 08:34:35 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-04T08:37:37.375Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-08-04T08:37:43.774Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 04 Aug 2020 08:34:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1320","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-04T08:37:43.777Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-08-04T08:37:48.511Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 04 Aug 2020 08:34:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-08-04T08:37:52.654Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-08-04T08:37:52.654Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-08-04T08:37:52.655Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-08-04T08:37:52.656Z] [worker-~diagnostic~-4d6ec974-085b-4d2b-9c92-dc1cf453b3b2]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\48652 
+[debug] [2020-08-04T08:37:52.657Z] [worker-~diagnostic~-4d6ec974-085b-4d2b-9c92-dc1cf453b3b2]: BUSY 
+[debug] [2020-08-04T08:38:08.748Z] [runtime-status] [48652] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T08:38:08.752Z] [runtime-status] [48652] Disabled runtime features: undefined 
+[debug] [2020-08-04T08:38:08.877Z] [runtime-status] [48652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T08:38:08.926Z] [runtime-status] [48652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T08:38:08.929Z] [runtime-status] [48652] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T08:38:15.712Z] [runtime-status] [48652] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T08:38:15.714Z] [runtime-status] [48652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T08:38:15.720Z] [runtime-status] [48652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T08:38:15.722Z] [runtime-status] [48652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T08:38:15.725Z] [runtime-status] [48652] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T08:38:35.478Z] [runtime-status] [48652] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-08-04T08:39:14.731Z] [worker-~diagnostic~-4d6ec974-085b-4d2b-9c92-dc1cf453b3b2]: IDLE 
+[debug] [2020-08-04T08:47:33.831Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T08:47:33.884Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T08:47:33.884Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T08:47:34.676Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T08:47:34.676Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-08-04T08:47:34.676Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T08:47:34.677Z] [worker-app-9041f051-d980-4e82-9ff0-933c3f9639aa]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55972 
+[debug] [2020-08-04T08:47:34.677Z] [worker-app-9041f051-d980-4e82-9ff0-933c3f9639aa]: BUSY 
+[debug] [2020-08-04T08:47:34.698Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T08:47:34.699Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T08:47:34.700Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T08:47:34.713Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T08:47:34.714Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-08-04T08:47:34.714Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T08:47:34.714Z] [worker-app-ac480abf-5504-479a-90cf-fe349e2e9d52]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\35348 
+[debug] [2020-08-04T08:47:34.714Z] [worker-app-ac480abf-5504-479a-90cf-fe349e2e9d52]: BUSY 
+[debug] [2020-08-04T08:48:06.144Z] [runtime-status] [55972] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T08:48:06.145Z] [runtime-status] [35348] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T08:48:06.146Z] [runtime-status] [35348] Disabled runtime features: undefined 
+[debug] [2020-08-04T08:48:06.146Z] [runtime-status] [55972] Disabled runtime features: undefined 
+[debug] [2020-08-04T08:48:06.467Z] [worker-app-9041f051-d980-4e82-9ff0-933c3f9639aa]: exited 
+[debug] [2020-08-04T08:48:06.467Z] [worker-app-9041f051-d980-4e82-9ff0-933c3f9639aa]: FINISHED 
+[debug] [2020-08-04T08:48:06.469Z] [worker-app-ac480abf-5504-479a-90cf-fe349e2e9d52]: exited 
+[debug] [2020-08-04T08:48:06.469Z] [worker-app-ac480abf-5504-479a-90cf-fe349e2e9d52]: FINISHED 
+[debug] [2020-08-04T08:48:06.735Z] [worker-~diagnostic~-4d6ec974-085b-4d2b-9c92-dc1cf453b3b2]: exited 
+[debug] [2020-08-04T08:48:06.735Z] [worker-~diagnostic~-4d6ec974-085b-4d2b-9c92-dc1cf453b3b2]: FINISHED 
+[debug] [2020-08-04T09:08:01.625Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T09:08:01.631Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-08-04T09:08:01.632Z] CLI Version:   8.0.2
+[debug] [2020-08-04T09:08:01.632Z] Platform:      win32
+[debug] [2020-08-04T09:08:01.633Z] Node Version:  v12.16.2
+[debug] [2020-08-04T09:08:01.636Z] Time:          Tue Aug 04 2020 14:38:01 GMT+0530 (India Standard Time)
+[debug] [2020-08-04T09:08:01.636Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T09:08:01.636Z] 
+[debug] [2020-08-04T09:08:01.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-04T09:08:01.736Z] > authorizing via signed-in user
+[debug] [2020-08-04T09:08:01.736Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-08-04T09:08:01.745Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-08-04T09:08:03.583Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 04 Aug 2020 09:05:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1318","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-04T09:08:03.584Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-08-04T09:08:04.332Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 04 Aug 2020 09:05:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-08-04T09:08:06.949Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-08-04T09:08:06.950Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-08-04T09:08:06.950Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-08-04T09:08:06.951Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\50752 
+[debug] [2020-08-04T09:08:06.952Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: BUSY 
+[debug] [2020-08-04T09:08:11.605Z] [runtime-status] [50752] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:08:11.610Z] [runtime-status] [50752] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:08:11.660Z] [runtime-status] [50752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:08:11.723Z] [runtime-status] [50752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:08:11.727Z] [runtime-status] [50752] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:08:15.232Z] [runtime-status] [50752] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:08:15.233Z] [runtime-status] [50752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:08:15.234Z] [runtime-status] [50752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:08:15.235Z] [runtime-status] [50752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:08:15.235Z] [runtime-status] [50752] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:08:19.219Z] [runtime-status] [50752] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-08-04T09:08:28.412Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: IDLE 
+[debug] [2020-08-04T09:11:19.950Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:11:19.950Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:11:19.951Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:11:20.030Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:20.030Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-08-04T09:11:20.030Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:20.030Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:20.030Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:11:20.031Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:11:20.032Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:11:20.032Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:20.036Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:20.036Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-08-04T09:11:20.036Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:20.036Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:20.036Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:11:20.037Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:11:20.037Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:11:20.037Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:11:20.212Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:20.212Z] [worker-pool] Adding worker with key app, total=3 
+[debug] [2020-08-04T09:11:20.212Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:20.212Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:11:20.212Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:11:26.108Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:11:26.109Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:11:26.109Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-04T09:11:26.114Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:26.114Z] [worker-pool] Adding worker with key app, total=4 
+[debug] [2020-08-04T09:11:26.114Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:26.114Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:11:26.114Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[debug] [2020-08-04T09:11:26.481Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:11:26.481Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:11:26.481Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-04T09:11:26.486Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:26.486Z] [worker-pool] Adding worker with key app, total=5 
+[debug] [2020-08-04T09:11:26.486Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:26.486Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\43980 
+[debug] [2020-08-04T09:11:26.486Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: BUSY 
+[debug] [2020-08-04T09:11:26.502Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-08-04T09:11:26.502Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:26.503Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:26.511Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:26.511Z] [worker-pool] Adding worker with key app, total=6 
+[debug] [2020-08-04T09:11:26.511Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:26.512Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36400 
+[debug] [2020-08-04T09:11:26.512Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: BUSY 
+[debug] [2020-08-04T09:11:27.470Z] [runtime-status] [36572] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.471Z] [runtime-status] [43980] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.473Z] [runtime-status] [64288] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.474Z] [runtime-status] [55192] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.475Z] [runtime-status] [36572] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.480Z] [runtime-status] [55192] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.491Z] [runtime-status] [43980] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.501Z] [runtime-status] [64288] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.502Z] [runtime-status] [36400] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.512Z] [runtime-status] [36400] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.529Z] [runtime-status] [55776] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:27.534Z] [runtime-status] [55776] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:27.563Z] [runtime-status] [55192] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.573Z] [runtime-status] [64288] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.574Z] [runtime-status] [36400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.575Z] [runtime-status] [36572] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.580Z] [runtime-status] [43980] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.592Z] [runtime-status] [55776] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.597Z] [runtime-status] [64288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.603Z] [runtime-status] [36400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.603Z] [runtime-status] [43980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.604Z] [runtime-status] [55776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.605Z] [runtime-status] [55192] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.606Z] [runtime-status] [64288] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:27.609Z] [runtime-status] [43980] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:27.610Z] [runtime-status] [36400] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:27.610Z] [runtime-status] [55776] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:27.613Z] [runtime-status] [55192] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:27.625Z] [runtime-status] [36572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:27.630Z] [runtime-status] [36572] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:28.749Z] [runtime-status] [55776] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.750Z] [runtime-status] [36572] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.750Z] [runtime-status] [36400] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.751Z] [runtime-status] [55776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.752Z] [runtime-status] [55192] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.753Z] [runtime-status] [36572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.754Z] [runtime-status] [36400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.755Z] [runtime-status] [43980] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.755Z] [runtime-status] [55192] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.756Z] [runtime-status] [55776] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.757Z] [runtime-status] [43980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.758Z] [runtime-status] [55776] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.759Z] [runtime-status] [36400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.759Z] [runtime-status] [55776] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:28.760Z] [runtime-status] [55192] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.761Z] [runtime-status] [36400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.762Z] [runtime-status] [36400] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:28.763Z] [runtime-status] [55192] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.763Z] [runtime-status] [55192] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:28.764Z] [runtime-status] [43980] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.765Z] [runtime-status] [36572] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.766Z] [runtime-status] [64288] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:28.767Z] [runtime-status] [36572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.768Z] [runtime-status] [36572] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:28.769Z] [runtime-status] [43980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.769Z] [runtime-status] [43980] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:28.769Z] [runtime-status] [64288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.773Z] [runtime-status] [64288] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.774Z] [runtime-status] [64288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:28.775Z] [runtime-status] [64288] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:30.686Z] [runtime-status] [43980] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[debug] [2020-08-04T09:11:30.688Z] [runtime-status] [55776] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:30.692Z] [runtime-status] [36572] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:30.696Z] [runtime-status] [64288] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:30.722Z] [runtime-status] [36400] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:30.725Z] [runtime-status] [55192] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:38.951Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:38.952Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:38.953Z] [runtime-status] [43980] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:38.954Z] [runtime-status] [43980] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:38.955Z] [runtime-status] [43980] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:38.955Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:38.969Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:38.969Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:38.969Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:38.971Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:38.971Z] [runtime-status] [36572] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:38.971Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:11:38.971Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:38.972Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:38.972Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:38.973Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:11:38.973Z] [runtime-status] [36400] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.008Z] [runtime-status] [36400] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.011Z] [runtime-status] [36400] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.011Z] [runtime-status] [36400] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36400 
+[debug] [2020-08-04T09:11:39.011Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.011Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:39.127Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.132Z] [runtime-status] [43980] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\43980 
+[debug] [2020-08-04T09:11:39.133Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.134Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:39.135Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.137Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.139Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.141Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.156Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:39.156Z] [runtime-status] [55776] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.159Z] [runtime-status] [55192] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:39.159Z] [runtime-status] [64288] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:39.159Z] [runtime-status] [36400] Ephemeral server handling OPTIONS request 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.166Z] [runtime-status] [43980] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:11:39.166Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.167Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.167Z] [runtime-status] [36572] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:11:39.168Z] [work-queue] {"queueLength":1,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.169Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-08-04T09:11:39.169Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:39.257Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:39.257Z] [worker-pool] Adding worker with key app, total=7 
+[debug] [2020-08-04T09:11:39.257Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.257Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\39860 
+[debug] [2020-08-04T09:11:39.257Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: BUSY 
+[debug] [2020-08-04T09:11:39.259Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:11:39.259Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.259Z] [runtime-status] [36400] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.260Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:11:39.261Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.295Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:11:39.295Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:11:39.296Z] [runtime-status] [36572] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.296Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:11:39.297Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:11:39.297Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:11:39.297Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.297Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:39.297Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:11:39.298Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-08-04T09:11:39.298Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.298Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:39.298Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.299Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:39.299Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:11:39.300Z] [runtime-status] [43980] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.301Z] [work-queue] {"queueLength":1,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.301Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-08-04T09:11:39.301Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:11:39.301Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.302Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:11:39.302Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.314Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: IDLE 
+[debug] [2020-08-04T09:11:39.314Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.318Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.319Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.319Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.319Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:39.321Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.323Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.347Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.348Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.348Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:39.349Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.353Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.354Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.355Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.356Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:11:39.357Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.362Z] [runtime-status] [55192] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:39.362Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:39.362Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:39.362Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.366Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:11:39.367Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:39.369Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:11:39.369Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:11:39.370Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:11:39.370Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:11:39.370Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:39.370Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.371Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:39.371Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:11:39.374Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-08-04T09:11:39.374Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:39.374Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:11:39.374Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:39.374Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:39.375Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:11:39.379Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.386Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.386Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.386Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:39.387Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.389Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:39.402Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:39.403Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:39.403Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:39.404Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:39.981Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:11:39.982Z] [runtime-status] [64288] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:11:39.982Z] [runtime-status] [55192] Ephemeral server handling POST request 
+[info] >  in {"user":"in"}
+[info] >  working {"user":"working"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:11:40.035Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:40.035Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:40.037Z] [work-queue] {"queueLength":1,"workRunningCount":6}
+[debug] [2020-08-04T09:11:40.037Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-08-04T09:11:40.037Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:40.037Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:40.038Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36400 
+[debug] [2020-08-04T09:11:40.038Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: BUSY 
+[debug] [2020-08-04T09:11:40.042Z] [runtime-status] [36400] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:40.053Z] [runtime-status] [36400] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:40.053Z] [runtime-status] [36400] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:40.054Z] [runtime-status] [36400] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36400 
+[debug] [2020-08-04T09:11:40.055Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:40.125Z] [runtime-status] [36400] Ephemeral server handling POST request 
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:11:40.133Z] [work-queue] {"queueLength":1,"workRunningCount":7}
+[debug] [2020-08-04T09:11:40.133Z] [work-queue] {"queueLength":0,"workRunningCount":8}
+[debug] [2020-08-04T09:11:40.133Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:40.154Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:11:40.154Z] [worker-pool] Adding worker with key app, total=8 
+[debug] [2020-08-04T09:11:40.154Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:40.155Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\56560 
+[debug] [2020-08-04T09:11:40.155Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: BUSY 
+[debug] [2020-08-04T09:11:40.252Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:40.263Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:11:40.263Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-08-04T09:11:40.322Z] [runtime-status] [36400] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:40.327Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: IDLE 
+[debug] [2020-08-04T09:11:40.327Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-04T09:11:40.741Z] [work-queue] {"queueLength":1,"workRunningCount":6}
+[debug] [2020-08-04T09:11:40.741Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-08-04T09:11:40.742Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:11:40.742Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:40.742Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:40.742Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:40.744Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:40.744Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:40.745Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:40.745Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:11:40.745Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:40.745Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:40.746Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:40.748Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[info] >  working {"user":"working"}
+[debug] [2020-08-04T09:11:40.752Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:11:40.755Z] [runtime-status] [56560] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:40.758Z] [runtime-status] [56560] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:40.763Z] [runtime-status] [56560] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:40.767Z] [runtime-status] [56560] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:40.769Z] [runtime-status] [56560] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:40.813Z] [runtime-status] [56560] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:40.814Z] [runtime-status] [56560] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:40.815Z] [runtime-status] [56560] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:40.816Z] [runtime-status] [56560] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:40.816Z] [runtime-status] [56560] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:40.950Z] [runtime-status] [56560] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  [2020-08-04T09:11:40.996Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:11:40.996Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:41.003Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:11:41.003Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:11:41.043Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-08-04T09:11:41.043Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-08-04T09:11:41.043Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:11:41.043Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:41.043Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:41.044Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:11:41.044Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:41.045Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:41.045Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:41.045Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:11:41.047Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:41.049Z] [runtime-status] [55192] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:11:41.053Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-04T09:11:41.290Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: IDLE 
+[debug] [2020-08-04T09:11:41.290Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[info] >  true {"user":true}
+[info] >  true {"user":true}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:41.358Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:11:41.358Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-04T09:11:41.360Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:11:41.361Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:42.269Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:11:42.269Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:11:42.668Z] [runtime-status] [56560] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:42.670Z] [runtime-status] [56560] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:42.670Z] [runtime-status] [56560] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:42.678Z] [runtime-status] [56560] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\56560 
+[debug] [2020-08-04T09:11:42.684Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:42.772Z] [runtime-status] [56560] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:11:43.093Z] [runtime-status] [56560] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:43.126Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: IDLE 
+[debug] [2020-08-04T09:11:43.127Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-04T09:11:44.826Z] [runtime-status] [39860] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:11:44.828Z] [runtime-status] [39860] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:11:44.834Z] [runtime-status] [39860] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:44.836Z] [runtime-status] [39860] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:44.838Z] [runtime-status] [39860] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:11:44.881Z] [runtime-status] [39860] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:11:44.882Z] [runtime-status] [39860] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:44.883Z] [runtime-status] [39860] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:44.884Z] [runtime-status] [39860] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:11:44.884Z] [runtime-status] [39860] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:11:45.028Z] [runtime-status] [39860] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:11:45.758Z] [runtime-status] [39860] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:45.759Z] [runtime-status] [39860] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:45.759Z] [runtime-status] [39860] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:45.763Z] [runtime-status] [39860] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\39860 
+[debug] [2020-08-04T09:11:45.766Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:45.796Z] [runtime-status] [39860] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:11:45.799Z] [runtime-status] [39860] Ephemeral server survived. 
+[debug] [2020-08-04T09:11:45.801Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:11:45.801Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:11:45.801Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:11:45.801Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:11:45.801Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:45.802Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:11:45.802Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Finished "app" in ~1s
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:11:45.804Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:11:45.804Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:11:45.804Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:11:45.804Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: IDLE 
+[debug] [2020-08-04T09:11:45.804Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:11:45.806Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:11:45.809Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:11:45.813Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:11:45.814Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:11:45.814Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:13:35.863Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:13:35.864Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:13:35.864Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:13:35.864Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:13:35.864Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:35.864Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:13:35.865Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:13:35.866Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:13:35.866Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:13:35.866Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:35.867Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:13:35.872Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:13:35.873Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:13:35.879Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:13:35.880Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:13:35.880Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:13:35.880Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:13:35.881Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:13:35.881Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:13:35.881Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:35.881Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:13:35.885Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:13:35.886Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:13:35.886Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:13:35.887Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:35.888Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:13:35.891Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:13:35.940Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  [2020-08-04T09:13:36.206Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:13:36.206Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:13:36.210Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:13:36.210Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:13:36.213Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:13:36.213Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:13:36.213Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:13:36.213Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:13:36.213Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:36.213Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:13:36.218Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:13:36.220Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:13:36.221Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:13:36.221Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:13:36.222Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:13:36.225Z] [runtime-status] [55776] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:13:36.227Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:13:36.643Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:13:36.644Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:20:24.993Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:20:24.993Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:20:24.993Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:20:24.993Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.001Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.002Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:20:25.003Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.005Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.005Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.006Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.104Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.110Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:20:25.112Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.114Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:20:25.114Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:20:25.116Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:20:25.116Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:20:25.117Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:20:25.117Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.117Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.117Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:20:25.123Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.143Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.143Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.144Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.146Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.152Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:20:25.155Z] [runtime-status] [55776] Ephemeral server survived. 
+[debug] [2020-08-04T09:20:25.156Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:20:25.156Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:20:25.156Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:20:25.156Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.157Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:25.157Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:20:25.158Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:20:25.158Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.159Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:20:25.159Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.159Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:20:25.160Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:20:25.161Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.161Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:20:25.161Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:20:25.162Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.162Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:20:25.162Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.195Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:20:25.196Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.198Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.198Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:20:25.198Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:20:25.198Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.199Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.199Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:20:25.202Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.205Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.205Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.206Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:25.209Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.211Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.236Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.237Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.238Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.240Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.243Z] [runtime-status] [36572] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.243Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:20:25.245Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.260Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.266Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.267Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.267Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.269Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.295Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:20:25.318Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.325Z] [runtime-status] [55192] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:20:25.327Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:20:25.334Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:20:25.334Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:20:25.643Z] [runtime-status] [64288] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:20:25.644Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:20:25.649Z] [runtime-status] [36572] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:20:25.649Z] [runtime-status] [36572] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  [2020-08-04T09:20:25.611Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-08-04T09:20:25.611Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.705Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:20:25.705Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.708Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.709Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:20:25.709Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:20:25.710Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.711Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:25.711Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.727Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:20:25.728Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.728Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.729Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:20:25.729Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:20:25.729Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.729Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:20:25.730Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.732Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:20:25.732Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.733Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:20:25.733Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:20:25.734Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:20:25.734Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:25.734Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.734Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:20:25.736Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.737Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.738Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.739Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:25.745Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.752Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.773Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.773Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.773Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:20:25.776Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.778Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:25.782Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:25.782Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:25.782Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:25.789Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:25.806Z] [runtime-status] [55776] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:20:25.806Z] [runtime-status] [55776] Ephemeral server survived. 
+[debug] [2020-08-04T09:20:25.807Z] [runtime-status] [55192] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:20:25.807Z] [runtime-status] [64288] Ephemeral server handling POST request 
+[info] >  working {"user":"working"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:20:25.830Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] >  [2020-08-04T09:20:25.831Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:20:25.831Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.838Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:20:25.838Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:20:25.868Z] [runtime-status] [64288] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:25.902Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:20:25.903Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] >  true {"user":true}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:26.506Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:20:26.506Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:26.590Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:20:26.591Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:20:26.592Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:20:26.593Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:26.594Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:26.594Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:20:26.595Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:20:26.595Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:20:26.596Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:26.616Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:26.616Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:26.616Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:20:26.618Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:20:26.622Z] [runtime-status] [55192] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:20:26.624Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:20:27.089Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:20:27.090Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:20:59.793Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:20:59.793Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:20:59.794Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:20:59.794Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:20:59.794Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:20:59.794Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:20:59.796Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:20:59.798Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:20:59.799Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:20:59.799Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:21:00.227Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:00.232Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:21:00.232Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:21:00.232Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:21:00.233Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:00.233Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:00.233Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:21:00.234Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:21:00.234Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:00.234Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:21:00.234Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:00.234Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:21:00.234Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:21:00.235Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:00.235Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:00.236Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:21:00.236Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:00.236Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:21:00.236Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[debug] [2020-08-04T09:21:00.238Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:21:00.239Z] [runtime-status] [55776] Ephemeral server survived. 
+[debug] [2020-08-04T09:21:00.241Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:00.244Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:00.244Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:00.244Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:00.247Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:00.249Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:00.264Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:00.264Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:00.264Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:21:00.266Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:00.268Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:00.270Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:00.270Z] [runtime-status] [36572] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:00.271Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:21:00.274Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:00.304Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:21:00.305Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:00.306Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:00.306Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:00.307Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:21:00.307Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:00.308Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:21:00.308Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:21:00.323Z] [runtime-status] [55192] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:21:00.323Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:21:00.323Z] [runtime-status] [64288] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:21:00.325Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:21:00.334Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:00.338Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:00.338Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:00.339Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:21:00.704Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:01.035Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:21:01.035Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.333Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.334Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:01.334Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:21:01.334Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:01.334Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:01.334Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:01.336Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:21:01.336Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.337Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.337Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:01.337Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:21:01.338Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:01.338Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:21:01.338Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:21:01.343Z] [runtime-status] [36572] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:21:01.343Z] [runtime-status] [36572] Ephemeral server survived. 
+[debug] [2020-08-04T09:21:01.345Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:21:01.345Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:21:01.361Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:01.362Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:01.363Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:01.363Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:01.365Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:01.366Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:01.367Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:01.368Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:01.368Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:21:01.369Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:01.389Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:21:01.389Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.394Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.394Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:01.394Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:21:01.394Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:01.395Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:21:01.395Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[debug] [2020-08-04T09:21:01.396Z] [runtime-status] [64288] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:21:01.396Z] [runtime-status] [55192] Ephemeral server handling POST request 
+[info] >  working {"user":"working"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:21:01.413Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:01.415Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:01.415Z] [runtime-status] [36572] Running app in mode HTTPS 
+[info] >  [2020-08-04T09:21:01.505Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:21:01.505Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:01.514Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:21:01.514Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  in {"user":"in"}
+[debug] [2020-08-04T09:21:01.541Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:21:01.543Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.543Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:01.543Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:21:01.544Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:01.544Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:21:01.544Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:21:01.545Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:21:01.577Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:01.579Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:01.579Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:01.580Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:21:01.582Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:01.595Z] [runtime-status] [55776] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:21:01.595Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  [2020-08-04T09:21:01.899Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-08-04T09:21:01.899Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:01.928Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:21:01.929Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.989Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:21:01.990Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:21:01.990Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:21:01.991Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:21:01.991Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:01.991Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:21:01.992Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:21:01.994Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:21:01.995Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:21:01.995Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:21:01.998Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:02.003Z] [runtime-status] [55192] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:21:02.005Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:02.029Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:21:02.030Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:21:02.171Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:21:02.174Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:21:02.179Z] [runtime-status] [36572] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  true {"user":true}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:02.335Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:21:02.335Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:02.411Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:21:02.412Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:21:03.225Z] [runtime-status] [36572] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:21:03.255Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:21:03.256Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-04T09:23:59.418Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:23:59.419Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:23:59.419Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:23:59.419Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:23:59.419Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:23:59.419Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:23:59.420Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:23:59.421Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:23:59.421Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:23:59.421Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:23:59.422Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:23:59.427Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:23:59.427Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:23:59.427Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:23:59.427Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:23:59.491Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:23:59.491Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:23:59.492Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:23:59.492Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:23:59.492Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:23:59.492Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:23:59.492Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:23:59.493Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:23:59.493Z] [runtime-status] [55776] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:23:59.493Z] [runtime-status] [55776] Ephemeral server survived. 
+[debug] [2020-08-04T09:23:59.509Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:23:59.510Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:23:59.511Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:23:59.512Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:23:59.513Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:23:59.513Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[debug] [2020-08-04T09:23:59.515Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:23:59.519Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:23:59.521Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:23:59.522Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:23:59.937Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.202Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.203Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.203Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.203Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:24:00.205Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.213Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:24:00.213Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.215Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.215Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:24:00.215Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:24:00.216Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.216Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:00.216Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:24:00.216Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.217Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.217Z] [runtime-status] [36572] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.217Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:24:00.218Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.221Z] [runtime-status] [55192] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:24:00.222Z] [runtime-status] [55192] Ephemeral server survived. 
+[debug] [2020-08-04T09:24:00.222Z] [runtime-status] [64288] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:24:00.222Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:24:00.223Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.224Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.224Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.224Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:00.268Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.270Z] [runtime-status] [36572] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:24:00.270Z] [runtime-status] [36572] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.272Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:24:00.272Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.285Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:24:00.285Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:24:00.286Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:24:00.286Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.286Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:24:00.286Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.286Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:24:00.286Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: BUSY 
+[debug] [2020-08-04T09:24:00.287Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.290Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:24:00.290Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:24:00.290Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.290Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:24:00.290Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: BUSY 
+[debug] [2020-08-04T09:24:00.292Z] [runtime-status] [55776] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:24:00.292Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.292Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:24:00.293Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:24:00.295Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.295Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:24:00.295Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:24:00.295Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.295Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:24:00.295Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: BUSY 
+[debug] [2020-08-04T09:24:00.296Z] [runtime-status] [55192] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.303Z] [runtime-status] [55192] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.303Z] [runtime-status] [55192] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.303Z] [runtime-status] [55192] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55192 
+[debug] [2020-08-04T09:24:00.304Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.305Z] [runtime-status] [64288] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.306Z] [runtime-status] [64288] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.306Z] [runtime-status] [64288] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.306Z] [runtime-status] [64288] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64288 
+[debug] [2020-08-04T09:24:00.307Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.310Z] [runtime-status] [36572] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.311Z] [runtime-status] [36572] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.311Z] [runtime-status] [36572] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.311Z] [runtime-status] [36572] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\36572 
+[debug] [2020-08-04T09:24:00.312Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.316Z] [runtime-status] [64288] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:24:00.316Z] [runtime-status] [64288] Ephemeral server survived. 
+[debug] [2020-08-04T09:24:00.316Z] [runtime-status] [55192] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:24:00.317Z] [runtime-status] [55192] Ephemeral server survived. 
+[info] >  working {"user":"working"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:24:00.327Z] [runtime-status] [36572] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:24:00.327Z] [runtime-status] [36572] Ephemeral server survived. 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.337Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: IDLE 
+[debug] [2020-08-04T09:24:00.337Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  [2020-08-04T09:24:00.589Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:24:00.589Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.603Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:24:00.603Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:24:00.605Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:24:00.605Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:24:00.605Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:24:00.605Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.605Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:00.606Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:24:00.606Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:00.607Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:00.607Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:00.607Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:00.608Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:00.610Z] [runtime-status] [55776] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:24:00.611Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] >  [2020-08-04T09:24:00.631Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-08-04T09:24:00.631Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.639Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: IDLE 
+[debug] [2020-08-04T09:24:00.639Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] >  true {"user":true}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.670Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: IDLE 
+[debug] [2020-08-04T09:24:00.671Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:00.952Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:24:00.952Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:24:00.954Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:24:00.954Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:24:00.954Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:24:00.955Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:24:00.955Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:00.955Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: BUSY 
+[debug] [2020-08-04T09:24:01.004Z] [runtime-status] [55776] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:24:01.005Z] [runtime-status] [55776] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:24:01.005Z] [runtime-status] [55776] Running app in mode HTTPS 
+[debug] [2020-08-04T09:24:01.005Z] [runtime-status] [55776] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\55776 
+[debug] [2020-08-04T09:24:01.006Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:24:01.009Z] [runtime-status] [55776] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:24:01.022Z] [runtime-status] [55776] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:24:01.275Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: IDLE 
+[debug] [2020-08-04T09:24:01.275Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:25:18.335Z] File C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\routes\puserevent.js changed, reloading triggers 
+[debug] [2020-08-04T09:25:18.577Z] File C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\routes\puserevent.js changed, reloading triggers 
+[debug] [2020-08-04T09:25:19.587Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-08-04T09:25:19.587Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: FINISHING 
+[debug] [2020-08-04T09:25:19.601Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.601Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: FINISHING 
+[debug] [2020-08-04T09:25:19.602Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.602Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: FINISHING 
+[debug] [2020-08-04T09:25:19.603Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.604Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: FINISHING 
+[debug] [2020-08-04T09:25:19.604Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.604Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: FINISHING 
+[debug] [2020-08-04T09:25:19.605Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.605Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: FINISHING 
+[debug] [2020-08-04T09:25:19.605Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.606Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: FINISHING 
+[debug] [2020-08-04T09:25:19.606Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.606Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: FINISHING 
+[debug] [2020-08-04T09:25:19.607Z] [worker-pool] Shutting down IDLE worker (app) 
+[debug] [2020-08-04T09:25:19.607Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: FINISHING 
+[debug] [2020-08-04T09:25:19.916Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-08-04T09:25:19.916Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-08-04T09:25:19.916Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-08-04T09:25:19.917Z] [worker-~diagnostic~-850b5c4c-b98f-4e64-b363-53f02d5c6f58]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\44248 
+[debug] [2020-08-04T09:25:19.917Z] [worker-~diagnostic~-850b5c4c-b98f-4e64-b363-53f02d5c6f58]: BUSY 
+[debug] [2020-08-04T09:25:20.061Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: exited 
+[debug] [2020-08-04T09:25:20.061Z] [worker-app-70218014-6b40-47ae-b412-fc5668467429]: FINISHED 
+[debug] [2020-08-04T09:25:20.124Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: exited 
+[debug] [2020-08-04T09:25:20.125Z] [worker-app-a739da54-2d3f-4aad-aad8-cb946c94b20e]: FINISHED 
+[debug] [2020-08-04T09:25:20.269Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: exited 
+[debug] [2020-08-04T09:25:20.270Z] [worker-app-f469416d-925a-491b-b1b6-f1fb6b9c2bcb]: FINISHED 
+[debug] [2020-08-04T09:25:20.270Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: exited 
+[debug] [2020-08-04T09:25:20.270Z] [worker-app-93aae6ef-70b8-4bca-9156-66947ba6b930]: FINISHED 
+[debug] [2020-08-04T09:25:20.270Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: exited 
+[debug] [2020-08-04T09:25:20.271Z] [worker-app-2bb4a409-8123-438a-a7bc-868cdce3fe72]: FINISHED 
+[debug] [2020-08-04T09:25:20.272Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: exited 
+[debug] [2020-08-04T09:25:20.272Z] [worker-app-0f6229ba-c86d-4d5f-8ccf-04e8fa5e8daa]: FINISHED 
+[debug] [2020-08-04T09:25:20.318Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: exited 
+[debug] [2020-08-04T09:25:20.318Z] [worker-~diagnostic~-d561b290-8a4d-4bb3-b021-e83d1bda03c6]: FINISHED 
+[debug] [2020-08-04T09:25:20.544Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: exited 
+[debug] [2020-08-04T09:25:20.545Z] [worker-app-8f383f7d-4258-4015-ab71-a44ed7e3bf50]: FINISHED 
+[debug] [2020-08-04T09:25:21.130Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: exited 
+[debug] [2020-08-04T09:25:21.130Z] [worker-app-0874afe8-3b61-465f-933c-e497b5a21299]: FINISHED 
+[debug] [2020-08-04T09:25:31.513Z] [runtime-status] [44248] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:25:31.522Z] [runtime-status] [44248] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:25:31.607Z] [runtime-status] [44248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:25:31.646Z] [runtime-status] [44248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:25:31.650Z] [runtime-status] [44248] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:25:32.417Z] [runtime-status] [44248] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:25:32.419Z] [runtime-status] [44248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:25:32.424Z] [runtime-status] [44248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:25:32.427Z] [runtime-status] [44248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:25:32.429Z] [runtime-status] [44248] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:25:34.184Z] [runtime-status] [44248] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:25:49.667Z] [worker-~diagnostic~-850b5c4c-b98f-4e64-b363-53f02d5c6f58]: IDLE 
+[debug] [2020-08-04T09:27:41.733Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:27:41.733Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:27:41.734Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:27:41.734Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-08-04T09:27:41.734Z] [worker-pool] Cleaned up workers for app: 8 --> 0 
+[debug] [2020-08-04T09:27:41.746Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:27:41.746Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-08-04T09:27:41.746Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:41.747Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:41.747Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: BUSY 
+[debug] [2020-08-04T09:27:41.749Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-04T09:27:41.749Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:27:41.749Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:27:41.759Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:27:41.759Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-08-04T09:27:41.759Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:41.783Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64084 
+[debug] [2020-08-04T09:27:41.784Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: BUSY 
+[debug] [2020-08-04T09:27:41.785Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:27:41.785Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:27:41.786Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:27:41.912Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:27:41.912Z] [worker-pool] Adding worker with key app, total=3 
+[debug] [2020-08-04T09:27:41.912Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:41.913Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\47816 
+[debug] [2020-08-04T09:27:41.913Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: BUSY 
+[debug] [2020-08-04T09:27:41.914Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:27:41.914Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:27:41.914Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:27:41.927Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:27:41.927Z] [worker-pool] Adding worker with key app, total=4 
+[debug] [2020-08-04T09:27:41.928Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:41.928Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\53876 
+[debug] [2020-08-04T09:27:41.928Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: BUSY 
+[debug] [2020-08-04T09:27:43.029Z] [runtime-status] [47816] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:27:43.031Z] [runtime-status] [64084] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:27:43.036Z] [runtime-status] [47816] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:27:43.037Z] [runtime-status] [64084] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:27:43.044Z] [runtime-status] [47816] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.046Z] [runtime-status] [64084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.050Z] [runtime-status] [64084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.052Z] [runtime-status] [47816] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.053Z] [runtime-status] [64084] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:27:43.055Z] [runtime-status] [47816] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:27:43.076Z] [runtime-status] [53876] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:27:43.078Z] [runtime-status] [53876] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:27:43.087Z] [runtime-status] [53876] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.090Z] [runtime-status] [53876] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.093Z] [runtime-status] [53876] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:27:43.122Z] [runtime-status] [64084] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:27:43.123Z] [runtime-status] [64084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.123Z] [runtime-status] [47816] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:27:43.124Z] [runtime-status] [47816] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.125Z] [runtime-status] [64084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.125Z] [runtime-status] [47816] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.126Z] [runtime-status] [64084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.126Z] [runtime-status] [64084] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:27:43.126Z] [runtime-status] [47816] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.126Z] [runtime-status] [47816] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:27:43.152Z] [runtime-status] [53876] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:27:43.153Z] [runtime-status] [53876] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.155Z] [runtime-status] [53876] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.156Z] [runtime-status] [53876] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.157Z] [runtime-status] [53876] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:27:43.162Z] [runtime-status] [16360] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:27:43.164Z] [runtime-status] [16360] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:27:43.173Z] [runtime-status] [16360] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.237Z] [runtime-status] [16360] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.238Z] [runtime-status] [16360] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:27:43.241Z] [runtime-status] [16360] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:27:43.243Z] [runtime-status] [16360] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.246Z] [runtime-status] [16360] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.249Z] [runtime-status] [16360] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:43.249Z] [runtime-status] [16360] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-04T09:27:43.324Z] [runtime-status] [64084] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:27:43.330Z] [runtime-status] [47816] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:27:43.372Z] [runtime-status] [53876] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:27:43.475Z] [runtime-status] [16360] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-04T09:27:46.005Z] [runtime-status] [64084] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.007Z] [runtime-status] [64084] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.008Z] [runtime-status] [64084] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.055Z] [runtime-status] [64084] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64084 
+[debug] [2020-08-04T09:27:46.078Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.170Z] [runtime-status] [47816] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.176Z] [runtime-status] [47816] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.177Z] [runtime-status] [47816] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.182Z] [runtime-status] [64084] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:27:46.188Z] [runtime-status] [47816] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\47816 
+[debug] [2020-08-04T09:27:46.195Z] [runtime-status] [64084] Ephemeral server survived. 
+[debug] [2020-08-04T09:27:46.200Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.237Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:27:46.237Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent/custom --> app
+[debug] [2020-08-04T09:27:46.285Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-04T09:27:46.285Z] [worker-pool] Adding worker with key app, total=5 
+[debug] [2020-08-04T09:27:46.285Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:46.285Z] [worker-app-2aefa480-cc97-4ed5-a7a8-444340fe3420]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\44516 
+[debug] [2020-08-04T09:27:46.286Z] [worker-app-2aefa480-cc97-4ed5-a7a8-444340fe3420]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:46.289Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: IDLE 
+[debug] [2020-08-04T09:27:46.290Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.333Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.337Z] [runtime-status] [53876] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.342Z] [runtime-status] [53876] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.343Z] [runtime-status] [53876] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.343Z] [runtime-status] [53876] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\53876 
+[debug] [2020-08-04T09:27:46.346Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.411Z] [runtime-status] [47816] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:27:46.411Z] [runtime-status] [47816] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:46.419Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.419Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:27:46.419Z] Accepted request POST /spring-internship/us-central1/app/api/pusercompleteprofile --> app
+[debug] [2020-08-04T09:27:46.419Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:46.420Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64084 
+[debug] [2020-08-04T09:27:46.420Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: BUSY 
+[debug] [2020-08-04T09:27:46.421Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: IDLE 
+[debug] [2020-08-04T09:27:46.421Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.421Z] [runtime-status] [64084] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.458Z] [runtime-status] [64084] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.458Z] [runtime-status] [64084] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.459Z] [runtime-status] [53876] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:27:46.459Z] [runtime-status] [64084] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64084 
+[debug] [2020-08-04T09:27:46.462Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.468Z] [runtime-status] [16360] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.494Z] [runtime-status] [16360] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.495Z] [runtime-status] [16360] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.503Z] [runtime-status] [53876] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:46.535Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: IDLE 
+[debug] [2020-08-04T09:27:46.536Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:27:46.537Z] [runtime-status] [16360] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:46.539Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.545Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-04T09:27:46.546Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.546Z] Accepted request POST /spring-internship/us-central1/app/api/profile/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-04T09:27:46.546Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:46.546Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\47816 
+[debug] [2020-08-04T09:27:46.547Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: BUSY 
+[debug] [2020-08-04T09:27:46.551Z] [runtime-status] [47816] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.570Z] [runtime-status] [47816] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.571Z] [runtime-status] [47816] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.571Z] [runtime-status] [47816] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\47816 
+[debug] [2020-08-04T09:27:46.574Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.647Z] [runtime-status] [16360] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-04T09:27:46.648Z] [runtime-status] [16360] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:46.655Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.655Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-08-04T09:27:46.655Z] Accepted request POST /spring-internship/us-central1/app/api/puserevent --> app
+[debug] [2020-08-04T09:27:46.656Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:46.656Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\53876 
+[debug] [2020-08-04T09:27:46.656Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: BUSY 
+[debug] [2020-08-04T09:27:46.657Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: IDLE 
+[debug] [2020-08-04T09:27:46.657Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-04T09:27:46.658Z] [runtime-status] [53876] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:46.659Z] [runtime-status] [53876] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:46.660Z] [runtime-status] [53876] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:46.663Z] [runtime-status] [53876] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\53876 
+[debug] [2020-08-04T09:27:46.666Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:46.817Z] [runtime-status] [64084] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:27:46.818Z] [runtime-status] [53876] Ephemeral server handling POST request 
+[debug] [2020-08-04T09:27:46.818Z] [runtime-status] [47816] Ephemeral server handling POST request 
+[info] >  in {"user":"in"}
+[info] >  working {"user":"working"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:27:46.852Z] [runtime-status] [64084] Ephemeral server survived. 
+[debug] [2020-08-04T09:27:46.853Z] [runtime-status] [53876] Ephemeral server survived. 
+[debug] [2020-08-04T09:27:47.283Z] [runtime-status] [47816] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:47.295Z] [worker-app-be058e8c-98d6-4716-aeb1-92c0489a4810]: IDLE 
+[debug] [2020-08-04T09:27:47.296Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-04T09:27:47.742Z] [runtime-status] [44516] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-04T09:27:47.742Z] [runtime-status] [44516] Disabled runtime features: undefined 
+[debug] [2020-08-04T09:27:47.753Z] [runtime-status] [44516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:47.758Z] [runtime-status] [44516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:47.766Z] [runtime-status] [44516] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-04T09:27:47.950Z] [runtime-status] [44516] Checked functions.config() {"config":{}} 
+[debug] [2020-08-04T09:27:47.952Z] [runtime-status] [44516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:47.955Z] [runtime-status] [44516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:47.957Z] [runtime-status] [44516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-04T09:27:47.958Z] [runtime-status] [44516] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[info] >  [2020-08-04T09:27:48.035Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /BOOKING_DETAILS to your security rules for better performance.  {"user":"[2020-08-04T09:27:48.035Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /BOOKING_DETAILS to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:48.167Z] [worker-app-64b4d342-6473-4e3c-8420-fcfeb4a9fa86]: IDLE 
+[debug] [2020-08-04T09:27:48.168Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-04T09:27:48.168Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-04T09:27:48.168Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-04T09:27:48.168Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:27:48.168Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:48.169Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:48.169Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: BUSY 
+[debug] [2020-08-04T09:27:48.169Z] [runtime-status] [16360] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:48.171Z] [runtime-status] [16360] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:48.171Z] [runtime-status] [16360] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:48.172Z] [runtime-status] [16360] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:48.173Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:48.176Z] [runtime-status] [16360] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:27:48.183Z] [runtime-status] [16360] Ephemeral server survived. 
+[debug] [2020-08-04T09:27:48.387Z] [runtime-status] [44516] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] >  true {"user":true}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-04T09:27:48.569Z] [worker-app-f92aa20f-b321-4eea-828f-ea62c433bab3]: IDLE 
+[debug] [2020-08-04T09:27:48.569Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:49.317Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: IDLE 
+[debug] [2020-08-04T09:27:49.317Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:27:49.758Z] [runtime-status] [44516] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:49.763Z] [runtime-status] [44516] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:49.763Z] [runtime-status] [44516] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:49.776Z] [runtime-status] [44516] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\44516 
+[debug] [2020-08-04T09:27:49.783Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:49.833Z] [runtime-status] [44516] Ephemeral server handling POST request 
+[info] >  in {"user":"in"}
+[info] >  uidAR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"uidAR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-04T09:27:49.841Z] [runtime-status] [44516] Ephemeral server survived. 
+[info] >  [2020-08-04T09:27:51.209Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding ".indexOn": "puid" at /CUSTOM_BOOKING to your security rules for better performance.  {"user":"[2020-08-04T09:27:51.209Z]  @firebase/database: FIREBASE WARNING: Using an unspecified index. Your data will be downloaded and filtered on the client. Consider adding \".indexOn\": \"puid\" at /CUSTOM_BOOKING to your security rules for better performance. "}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:51.280Z] [worker-app-2aefa480-cc97-4ed5-a7a8-444340fe3420]: IDLE 
+[debug] [2020-08-04T09:27:51.281Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-04T09:27:51.285Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-04T09:27:51.285Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-04T09:27:51.285Z] Accepted request GET /spring-internship/us-central1/app/api/admin/iuserprofile --> app
+[debug] [2020-08-04T09:27:51.285Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-04T09:27:51.285Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:51.285Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: BUSY 
+[debug] [2020-08-04T09:27:51.286Z] [runtime-status] [16360] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-04T09:27:51.289Z] [runtime-status] [16360] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-04T09:27:51.289Z] [runtime-status] [16360] Running app in mode HTTPS 
+[debug] [2020-08-04T09:27:51.290Z] [runtime-status] [16360] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\16360 
+[debug] [2020-08-04T09:27:51.290Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-04T09:27:51.292Z] [runtime-status] [16360] Ephemeral server handling GET request 
+[debug] [2020-08-04T09:27:51.293Z] [runtime-status] [16360] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-04T09:27:51.530Z] [worker-app-dc1686e4-1216-422b-b74e-84882a4567dc]: IDLE 
+[debug] [2020-08-04T09:27:51.531Z] [work-queue] {"queueLength":0,"workRunningCount":0}

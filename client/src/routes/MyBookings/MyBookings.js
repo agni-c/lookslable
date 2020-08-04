@@ -23,6 +23,7 @@ import {
   getIuserProfile,
   iUserAdmin,
   landmarkInfo,
+  custompuserevent,
 } from '../../api';
 import firebase from 'firebase';
 import Card from '@material-ui/core/Card';
@@ -57,6 +58,7 @@ const useStyles = makeStyles({
 const MyBookings = () => {
   const classes = useStyles();
   const [state, setState] = useState({ data: [] });
+  const [customState, setCustomState] = useState({ data: [] });
   const [driveLink, setDriveLink] = useState('');
   // const [puid, setPuid] = useState('');
   // const [time, setTime] = useState('');
@@ -92,73 +94,119 @@ const MyBookings = () => {
       idata.map((i) => {
         console.log(i);
         event.map((e) => {
-          // console.log(i);
-
           if (e.iuid === i.uid) {
             e.iname = i.name;
           }
         });
       });
-
       setState({ data: event });
-
-      // state.data.map((d) => {
-      //   console.log(d);
-
-      //   idata.map((p) => {
-      //     if (d.puid === p.uid) {
-      //       d.pname = p.name;
-      //       console.log(d.pname);
-      //     }
-      //   });
-      // });
-      // console.log(idata);
+    })();
+    (async () => {
+      var uid = firebase.auth().currentUser.uid;
+      const customEvent = await custompuserevent(uid);
+      const idata = await iUserAdmin();
+      console.log(customEvent);
+      idata.map((i) => {
+        console.log(i);
+        customEvent.map((e) => {
+          if (e.iuid === i.uid) {
+            e.iname = i.name;
+          }
+        });
+      });
+      setCustomState({ data: customEvent });
     })();
   }, []);
-  if (state.data) {
+  if (state.data || customState.data) {
     return (
       <>
-        {state.data.map((d) => (
-          <>
-            {/* {const data = await getIuserProfile(d.puid);}       */}
+        <div>
+          {state.data.map((d) => (
+            <>
+              {/* {const data = await getIuserProfile(d.puid);}       */}
 
-            <Card style={{ margin: '5vh' }}>
-              <CardContent>
-                <Typography variant='h5' component='h2'>
-                  {d.landmark}
-                </Typography>
-                <Typography>Booking Date: {d.bookingdate}</Typography>
-                <Typography>Booking Time: {d.time}</Typography>
-                <Typography>Iuser: {d.iname}</Typography>
-                <Typography>Number of User: {d.numberOfUsers}</Typography>
-                <Typography>Price: {d.price}</Typography>
-                <Typography>Phone No: {d.phoneNo}</Typography>
-                <Typography>
-                  Drive Link: <a href={d.driveLink}>{d.driveLink} </a>
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <input
-                  type='text'
-                  onChange={(e) => {
-                    setDriveLink(e.target.value);
-                  }}
-                />
+              <Card style={{ margin: '5vh' }}>
+                <CardContent>
+                  <Typography variant='h5' component='h2'>
+                    {d.landmark}
+                  </Typography>
+                  <Typography>Booking Date: {d.bookingdate}</Typography>
+                  <Typography>Booking Time: {d.time}</Typography>
+                  <Typography>Iuser: {d.iname}</Typography>
+                  <Typography>Number of User: {d.numberOfUsers}</Typography>
+                  <Typography>Price: {d.price}</Typography>
+                  <Typography>Phone No: {d.phoneNo}</Typography>
+                  <Typography>
+                    Drive Link: <a href={d.driveLink}>{d.driveLink} </a>
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <input
+                    type='text'
+                    onChange={(e) => {
+                      setDriveLink(e.target.value);
+                    }}
+                  />
 
-                <Button
-                  size='small'
-                  onClick={() =>
-                    handleDriveLink(d.iuid, d.puid, d.time, d.bookingdate)
-                  }
-                  style={{ width: '200px' }}
-                >
-                  Upload Drive Link
-                </Button>
-                {/* <Button size='small'>Give Rating</Button> */}
-              </CardActions>
-            </Card>
-          </>
-        ))}
+                  <Button
+                    size='small'
+                    onClick={() =>
+                      handleDriveLink(d.iuid, d.puid, d.time, d.bookingdate)
+                    }
+                    style={{ width: '200px' }}
+                  >
+                    Upload Drive Link
+                  </Button>
+                  {/* <Button size='small'>Give Rating</Button> */}
+                </CardActions>
+              </Card>
+            </>
+          ))}
+        </div>
+        <div>
+          {customState.data.map((d) => (
+            <>
+              {/* {const data = await getIuserProfile(d.puid);}       */}
+
+              <Card style={{ margin: '5vh' }}>
+                <CardContent>
+                  <Typography variant='h5' component='h2'>
+                    {d.landmark}
+                  </Typography>
+                  <Typography>Booking Date: {d.date}</Typography>
+                  <Typography>Iuser: {d.iname}</Typography>
+
+                  <Typography>
+                    Plan: {d.key1} {d.key2}
+                  </Typography>
+                  <Typography>Phone No: {d.PhoneNo}</Typography>
+                  <Typography>
+                    Drive Link: <a href={d.driveLink}>{d.driveLink} </a>
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <input
+                    type='text'
+                    onChange={(e) => {
+                      setDriveLink(e.target.value);
+                    }}
+                  />
+
+                  <Button
+                    size='small'
+                    onClick={() =>
+                      handleDriveLink(d.iuid, d.puid, d.time, d.bookingdate)
+                    }
+                    style={{ width: '200px' }}
+                  >
+                    Upload Drive Link
+                  </Button>
+                  {/* <Button size='small'>Give Rating</Button> */}
+                </CardActions>
+              </Card>
+            </>
+          ))}
+        </div>
       </>
     );
   } else {
