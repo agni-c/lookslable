@@ -32,7 +32,8 @@
 		"react-swipeable-views": "^0.13.9",
 		"react-toastify": "^5.5.0",
 		"react-webcam": "^5.0.1",
-		"shortid": "^2.2.15"
+		"shortid": "^2.2.15",
+		"validator": "^13.1.1"
 	},
 	"scripts": {
 		"functions": "firebase serve --only functions",
