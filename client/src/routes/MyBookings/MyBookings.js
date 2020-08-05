@@ -24,6 +24,7 @@ import {
   iUserAdmin,
   landmarkInfo,
   custompuserevent,
+  uploadDriveLinkCustombooking,
 } from '../../api';
 import firebase from 'firebase';
 import Card from '@material-ui/core/Card';
@@ -82,6 +83,11 @@ const MyBookings = () => {
     (async () => {
       console.log(iuid + ' ' + puid + ' ' + time + ' ' + bookingdate);
       await uploadDriveLink(iuid, puid, time, bookingdate, driveLink);
+    })();
+  };
+  const handleCustomDriveLink = (iuid, puid, date) => {
+    (async () => {
+      await uploadDriveLinkCustombooking(iuid, puid, date, driveLink);
     })();
   };
 
@@ -170,9 +176,7 @@ const MyBookings = () => {
 
               <Card style={{ margin: '5vh' }}>
                 <CardContent>
-                  <Typography variant='h5' component='h2'>
-                    {d.landmark}
-                  </Typography>
+                  <Typography>Address: {d.address}</Typography>
                   <Typography>Booking Date: {d.date}</Typography>
                   <Typography>Iuser: {d.iname}</Typography>
 
@@ -195,7 +199,7 @@ const MyBookings = () => {
                   <Button
                     size='small'
                     onClick={() =>
-                      handleDriveLink(d.iuid, d.puid, d.time, d.bookingdate)
+                      handleCustomDriveLink(d.iuid, d.puid, d.date)
                     }
                     style={{ width: '200px' }}
                   >

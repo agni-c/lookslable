@@ -298,6 +298,14 @@ export async function uploadLinkIuser(bookingdate, time, iuid, link) {
     link: link,
   });
 }
+export async function uploadLinkIuserCustom(date, puid, iuid, link) {
+  await axios.put(`/iuseruploadlink/custom`, {
+    date: date,
+    iuid: iuid,
+    puid: puid,
+    link: link,
+  });
+}
 export async function uploadRating(iuid, puid, time, bookingdate, rating) {
   await axios.post(`/rating`, {
     bookingdate: bookingdate,
@@ -308,7 +316,7 @@ export async function uploadRating(iuid, puid, time, bookingdate, rating) {
   });
 }
 export async function uploadRatingCustomBooking(iuid, puid, date, rating) {
-  await axios.post(`/rating`, {
+  await axios.post(`/rating/custom`, {
     date: date,
     iuid: iuid,
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { customBooking, mylocation } from '../../../api';
 import { Tabs, Tab, Badge } from 'react-bootstrap';
+import validator from 'validator';
 import { Form, Button, Col } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -92,6 +93,11 @@ class Forms extends React.Component {
     );
   }
 
+  validatePhoneNumber = (number) => {
+    const isValidPhoneNumber = validator.isMobilePhone(number);
+    return isValidPhoneNumber;
+  };
+
   detailsHandler = (value) => {
     this.setState({
       details: value,
@@ -115,20 +121,17 @@ class Forms extends React.Component {
       date: value,
     });
   };
-  // timeHandler = (value) => {
-  //   this.setState({
-  //     time: value,
-  //   });
-  // };
 
   handleSubmit = () => {
     if (
-      this.state.address === '' &&
-      this.state.phoneNo === '' &&
-      this.state.date === '' &&
+      this.state.address === '' ||
+      this.state.phoneNo === '' ||
+      this.state.date === '' ||
       this.state.details === ''
     ) {
       alert('Enter All Credentials');
+    } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
+      alert('Enter Valid Phone Number');
     } else {
       (async () => {
         const response = await customBooking(
@@ -156,38 +159,6 @@ class Forms extends React.Component {
         }
       })();
     }
-
-    // axios
-    //   .post(
-    //     `http://localhost:5000/spring-internship/us-central1/app/api/uploaddetails`,
-    //     {
-    //       address: this.state.address,
-    //       phoneno: this.state.phoneNo,
-    //       date: this.state.date,
-    //       lat: this.state.location.lat,
-    //       lon: this.state.location.lon,
-    //       order: this.state.key1,
-    //       price: this.state.key2,
-    //       details: this.state.details,
-    //     }
-    //   )
-    //   .then((res) => {
-    //     console.log(res.data);
-    //     console.log("Done!");
-
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     toast.error("Something Went wrong!", {
-    //       position: "top-right",
-    //       autoClose: 5000,
-    //       hideProgressBar: false,
-    //       closeOnClick: true,
-    //       pauseOnHover: true,
-    //       draggable: true,
-    //       progress: undefined,
-    //     });
-    //   });
   };
   render() {
     return (
