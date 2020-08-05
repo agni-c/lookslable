@@ -1,7 +1,7 @@
 import React from 'react';
 import { customBooking, mylocation } from '../../../api';
 import { Tabs, Tab, Badge } from 'react-bootstrap';
-import validator from 'validator';
+// import validator from 'validator';
 import { Form, Button, Col } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -94,8 +94,15 @@ class Forms extends React.Component {
   }
 
   validatePhoneNumber = (number) => {
-    const isValidPhoneNumber = validator.isMobilePhone(number);
-    return isValidPhoneNumber;
+    console.log(number);
+    const local = number.slice(0, 2);
+    console.log(local);
+    if (number.length === 12 && local === '91') {
+      return true;
+    } else if (number.length === 10) {
+      return true;
+    }
+    return false;
   };
 
   detailsHandler = (value) => {

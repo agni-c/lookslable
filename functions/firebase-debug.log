@@ -13311,3 +13311,1458 @@ SyntaxError: Invalid or unexpected token
 [debug] [2020-08-05T09:00:33.530Z] [worker-app-0b336112-05c9-469f-84f8-733bbe057bbc]: IDLE 
 [debug] [2020-08-05T09:00:33.530Z] [work-queue] {"queueLength":0,"workRunningCount":0}
 [info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T09:07:21.937Z] [worker-app-4d57b6b1-c159-4578-b0c9-27f460f3df92]: exited 
+[debug] [2020-08-05T09:07:22.345Z] [worker-app-4d57b6b1-c159-4578-b0c9-27f460f3df92]: FINISHED 
+[debug] [2020-08-05T09:07:26.277Z] [worker-app-0785b552-00b4-48aa-8fe8-8592e0a7e1b6]: exited 
+[debug] [2020-08-05T09:07:26.277Z] [worker-app-0785b552-00b4-48aa-8fe8-8592e0a7e1b6]: FINISHED 
+[debug] [2020-08-05T09:07:29.183Z] [worker-app-317d791f-4fbf-43c8-8f50-c9c77120a30b]: exited 
+[debug] [2020-08-05T09:07:29.183Z] [worker-app-317d791f-4fbf-43c8-8f50-c9c77120a30b]: FINISHED 
+[debug] [2020-08-05T09:07:30.527Z] [worker-app-6db1c780-e7e0-4d6c-8c3b-a2cac1da7c3b]: exited 
+[debug] [2020-08-05T09:07:30.527Z] [worker-app-6db1c780-e7e0-4d6c-8c3b-a2cac1da7c3b]: FINISHED 
+[debug] [2020-08-05T09:07:32.910Z] [worker-app-0b336112-05c9-469f-84f8-733bbe057bbc]: exited 
+[debug] [2020-08-05T09:07:32.910Z] [worker-app-0b336112-05c9-469f-84f8-733bbe057bbc]: FINISHED 
+[debug] [2020-08-05T09:07:34.343Z] [worker-app-0e5907cd-0e79-4920-9af1-417d551a09c0]: exited 
+[debug] [2020-08-05T09:07:34.344Z] [worker-app-0e5907cd-0e79-4920-9af1-417d551a09c0]: FINISHED 
+[debug] [2020-08-05T09:07:35.382Z] [worker-app-f3556b41-f883-48df-bc25-9dafccca8bae]: exited 
+[debug] [2020-08-05T09:07:35.382Z] [worker-app-f3556b41-f883-48df-bc25-9dafccca8bae]: FINISHED 
+[debug] [2020-08-05T09:07:38.053Z] [worker-~diagnostic~-19882aae-1116-4b4c-8623-a25f697ef4e8]: exited 
+[debug] [2020-08-05T09:07:38.189Z] [worker-~diagnostic~-19882aae-1116-4b4c-8623-a25f697ef4e8]: FINISHED 
+[debug] [2020-08-05T17:39:30.791Z] ----------------------------------------------------------------------
+[debug] [2020-08-05T17:39:30.800Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nikunj Savaliya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-08-05T17:39:30.800Z] CLI Version:   8.0.2
+[debug] [2020-08-05T17:39:30.800Z] Platform:      win32
+[debug] [2020-08-05T17:39:30.800Z] Node Version:  v12.16.2
+[debug] [2020-08-05T17:39:30.988Z] Time:          Wed Aug 05 2020 23:09:30 GMT+0530 (India Standard Time)
+[debug] [2020-08-05T17:39:30.989Z] ----------------------------------------------------------------------
+[debug] [2020-08-05T17:39:30.989Z] 
+[debug] [2020-08-05T17:39:31.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-05T17:39:31.087Z] > authorizing via signed-in user
+[debug] [2020-08-05T17:39:31.088Z] [iam] checking project spring-internship for permissions ["firebase.projects.get"]
+[debug] [2020-08-05T17:39:31.091Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-08-05T17:39:31.092Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-08-05T17:39:31.581Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 05 Aug 2020 17:36:29 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-05T17:39:31.722Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-internship:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-08-05T17:39:33.343Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 05 Aug 2020 17:36:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1387","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-05T17:39:33.345Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-internship  
+ 
+[debug] [2020-08-05T17:39:33.930Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 05 Aug 2020 17:36:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions" for Cloud Functions...
+[debug] [2020-08-05T17:39:36.859Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-08-05T17:39:36.860Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-08-05T17:39:36.860Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-08-05T17:39:36.860Z] [worker-~diagnostic~-b057b170-5794-4c55-97a6-8a83dc97000d]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\17476 
+[debug] [2020-08-05T17:39:36.860Z] [worker-~diagnostic~-b057b170-5794-4c55-97a6-8a83dc97000d]: BUSY 
+[debug] [2020-08-05T17:39:44.705Z] [runtime-status] [17476] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-05T17:39:44.706Z] [runtime-status] [17476] Disabled runtime features: undefined 
+[debug] [2020-08-05T17:39:44.878Z] [runtime-status] [17476] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:39:45.118Z] [runtime-status] [17476] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:39:45.120Z] [runtime-status] [17476] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-05T17:39:46.677Z] [runtime-status] [17476] Checked functions.config() {"config":{}} 
+[debug] [2020-08-05T17:39:46.678Z] [runtime-status] [17476] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:39:46.679Z] [runtime-status] [17476] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:39:46.680Z] [runtime-status] [17476] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:39:46.680Z] [runtime-status] [17476] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-05T17:39:48.987Z] [runtime-status] [17476] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/spring-internship/us-central1/app).
+[debug] [2020-08-05T17:40:27.796Z] [worker-~diagnostic~-b057b170-5794-4c55-97a6-8a83dc97000d]: IDLE 
+[debug] [2020-08-05T17:53:54.524Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T17:53:54.524Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T17:53:54.525Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T17:53:54.621Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-05T17:53:54.621Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-08-05T17:53:54.621Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:53:54.621Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:53:54.621Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T17:53:54.622Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T17:53:54.622Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T17:53:54.623Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T17:53:54.627Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-05T17:53:54.627Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-08-05T17:53:54.627Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:53:54.627Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:53:54.627Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T17:53:54.628Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T17:53:54.628Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T17:53:54.629Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T17:53:54.649Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-05T17:53:54.649Z] [worker-pool] Adding worker with key app, total=3 
+[debug] [2020-08-05T17:53:54.649Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:53:54.649Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:53:54.649Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T17:53:59.215Z] [runtime-status] [63268] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-05T17:53:59.215Z] [runtime-status] [64248] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-05T17:53:59.216Z] [runtime-status] [58488] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-05T17:53:59.227Z] [runtime-status] [58488] Disabled runtime features: undefined 
+[debug] [2020-08-05T17:53:59.227Z] [runtime-status] [64248] Disabled runtime features: undefined 
+[debug] [2020-08-05T17:53:59.233Z] [runtime-status] [63268] Disabled runtime features: undefined 
+[debug] [2020-08-05T17:53:59.298Z] [runtime-status] [63268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.303Z] [runtime-status] [64248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.303Z] [runtime-status] [58488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.312Z] [runtime-status] [64248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.312Z] [runtime-status] [58488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.314Z] [runtime-status] [63268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.314Z] [runtime-status] [64248] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-05T17:53:59.314Z] [runtime-status] [58488] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-05T17:53:59.316Z] [runtime-status] [63268] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-05T17:53:59.939Z] [runtime-status] [64248] Checked functions.config() {"config":{}} 
+[debug] [2020-08-05T17:53:59.940Z] [runtime-status] [58488] Checked functions.config() {"config":{}} 
+[debug] [2020-08-05T17:53:59.941Z] [runtime-status] [63268] Checked functions.config() {"config":{}} 
+[debug] [2020-08-05T17:53:59.942Z] [runtime-status] [64248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.942Z] [runtime-status] [58488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.943Z] [runtime-status] [63268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.945Z] [runtime-status] [64248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.945Z] [runtime-status] [58488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.945Z] [runtime-status] [63268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.946Z] [runtime-status] [64248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.946Z] [runtime-status] [58488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.946Z] [runtime-status] [58488] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-05T17:53:59.947Z] [runtime-status] [63268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T17:53:59.947Z] [runtime-status] [63268] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-05T17:53:59.948Z] [runtime-status] [64248] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-05T17:54:00.996Z] [runtime-status] [63268] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[debug] [2020-08-05T17:54:00.996Z] [runtime-status] [64248] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-05T17:54:01.019Z] [runtime-status] [58488] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-05T17:54:05.793Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[debug] [2020-08-05T17:54:05.794Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:54:05.795Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:54:05.795Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T17:54:05.795Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:54:05.797Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:54:05.797Z] [runtime-status] [63268] Running app in mode HTTPS 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:54:05.806Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:54:05.806Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T17:54:05.806Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:54:05.806Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:54:05.806Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:54:05.861Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:54:05.874Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:54:05.875Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:54:05.963Z] [runtime-status] [58488] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T17:54:05.970Z] [runtime-status] [64248] Ephemeral server handling GET request 
+[debug] [2020-08-05T17:54:05.970Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T17:54:05.972Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:54:05.974Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T17:54:05.974Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T17:54:05.975Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T17:54:05.975Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T17:54:05.975Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T17:54:05.975Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:54:05.975Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:54:05.975Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[info] >  in {"user":"in"}
+[debug] [2020-08-05T17:54:06.045Z] [runtime-status] [63268] Ephemeral server survived. 
+[debug] [2020-08-05T17:54:06.045Z] [runtime-status] [64248] Ephemeral server survived. 
+[debug] [2020-08-05T17:54:06.045Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:54:06.053Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:54:06.053Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T17:54:06.053Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:54:06.054Z] [functions] Runtime ready! Sending request! 
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T17:54:06.288Z] [runtime-status] [58488] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T17:54:06.382Z] [runtime-status] [58488] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:54:06.433Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T17:54:06.433Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:54:07.305Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T17:54:07.306Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:54:07.463Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T17:54:07.463Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T17:57:23.720Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T17:57:23.722Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T17:57:23.722Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T17:57:23.722Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:57:23.723Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:57:23.723Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T17:57:23.725Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:57:23.727Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:57:23.728Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T17:57:23.728Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:57:23.731Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:57:23.852Z] [runtime-status] [63268] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T17:57:23.858Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:57:23.949Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T17:57:23.949Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T17:57:23.950Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T17:57:23.951Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T17:57:23.952Z] Accepted request POST /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T17:57:23.952Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:57:23.952Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:57:23.952Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T17:57:23.954Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:57:23.963Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:57:23.963Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T17:57:23.963Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:57:23.964Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:57:23.988Z] [runtime-status] [63268] Ephemeral server handling POST request 
+[info] >  { {"user":"{"}
+[info] >    address: 'abc', {"user":"  address: 'abc',"}
+[info] >    PhoneNo: '123456', {"user":"  PhoneNo: '123456',"}
+[info] >    date: '2020-08-06T22:10', {"user":"  date: '2020-08-06T22:10',"}
+[info] >    lat: 21.624543499999998, {"user":"  lat: 21.624543499999998,"}
+[info] >    lon: 73.00449429999999, {"user":"  lon: 73.00449429999999,"}
+[info] >    key1: 'video', {"user":"  key1: 'video',"}
+[info] >    key2: 'basic', {"user":"  key2: 'basic',"}
+[info] >    details: 'mnb', {"user":"  details: 'mnb',"}
+[info] >    user: { {"user":"  user: {"}
+[info] >      uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2', {"user":"    uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2',"}
+[info] >      displayName: 'Nikunj Savaliya', {"user":"    displayName: 'Nikunj Savaliya',"}
+[info] >      photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro', {"user":"    photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro',"}
+[info] >      email: 'nikunjsavaliyan@gmail.com', {"user":"    email: 'nikunjsavaliyan@gmail.com',"}
+[info] >      emailVerified: true, {"user":"    emailVerified: true,"}
+[info] >      phoneNumber: null, {"user":"    phoneNumber: null,"}
+[info] >      isAnonymous: false, {"user":"    isAnonymous: false,"}
+[info] >      tenantId: null, {"user":"    tenantId: null,"}
+[info] >      providerData: [ [Object] ], {"user":"    providerData: [ [Object] ],"}
+[info] >      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"    apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >      appName: '[DEFAULT]', {"user":"    appName: '[DEFAULT]',"}
+[info] >      authDomain: 'spring-internship.firebaseapp.com', {"user":"    authDomain: 'spring-internship.firebaseapp.com',"}
+[info] >      stsTokenManager: { {"user":"    stsTokenManager: {"}
+[info] >        apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >        refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM', {"user":"      refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM',"}
+[info] >        accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w', {"user":"      accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w',"}
+[info] >        expirationTime: 1596653451000 {"user":"      expirationTime: 1596653451000"}
+[info] >      }, {"user":"    },"}
+[info] >      redirectEventId: null, {"user":"    redirectEventId: null,"}
+[info] >      lastLoginAt: '1596095967273', {"user":"    lastLoginAt: '1596095967273',"}
+[info] >      createdAt: '1593507184851', {"user":"    createdAt: '1593507184851',"}
+[info] >      multiFactor: { enrolledFactors: [] } {"user":"    multiFactor: { enrolledFactors: [] }"}
+[info] >    } {"user":"  }"}
+[info] >  } {"user":"}"}
+[debug] [2020-08-05T17:57:24.412Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  Reference { {"user":"Reference {"}
+[info] >    repo: Repo { {"user":"  repo: Repo {"}
+[info] >      repoInfo_: RepoInfo { {"user":"    repoInfo_: RepoInfo {"}
+[info] >        secure: true, {"user":"      secure: true,"}
+[info] >        namespace: 'spring-internship', {"user":"      namespace: 'spring-internship',"}
+[info] >        webSocketOnly: false, {"user":"      webSocketOnly: false,"}
+[info] >        persistenceKey: '', {"user":"      persistenceKey: '',"}
+[info] >        includeNamespaceInQueryParams: false, {"user":"      includeNamespaceInQueryParams: false,"}
+[info] >        host: 'spring-internship.firebaseio.com', {"user":"      host: 'spring-internship.firebaseio.com',"}
+[info] >        domain: 'firebaseio.com', {"user":"      domain: 'firebaseio.com',"}
+[info] >        internalHost: 's-usc1c-nss-237.firebaseio.com' {"user":"      internalHost: 's-usc1c-nss-237.firebaseio.com'"}
+[info] >      }, {"user":"    },"}
+[info] >      app: FirebaseAppImpl { {"user":"    app: FirebaseAppImpl {"}
+[info] >        firebase_: [Object], {"user":"      firebase_: [Object],"}
+[info] >        isDeleted_: false, {"user":"      isDeleted_: false,"}
+[info] >        name_: '[DEFAULT]', {"user":"      name_: '[DEFAULT]',"}
+[info] >        automaticDataCollectionEnabled_: false, {"user":"      automaticDataCollectionEnabled_: false,"}
+[info] >        options_: [Object], {"user":"      options_: [Object],"}
+[info] >        container: [ComponentContainer] {"user":"      container: [ComponentContainer]"}
+[info] >      }, {"user":"    },"}
+[info] >      dataUpdateCount: 1, {"user":"    dataUpdateCount: 1,"}
+[info] >      statsListener_: null, {"user":"    statsListener_: null,"}
+[info] >      eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 }, {"user":"    eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 },"}
+[info] >      nextWriteId_: 2, {"user":"    nextWriteId_: 2,"}
+[info] >      interceptServerDataCallback_: null, {"user":"    interceptServerDataCallback_: null,"}
+[info] >      onDisconnect_: SparseSnapshotTree { value: null, children: Map {} }, {"user":"    onDisconnect_: SparseSnapshotTree { value: null, children: Map {} },"}
+[info] >      persistentConnection_: PersistentConnection { {"user":"    persistentConnection_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 4, {"user":"      requestNumber_: 4,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      stats_: StatsCollection { counters_: [Object] }, {"user":"    stats_: StatsCollection { counters_: [Object] },"}
+[info] >      server_: PersistentConnection { {"user":"    server_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 4, {"user":"      requestNumber_: 4,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      statsReporter_: StatsReporter { {"user":"    statsReporter_: StatsReporter {"}
+[info] >        server_: [PersistentConnection], {"user":"      server_: [PersistentConnection],"}
+[info] >        statsToReport_: {}, {"user":"      statsToReport_: {},"}
+[info] >        statsListener_: [StatsListener] {"user":"      statsListener_: [StatsListener]"}
+[info] >      }, {"user":"    },"}
+[info] >      transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] }, {"user":"    transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] },"}
+[info] >      infoData_: SnapshotHolder { rootNode_: [ChildrenNode] }, {"user":"    infoData_: SnapshotHolder { rootNode_: [ChildrenNode] },"}
+[info] >      infoSyncTree_: SyncTree { {"user":"    infoSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      serverSyncTree_: SyncTree { {"user":"    serverSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      __database: Database { {"user":"    __database: Database {"}
+[info] >        repo_: [Circular], {"user":"      repo_: [Circular],"}
+[info] >        root_: [Reference], {"user":"      root_: [Reference],"}
+[info] >        INTERNAL: [DatabaseInternals] {"user":"      INTERNAL: [DatabaseInternals]"}
+[info] >      } {"user":"    }"}
+[info] >    }, {"user":"  },"}
+[info] >    path: Path { {"user":"  path: Path {"}
+[info] >      pieces_: [ 'CUSTOM_BOOKING', '-MDzkc1ZP5cZTTDazPnv' ], {"user":"    pieces_: [ 'CUSTOM_BOOKING', '-MDzkc1ZP5cZTTDazPnv' ],"}
+[info] >      pieceNum_: 0 {"user":"    pieceNum_: 0"}
+[info] >    }, {"user":"  },"}
+[info] >    queryParams_: QueryParams { {"user":"  queryParams_: QueryParams {"}
+[info] >      limitSet_: false, {"user":"    limitSet_: false,"}
+[info] >      startSet_: false, {"user":"    startSet_: false,"}
+[info] >      startNameSet_: false, {"user":"    startNameSet_: false,"}
+[info] >      endSet_: false, {"user":"    endSet_: false,"}
+[info] >      endNameSet_: false, {"user":"    endNameSet_: false,"}
+[info] >      limit_: 0, {"user":"    limit_: 0,"}
+[info] >      viewFrom_: '', {"user":"    viewFrom_: '',"}
+[info] >      indexStartValue_: null, {"user":"    indexStartValue_: null,"}
+[info] >      indexStartName_: '', {"user":"    indexStartName_: '',"}
+[info] >      indexEndValue_: null, {"user":"    indexEndValue_: null,"}
+[info] >      indexEndName_: '', {"user":"    indexEndName_: '',"}
+[info] >      index_: PriorityIndex {} {"user":"    index_: PriorityIndex {}"}
+[info] >    }, {"user":"  },"}
+[info] >    orderByCalled_: false, {"user":"  orderByCalled_: false,"}
+[info] >    then: [Function: bound then], {"user":"  then: [Function: bound then],"}
+[info] >    catch: [Function: bound then] {"user":"  catch: [Function: bound then]"}
+[info] >  } {"user":"}"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:57:24.784Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T17:57:24.784Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T17:58:36.337Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T17:58:36.337Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T17:58:36.337Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T17:58:36.338Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:58:36.338Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:58:36.338Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T17:58:36.339Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:58:36.341Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:58:36.341Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T17:58:36.341Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T17:58:36.342Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:58:36.345Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T17:58:36.360Z] [runtime-status] [63268] Ephemeral server survived. 
+[debug] [2020-08-05T17:58:36.517Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T17:58:36.518Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T17:58:36.518Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T17:58:36.519Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:58:36.519Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:58:36.519Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T17:58:36.521Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T17:58:36.521Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T17:58:36.521Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T17:58:36.521Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:58:36.521Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:58:36.521Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T17:58:36.522Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:58:36.523Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:58:36.523Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T17:58:36.523Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T17:58:36.523Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:58:36.524Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:58:36.525Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T17:58:36.525Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:58:36.526Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:58:36.528Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:58:36.532Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T17:58:36.533Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T17:58:36.533Z] [runtime-status] [64248] Ephemeral server survived. 
+[debug] [2020-08-05T17:58:36.535Z] [runtime-status] [58488] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:58:36.536Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T17:58:36.536Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T17:58:36.538Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T17:58:36.538Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T17:58:36.538Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T17:58:36.538Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T17:58:36.538Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:58:36.538Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T17:58:36.545Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T17:58:36.547Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T17:58:36.547Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T17:58:36.547Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T17:58:36.549Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T17:58:36.568Z] [runtime-status] [64248] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T17:58:36.571Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:58:36.579Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T17:58:36.579Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:58:36.627Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T17:58:36.627Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T17:58:37.216Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T17:58:37.216Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:15:29.398Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:15:29.400Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:15:29.400Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:15:29.400Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:15:29.400Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:15:29.400Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:15:29.402Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:15:29.404Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:15:29.404Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:15:29.529Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:15:30.086Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:15:32.291Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:15:32.291Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:15:32.291Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:15:32.291Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:15:32.291Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:15:32.291Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:15:32.344Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:15:32.344Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:15:32.344Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:15:32.344Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:15:32.344Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:15:32.344Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:15:32.345Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:15:32.345Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:15:32.347Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:15:32.348Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:15:32.348Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:15:32.349Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:15:32.350Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:15:32.407Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:15:32.407Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:15:32.408Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:15:32.408Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:15:32.452Z] [runtime-status] [58488] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:15:32.453Z] [runtime-status] [58488] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:15:32.455Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:15:32.456Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:15:32.458Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:15:32.458Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:15:32.458Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:15:32.458Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:15:32.458Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:15:32.458Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:15:32.463Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:15:32.464Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:15:32.464Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:15:32.465Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:15:32.466Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:15:32.634Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:15:32.673Z] [runtime-status] [64248] Ephemeral server handling GET request 
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:15:32.716Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:15:32.717Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:15:32.867Z] [runtime-status] [64248] Ephemeral server survived. 
+[debug] [2020-08-05T18:15:33.034Z] [runtime-status] [58488] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:15:33.249Z] [runtime-status] [58488] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:15:33.327Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:15:33.327Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:15:34.543Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:15:34.543Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:18:59.286Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:18:59.287Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:18:59.914Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:18:59.915Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:18:59.915Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:18:59.915Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:18:59.919Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:18:59.920Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:18:59.921Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:18:59.921Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:18:59.922Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:18:59.922Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:18:59.924Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:18:59.924Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:18:59.924Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:18:59.925Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:18:59.925Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:18:59.925Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:18:59.926Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:18:59.927Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:18:59.927Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:18:59.936Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:18:59.944Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[debug] [2020-08-05T18:19:00.577Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:19:00.578Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:19:00.578Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:19:00.578Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:19:00.610Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:19:00.611Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:19:00.613Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:19:00.613Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:19:00.613Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:19:00.614Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:19:00.701Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:19:00.709Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:19:00.716Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[info] >  in {"user":"in"}
+[debug] [2020-08-05T18:19:00.794Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:19:01.006Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:19:01.008Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:19:01.008Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:19:01.046Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:19:01.046Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:19:01.047Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:19:01.047Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:19:01.047Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:19:01.047Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:19:01.048Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:19:01.048Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:19:01.049Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:19:01.116Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:19:01.405Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:19:01.406Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:19:01.733Z] [runtime-status] [64248] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:19:01.818Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:19:02.020Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:19:02.020Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:19:02.205Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:19:02.206Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:19:02.583Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:19:02.584Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:21:43.083Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:21:43.083Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:21:43.083Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:21:43.083Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:21:43.083Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:21:43.083Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:21:43.084Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:21:43.085Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:21:43.085Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:21:43.086Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:21:43.121Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:21:43.132Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:21:43.134Z] [runtime-status] [63268] Ephemeral server survived. 
+[debug] [2020-08-05T18:21:43.211Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:21:43.211Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:21:43.211Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:21:43.211Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:21:43.212Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:21:43.212Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:21:43.212Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:21:43.213Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:21:43.213Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:21:43.213Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:21:43.213Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:21:43.213Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:21:43.213Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:21:43.214Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:21:43.215Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:21:43.215Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:21:43.217Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:21:43.217Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:21:43.217Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:21:43.217Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:21:43.219Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:21:43.235Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:21:43.237Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:21:43.237Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:21:43.359Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:21:43.382Z] [runtime-status] [64248] Ephemeral server survived. 
+[debug] [2020-08-05T18:21:43.383Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-08-05T18:21:43.383Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-08-05T18:21:43.383Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:21:44.856Z] [worker-pool] addWorker(app) 
+[debug] [2020-08-05T18:21:44.856Z] [worker-pool] Adding worker with key app, total=4 
+[debug] [2020-08-05T18:21:44.856Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:21:44.882Z] [worker-app-ec8a744d-4161-4e86-b283-9a95554fa87e]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\46668 
+[debug] [2020-08-05T18:21:44.882Z] [worker-app-ec8a744d-4161-4e86-b283-9a95554fa87e]: BUSY 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:21:45.279Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:21:45.280Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:21:45.295Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:21:45.296Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:21:45.297Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:21:45.297Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:22:02.451Z] [runtime-status] [46668] Functions runtime initialized. {"cwd":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions","node_version":"12.16.2"} 
+[debug] [2020-08-05T18:22:02.459Z] [runtime-status] [46668] Disabled runtime features: undefined 
+[debug] [2020-08-05T18:22:03.071Z] [runtime-status] [46668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T18:22:03.129Z] [runtime-status] [46668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T18:22:03.218Z] [runtime-status] [46668] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-08-05T18:22:04.751Z] [runtime-status] [46668] Checked functions.config() {"config":{}} 
+[debug] [2020-08-05T18:22:05.262Z] [runtime-status] [46668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T18:22:05.268Z] [runtime-status] [46668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-08-05T18:22:05.271Z] [runtime-status] [46668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-08-05T18:22:05.272Z] [runtime-status] [46668] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.11.0","resolution":"C:\\Users\\Nikunj Savaliya\\Desktop\\Lookslable 1\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-08-05T18:22:11.590Z] [runtime-status] [46668] initializeApp(DEFAULT) {"databaseURL":"https://spring-internship.firebaseio.com","storageBucket":"spring-internship.appspot.com","projectId":"spring-internship"} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-08-05T18:22:33.194Z] [runtime-status] [46668] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:22:33.198Z] [runtime-status] [46668] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:22:33.199Z] [runtime-status] [46668] Running app in mode HTTPS 
+[debug] [2020-08-05T18:22:33.225Z] [runtime-status] [46668] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\46668 
+[debug] [2020-08-05T18:22:33.250Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:22:33.756Z] [runtime-status] [46668] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:22:34.053Z] [runtime-status] [46668] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:22:34.060Z] [worker-app-ec8a744d-4161-4e86-b283-9a95554fa87e]: IDLE 
+[debug] [2020-08-05T18:22:34.061Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-05T18:29:32.646Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:29:32.704Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:29:32.704Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:29:32.704Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:29:32.704Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:29:32.704Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:29:32.705Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:29:32.705Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:29:32.705Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:29:32.705Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:29:32.705Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:29:32.706Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:29:32.706Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:29:32.750Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:29:32.751Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:29:32.751Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:29:32.751Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:29:32.752Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:29:32.752Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:29:32.752Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:29:32.753Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:29:32.753Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:29:32.790Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:29:32.791Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:29:32.791Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:29:32.791Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:29:32.977Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:29:32.979Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:29:32.980Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:29:32.980Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:29:32.980Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:29:32.981Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:29:32.983Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:29:32.986Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:29:32.986Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:29:32.992Z] [runtime-status] [64248] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:29:33.007Z] [runtime-status] [58488] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:29:33.009Z] [runtime-status] [58488] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:29:33.010Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:29:33.010Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:29:33.013Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:29:33.013Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:29:33.013Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:29:33.014Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:29:33.014Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:29:33.014Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:29:33.020Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:29:33.029Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:29:33.029Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:29:33.029Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:29:33.030Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:29:33.058Z] [runtime-status] [58488] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:29:33.060Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:29:33.108Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:29:33.164Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:29:33.164Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:29:33.386Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:29:33.387Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:29:34.644Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:29:34.645Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:32:58.956Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:32:58.956Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:32:58.956Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:32:58.957Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:32:58.957Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:32:58.957Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:32:58.957Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:32:58.958Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:32:58.959Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:32:59.016Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:32:59.236Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:33:00.204Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:33:00.204Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:33:00.204Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:33:00.204Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:33:00.204Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:33:00.204Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:33:00.205Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:33:00.205Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:33:00.352Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:33:00.352Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:33:00.352Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:33:00.352Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:33:00.352Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:33:00.352Z] [runtime-status] [63268] Ephemeral server survived. 
+[debug] [2020-08-05T18:33:00.353Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:33:00.354Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:33:00.354Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:33:00.354Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:33:00.355Z] [functions] Runtime ready! Sending request! 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:33:00.363Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:33:00.364Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:33:00.425Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:33:00.628Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:33:00.629Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:33:00.630Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:33:00.643Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:33:00.643Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:33:00.653Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:33:00.654Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:33:00.655Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:33:00.655Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:33:00.660Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:33:01.028Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:33:01.028Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:33:01.028Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:33:01.028Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:33:01.028Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:33:01.028Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:33:01.029Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:33:01.030Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:33:01.030Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:33:01.030Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:33:01.858Z] [functions] Runtime ready! Sending request! 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:33:01.953Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:33:01.953Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:33:03.480Z] [runtime-status] [63268] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:33:14.422Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:33:14.450Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:33:14.451Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[warn] !  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service.
+[debug] [2020-08-05T18:36:51.944Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:36:51.944Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:36:51.944Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T18:36:51.944Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:36:51.944Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:36:51.944Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:36:51.945Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:36:51.946Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:36:51.946Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:36:51.946Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:36:52.243Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:36:52.285Z] [runtime-status] [63268] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:36:52.286Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:36:52.287Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:36:52.287Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:36:52.404Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:36:52.404Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:36:52.404Z] Accepted request POST /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T18:36:52.404Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:36:52.404Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:36:52.404Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:36:52.405Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:36:52.406Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:36:52.406Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:36:52.406Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:36:52.407Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:36:52.410Z] [runtime-status] [63268] Ephemeral server handling POST request 
+[info] >  { {"user":"{"}
+[info] >    address: 'mansi', {"user":"  address: 'mansi',"}
+[info] >    PhoneNo: '917984256508', {"user":"  PhoneNo: '917984256508',"}
+[info] >    date: '2020-08-05T22:10', {"user":"  date: '2020-08-05T22:10',"}
+[info] >    lat: 21.6020221, {"user":"  lat: 21.6020221,"}
+[info] >    lon: 73.0230596, {"user":"  lon: 73.0230596,"}
+[info] >    key1: 'video', {"user":"  key1: 'video',"}
+[info] >    key2: 'basic', {"user":"  key2: 'basic',"}
+[info] >    details: 'abc', {"user":"  details: 'abc',"}
+[info] >    user: { {"user":"  user: {"}
+[info] >      uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2', {"user":"    uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2',"}
+[info] >      displayName: 'Nikunj Savaliya', {"user":"    displayName: 'Nikunj Savaliya',"}
+[info] >      photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro', {"user":"    photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro',"}
+[info] >      email: 'nikunjsavaliyan@gmail.com', {"user":"    email: 'nikunjsavaliyan@gmail.com',"}
+[info] >      emailVerified: true, {"user":"    emailVerified: true,"}
+[info] >      phoneNumber: null, {"user":"    phoneNumber: null,"}
+[info] >      isAnonymous: false, {"user":"    isAnonymous: false,"}
+[info] >      tenantId: null, {"user":"    tenantId: null,"}
+[info] >      providerData: [ [Object] ], {"user":"    providerData: [ [Object] ],"}
+[info] >      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"    apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >      appName: '[DEFAULT]', {"user":"    appName: '[DEFAULT]',"}
+[info] >      authDomain: 'spring-internship.firebaseapp.com', {"user":"    authDomain: 'spring-internship.firebaseapp.com',"}
+[info] >      stsTokenManager: { {"user":"    stsTokenManager: {"}
+[info] >        apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >        refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM', {"user":"      refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM',"}
+[info] >        accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w', {"user":"      accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w',"}
+[info] >        expirationTime: 1596653451000 {"user":"      expirationTime: 1596653451000"}
+[info] >      }, {"user":"    },"}
+[info] >      redirectEventId: null, {"user":"    redirectEventId: null,"}
+[info] >      lastLoginAt: '1596095967273', {"user":"    lastLoginAt: '1596095967273',"}
+[info] >      createdAt: '1593507184851', {"user":"    createdAt: '1593507184851',"}
+[info] >      multiFactor: { enrolledFactors: [] } {"user":"    multiFactor: { enrolledFactors: [] }"}
+[info] >    } {"user":"  }"}
+[info] >  } {"user":"}"}
+[debug] [2020-08-05T18:36:52.455Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  Reference { {"user":"Reference {"}
+[info] >    repo: Repo { {"user":"  repo: Repo {"}
+[info] >      repoInfo_: RepoInfo { {"user":"    repoInfo_: RepoInfo {"}
+[info] >        secure: true, {"user":"      secure: true,"}
+[info] >        namespace: 'spring-internship', {"user":"      namespace: 'spring-internship',"}
+[info] >        webSocketOnly: false, {"user":"      webSocketOnly: false,"}
+[info] >        persistenceKey: '', {"user":"      persistenceKey: '',"}
+[info] >        includeNamespaceInQueryParams: false, {"user":"      includeNamespaceInQueryParams: false,"}
+[info] >        host: 'spring-internship.firebaseio.com', {"user":"      host: 'spring-internship.firebaseio.com',"}
+[info] >        domain: 'firebaseio.com', {"user":"      domain: 'firebaseio.com',"}
+[info] >        internalHost: 's-usc1c-nss-237.firebaseio.com' {"user":"      internalHost: 's-usc1c-nss-237.firebaseio.com'"}
+[info] >      }, {"user":"    },"}
+[info] >      app: FirebaseAppImpl { {"user":"    app: FirebaseAppImpl {"}
+[info] >        firebase_: [Object], {"user":"      firebase_: [Object],"}
+[info] >        isDeleted_: false, {"user":"      isDeleted_: false,"}
+[info] >        name_: '[DEFAULT]', {"user":"      name_: '[DEFAULT]',"}
+[info] >        automaticDataCollectionEnabled_: false, {"user":"      automaticDataCollectionEnabled_: false,"}
+[info] >        options_: [Object], {"user":"      options_: [Object],"}
+[info] >        container: [ComponentContainer] {"user":"      container: [ComponentContainer]"}
+[info] >      }, {"user":"    },"}
+[info] >      dataUpdateCount: 7, {"user":"    dataUpdateCount: 7,"}
+[info] >      statsListener_: null, {"user":"    statsListener_: null,"}
+[info] >      eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 }, {"user":"    eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 },"}
+[info] >      nextWriteId_: 3, {"user":"    nextWriteId_: 3,"}
+[info] >      interceptServerDataCallback_: null, {"user":"    interceptServerDataCallback_: null,"}
+[info] >      onDisconnect_: SparseSnapshotTree { value: null, children: Map {} }, {"user":"    onDisconnect_: SparseSnapshotTree { value: null, children: Map {} },"}
+[info] >      persistentConnection_: PersistentConnection { {"user":"    persistentConnection_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 17, {"user":"      requestNumber_: 17,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      stats_: StatsCollection { counters_: [Object] }, {"user":"    stats_: StatsCollection { counters_: [Object] },"}
+[info] >      server_: PersistentConnection { {"user":"    server_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 17, {"user":"      requestNumber_: 17,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      statsReporter_: StatsReporter { {"user":"    statsReporter_: StatsReporter {"}
+[info] >        server_: [PersistentConnection], {"user":"      server_: [PersistentConnection],"}
+[info] >        statsToReport_: {}, {"user":"      statsToReport_: {},"}
+[info] >        statsListener_: [StatsListener] {"user":"      statsListener_: [StatsListener]"}
+[info] >      }, {"user":"    },"}
+[info] >      transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] }, {"user":"    transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] },"}
+[info] >      infoData_: SnapshotHolder { rootNode_: [ChildrenNode] }, {"user":"    infoData_: SnapshotHolder { rootNode_: [ChildrenNode] },"}
+[info] >      infoSyncTree_: SyncTree { {"user":"    infoSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      serverSyncTree_: SyncTree { {"user":"    serverSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      __database: Database { {"user":"    __database: Database {"}
+[info] >        repo_: [Circular], {"user":"      repo_: [Circular],"}
+[info] >        root_: [Reference], {"user":"      root_: [Reference],"}
+[info] >        INTERNAL: [DatabaseInternals] {"user":"      INTERNAL: [DatabaseInternals]"}
+[info] >      } {"user":"    }"}
+[info] >    }, {"user":"  },"}
+[info] >    path: Path { {"user":"  path: Path {"}
+[info] >      pieces_: [ 'CUSTOM_BOOKING', '-MDzteG6NkMRRD70HI1W' ], {"user":"    pieces_: [ 'CUSTOM_BOOKING', '-MDzteG6NkMRRD70HI1W' ],"}
+[info] >      pieceNum_: 0 {"user":"    pieceNum_: 0"}
+[info] >    }, {"user":"  },"}
+[info] >    queryParams_: QueryParams { {"user":"  queryParams_: QueryParams {"}
+[info] >      limitSet_: false, {"user":"    limitSet_: false,"}
+[info] >      startSet_: false, {"user":"    startSet_: false,"}
+[info] >      startNameSet_: false, {"user":"    startNameSet_: false,"}
+[info] >      endSet_: false, {"user":"    endSet_: false,"}
+[info] >      endNameSet_: false, {"user":"    endNameSet_: false,"}
+[info] >      limit_: 0, {"user":"    limit_: 0,"}
+[info] >      viewFrom_: '', {"user":"    viewFrom_: '',"}
+[info] >      indexStartValue_: null, {"user":"    indexStartValue_: null,"}
+[info] >      indexStartName_: '', {"user":"    indexStartName_: '',"}
+[info] >      indexEndValue_: null, {"user":"    indexEndValue_: null,"}
+[info] >      indexEndName_: '', {"user":"    indexEndName_: '',"}
+[info] >      index_: PriorityIndex {} {"user":"    index_: PriorityIndex {}"}
+[info] >    }, {"user":"  },"}
+[info] >    orderByCalled_: false, {"user":"  orderByCalled_: false,"}
+[info] >    then: [Function: bound then], {"user":"  then: [Function: bound then],"}
+[info] >    catch: [Function: bound then] {"user":"  catch: [Function: bound then]"}
+[info] >  } {"user":"}"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:36:52.836Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:36:52.837Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:38:07.536Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:38:07.537Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:38:07.537Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T18:38:07.538Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:38:07.538Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:38:07.538Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:38:07.540Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:38:07.543Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:38:07.544Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:38:07.546Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:38:07.549Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:38:07.692Z] [runtime-status] [63268] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:38:07.693Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:38:07.695Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:38:07.696Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:38:07.699Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:38:08.435Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:38:08.435Z] Accepted request POST /spring-internship/us-central1/app/api/custombooking --> app
+[debug] [2020-08-05T18:38:08.435Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:38:08.435Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:38:08.435Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:38:08.436Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:38:08.437Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:38:08.437Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:38:08.437Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:38:08.438Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:38:08.441Z] [runtime-status] [63268] Ephemeral server handling POST request 
+[info] >  { {"user":"{"}
+[info] >    address: 'mansi', {"user":"  address: 'mansi',"}
+[info] >    PhoneNo: '917984256508', {"user":"  PhoneNo: '917984256508',"}
+[info] >    date: '2020-08-05T22:10', {"user":"  date: '2020-08-05T22:10',"}
+[info] >    lat: 21.6020221, {"user":"  lat: 21.6020221,"}
+[info] >    lon: 73.0230596, {"user":"  lon: 73.0230596,"}
+[info] >    key1: 'video', {"user":"  key1: 'video',"}
+[info] >    key2: 'basic', {"user":"  key2: 'basic',"}
+[info] >    details: 'abc', {"user":"  details: 'abc',"}
+[info] >    user: { {"user":"  user: {"}
+[info] >      uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2', {"user":"    uid: 'AR4mnmPDQShex70wmLWIwgiSfxj2',"}
+[info] >      displayName: 'Nikunj Savaliya', {"user":"    displayName: 'Nikunj Savaliya',"}
+[info] >      photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro', {"user":"    photoURL: 'https://lh3.googleusercontent.com/a-/AOh14GjPaymbyaEEL4BOdH2-6rsMLPEk4195yxnHtIEtnro',"}
+[info] >      email: 'nikunjsavaliyan@gmail.com', {"user":"    email: 'nikunjsavaliyan@gmail.com',"}
+[info] >      emailVerified: true, {"user":"    emailVerified: true,"}
+[info] >      phoneNumber: null, {"user":"    phoneNumber: null,"}
+[info] >      isAnonymous: false, {"user":"    isAnonymous: false,"}
+[info] >      tenantId: null, {"user":"    tenantId: null,"}
+[info] >      providerData: [ [Object] ], {"user":"    providerData: [ [Object] ],"}
+[info] >      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"    apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >      appName: '[DEFAULT]', {"user":"    appName: '[DEFAULT]',"}
+[info] >      authDomain: 'spring-internship.firebaseapp.com', {"user":"    authDomain: 'spring-internship.firebaseapp.com',"}
+[info] >      stsTokenManager: { {"user":"    stsTokenManager: {"}
+[info] >        apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI', {"user":"      apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',"}
+[info] >        refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM', {"user":"      refreshToken: 'AE0u-NdlaG4yWcPb6kbGKtkgXg2ofpZ9zaFewubtWvT91QlGg-HuLtx5F4EUjhAY-dHodkTHBLPbmSiJPBhVE1GtDBoISbJe5DdkeHqm42hVKVvmmhePnF88mhL7dIZzqrm0weSnTnuDUV2vrlcuzFJ8g4LKTNBJdZ_4_P0P1yQ0DnFkq1GgQ4ZjWS4fG7SZHkAzsNl5vVMZFOwJtuvDh896saugr_NNnJbWO9zM7IwtXZ7HMGWKJWjo3mljB_OK7MrwYsJ3B2d4dUWGC09jNgZnnHONp4QisRVID28BwPfkMOKxNja9c6wi22B_AP-w6rG8JmBOGjljymlPleNXWSmhP9jNHCpTZMfj5cdmspNA8pLtGd6uYhC3Q8Z8wa7MPkpt3mgm3hkXdJq9ohAqio6xXsIiAnQQB43a24GU1OhpJSEuf9bm6EM',"}
+[info] >        accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w', {"user":"      accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImFmMDg2ZmE4Y2Q5NDFlMDY3ZTc3NzNkYmIwNDcxMjAxMTBlMDA1NGEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTmlrdW5qIFNhdmFsaXlhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqUGF5bWJ5YUVFTDRCT2RIMi02cnNNTFBFazQxOTV5eG5IdElFdG5ybyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9zcHJpbmctaW50ZXJuc2hpcCIsImF1ZCI6InNwcmluZy1pbnRlcm5zaGlwIiwiYXV0aF90aW1lIjoxNTk0NzA3MTcxLCJ1c2VyX2lkIjoiQVI0bW5tUERRU2hleDcwd21MV0l3Z2lTZnhqMiIsInN1YiI6IkFSNG1ubVBEUVNoZXg3MHdtTFdJd2dpU2Z4ajIiLCJpYXQiOjE1OTY2NDk4NTEsImV4cCI6MTU5NjY1MzQ1MSwiZW1haWwiOiJuaWt1bmpzYXZhbGl5YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTYyNTA2NTU2Mzc0MjcxMDkyNzQiXSwiZW1haWwiOlsibmlrdW5qc2F2YWxpeWFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.iAnW4YURTZ3AY-4Gu9o1JUNwAMUGXcNQ2KrzVxErnPJGGHY2YtSo9IGH00d6gsLX5rFCPKRyIMlCKsrzJXgmchl6RAkuB-wydEF39R00VhDJ9743g317zT0gM8GkCSbNw5UPch1Kr8qBUxspjRAK1ABzlA5H9T0HEAZumKmAY91lZaLktRyNyhe2nebOULjdv9PrgvWRiM8rg7uQajjiRdqpN3h447BbNsMSyH_6T30Rz1TX7sj99kUVXAVMBVlk3JjzAG3WZRO3TykoZz26b-Y__CExhQ0dESlTGjS_Kg01xQYW2RO5Ka8Jf6faE3ARb4TnLfwwvsWyMqxXCePi3w',"}
+[info] >        expirationTime: 1596653451000 {"user":"      expirationTime: 1596653451000"}
+[info] >      }, {"user":"    },"}
+[info] >      redirectEventId: null, {"user":"    redirectEventId: null,"}
+[info] >      lastLoginAt: '1596095967273', {"user":"    lastLoginAt: '1596095967273',"}
+[info] >      createdAt: '1593507184851', {"user":"    createdAt: '1593507184851',"}
+[info] >      multiFactor: { enrolledFactors: [] } {"user":"    multiFactor: { enrolledFactors: [] }"}
+[info] >    } {"user":"  }"}
+[info] >  } {"user":"}"}
+[debug] [2020-08-05T18:38:08.484Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  Reference { {"user":"Reference {"}
+[info] >    repo: Repo { {"user":"  repo: Repo {"}
+[info] >      repoInfo_: RepoInfo { {"user":"    repoInfo_: RepoInfo {"}
+[info] >        secure: true, {"user":"      secure: true,"}
+[info] >        namespace: 'spring-internship', {"user":"      namespace: 'spring-internship',"}
+[info] >        webSocketOnly: false, {"user":"      webSocketOnly: false,"}
+[info] >        persistenceKey: '', {"user":"      persistenceKey: '',"}
+[info] >        includeNamespaceInQueryParams: false, {"user":"      includeNamespaceInQueryParams: false,"}
+[info] >        host: 'spring-internship.firebaseio.com', {"user":"      host: 'spring-internship.firebaseio.com',"}
+[info] >        domain: 'firebaseio.com', {"user":"      domain: 'firebaseio.com',"}
+[info] >        internalHost: 's-usc1c-nss-237.firebaseio.com' {"user":"      internalHost: 's-usc1c-nss-237.firebaseio.com'"}
+[info] >      }, {"user":"    },"}
+[info] >      app: FirebaseAppImpl { {"user":"    app: FirebaseAppImpl {"}
+[info] >        firebase_: [Object], {"user":"      firebase_: [Object],"}
+[info] >        isDeleted_: false, {"user":"      isDeleted_: false,"}
+[info] >        name_: '[DEFAULT]', {"user":"      name_: '[DEFAULT]',"}
+[info] >        automaticDataCollectionEnabled_: false, {"user":"      automaticDataCollectionEnabled_: false,"}
+[info] >        options_: [Object], {"user":"      options_: [Object],"}
+[info] >        container: [ComponentContainer] {"user":"      container: [ComponentContainer]"}
+[info] >      }, {"user":"    },"}
+[info] >      dataUpdateCount: 7, {"user":"    dataUpdateCount: 7,"}
+[info] >      statsListener_: null, {"user":"    statsListener_: null,"}
+[info] >      eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 }, {"user":"    eventQueue_: EventQueue { eventLists_: [], recursionDepth_: 0 },"}
+[info] >      nextWriteId_: 4, {"user":"    nextWriteId_: 4,"}
+[info] >      interceptServerDataCallback_: null, {"user":"    interceptServerDataCallback_: null,"}
+[info] >      onDisconnect_: SparseSnapshotTree { value: null, children: Map {} }, {"user":"    onDisconnect_: SparseSnapshotTree { value: null, children: Map {} },"}
+[info] >      persistentConnection_: PersistentConnection { {"user":"    persistentConnection_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 18, {"user":"      requestNumber_: 18,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      stats_: StatsCollection { counters_: [Object] }, {"user":"    stats_: StatsCollection { counters_: [Object] },"}
+[info] >      server_: PersistentConnection { {"user":"    server_: PersistentConnection {"}
+[info] >        repoInfo_: [RepoInfo], {"user":"      repoInfo_: [RepoInfo],"}
+[info] >        onDataUpdate_: [Function: bound ], {"user":"      onDataUpdate_: [Function: bound ],"}
+[info] >        onConnectStatus_: [Function: bound ], {"user":"      onConnectStatus_: [Function: bound ],"}
+[info] >        onServerInfoUpdate_: [Function: bound ], {"user":"      onServerInfoUpdate_: [Function: bound ],"}
+[info] >        authTokenProvider_: [AuthTokenProvider], {"user":"      authTokenProvider_: [AuthTokenProvider],"}
+[info] >        authOverride_: undefined, {"user":"      authOverride_: undefined,"}
+[info] >        id: 0, {"user":"      id: 0,"}
+[info] >        log_: [Function], {"user":"      log_: [Function],"}
+[info] >        interruptReasons_: {}, {"user":"      interruptReasons_: {},"}
+[info] >        listens: Map {}, {"user":"      listens: Map {},"}
+[info] >        outstandingPuts_: [Array], {"user":"      outstandingPuts_: [Array],"}
+[info] >        outstandingPutCount_: 1, {"user":"      outstandingPutCount_: 1,"}
+[info] >        onDisconnectRequestQueue_: [], {"user":"      onDisconnectRequestQueue_: [],"}
+[info] >        connected_: true, {"user":"      connected_: true,"}
+[info] >        reconnectDelay_: 1000, {"user":"      reconnectDelay_: 1000,"}
+[info] >        maxReconnectDelay_: 300000, {"user":"      maxReconnectDelay_: 300000,"}
+[info] >        securityDebugCallback_: null, {"user":"      securityDebugCallback_: null,"}
+[info] >        lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f', {"user":"      lastSessionId: 'IgcAsRNRLagsySJoZWnnwuaAPdODHl7f',"}
+[info] >        establishConnectionTimer_: null, {"user":"      establishConnectionTimer_: null,"}
+[info] >        visible_: true, {"user":"      visible_: true,"}
+[info] >        requestCBHash_: [Object], {"user":"      requestCBHash_: [Object],"}
+[info] >        requestNumber_: 18, {"user":"      requestNumber_: 18,"}
+[info] >        realtime_: [Object], {"user":"      realtime_: [Object],"}
+[info] >        authToken_: null, {"user":"      authToken_: null,"}
+[info] >        forceTokenRefresh_: false, {"user":"      forceTokenRefresh_: false,"}
+[info] >        invalidAuthTokenCount_: 0, {"user":"      invalidAuthTokenCount_: 0,"}
+[info] >        firstConnection_: false, {"user":"      firstConnection_: false,"}
+[info] >        lastConnectionAttemptTime_: 1596650045816, {"user":"      lastConnectionAttemptTime_: 1596650045816,"}
+[info] >        lastConnectionEstablishedTime_: 1596650047180 {"user":"      lastConnectionEstablishedTime_: 1596650047180"}
+[info] >      }, {"user":"    },"}
+[info] >      statsReporter_: StatsReporter { {"user":"    statsReporter_: StatsReporter {"}
+[info] >        server_: [PersistentConnection], {"user":"      server_: [PersistentConnection],"}
+[info] >        statsToReport_: {}, {"user":"      statsToReport_: {},"}
+[info] >        statsListener_: [StatsListener] {"user":"      statsListener_: [StatsListener]"}
+[info] >      }, {"user":"    },"}
+[info] >      transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] }, {"user":"    transactionQueueTree_: Tree { name_: '', parent_: null, node_: [TreeNode] },"}
+[info] >      infoData_: SnapshotHolder { rootNode_: [ChildrenNode] }, {"user":"    infoData_: SnapshotHolder { rootNode_: [ChildrenNode] },"}
+[info] >      infoSyncTree_: SyncTree { {"user":"    infoSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      serverSyncTree_: SyncTree { {"user":"    serverSyncTree_: SyncTree {"}
+[info] >        listenProvider_: [Object], {"user":"      listenProvider_: [Object],"}
+[info] >        syncPointTree_: [ImmutableTree], {"user":"      syncPointTree_: [ImmutableTree],"}
+[info] >        pendingWriteTree_: [WriteTree], {"user":"      pendingWriteTree_: [WriteTree],"}
+[info] >        tagToQueryMap: Map {}, {"user":"      tagToQueryMap: Map {},"}
+[info] >        queryToTagMap: Map {} {"user":"      queryToTagMap: Map {}"}
+[info] >      }, {"user":"    },"}
+[info] >      __database: Database { {"user":"    __database: Database {"}
+[info] >        repo_: [Circular], {"user":"      repo_: [Circular],"}
+[info] >        root_: [Reference], {"user":"      root_: [Reference],"}
+[info] >        INTERNAL: [DatabaseInternals] {"user":"      INTERNAL: [DatabaseInternals]"}
+[info] >      } {"user":"    }"}
+[info] >    }, {"user":"  },"}
+[info] >    path: Path { {"user":"  path: Path {"}
+[info] >      pieces_: [ 'CUSTOM_BOOKING', '-MDztwp4utEfdEBcWwz0' ], {"user":"    pieces_: [ 'CUSTOM_BOOKING', '-MDztwp4utEfdEBcWwz0' ],"}
+[info] >      pieceNum_: 0 {"user":"    pieceNum_: 0"}
+[info] >    }, {"user":"  },"}
+[info] >    queryParams_: QueryParams { {"user":"  queryParams_: QueryParams {"}
+[info] >      limitSet_: false, {"user":"    limitSet_: false,"}
+[info] >      startSet_: false, {"user":"    startSet_: false,"}
+[info] >      startNameSet_: false, {"user":"    startNameSet_: false,"}
+[info] >      endSet_: false, {"user":"    endSet_: false,"}
+[info] >      endNameSet_: false, {"user":"    endNameSet_: false,"}
+[info] >      limit_: 0, {"user":"    limit_: 0,"}
+[info] >      viewFrom_: '', {"user":"    viewFrom_: '',"}
+[info] >      indexStartValue_: null, {"user":"    indexStartValue_: null,"}
+[info] >      indexStartName_: '', {"user":"    indexStartName_: '',"}
+[info] >      indexEndValue_: null, {"user":"    indexEndValue_: null,"}
+[info] >      indexEndName_: '', {"user":"    indexEndName_: '',"}
+[info] >      index_: PriorityIndex {} {"user":"    index_: PriorityIndex {}"}
+[info] >    }, {"user":"  },"}
+[info] >    orderByCalled_: false, {"user":"  orderByCalled_: false,"}
+[info] >    then: [Function: bound then], {"user":"  then: [Function: bound then],"}
+[info] >    catch: [Function: bound then] {"user":"  catch: [Function: bound then]"}
+[info] >  } {"user":"}"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:38:09.584Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:38:09.584Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:39:03.988Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:39:04.207Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:39:04.207Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:39:04.207Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:39:04.208Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:39:04.208Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:39:04.282Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:39:04.282Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:39:04.282Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:39:04.283Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:39:04.283Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:39:04.283Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:39:04.283Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:39:04.283Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:39:04.283Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:39:04.283Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:39:04.283Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:39:04.283Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:39:04.284Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:39:04.284Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:39:04.285Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:39:04.285Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:39:04.330Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:39:04.331Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:39:04.332Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:39:04.332Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:39:04.332Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:39:04.332Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:39:04.335Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:39:04.336Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:39:04.336Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:39:04.336Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:39:04.337Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:39:04.338Z] [runtime-status] [58488] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:39:04.338Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:39:04.339Z] [runtime-status] [64248] Ephemeral server handling GET request 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:39:04.340Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:39:04.340Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:39:04.342Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:39:04.342Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:39:04.342Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:39:04.343Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:39:04.343Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:39:04.343Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:39:04.350Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:39:04.351Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:39:04.352Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:39:04.352Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:39:04.353Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:39:04.357Z] [runtime-status] [58488] Ephemeral server handling POST request 
+[debug] [2020-08-05T18:39:04.381Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:39:04.384Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:39:04.504Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:39:04.504Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  in {"user":"in"}
+[info] >  undefined {"user":"undefined"}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:39:04.794Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:39:04.795Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:39:05.265Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:39:05.265Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-08-05T18:39:07.274Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:39:07.275Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:40:48.213Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:40:48.213Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:40:48.213Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:40:48.214Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:40:48.214Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:40:48.214Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:40:48.215Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:40:48.217Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:40:48.217Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:40:48.217Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:40:48.220Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:40:48.226Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[info] >  in {"user":"in"}
+[debug] [2020-08-05T18:40:48.238Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:40:48.324Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:40:48.324Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:40:48.324Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:40:48.325Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:40:48.325Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:40:48.325Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:40:48.327Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:40:48.327Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:40:48.327Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:40:48.327Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:40:48.328Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:40:48.328Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:40:48.328Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:40:48.329Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:40:48.330Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:40:48.330Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:40:48.331Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:40:48.332Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:40:48.332Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:40:48.333Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:40:48.335Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:40:48.340Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:40:48.341Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:40:48.343Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:40:48.343Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:40:48.358Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:40:48.358Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:40:48.358Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:40:48.358Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:40:48.359Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:40:48.359Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:40:48.410Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:40:48.415Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:40:48.416Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:40:48.417Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:40:48.417Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:40:48.419Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:40:48.425Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:40:48.425Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:40:48.428Z] [runtime-status] [64248] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:40:48.448Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:40:48.546Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:40:48.546Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:40:48.879Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:40:48.879Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:40:49.414Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:40:49.414Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-05T18:43:25.888Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-05T18:43:25.889Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-05T18:43:25.889Z] Accepted request GET /spring-internship/us-central1/app/api/mylocation --> app
+[debug] [2020-08-05T18:43:25.889Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:43:25.889Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:43:25.891Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: BUSY 
+[debug] [2020-08-05T18:43:25.892Z] [runtime-status] [63268] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:43:25.894Z] [runtime-status] [63268] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:43:25.894Z] [runtime-status] [63268] Running app in mode HTTPS 
+[debug] [2020-08-05T18:43:25.895Z] [runtime-status] [63268] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\63268 
+[debug] [2020-08-05T18:43:25.897Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:43:25.902Z] [runtime-status] [63268] Ephemeral server handling GET request 
+[info] >  in {"user":"in"}
+[debug] [2020-08-05T18:43:25.913Z] [runtime-status] [63268] Ephemeral server survived. 
+[info] >  undefined {"user":"undefined"}
+[debug] [2020-08-05T18:43:25.921Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-08-05T18:43:25.922Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:43:25.922Z] Accepted request GET /spring-internship/us-central1/app/api/upload/allUsergallery --> app
+[debug] [2020-08-05T18:43:25.922Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:43:25.922Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:43:25.922Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: BUSY 
+[debug] [2020-08-05T18:43:25.924Z] [runtime-status] [58488] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:43:25.931Z] [runtime-status] [58488] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:43:25.931Z] [runtime-status] [58488] Running app in mode HTTPS 
+[debug] [2020-08-05T18:43:25.935Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:43:25.935Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:43:25.936Z] Accepted request OPTIONS /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:43:25.936Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:43:25.936Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:43:25.936Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:43:25.937Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:43:25.940Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:43:26.007Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:43:26.008Z] [runtime-status] [58488] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\58488 
+[debug] [2020-08-05T18:43:26.010Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:43:26.011Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:43:26.012Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:43:26.018Z] [runtime-status] [58488] Ephemeral server handling GET request 
+[debug] [2020-08-05T18:43:26.019Z] [runtime-status] [64248] Ephemeral server handling OPTIONS request 
+[debug] [2020-08-05T18:43:26.020Z] [runtime-status] [58488] Ephemeral server survived. 
+[debug] [2020-08-05T18:43:26.021Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:43:26.023Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:43:26.023Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-08-05T18:43:26.026Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-08-05T18:43:26.027Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-08-05T18:43:26.027Z] Accepted request POST /spring-internship/us-central1/app/api/profile/iuser/AR4mnmPDQShex70wmLWIwgiSfxj2 --> app
+[debug] [2020-08-05T18:43:26.027Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-08-05T18:43:26.027Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: Assigning socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:43:26.027Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: BUSY 
+[debug] [2020-08-05T18:43:26.033Z] [runtime-status] [64248] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-08-05T18:43:26.044Z] [runtime-status] [64248] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-08-05T18:43:26.045Z] [runtime-status] [64248] Running app in mode HTTPS 
+[debug] [2020-08-05T18:43:26.046Z] [runtime-status] [64248] Attempting to listen to socketPath: \\?\pipe\C:\Users\Nikunj Savaliya\Desktop\Lookslable 1\functions\64248 
+[debug] [2020-08-05T18:43:26.048Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-08-05T18:43:26.053Z] [runtime-status] [64248] Ephemeral server handling POST request 
+[info] >  AR4mnmPDQShex70wmLWIwgiSfxj2 {"user":"AR4mnmPDQShex70wmLWIwgiSfxj2"}
+[debug] [2020-08-05T18:43:26.065Z] [runtime-status] [64248] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:43:26.095Z] [worker-app-4fd4f0a9-9413-4422-9ded-415b632c34eb]: IDLE 
+[debug] [2020-08-05T18:43:26.096Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:43:26.202Z] [worker-app-e23f0db9-6e7e-460a-97ad-31f058ffec22]: IDLE 
+[debug] [2020-08-05T18:43:26.203Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-08-05T18:43:27.415Z] [worker-app-0ea31165-9d3b-45e6-8168-3d35731f25fc]: IDLE 
+[debug] [2020-08-05T18:43:27.415Z] [work-queue] {"queueLength":0,"workRunningCount":0}
