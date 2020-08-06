@@ -137,8 +137,9 @@ class Forms extends React.Component {
       this.state.details === ''
     ) {
       alert('Enter All Credentials');
-    } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
-      alert('Enter Valid Phone Number');
+      // } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
+      //   alert('Enter Valid Phone Number');
+      // }
     } else {
       (async () => {
         const response = await customBooking(
