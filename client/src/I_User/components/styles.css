@@ -16,3 +16,7 @@ body {
 .customBtn {
   height: 50px;
 }
+
+.MuiButton-contained {
+  margin: "0";
+}

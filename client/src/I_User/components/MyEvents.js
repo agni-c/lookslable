@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   iuserevent,
   uploadRating,
@@ -9,26 +9,27 @@ import {
   uploadLinkIuser,
   uploadRatingCustomBooking,
   uploadLinkIuserCustom,
-} from '../../api';
-import firebase from 'firebase';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import ReactStars from 'react-rating-stars-component';
-import { Modal, TextField, CircularProgress } from '@material-ui/core';
-import LinkPopOver from './LinkPopOver';
+} from "../../api";
+import firebase from "firebase";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import ReactStars from "react-rating-stars-component";
+import { Modal, TextField, CircularProgress } from "@material-ui/core";
+import LinkPopOver from "./LinkPopOver";
+import CustomLinkPopOver from "./CustomLinkPopOver";
 
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
   },
   title: {
     fontSize: 14,
@@ -45,7 +46,7 @@ const MyEvents = () => {
   const [customLoader, setCustomLoader] = useState(true);
   const [customState, setCustomState] = useState({ data: [] });
   const [value, setValue] = useState(3);
-  const [link, setLink] = useState('');
+  const [link, setLink] = useState("");
   const [open, setOpen] = React.useState(false);
   const [event, setEvent] = useState(true);
   const [customEvent, setCustomEvent] = useState(true);
@@ -62,13 +63,13 @@ const MyEvents = () => {
     (async () => {
       await uploadLinkIuser(bookingdate, time, iuid, link);
     })();
-    setLink('');
+    setLink("");
   };
   const customLinkHandler = (date, puid, iuid) => {
     (async () => {
       await uploadLinkIuserCustom(date, puid, iuid, link);
     })();
-    setLink('');
+    setLink("");
   };
 
   useEffect(() => {
@@ -113,33 +114,33 @@ const MyEvents = () => {
     })();
   }, []);
 
-  if (state.data !== false && event) {
+  if (state.data !== false || customState.data !== false) {
     return (
       <>
-        <h4 style={{ marginLeft: '5vh', color: '#fff', marginTop: '10px' }}>
+        <h4 style={{ marginLeft: "5vh", color: "#fff", marginTop: "10px" }}>
           Events
         </h4>
-        <div style={{ padding: '5px' }}>
+        <div style={{ padding: "5px" }}>
           {state.data ? (
             loader ? (
               <div
                 style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <CircularProgress
                   style={{
-                    color: '#ed3181',
+                    color: "#ed3181",
                   }}
                 />
               </div>
             ) : (
               state.data.map((d) => (
-                <Card style={{ margin: '5vh' }}>
+                <Card style={{ margin: "5vh" }}>
                   <CardContent>
-                    <Typography variant='h5' component='h2'>
+                    <Typography variant="h5" component="h2">
                       {d.landmark}
                     </Typography>
                     <Typography>Booking Date: {d.bookingdate}</Typography>
@@ -147,9 +148,9 @@ const MyEvents = () => {
                     <Typography>Number of User: {d.numberOfUsers}</Typography>
                     <Typography>Price: {d.price}</Typography>
                     <Typography style={{}}>
-                      Link:{' '}
+                      Link:{" "}
                       <a
-                        href='#'
+                        href="#"
                         onClick={() => window.open(`${d.locationLink}`)}
                       >
                         Location
@@ -160,11 +161,11 @@ const MyEvents = () => {
                     </Typography>
 
                     {(() => {
-                      if (d.driveLink === 'NO') {
+                      if (d.driveLink === "NO") {
                       } else {
                         return (
                           <>
-                            <Typography component='legend'>
+                            <Typography component="legend">
                               Give Ratings :
                             </Typography>
                             <ReactStars
@@ -175,13 +176,13 @@ const MyEvents = () => {
                               onChange={(newRating) => {
                                 console.log(
                                   d.iuid +
-                                    ' ' +
+                                    " " +
                                     d.puid +
-                                    ' ' +
+                                    " " +
                                     d.time +
-                                    ' ' +
+                                    " " +
                                     newRating +
-                                    ' ' +
+                                    " " +
                                     d.bookingdate
                                 );
                                 uploadRating(
@@ -194,30 +195,39 @@ const MyEvents = () => {
                               }}
                             />
                             <TextField
-                              id='outlined-basic'
-                              label='Links'
-                              variant='outlined'
+                              id="outlined-basic"
+                              label="Links"
+                              variant="outlined"
                               value={link}
                               onChange={(e) => {
                                 setLink(e.target.value);
                               }}
                             />
 
+                            {/* <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-start",
+                              }}
+                            > */}
                             <Button
-                              variant='contained'
+                              // variant="contained"
                               onClick={() =>
                                 linkHandler(d.bookingdate, d.time, d.iuid)
                               }
                               style={{
-                                margin: '20px',
-                                backgroundColor: '#ed3181',
-                                color: '#fff',
-                                height: '40px',
+                                margin: "0",
+
+                                backgroundColor: "#ed3181",
+                                color: "#fff",
+                                height: "40px",
                               }}
                             >
                               Upload
                             </Button>
                             <LinkPopOver data={d} />
+                            {/* </div> */}
                           </>
                         );
                       }
@@ -227,33 +237,33 @@ const MyEvents = () => {
               ))
             )
           ) : (
-            <h1 style={{ color: '#fff', textAlign: 'center' }}>
+            <h1 style={{ color: "#fff", textAlign: "center" }}>
               No Booking Found
             </h1>
           )}
         </div>
-        <h4 style={{ marginLeft: '5vh', color: '#fff' }}>Custom Events</h4>
-        <div style={{ padding: '5px' }}>
+        <h4 style={{ marginLeft: "5vh", color: "#fff" }}>Custom Events</h4>
+        <div style={{ padding: "5px" }}>
           {customState.data ? (
             customLoader ? (
               <div
                 style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <CircularProgress
                   style={{
-                    color: '#ed3181',
+                    color: "#ed3181",
                   }}
                 />
               </div>
             ) : (
               customState.data.map((d) => (
-                <Card style={{ margin: '5vh' }}>
+                <Card style={{ margin: "5vh" }}>
                   <CardContent>
-                    <Typography variant='h5' component='h2'>
+                    <Typography variant="h5" component="h2">
                       {d.landmark}
                     </Typography>
                     <Typography>Booking Date: {d.date}</Typography>
@@ -261,9 +271,9 @@ const MyEvents = () => {
                       Plan: {d.key1} {d.key2}
                     </Typography>
                     <Typography style={{}}>
-                      Link:{' '}
+                      Link:{" "}
                       <a
-                        href='#'
+                        href="#"
                         onClick={() => window.open(`${d.locationLink}`)}
                       >
                         Location
@@ -274,11 +284,11 @@ const MyEvents = () => {
                     </Typography>
 
                     {(() => {
-                      if (d.driveLink === 'NO') {
+                      if (d.driveLink === "NO") {
                       } else {
                         return (
                           <>
-                            <Typography component='legend'>
+                            <Typography component="legend">
                               Give Ratings :
                             </Typography>
                             <ReactStars
@@ -289,13 +299,13 @@ const MyEvents = () => {
                               onChange={(newRating) => {
                                 console.log(
                                   d.iuid +
-                                    ' ' +
+                                    " " +
                                     d.puid +
-                                    ' ' +
+                                    " " +
                                     d.time +
-                                    ' ' +
+                                    " " +
                                     newRating +
-                                    ' ' +
+                                    " " +
                                     d.bookingdate
                                 );
                                 uploadRatingCustomBooking(
@@ -307,9 +317,9 @@ const MyEvents = () => {
                               }}
                             />
                             <TextField
-                              id='outlined-basic'
-                              label='Links'
-                              variant='outlined'
+                              id="outlined-basic"
+                              label="Links"
+                              variant="outlined"
                               value={link}
                               onChange={(e) => {
                                 setLink(e.target.value);
@@ -317,20 +327,20 @@ const MyEvents = () => {
                             />
 
                             <Button
-                              variant='contained'
+                              variant="contained"
                               onClick={() =>
                                 customLinkHandler(d.date, d.puid, d.iuid)
                               }
                               style={{
-                                margin: '20px',
-                                backgroundColor: '#ed3181',
-                                color: '#fff',
-                                height: '40px',
+                                margin: "20px",
+                                backgroundColor: "#ed3181",
+                                color: "#fff",
+                                height: "40px",
                               }}
                             >
                               Upload
                             </Button>
-                            <LinkPopOver data={d} />
+                            <CustomLinkPopOver data={d} />
                           </>
                         );
                       }
@@ -340,15 +350,15 @@ const MyEvents = () => {
               ))
             )
           ) : (
-            <h1 style={{ color: '#fff', textAlign: 'center' }}>
+            <h1 style={{ color: "#fff", textAlign: "center" }}>
               No Custom Bookings
             </h1>
           )}
         </div>
       </>
     );
-  } else if (state.data === undefined || customState.data === undefined) {
-    return <h1 style={{ height: '100vh', color: 'white' }}>No record Found</h1>;
+  } else {
+    return <h1 style={{ height: "100vh", color: "white" }}>No record Found</h1>;
   }
 };
 

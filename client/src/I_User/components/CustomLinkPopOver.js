@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { bookingDetails } from "../../api";
+import { bookingDetails, customBookingDetails } from "../../api";
 import { Button, Popover, Typography, Paper } from "@material-ui/core";
 
-const LinkPopOver = (props) => {
+const CustomLinkPopOver = (props) => {
   const [data, setdata] = useState(props.data);
   const [bookingData, setBookingData] = useState("");
   const [state, setState] = useState(true);
@@ -33,14 +33,13 @@ const LinkPopOver = (props) => {
   };
   useEffect(() => {
     (async () => {
-      const booking = await bookingDetails();
+      const data1 = await customBookingDetails();
+      const booking = Object.values(data1);
       console.log(booking);
+      console.log(data);
       booking.map((b) => {
-        if (
-          b.bookingdate === data.bookingdate &&
-          b.time === data.time &&
-          b.iuid === data.iuid
-        ) {
+        if (b.date === data.date && b.iuid === data.iuid) {
+          console.log("In");
           setLink1(b.link1);
           setLink2(b.link2);
           setLink3(b.link3);
@@ -152,4 +151,4 @@ const LinkPopOver = (props) => {
   );
 };
 
-export default LinkPopOver;
+export default CustomLinkPopOver;
