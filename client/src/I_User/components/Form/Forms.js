@@ -105,6 +105,12 @@ class Forms extends React.Component {
     return false;
   };
 
+  dateHandler = (value) => {
+    this.setState({
+      date: value,
+    });
+  };
+
   detailsHandler = (value) => {
     this.setState({
       details: value,
@@ -123,11 +129,6 @@ class Forms extends React.Component {
       phoneNo: value,
     });
   };
-  dateHandler = (value) => {
-    this.setState({
-      date: value,
-    });
-  };
 
   handleSubmit = () => {
     if (
@@ -140,8 +141,11 @@ class Forms extends React.Component {
       // } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
       //   alert('Enter Valid Phone Number');
       // }
+    } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
+      alert('Enter Valid Phone Number');
     } else {
       (async () => {
+        console.log(this.state.location);
         const response = await customBooking(
           this.state.address,
           this.state.phoneNo,

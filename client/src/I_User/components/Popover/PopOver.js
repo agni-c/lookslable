@@ -44,10 +44,25 @@ class PopOver extends React.Component {
     console.log(value);
   };
 
+  validatePhoneNumber = (number) => {
+    console.log(number);
+    const local = number.slice(0, 2);
+    console.log(local);
+    if (number.length === 12 && local === '91') {
+      return true;
+    } else if (number.length === 10) {
+      return true;
+    }
+    return false;
+  };
+
+  dateHandler = (value) => {
+    this.setState({
+      date: value,
+    });
+  };
+
   handleSubmit = async () => {
-    console.log(this.state.phoneNo);
-    console.log('LAndmark' + this.state.landmark);
-    console.log(this.props);
     this.setState({ showState: false });
     const response = await popUpShoot(
       firebase.auth().currentUser,

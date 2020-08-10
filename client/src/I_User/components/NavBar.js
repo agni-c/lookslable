@@ -25,7 +25,7 @@ function NavBar(props) {
         variant='dark'
         style={{ height: '7vh' }}
       >
-        <Link to='/iuser'>
+        <Link to='/'>
           <Navbar.Brand
             href='#home'
             style={{ fontSize: '24px', letterSpacing: '1px' }}
@@ -36,7 +36,7 @@ function NavBar(props) {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto'>
-            <Link to='/iuser/myevents'>
+            <Link to='/myevents'>
               <Nav.Link
                 href='#features'
                 style={{ color: '#ed3181', fontSize: '20px' }}

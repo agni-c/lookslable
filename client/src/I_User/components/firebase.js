@@ -42,9 +42,9 @@ class SignInScreen extends React.Component {
     // We will display Google and Facebook as auth providers.
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      // firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      // firebase.auth.PhoneAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
       // Avoid redirects after sign-in.
@@ -91,10 +91,10 @@ class SignInScreen extends React.Component {
         <Switch>
           <div>
             <NavBar isLoggedIn={true} showLogOut={true} />
-            <Route exact path='/iuser/myevents'>
+            <Route exact path='/myevents'>
               <MyEvents />
             </Route>
-            <Route exact path='/iuser'>
+            <Route exact path='/'>
               <Container md='auto' className='center'>
                 <h1 style={{ color: '#ed3181', marginTop: '50px' }}>
                   Welcome,

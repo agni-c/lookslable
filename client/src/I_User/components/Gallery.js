@@ -108,7 +108,7 @@ export default function Gallery() {
                     <Card.Title style={{ textAlign: 'center' }}>
                       {ele.landmark}
                     </Card.Title>
-                    <Link to={`/iuser/${ele.landmark}`}>
+                    <Link to={`/${ele.landmark}`}>
                       <Badge
                         pill
                         variant='success'
@@ -146,8 +146,8 @@ export default function Gallery() {
   };
   return (
     <Router>
-      <Route path='/iuser' exact component={HomeData}></Route>
-      <Route path='/iuser/:ldataandmark'>
+      <Route path='/' exact component={HomeData}></Route>
+      <Route path='/:ldataandmark'>
         <Landmark rawData={rawdata} landmark={currLandmark} />
       </Route>
     </Router>

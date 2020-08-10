@@ -56,21 +56,11 @@ const HeroMain = () => {
                 padding: '0 0 0 0 ',
               }}
             >
-              <StyledCard
-                name='Location'
-                // content='Lorem Lorem'
-                className='grid-content'
-              />
+              <StyledCard name='Location' className='grid-content' />
             </Link>
             <Link to='/puser/my-bookings' style={{ textDecoration: 'none' }}>
               <StyledCard name='My Bookings' />
             </Link>
-            {/* <Link
-              to='/puser/uploaded-images'
-              style={{ textDecoration: 'none' }}
-            >
-              <StyledCard name='Drive Link' content='Lorem Lorem' />
-            </Link> */}
             <Link to='/puser/support' style={{ textDecoration: 'none' }}>
               <StyledCard name='Support' />
             </Link>
@@ -100,34 +90,11 @@ const HeroMain = () => {
             <Route path='/puser/location' exact component={Location} />
             <Route path='/puser/my-bookings' exact component={MyBookings} />
             <Route path='/puser/support' exact component={Support} />
-            {/* <Route path='/puser/uploaded-images' exact component={DriveLink} /> */}
           </Switch>
         </BrowserRouter>
       );
     }
   }
-  //   return (
-  //     <BrowserRouter>
-  //       <Switch>
-  //         {/* {(() => (
-  //           <Modal
-  //             open={open}
-  //             onClose={handleClose}
-  //             aria-labelledby='simple-modal-title'
-  //             aria-describedby='simple-modal-description'
-  //           >
-  //             <PuserForm />
-  //           </Modal>
-  //         ))()} */}
-  //         <Route path='/puser' exact component={Homedata} />
-  //         <Route path='/puser/location' exact component={Location} />
-  //         <Route path='/puser/my-bookings' exact component={MyBookings} />
-  //         <Route path='/puser/support' exact component={Support} />
-  //         <Route path='/puser/uploaded-images' exact component={DriveLink} />
-  //       </Switch>
-  //     </BrowserRouter>
-  //   );
-  // }
 };
 
 export default HeroMain;

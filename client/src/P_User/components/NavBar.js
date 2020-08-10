@@ -1,36 +1,77 @@
-import React from "react";
-import "./main.css";
-import {
-  Navbar,
-  Button,
-  Nav,
-  Container,
-} from "react-bootstrap";
-import firebase from "firebase";
+import React from 'react';
+import './main.css';
+import { Navbar, Button, Nav, Container } from 'react-bootstrap';
+import firebase from 'firebase';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
     <>
-      <container>
-        <Navbar
-          sticky="top"
-          bg="dark"
-          variant="dark"
-          expand="lg"
-        >
-          <Navbar.Brand href="#home">
-            Photographer
+      <Navbar
+        collapseOnSelect
+        expand='lg'
+        bg='dark'
+        variant='dark'
+        style={{ height: '7vh' }}
+      >
+        <Link to='/puser'>
+          <Navbar.Brand
+            href='#home'
+            style={{ fontSize: '24px', letterSpacing: '1px' }}
+          >
+            Pozular
           </Navbar.Brand>
-          <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
+        </Link>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav className='mr-auto'>
+            <Link to='/myevents'>
+              <Nav.Link
+                href='#features'
+                style={{ color: '#ed3181', fontSize: '20px' }}
+              >
+                My Events
+              </Nav.Link>
+            </Link>
+            <Link>
+              <Nav.Link
+                href='#features'
+                style={{ color: '#ed3181', fontSize: '20px' }}
+              >
+                Support
+              </Nav.Link>
+            </Link>
+            <Link>
+              <Nav.Link
+                href='#features'
+                style={{ color: '#ed3181', fontSize: '20px' }}
+              >
+                FAQ
+              </Nav.Link>
+            </Link>
+            <Link>
+              <Nav.Link
+                href='#pricing'
+                style={{ color: '#ed3181', fontSize: '20px' }}
+              >
+                Contact us
+              </Nav.Link>
+            </Link>
+          </Nav>
           <Button
-            variant="outline-light"
-            className="ml-sm-3"
+            // variant='primary'
+            style={{
+              backgroundColor: '#cd236a',
+              border: 'none',
+              height: '40px',
+            }}
             onClick={() => firebase.auth().signOut()}
+            className='ml-sm-3 customBtn'
           >
             Logout
           </Button>
-        </Navbar>
-      </container>
+        </Navbar.Collapse>
+      </Navbar>
     </>
   );
 }
