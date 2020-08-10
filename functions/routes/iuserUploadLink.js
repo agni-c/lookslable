@@ -1,13 +1,13 @@
-var router = require('express').Router();
-var database = require('./firebaseDAO');
+var router = require("express").Router();
+var database = require("./firebaseDAO");
 
-router.put('/', (req, res) => {
-  var ref = database.ref('BOOKING_DETAILS');
+router.put("/", (req, res) => {
+  var ref = database.ref("BOOKING_DETAILS");
   ref
-    .orderByChild('iuid')
+    .orderByChild("iuid")
     .equalTo(req.body.iuid)
     .once(
-      'value',
+      "value",
       (snapshot) => {
         console.log(snapshot.val());
         const data = Object.values(snapshot.val());
@@ -18,25 +18,26 @@ router.put('/', (req, res) => {
             data[i].bookingdate === req.body.bookingdate &&
             data[i].time === req.body.time
           ) {
-            database.ref('BOOKING_DETAILS/' + keys[i]).update({
+            database.ref("BOOKING_DETAILS/" + keys[i]).update({
               link: req.body.link,
             });
           }
         }
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
+        res.send(false);
       }
     );
-  res.send('updated');
+  res.send(true);
 });
-router.put('/custom', (req, res) => {
-  var ref = database.ref('CUSTOM_BOOKING');
+router.put("/custom", (req, res) => {
+  var ref = database.ref("CUSTOM_BOOKING");
   ref
-    .orderByChild('iuid')
+    .orderByChild("iuid")
     .equalTo(req.body.iuid)
     .once(
-      'value',
+      "value",
       (snapshot) => {
         console.log(snapshot.val());
         const data = Object.values(snapshot.val());
@@ -47,17 +48,18 @@ router.put('/custom', (req, res) => {
             data[i].date === req.body.date &&
             data[i].puid === req.body.puid
           ) {
-            database.ref('CUSTOM_BOOKING/' + keys[i]).update({
+            var response = database.ref("CUSTOM_BOOKING/" + keys[i]).update({
               link: req.body.link,
             });
           }
         }
       },
       (errorObject) => {
-        console.log('The read failed: ' + errorObject.code);
+        console.log("The read failed: " + errorObject.code);
+        res.send(false);
       }
     );
-  res.send('updated');
+  res.send(true);
 });
 
 module.exports = router;

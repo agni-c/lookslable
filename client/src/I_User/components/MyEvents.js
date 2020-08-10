@@ -21,6 +21,7 @@ import ReactStars from 'react-rating-stars-component';
 import { Modal, TextField, CircularProgress } from '@material-ui/core';
 import LinkPopOver from './LinkPopOver';
 import CustomLinkPopOver from './CustomLinkPopOver';
+import { ToastContainer, toast } from 'react-toastify';
 
 const useStyles = makeStyles({
   root: {
@@ -62,13 +63,65 @@ const MyEvents = () => {
 
   const linkHandler = (bookingdate, time, iuid) => {
     (async () => {
-      await uploadLinkIuser(bookingdate, time, iuid, link);
+      if (link === null || link === undefined || link === '') {
+        toast.info('Please Enrter Link', {
+          position: 'top-right',
+          backgroundColor: '#ed3181',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        const data = await uploadLinkIuser(bookingdate, time, iuid, link);
+        if (data.data) {
+          toast.info('Link Uploaded Successfully', {
+            position: 'top-right',
+            backgroundColor: '#ed3181',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      }
     })();
     setLink('');
   };
   const customLinkHandler = (date, puid, iuid) => {
     (async () => {
-      await uploadLinkIuserCustom(date, puid, iuid, link);
+      console.log(link);
+      if (link === null || link === undefined || link === '') {
+        toast.info('Please Enrter Link', {
+          position: 'top-right',
+          backgroundColor: '#ed3181',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        const data = await uploadLinkIuserCustom(date, puid, iuid, link);
+        console.log(data);
+        if (data.data) {
+          toast.info('Link Uploaded Successfully', {
+            position: 'top-right',
+            backgroundColor: '#ed3181',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      }
     })();
     setLink('');
   };
@@ -195,39 +248,43 @@ const MyEvents = () => {
                                 );
                               }}
                             />
-                            <TextField
-                              id='outlined-basic'
-                              label='Links'
-                              variant='outlined'
-                              value={link}
-                              onChange={(e) => {
-                                setLink(e.target.value);
-                              }}
-                            />
+                            {d.rating ? (
+                              <>
+                                <TextField
+                                  id='outlined-basic'
+                                  label='Links'
+                                  variant='outlined'
+                                  edit={d.rating ? false : true}
+                                  value={link}
+                                  onChange={(e) => {
+                                    setLink(e.target.value);
+                                  }}
+                                />
 
-                            {/* <div
+                                {/* <div
                               style={{
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "flex-start",
                               }}
                             > */}
-                            <Button
-                              // variant="contained"
-                              onClick={() =>
-                                linkHandler(d.bookingdate, d.time, d.iuid)
-                              }
-                              style={{
-                                margin: '0',
-
-                                backgroundColor: '#ed3181',
-                                color: '#fff',
-                                height: '40px',
-                              }}
-                            >
-                              Upload
-                            </Button>
-                            <LinkPopOver data={d} />
+                                <Button
+                                  // variant="contained"
+                                  onClick={() =>
+                                    linkHandler(d.bookingdate, d.time, d.iuid)
+                                  }
+                                  style={{
+                                    margin: '20px',
+                                    backgroundColor: '#ed3181',
+                                    color: '#fff',
+                                    height: '40px',
+                                  }}
+                                >
+                                  Upload
+                                </Button>
+                                <LinkPopOver data={d} />
+                              </>
+                            ) : null}
                             {/* </div> */}
                           </>
                         );
@@ -318,31 +375,37 @@ const MyEvents = () => {
                                 );
                               }}
                             />
-                            <TextField
-                              id='outlined-basic'
-                              label='Links'
-                              variant='outlined'
-                              value={link}
-                              onChange={(e) => {
-                                setLink(e.target.value);
-                              }}
-                            />
+                            {d.rating ? (
+                              <>
+                                <TextField
+                                  id='outlined-basic'
+                                  label='Links'
+                                  variant='outlined'
+                                  disabled={d.link === 'NO' ? false : true}
+                                  value={link}
+                                  onChange={(e) => {
+                                    setLink(e.target.value);
+                                  }}
+                                />
 
-                            <Button
-                              variant='contained'
-                              onClick={() =>
-                                customLinkHandler(d.date, d.puid, d.iuid)
-                              }
-                              style={{
-                                margin: '20px',
-                                backgroundColor: '#ed3181',
-                                color: '#fff',
-                                height: '40px',
-                              }}
-                            >
-                              Upload
-                            </Button>
-                            <CustomLinkPopOver data={d} />
+                                <Button
+                                  variant='contained'
+                                  onClick={() =>
+                                    customLinkHandler(d.date, d.puid, d.iuid)
+                                  }
+                                  style={{
+                                    margin: '20px',
+                                    backgroundColor: '#ed3181',
+                                    color: '#fff',
+                                    height: '40px',
+                                  }}
+                                >
+                                  Upload
+                                </Button>
+                                <CustomLinkPopOver data={d} />
+                                {/* <ToastContainer /> */}
+                              </>
+                            ) : null}
                           </>
                         );
                       }
@@ -356,6 +419,7 @@ const MyEvents = () => {
               No Custom Bookings
             </h1>
           )}
+          <ToastContainer />
         </div>
       </>
     );

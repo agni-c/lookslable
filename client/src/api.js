@@ -6,8 +6,8 @@ require("dotenv").config();
 // Axios defaults.baseURL method => sets default host URL (as prefix)
 // axios.defaults.baseURL =
 //   "http://localhost:5000/spring-internship/us-central1/app/api";
-axios.defaults.baseURL =
-  "https://us-central1-spring-internship.cloudfunctions.net/app/api";
+// axios.defaults.baseURL =
+//   "https://us-central1-spring-internship.cloudfunctions.net/app/api";
 
 export async function iuserevent(iuid) {
   console.log("in api" + iuid);
@@ -291,7 +291,7 @@ export async function uploadDriveLinkCustombooking(
   });
 }
 export async function uploadLinkIuser(bookingdate, time, iuid, link) {
-  await axios.put(`/iuseruploadlink`, {
+  return await axios.put(`/iuseruploadlink`, {
     bookingdate: bookingdate,
     iuid: iuid,
     time: time,
@@ -299,7 +299,7 @@ export async function uploadLinkIuser(bookingdate, time, iuid, link) {
   });
 }
 export async function uploadLinkIuserCustom(date, puid, iuid, link) {
-  await axios.put(`/iuseruploadlink/custom`, {
+  return await axios.put(`/iuseruploadlink/custom`, {
     date: date,
     iuid: iuid,
     puid: puid,

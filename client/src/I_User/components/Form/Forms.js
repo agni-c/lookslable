@@ -93,6 +93,18 @@ class Forms extends React.Component {
     );
   }
 
+  validateDate = (date) => {
+    var currentdate = new Date().toISOString().substring(0, 16);
+
+    if (Date.parse(date) - Date.parse(currentdate) <= 0) {
+      return false;
+    } else if (currentdate.substring(8, 10) === date.substring(8, 10)) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   validatePhoneNumber = (number) => {
     console.log(number);
     const local = number.slice(0, 2);
@@ -137,12 +149,41 @@ class Forms extends React.Component {
       this.state.date === '' ||
       this.state.details === ''
     ) {
-      alert('Enter All Credentials');
+      toast.info('Please Enter All Credentials', {
+        position: 'top-right',
+        backgroundColor: '#ed3181',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       // } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
       //   alert('Enter Valid Phone Number');
       // }
+    } else if (this.validateDate(this.state.date) === false) {
+      toast.info('Please Enter Valid Date', {
+        position: 'top-right',
+        backgroundColor: '#ed3181',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
-      alert('Enter Valid Phone Number');
+      toast.info('Please Enter Valid Phone Number', {
+        position: 'top-right',
+        backgroundColor: '#ed3181',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       (async () => {
         console.log(this.state.location);
@@ -423,47 +464,6 @@ class Forms extends React.Component {
               </Tab>
             </Tabs>
           </div>
-          {/* <div className='tabs-content'>
-            <Tabs
-              variant='pills'
-              id='controlled-tab-example'
-              activeKey={this.state.key}
-              onSelect={(k) => {
-                this.setState({ key2: k });
-              }}
-              style={{ marginLeft: '100px' }}
-            >
-              <Tab eventKey='basic' title='Basic'>
-                <h4>Lorem</h4>
-                <h4>Lorem</h4>
-                <h4>Lorem</h4>
-                <h3>
-                  <Badge variant='success' as='h4'>
-                    Price :
-                  </Badge>
-                  {'  '}
-                  <Badge variant='success'>349</Badge>{' '}
-                </h3>
-              </Tab>
-              <Tab eventKey='premium' title='Premium'>
-                <h4>Lorem</h4>
-                <h4>Lorem</h4>
-                <h4>Lorem</h4>
-                <h3>
-                  <Badge variant='success' as='h4'>
-                    Price :
-                  </Badge>
-                  {'  '}
-                  <Badge variant='success'>549</Badge>{' '}
-                </h3>
-              </Tab>
-            </Tabs>
-          </div> */}
-          {/* <Form.Row>
-            <br />
-            <br />
-          </Form.Row> */}
-
           <br />
           {console.log(this.state)}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
