@@ -19,6 +19,8 @@ router.post("/", (req, res) => {
     name: req.body.user.displayName,
     iuid: req.body.user.uid,
     puid: "",
+    link: "NO",
+    driveLink: "NO",
     details: req.body.details,
     link1: "NO",
     link2: "NO",
