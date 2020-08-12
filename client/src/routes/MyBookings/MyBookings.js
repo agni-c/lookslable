@@ -125,7 +125,7 @@ const MyBookings = () => {
   }, []);
   if (state.data || customState.data) {
     return (
-      <>
+      <div style={{height: '90vh'}}>
         <div>
           {state.data.map((d) => (
             <>
@@ -170,6 +170,7 @@ const MyBookings = () => {
           ))}
         </div>
         <div>
+          <h1>Custom Bookings</h1>
           {customState.data.map((d) => (
             <>
               {/* {const data = await getIuserProfile(d.puid);}       */}
@@ -211,7 +212,7 @@ const MyBookings = () => {
             </>
           ))}
         </div>
-      </>
+      </div>
     );
   } else {
     return <h1>Hello</h1>;
