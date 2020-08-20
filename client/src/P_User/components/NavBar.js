@@ -25,22 +25,6 @@ function NavBar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto'>
-            <Link to='/myevents'>
-              <Nav.Link
-                href='#features'
-                style={{ color: '#ed3181', fontSize: '20px' }}
-              >
-                My Events
-              </Nav.Link>
-            </Link>
-            <Link>
-              <Nav.Link
-                href='#features'
-                style={{ color: '#ed3181', fontSize: '20px' }}
-              >
-                Support
-              </Nav.Link>
-            </Link>
             <Link>
               <Nav.Link
                 href='#features'

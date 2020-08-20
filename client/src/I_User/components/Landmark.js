@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Badge } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Card, Badge } from 'react-bootstrap';
 
 const Landmark = ({ rawData, landmark }) => {
   const [showLandmark, setShowLandmark] = useState([]);
@@ -14,27 +14,24 @@ const Landmark = ({ rawData, landmark }) => {
       {currentLandmarks.map((ele, index) => {
         return (
           <>
-            <Card style={{ color: "black" }}>
-              <Card.Title style={{ textAlign: "center" }}>
-                Landmark:{ele.landmark}
-              </Card.Title>
+            <Card style={{ color: 'black' }}>
               {/* <Link to={`/iuser/${ele.landmark}`}> */}
-              <Badge
+              {/* <Badge
                 pill
                 variant="success"
                 style={{ width: "50%", cursor: "pointer" }}
               >
                 {ele.landmark}
-              </Badge>{" "}
+              </Badge>{" "} */}
               {/* </Link> */}
               <Card.Body>
                 <Card.Img
-                  variant="top"
+                  variant='top'
                   src={ele.images}
-                  alt="something"
-                  style={{ position: "relative" }}
+                  alt='something'
+                  style={{ position: 'relative' }}
                 />
-                <Card.Text>{ele.names}</Card.Text>
+
                 {/* <PopOver puid={ele.puid} landmark={ele.landmark} /> */}
               </Card.Body>
             </Card>

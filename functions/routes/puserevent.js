@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
         if (snapshot.exists()) {
           res.json(Object.values(snapshot.val()));
         } else {
-          res.send('data not found');
+          res.send(false);
         }
       },
       (errorObject) => {

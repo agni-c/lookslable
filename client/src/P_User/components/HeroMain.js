@@ -46,7 +46,20 @@ const HeroMain = () => {
     return (
       <>
         <Container className='center home-container'>
-          <h1 className='center-align'>Welcome Photographer!</h1>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '25px',
+            }}
+          >
+            <h1 className='center-align' style={{ color: '#fff' }}>
+              Welcome
+            </h1>
+            <h1 style={{ color: '#ed3181' }}>
+              {firebase.auth().currentUser.displayName}!
+            </h1>
+          </div>
           <br />
           <div className='grid1-container'>
             <Link

@@ -25,22 +25,11 @@ export default function Gallery() {
   const [landmarks, setLandmarks] = useState([]);
   const [currLandmark, setCurrLandmark] = useState();
   const [multipleLandmarkImages, setMultipleLandmarkImages] = useState([0]);
-  // const [pUser, setPUser] = useState({
-  //   puids: [],
-  //   puid: [
-  //     {
-  //       landmarks: [],
-  //     },
-  //   ],
-  //   landmark: {
-  //     images: [],
-  //   },
-  // });
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-  //for grouping the landmarks
+
 
   function landmarksGrouper(list, getKey) {
     const map = new Map();

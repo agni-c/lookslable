@@ -213,6 +213,7 @@ class Forms extends React.Component {
       })();
     }
   };
+
   render() {
     return (
       <div>

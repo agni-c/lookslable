@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import "./styles.css";
-import Upload from "./Upload";
-import axios from "axios";
-import { Container, Button, Form, Col, Row } from "react-bootstrap";
-import firebase from "firebase";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { getEditLocation, uploadFormDATA } from "../../../api";
+import React, { useEffect, useState } from 'react';
+import './styles.css';
+import Upload from './Upload';
+import axios from 'axios';
+import { Container, Button, Form, Col, Row } from 'react-bootstrap';
+import firebase from 'firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { getEditLocation, uploadFormDATA } from '../../../api';
 
 const App = () => {
   const [landmarks, setLandmarks] = useState([]);
   const [file, setFile] = useState(null);
-  const [currentLandmark, setCurrentLandmark] = useState("");
+  const [currentLandmark, setCurrentLandmark] = useState('');
   const [formData, setFormData] = useState({
-    landmark: "",
-    upload: "",
+    landmark: '',
+    upload: '',
   });
 
   const onFormSubmit = async (e) => {
@@ -22,13 +22,13 @@ const App = () => {
     // const formData = new FormData();
     // formData.append("uploads", file);
     // formData.set("landmark", currentLandmark);
-    console.log("uuuuooopppp" + currentLandmark);
+    console.log('uuuuooopppp' + currentLandmark);
     const lm = currentLandmark;
 
     setFormData({ landmark: lm, upload: file });
     const config = {
       headers: {
-        "content-type": "multipart/form-data",
+        'content-type': 'multipart/form-data',
       },
     };
     console.log(currentLandmark);
@@ -39,11 +39,11 @@ const App = () => {
   };
 
   const testing = () => {
-    toast("Successfully Submited");
+    toast('Successfully Submited');
   };
   const onChange = (e) => {
     setFile(e.target.files[0]);
-    console.log("Changedd");
+    console.log('Changedd');
   };
   const onLandmarkChange = (value) => {
     currentLandmarkUpdate(value);
@@ -67,7 +67,7 @@ const App = () => {
     })();
   }, []);
   return (
-    <div className="contain">
+    <div className='contain'>
       <form
         // REVIEW upload link
 
@@ -78,17 +78,17 @@ const App = () => {
         // enctype="multipart/form-data"
         onSubmit={onFormSubmit}
       >
-        {" "}
+        {' '}
         <Form.Group>
-          <Form.Label colomn="lg" lg={2} for="upload">
+          <Form.Label colomn='lg' lg={2} for='upload'>
             Upload Images
           </Form.Label>
           <Col>
             <input
-              type="file"
-              accept="image/*"
-              id="upload"
-              name="uploads"
+              type='file'
+              accept='image/*'
+              id='upload'
+              name='uploads'
               onChange={onChange}
               required
             />
@@ -97,23 +97,23 @@ const App = () => {
         <br />
         <br />
         <Form.Group as={Row}>
-          <Form.Label column sm="2" size="lg" for="landmark">
-            {" "}
+          <Form.Label column sm='2' size='lg' for='landmark'>
+            {' '}
             Landmark
           </Form.Label>
-          <Col sm="10">
+          <Col sm='10'>
             <Form.Control
-              as="select"
-              value="Select Your Landmark"
-              name="landmark"
-              placeholder="eg. lake gardens"
+              as='select'
+              value={currentLandmark}
+              name='landmark'
+              placeholder='eg. lake gardens'
               required
-              id="landmark"
+              id='landmark'
               onChange={(e) => {
                 onLandmarkChange(e.target.value);
               }}
             >
-              <option value="default">Select Your Landmark</option>
+              <option value='default'>Select Your Landmark</option>
               {landmarks.map((ele, index) => {
                 return <option value={ele}>{ele}</option>;
               })}
@@ -124,7 +124,7 @@ const App = () => {
         </Form.Group>
         <br />
         <br />
-        <Button variant="outline-primary" className="mb-2" type="submit">
+        <Button variant='outline-primary' className='mb-2' type='submit'>
           Upload
         </Button>
         <ToastContainer />

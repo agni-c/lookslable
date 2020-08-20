@@ -3,7 +3,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
-import HeroMain from './HeroMain';
+import HeroMain from './HeroMain1';
 import { Container } from 'react-bootstrap';
 import MyEvents from './MyEvents';
 
@@ -96,12 +96,18 @@ class SignInScreen extends React.Component {
             </Route>
             <Route exact path='/'>
               <Container md='auto' className='center'>
-                <h1 style={{ color: '#ed3181', marginTop: '50px' }}>
-                  Welcome,
-                </h1>{' '}
-                <h1 className='margin-bt' style={{ color: '#fff' }}>
-                  {firebase.auth().currentUser.displayName}
-                </h1>
+                <div
+                  className='welcome-user'
+                  style={{ height: '40vh', marginBottom: '0px' }}
+                >
+                  <div style={{ marginLeft: '10px' }}>
+                    <h1 style={{ color: '#fff' }}>Welcome,</h1>{' '}
+                    <h1 style={{ color: '#fff' }}>
+                      {firebase.auth().currentUser.displayName}
+                    </h1>
+                  </div>
+                </div>
+                {/* <HeroMain /> */}
                 <HeroMain />
               </Container>
             </Route>

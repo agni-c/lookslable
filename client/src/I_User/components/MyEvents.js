@@ -137,8 +137,8 @@ const MyEvents = () => {
       if (landmark && event) {
         event.map((e) => {
           landmark.map((l) => {
-            // console.log(l);
-            e.locationLink = `http://www.google.com/maps/place/${l.location.lat},${l.location.long}`;
+            console.log(l);
+            e.locationLink = `http://www.google.com/maps/place/${l.location.lat},${l.location.lon}`;
           });
         });
         setLoader(false);
@@ -204,7 +204,7 @@ const MyEvents = () => {
                     <Typography style={{}}>
                       Link:{' '}
                       <a
-                        href='#'
+                        href='/myevents'
                         onClick={() => window.open(`${d.locationLink}`)}
                       >
                         Location
