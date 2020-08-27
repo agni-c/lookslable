@@ -69,13 +69,14 @@ const HeroMain = () => {
                 padding: '0 0 0 0 ',
               }}
             >
-              <StyledCard name='Location' className='grid-content' />
+              <StyledCard
+                name='Location'
+                content='Manage Location Here'
+                className='grid-content'
+              />
             </Link>
             <Link to='/puser/my-bookings' style={{ textDecoration: 'none' }}>
-              <StyledCard name='My Bookings' />
-            </Link>
-            <Link to='/puser/support' style={{ textDecoration: 'none' }}>
-              <StyledCard name='Support' />
+              <StyledCard name='My Bookings' content='Your Bookings' />
             </Link>
           </div>
         </Container>
