@@ -1,13 +1,13 @@
-import { customBookingDetails } from '../api';
+import { customBookingPremiumDetails } from '../api';
 import React, { useEffect, useContext, useState } from 'react';
 import axios from 'axios';
 import ReactStars from 'react-rating-stars-component';
 import { PuserAdminContext } from '../context/pUserAdmin';
 import { IuserAdminContext } from '../context/iUserAdmin';
 
-export const customBookingsAdminContext = React.createContext();
+export const customBookingsPremiumAdminContext = React.createContext();
 
-export const CustomBookingsAdminProvider = ({ children }) => {
+export const CustomBookingsPremiumAdminProvider = ({ children }) => {
   const [state, setState] = useState({
     columns: [],
     data: [],
@@ -16,7 +16,7 @@ export const CustomBookingsAdminProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const response = await customBookingDetails();
+      const response = await customBookingPremiumDetails();
       const data = Object.values(response);
       const columns = [
         { title: 'PUID', field: 'puid' },
@@ -47,62 +47,52 @@ export const CustomBookingsAdminProvider = ({ children }) => {
           render: (data) => <a href={data.link}>{data.link}</a>,
         },
         {
-          title: 'link1',
-          field: 'link1',
-          render: (data) => <a href={data.link1}>{data.link1}</a>,
+          title: 'Date 1',
+          field: 'date1',
         },
         {
-          title: 'link2',
-          field: 'link2',
-          render: (data) => <a href={data.link2}>{data.link2}</a>,
+          title: 'Value 1',
+          field: 'value1',
         },
         {
-          title: 'link3',
-          field: 'link3',
-          render: (data) => <a href={data.link3}>{data.link3}</a>,
+          title: 'Date 2',
+          field: 'date2',
         },
         {
-          title: 'link4',
-          field: 'link4',
-          render: (data) => <a href={data.link4}>{data.link4}</a>,
+          title: 'Value 2',
+          field: 'value2',
         },
         {
-          title: 'link5',
-          field: 'link5',
-          render: (data) => <a href={data.link5}>{data.link5}</a>,
+          title: 'Date 3',
+          field: 'date3',
         },
         {
-          title: 'link6',
-          field: 'link6',
-          render: (data) => <a href={data.link6}>{data.link6}</a>,
+          title: 'Value 3',
+          field: 'value3',
         },
         {
-          title: 'link7',
-          field: 'link7',
-          render: (data) => <a href={data.link7}>{data.link7}</a>,
+          title: 'Date 4',
+          field: 'date4',
         },
         {
-          title: 'link8',
-          field: 'link8',
-          render: (data) => <a href={data.link8}>{data.link8}</a>,
+          title: 'Value 4',
+          field: 'value4',
         },
         {
-          title: 'link9',
-          field: 'link9',
-          render: (data) => <a href={data.link9}>{data.link9}</a>,
+          title: 'Date 5',
+          field: 'date5',
         },
         {
-          title: 'link10',
-          field: 'link10',
-          render: (data) => <a href={data.link10}>{data.link10}</a>,
+          title: 'Value 5',
+          field: 'value5',
         },
       ];
       setState({ columns, data });
     })();
   }, []);
   return (
-    <customBookingsAdminContext.Provider value={[state, setState]}>
+    <customBookingsPremiumAdminContext.Provider value={[state, setState]}>
       {children}
-    </customBookingsAdminContext.Provider>
+    </customBookingsPremiumAdminContext.Provider>
   );
 };

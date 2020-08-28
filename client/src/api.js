@@ -436,6 +436,14 @@ export async function customBookingDetails() {
     return false;
   }
 }
+export async function customBookingPremiumDetails() {
+  var response = await axios.get(`/custombooking/premium`);
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
+}
 export async function uploadAdminLinks(
   bookingdate,
   iuid,

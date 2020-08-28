@@ -54,16 +54,34 @@ const MyEvents = () => {
   const [customEvent, setCustomEvent] = useState(true);
   const [displayRating, setDisplayRating] = useState(false);
   const [chartData, setChartData] = useState({
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: [],
     datasets: [
       {
-        label: 'Audience Reach',
-        data: [1000, 1200, 1400, 1600, 1700, 1800, 1900],
+        label: 'Audience',
+        data: [],
         backgroundColor: ['rgba(237, 49, 129,0.6)'],
         borderWidth: 4,
       },
     ],
   });
+
+  const handleGraphData = (
+    date1,
+    date2,
+    date3,
+    date4,
+    date5,
+    value1,
+    value2,
+    value3,
+    value4,
+    value5
+  ) => {
+    setChartData({
+      labels: [date1, date2, date3, date4, date5],
+      datasets: [{ data: [value1, value2, value3, value4, value5] }],
+    });
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -425,7 +443,21 @@ const MyEvents = () => {
                                         color: '#fff',
                                         backgroundColor: '#ed3181',
                                       }}
-                                      onClick={handleOpen}
+                                      onClick={() => {
+                                        handleOpen();
+                                        handleGraphData(
+                                          d.date1,
+                                          d.date2,
+                                          d.date3,
+                                          d.date4,
+                                          d.date5,
+                                          d.value1,
+                                          d.value2,
+                                          d.value3,
+                                          d.value4,
+                                          d.value5
+                                        );
+                                      }}
                                     >
                                       Promotion
                                     </Button>
