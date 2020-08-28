@@ -10,6 +10,8 @@ import {
   uploadRatingCustomBooking,
   uploadLinkIuserCustom,
 } from "../../api";
+import { Line } from "react-chartjs-2";
+import CountUp from "react-countup";
 import firebase from "firebase";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -39,7 +41,6 @@ const useStyles = makeStyles({
     marginBottom: 12,
   },
 });
-
 const MyEvents = () => {
   const classes = useStyles();
   const [state, setState] = useState({ data: [] });
@@ -52,6 +53,35 @@ const MyEvents = () => {
   const [event, setEvent] = useState(true);
   const [customEvent, setCustomEvent] = useState(true);
   const [displayRating, setDisplayRating] = useState(false);
+  const [chartData, setChartData] = useState({
+    labels: [],
+    datasets: [
+      {
+        label: "Audience",
+        data: [],
+        backgroundColor: ["rgba(237, 49, 129,0.6)"],
+        borderWidth: 4,
+      },
+    ],
+  });
+
+  const handleGraphData = (
+    date1,
+    date2,
+    date3,
+    date4,
+    date5,
+    value1,
+    value2,
+    value3,
+    value4,
+    value5
+  ) => {
+    setChartData({
+      labels: [date1, date2, date3, date4, date5],
+      datasets: [{ data: [value1, value2, value3, value4, value5] }],
+    });
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -132,13 +162,13 @@ const MyEvents = () => {
       const event = await iuserevent(uid);
       const landmark = await landmarkDetails();
       // console.log(landmark);
-      // console.log(event);
+      console.log(event);
 
       if (landmark && event) {
         event.map((e) => {
           landmark.map((l) => {
-            // console.log(l);
-            e.locationLink = `http://www.google.com/maps/place/${l.location.lat},${l.location.long}`;
+            console.log(l);
+            e.locationLink = `http://www.google.com/maps/place/${l.location.lat},${l.location.lon}`;
           });
         });
         setLoader(false);
@@ -204,7 +234,7 @@ const MyEvents = () => {
                     <Typography style={{}}>
                       Link:{" "}
                       <a
-                        href="#"
+                        href="/myevents"
                         onClick={() => window.open(`${d.locationLink}`)}
                       >
                         Location
@@ -402,7 +432,94 @@ const MyEvents = () => {
                                 >
                                   Upload
                                 </Button>
-                                <CustomLinkPopOver data={d} />
+                                <br />
+                                {d.key2 === "Premium" ? (
+                                  <>
+                                    <Button
+                                      variant="contained"
+                                      style={{
+                                        width: "auto",
+                                        height: "40px",
+                                        color: "#fff",
+                                        backgroundColor: "#ed3181",
+                                      }}
+                                      onClick={() => {
+                                        handleOpen();
+                                        handleGraphData(
+                                          d.date1,
+                                          d.date2,
+                                          d.date3,
+                                          d.date4,
+                                          d.date5,
+                                          d.value1,
+                                          d.value2,
+                                          d.value3,
+                                          d.value4,
+                                          d.value5
+                                        );
+                                      }}
+                                    >
+                                      Promotion
+                                    </Button>
+                                    <Modal
+                                      open={open}
+                                      onClose={handleClose}
+                                      aria-labelledby="simple-modal-title"
+                                      aria-describedby="simple-modal-description"
+                                    >
+                                      <div
+                                        style={{
+                                          display: "flex",
+                                          justifyContent: "center",
+                                        }}
+                                      >
+                                        <Card
+                                          style={{
+                                            padding: "20px",
+                                            height: "auto",
+                                            width: "800px",
+                                            margin: "25px",
+                                          }}
+                                        >
+                                          <Line
+                                            // height={400}
+                                            // width={800}
+                                            data={chartData}
+                                            options={{
+                                              maintainAspectRatio: false,
+                                            }}
+                                          />
+                                          <div
+                                            style={{
+                                              display: "flex",
+                                              flexDirection: "column",
+                                            }}
+                                          >
+                                            <div
+                                              style={{
+                                                display: "flex",
+                                                flexDirection: "column",
+                                              }}
+                                            >
+                                              <h6>Gender</h6>
+                                              <p>
+                                                Male:
+                                                <CountUp end={100} />
+                                              </p>
+                                              <p>
+                                                Female:
+                                                <CountUp end={100} />
+                                              </p>
+                                            </div>
+                                            <CountUp end={100} />
+                                          </div>
+                                        </Card>
+                                      </div>
+                                    </Modal>
+                                  </>
+                                ) : (
+                                  <CustomLinkPopOver data={d} />
+                                )}
                                 {/* <ToastContainer /> */}
                               </>
                             ) : null}

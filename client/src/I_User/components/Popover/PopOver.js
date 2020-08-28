@@ -17,6 +17,7 @@ import axios from 'axios';
 import firebase from 'firebase';
 import SignInScreen from './../firebase';
 import { popUpShoot } from '../../../api';
+import { css } from 'glamor';
 
 class PopOver extends React.Component {
   constructor(props) {
@@ -44,6 +45,19 @@ class PopOver extends React.Component {
     console.log(value);
   };
 
+  validateDate = (date) => {
+    console.log(date);
+    var currentdate = new Date().toISOString().substring(0, 16);
+    console.log(currentdate);
+    if (Date.parse(date) - Date.parse(currentdate) <= 0) {
+      return false;
+    } else if (currentdate.substring(8, 10) === date.substring(8, 10)) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   validatePhoneNumber = (number) => {
     console.log(number);
     const local = number.slice(0, 2);
@@ -63,19 +77,13 @@ class PopOver extends React.Component {
   };
 
   handleSubmit = async () => {
-    this.setState({ showState: false });
-    const response = await popUpShoot(
-      firebase.auth().currentUser,
-      this.state.phoneNo,
-      this.state.date,
-      this.state.currentPuid,
-      '350',
-      this.state.no_of_users,
-      this.state.landmark
-    );
-    if (response.data) {
-      this.setState({ show: false });
-      toast.info('Booked Successfully', {
+    if (
+      this.state.phoneNo === ' ' ||
+      this.state.date === ' ' ||
+      this.state.no_of_users === ''
+    ) {
+      // this.setState({ show: false });
+      toast('Please Enter All Credentials', {
         position: 'top-right',
         backgroundColor: '#ed3181',
         autoClose: 5000,
@@ -84,10 +92,114 @@ class PopOver extends React.Component {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
+        className: css({
+          background: '#ed3181 !important',
+          color: 'red !important',
+          fontWeight: 'bold',
+        }),
       });
-      // this.setState({ show: false })}
-      console.log('Successful');
+      // toast('Hello!', {
+      // className: css({
+      //   background: '#00FF00 !important',
+      //   color: 'red !important',
+      //   fontWeight: 'bold',
+      // }),
+      //   closeOnClick: false,
+      //   toastId: 'my_toast',
+      //   autoClose: true,
+      //   closeButton: false,
+      //   position: toast.POSITION.BOTTOM_CENTER,
+      // });
+    } else if (this.validatePhoneNumber(this.state.phoneNo) === false) {
+      toast('Please Enter Valid Phone Number', {
+        position: 'top-right',
+        backgroundColor: '#ed3181',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        className: css({
+          background: '#ed3181 !important',
+          color: 'red !important',
+          fontWeight: 'bold',
+        }),
+      });
+    } else if (this.validateDate(this.state.date) === false) {
+      toast('Please Enter Valid Date', {
+        position: 'top-right',
+        backgroundColor: '#ed3181',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        className: css({
+          background: '#ed3181 !important',
+          color: 'red !important',
+          fontWeight: 'bold',
+        }),
+      });
+    } else {
+      (async () => {
+        // console.log(location);
+        // this.setState({ showState: false });
+        const response = await popUpShoot(
+          firebase.auth().currentUser,
+          this.state.phoneNo,
+          this.state.date,
+          this.state.currentPuid,
+          '350',
+          this.state.no_of_users,
+          this.state.landmark
+        );
+        if (response.data) {
+          this.setState({ show: false });
+          toast('Booked Successfully', {
+            position: 'top-right',
+            backgroundColor: '#ed3181',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            className: css({
+              background: '#ed3181 !important',
+              color: 'red !important',
+              fontWeight: 'bold',
+            }),
+          });
+          console.log('Successful');
+        }
+      })();
     }
+    // this.setState({ showState: false });
+    // const response = await popUpShoot(
+    //   firebase.auth().currentUser,
+    //   this.state.phoneNo,
+    //   this.state.date,
+    //   this.state.currentPuid,
+    //   '350',
+    //   this.state.no_of_users,
+    //   this.state.landmark
+    // );
+    // if (response.data) {
+    //   this.setState({ show: false });
+    //   toast.info('Please Enter All Credentials', {
+    //     position: 'bottom-right',
+    //     backgroundColor: '#ed3181',
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //   });
+    //   console.log('Successful');
+    // }
   };
 
   render() {
@@ -116,6 +228,8 @@ class PopOver extends React.Component {
         </Button>
 
         <Overlay
+          rootClose
+          onHide={() => this.setState({ show: false })}
           placement='top'
           show={this.state.show}
           target={ReactDOM.findDOMNode(this.target)}
@@ -184,7 +298,7 @@ class PopOver extends React.Component {
             </Button> */}
           </Popover>
         </Overlay>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </div>
     );
   }

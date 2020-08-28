@@ -1,0 +1,13 @@
+.formGroup {
+  color: #ed3181;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+@media only screen and (min-width: 576px) {
+  .formGroup {
+    color: #ed3181;
+    font-size: 20px;
+    margin-left: 0;
+  }
+}

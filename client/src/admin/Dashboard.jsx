@@ -9,7 +9,8 @@ import IuserFragment from './fragments/iuserFragment';
 import BookingFragment from './fragments/bookingFragment';
 import LandMarkFragment from './fragments/landMarkFragment';
 import ApprovedPhotos from './fragments/approvedPhotosFragment';
-import CustomBookingFragment from './fragments/customBookingFregment';
+import CustomBookingFragment from './fragments/customBookingFragment';
+import CustomBookingPremiumFragment from './fragments/customBookingPremiumFragment';
 import {
   List,
   ListItem,
@@ -140,7 +141,17 @@ export default function ClippedDrawer() {
                   <ListItemIcon>
                     <Portrait />
                   </ListItemIcon>
-                  <ListItemText primary='Custom Bookings' />
+                  <ListItemText primary='Basic Custom Bookings' />
+                </ListItem>
+              </Link>
+            </List>
+            <List>
+              <Link to='/dashboard/custombookingspremium'>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Portrait />
+                  </ListItemIcon>
+                  <ListItemText primary='Premium Custom Bookings' />
                 </ListItem>
               </Link>
             </List>
@@ -193,6 +204,13 @@ export default function ClippedDrawer() {
               exact
               path='/dashboard/custombookings'
               component={CustomBookingFragment}
+            />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path='/dashboard/custombookingspremium'
+              component={CustomBookingPremiumFragment}
             />
           </Switch>
         </main>

@@ -26,7 +26,8 @@ export async function puserevent(puid) {
   const response = await axios.post(`/puserevent`, {
     puid: puid,
   });
-  if (response.data != null && response.data != undefined) {
+  console.log(response.data);
+  if (response.data && response.data != null && response.data != undefined) {
     const data = Object.values(response.data);
     return data;
   } else {
@@ -38,7 +39,7 @@ export async function customiuserevent(iuid) {
   const response = await axios.post(`/iuserevent/custom`, {
     iuid: iuid,
   });
-  if (response.data != null && response.data != undefined) {
+  if (response.data && response.data != null && response.data != undefined) {
     const data = Object.values(response.data);
     return data;
   } else {
@@ -429,6 +430,14 @@ export async function customBooking(
 }
 export async function customBookingDetails() {
   var response = await axios.get(`/custombooking`);
+  if (response.data != null && response.data != undefined) {
+    return response.data;
+  } else {
+    return false;
+  }
+}
+export async function customBookingPremiumDetails() {
+  var response = await axios.get(`/custombooking/premium`);
   if (response.data != null && response.data != undefined) {
     return response.data;
   } else {

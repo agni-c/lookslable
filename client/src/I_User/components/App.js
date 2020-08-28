@@ -5,6 +5,7 @@ import { Navbar, Button, Nav, Container } from 'react-bootstrap';
 import SignInScreen from '../components/firebase';
 import NavBar from './NavBar';
 import HeroMain from './HeroMain';
+import { ToastContainer } from 'react-toastify';
 
 export default function App() {
   // return <SignInScreen />;
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <div style={{ width: '100%', height: '100%', backgroundColor: '#222831' }}>
       <SignInScreen />
+      <ToastContainer />
     </div>
   );
 }

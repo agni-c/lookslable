@@ -46,7 +46,20 @@ const HeroMain = () => {
     return (
       <>
         <Container className='center home-container'>
-          <h1 className='center-align'>Welcome Photographer!</h1>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '25px',
+            }}
+          >
+            <h1 className='center-align' style={{ color: '#fff' }}>
+              Welcome
+            </h1>
+            <h1 style={{ color: '#ed3181' }}>
+              {firebase.auth().currentUser.displayName}!
+            </h1>
+          </div>
           <br />
           <div className='grid1-container'>
             <Link
@@ -56,13 +69,14 @@ const HeroMain = () => {
                 padding: '0 0 0 0 ',
               }}
             >
-              <StyledCard name='Location' className='grid-content' />
+              <StyledCard
+                name='Location'
+                content='Manage Location Here'
+                className='grid-content'
+              />
             </Link>
             <Link to='/puser/my-bookings' style={{ textDecoration: 'none' }}>
-              <StyledCard name='My Bookings' />
-            </Link>
-            <Link to='/puser/support' style={{ textDecoration: 'none' }}>
-              <StyledCard name='Support' />
+              <StyledCard name='My Bookings' content='Your Bookings' />
             </Link>
           </div>
         </Container>

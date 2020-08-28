@@ -17,11 +17,11 @@ const EditLocationRender = () => {
         <Route path='/puser/location' exact component={Location} />
 
         <Route path='/puser/location/edit-location'>
-          <div className='backButton'>
+          {/* <div className='backButton'>
             <Link to='/puser/location'>
               <Button variant='outline-primary'>Go Back</Button>
             </Link>
-          </div>
+          </div> */}
           <EditLocation />
         </Route>
       </Switch>

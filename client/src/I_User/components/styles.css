@@ -20,3 +20,14 @@ body {
 .MuiButton-contained {
   margin: '0';
 }
+
+.welcome-user {
+  display: flex;
+  align-items: center;
+  height: '100px';
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/download.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -14,52 +14,66 @@ import EditLocationRender from './EditLocation/EditLocationRender';
 import StyledCard from '../../components/Card/StyledCard';
 import UploadedImagesRender from '../UploadedImages/UploadedImages';
 import HeroMain from '../../P_User/components/HeroMain';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 class Location extends React.Component {
   HomeData = () => {
     return (
-      <>
-        <div className='center-bt'>
-          <h1>Location</h1>
+      <div style={{ height: '90vh' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '25px',
+            marginBottom: '25px',
+          }}
+        >
+          <h1 className='center-align' style={{ color: '#ed3181' }}>
+            Location
+          </h1>
         </div>
 
-        <div className='backButton'>
-          <Link to='/puser'>
-            <Button variant='outline-primary'>Go Back</Button>
-          </Link>
-        </div>
-        <div className='grid2-container'>
-          <Link to='/puser/location/add' style={{ textDecoration: 'none' }}>
-            <StyledCard name='Add' content='Lorem Lorem' />
-          </Link>
-          <Link
-            to='/puser/location/submit-location-images'
-            style={{ textDecoration: 'none' }}
-          >
-            <StyledCard name='Submit Images' content='Lorem Lorem' />
-          </Link>
-          <Link
-            to='/puser/location/edit-location'
-            style={{ textDecoration: 'none' }}
-          >
-            <StyledCard name='Edit Location' content='Lorem Lorem' />
-          </Link>
-          <Link
-            to='/puser/location/uploded-images'
-            style={{ textDecoration: 'none' }}
-          >
-            <StyledCard name='Uploaded Images' content='Lorem Lorem' />
-          </Link>
-        </div>
-      </>
+        <Container
+          className='center'
+          style={{ marginBottom: '20px', marginTop: '0px' }}
+        >
+          {/* <div className='backButton'>
+            <Link to='/puser'>
+              <Button variant='outline-primary'>Go Back</Button>
+            </Link>
+          </div> */}
+          <div className='grid2-container'>
+            <Link to='/puser/location/add' style={{ textDecoration: 'none' }}>
+              <StyledCard name='Add' content='Add Your Selfie' />
+            </Link>
+            <Link
+              to='/puser/location/submit-location-images'
+              style={{ textDecoration: 'none' }}
+            >
+              <StyledCard
+                name='Submit Images'
+                content='Submit Location Images'
+              />
+            </Link>
+            <Link
+              to='/puser/location/edit-location'
+              style={{ textDecoration: 'none' }}
+            >
+              <StyledCard name='Edit Location' content='Edit Location' />
+            </Link>
+            {/* <Link
+              to='/puser/location/uploded-images'
+              style={{ textDecoration: 'none' }}
+            >
+              <StyledCard name='Uploaded Images' content='Upload Images' />
+            </Link> */}
+          </div>
+        </Container>
+      </div>
     );
   };
-  componentDidMount() {
-    console.log('hi');
-  }
   render() {
     return (
-      <div className='content'>
+      <div className='content' style={{ overflow: 'hidden', backgroundColor:"#222831" }}>
         <BrowserRouter>
           <Switch>
             <Route path='/puser/location' exact component={this.HomeData} />
