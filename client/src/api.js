@@ -4,10 +4,10 @@ import { func } from "prop-types";
 
 require("dotenv").config();
 // Axios defaults.baseURL method => sets default host URL (as prefix)
-// axios.defaults.baseURL =
-//   "http://localhost:5000/spring-internship/us-central1/app/api";
 axios.defaults.baseURL =
-  "https://us-central1-spring-internship.cloudfunctions.net/app/api";
+  "http://localhost:5000/spring-internship/us-central1/app/api";
+// axios.defaults.baseURL =
+//   "https://us-central1-spring-internship.cloudfunctions.net/app/api";
 
 export async function iuserevent(iuid) {
   console.log("in api" + iuid);
@@ -502,5 +502,42 @@ export async function uploadAdminLinksCustom(
     link8: link8,
     link9: link9,
     link10: link10,
+  });
+}
+export async function graphDetails(
+  iuid,
+  date,
+  PhoneNo,
+  date1,
+  date2,
+  date3,
+  date4,
+  date5,
+  value1,
+  value2,
+  value3,
+  value4,
+  value5,
+  agegroup,
+  sex,
+  location
+) {
+  await axios.put("/admin/graphvalue", {
+    iuid: iuid,
+    date: date,
+    PhoneNo: PhoneNo,
+    date1: date1,
+    date2: date2,
+    date3: date3,
+    date4: date4,
+    date5: date5,
+    value1: value1,
+    value2: value2,
+    value3: value3,
+    value4: value4,
+    value5: value5,
+    agegroup: agegroup,
+    sex: sex,
+    location: location,
   });
 }

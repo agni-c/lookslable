@@ -1,17 +1,18 @@
-import React, { useContext } from 'react';
-import { BookingsAdminContext } from '../../context/bookingsAdmin';
-import { PuserAdminContext } from '../../context/pUserAdmin';
-import { IuserAdminContext } from '../../context/iUserAdmin';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { customBookingsPremiumAdminContext } from '../../context/customBookingsPremiumAdmin';
+import React, { useContext } from "react";
+import { BookingsAdminContext } from "../../context/bookingsAdmin";
+import { PuserAdminContext } from "../../context/pUserAdmin";
+import { IuserAdminContext } from "../../context/iUserAdmin";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { customBookingsPremiumAdminContext } from "../../context/customBookingsPremiumAdmin";
 
-import MaterialTable from 'material-table';
-import {} from '@material-ui/icons';
+import MaterialTable from "material-table";
+import {} from "@material-ui/icons";
 import {
   AssigningPUser,
   AssigningPUserCustomBooking,
   uploadAdminLinksCustom,
-} from '../../api';
+  graphDetails,
+} from "../../api";
 //import { useEffect } from "react";
 
 export default function CustomBookingOPremiumFragment() {
@@ -27,7 +28,7 @@ export default function CustomBookingOPremiumFragment() {
     } else {
       return (
         <MaterialTable
-          title='Booking Details'
+          title="Booking Details"
           columns={state.columns}
           data={state.data}
           editable={{
@@ -60,19 +61,23 @@ export default function CustomBookingOPremiumFragment() {
                           newData.PhoneNo
                         );
                       } else {
-                        uploadAdminLinksCustom(
-                          newData.date,
+                        graphDetails(
                           newData.iuid,
-                          newData.link1,
-                          newData.link2,
-                          newData.link3,
-                          newData.link4,
-                          newData.link5,
-                          newData.link6,
-                          newData.link7,
-                          newData.link8,
-                          newData.link9,
-                          newData.link10
+                          newData.date,
+                          newData.PhoneNo,
+                          newData.date1,
+                          newData.date2,
+                          newData.date3,
+                          newData.date4,
+                          newData.date5,
+                          newData.value1,
+                          newData.value2,
+                          newData.value3,
+                          newData.value4,
+                          newData.value5,
+                          newData.agegroup,
+                          newData.sex,
+                          newData.location
                         );
                       }
 

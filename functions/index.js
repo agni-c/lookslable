@@ -41,10 +41,6 @@ app.use("/api/upload", picsUpload);
 const uploaddetails = require("./routes/uploadDetails");
 app.use("/api/uploaddetails", uploaddetails);
 
-//
-
-//
-
 // set trending photos
 const trendingphotos = require("./routes/admin/trendingPhotos");
 app.use("/api/admin/trendingPhotos", trendingphotos);
@@ -136,6 +132,9 @@ app.use("/api/admin/asignpuser", asignpuser);
 
 const uploadlinks = require("./routes/admin/uploadLinks");
 app.use("/api/admin/uploadlinks", uploadlinks);
+
+const graphvalues = require("./routes/admin/customBooking");
+app.use("/api/admin/graphvalue", graphvalues);
 
 //Listening
 exports.app = functions.https.onRequest(app);

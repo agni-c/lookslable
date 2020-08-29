@@ -455,7 +455,10 @@ const MyEvents = () => {
                                           d.value2,
                                           d.value3,
                                           d.value4,
-                                          d.value5
+                                          d.value5,
+                                          d.agegroup,
+                                          d.sex,
+                                          d.location
                                         );
                                       }}
                                     >
@@ -501,17 +504,19 @@ const MyEvents = () => {
                                                 flexDirection: "column",
                                               }}
                                             >
-                                              <h6>Gender</h6>
                                               <p>
-                                                Male:
-                                                <CountUp end={100} />
+                                                AgeGroup:
+                                                {d.agegroup}
                                               </p>
                                               <p>
-                                                Female:
-                                                <CountUp end={100} />
+                                                Sex:
+                                                {d.sex}
+                                              </p>
+                                              <p>
+                                                Location:
+                                                {d.location}
                                               </p>
                                             </div>
-                                            <CountUp end={100} />
                                           </div>
                                         </Card>
                                       </div>
