@@ -108,7 +108,7 @@ const App = () => {
           </Form.Group>
           <Form.Group as={Row}>
             <Form.Label className='formGroup'> Landmark</Form.Label>
-            <Col sm='10'>
+            <Col sm='6'>
               <Form.Control
                 style={{ overflow: 'hidden' }}
                 as='select'

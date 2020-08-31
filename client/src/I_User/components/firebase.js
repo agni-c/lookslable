@@ -6,6 +6,8 @@ import NavBar from './NavBar';
 import HeroMain from './HeroMain1';
 import { Container } from 'react-bootstrap';
 import MyEvents from './MyEvents';
+import Support from '../../components/Support';
+import FAQ from '../../components/FAQ';
 
 // Configure Firebase.
 const config = {
@@ -93,6 +95,12 @@ class SignInScreen extends React.Component {
             <NavBar isLoggedIn={true} showLogOut={true} />
             <Route exact path='/myevents'>
               <MyEvents />
+            </Route>
+            <Route exact path='/support'>
+              <Support />
+            </Route>
+            <Route exact path='/faq'>
+              <FAQ />
             </Route>
             <Route exact path='/'>
               <Container md='auto' className='center'>

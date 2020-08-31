@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -11,6 +11,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Gallery from './Gallery';
 import Forms from './Form/form';
 import { LocationDataProvider } from '../../context/Iuser/locationData';
+import { postIuserProfile } from '../../api';
 
 const theme = createMuiTheme({
   palette: {
@@ -71,6 +72,12 @@ export default function HeroMain() {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
+  useEffect(() => {
+    (() => {
+      postIuserProfile();
+    })();
+  });
 
   return (
     <MuiThemeProvider theme={theme}>

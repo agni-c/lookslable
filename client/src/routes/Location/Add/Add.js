@@ -9,7 +9,7 @@ import {
   Router,
 } from 'react-router-dom';
 import Location from '../Location';
-import { Button } from 'react-bootstrap';
+import { Button } from '@material-ui/core';
 const Add = () => {
   return (
     <BrowserRouter>
@@ -17,12 +17,28 @@ const Add = () => {
         <Route path='/puser/location' exact component={Location} />
 
         <Route path='/puser/location/add'>
-          <div className='backButton'>
-            <Link to='/puser/location'>
-              <Button variant='outline-primary'>Go Back</Button>
-            </Link>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '50px',
+            }}
+          >
+            {/* <Link to='/puser/location'>
+              <Button
+                variant='contained'
+                style={{
+                  color: '#fff',
+                  backgroundColor: '#ed3181',
+                  height: '40px',
+                  width: 'auto',
+                }}
+              >
+                Go Back
+              </Button>
+            </Link> */}
+            <SampleForm />
           </div>
-          <SampleForm />
         </Route>
       </Switch>
     </BrowserRouter>

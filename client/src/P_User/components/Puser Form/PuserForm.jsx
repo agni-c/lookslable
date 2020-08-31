@@ -57,7 +57,15 @@ const PuserForm = (props) => {
   return (
     <div className={classes.root}>
       <Paper elevation={3}>
-        <Typography variant='h5'>Fill up the details</Typography>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '25px',
+          }}
+        >
+          <h3>Please Fill up the details</h3>
+        </div>
         <form className={classes.form} onSubmit={handleSubmit}>
           <TextField
             className={classes.input}
@@ -95,7 +103,17 @@ const PuserForm = (props) => {
               setDriveLink(e.target.value);
             }}
           />
-          <Button variant='contained' type='submit'>
+          <Button
+            variant='contained'
+            type='submit'
+            style={{
+              color: '#fff',
+              backgroundColor: '#ed3181',
+              height: '40px',
+              width: 'auto',
+              marginTop: '25px',
+            }}
+          >
             Submit
           </Button>
         </form>

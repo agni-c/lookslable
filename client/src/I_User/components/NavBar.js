@@ -44,7 +44,7 @@ function NavBar(props) {
                 My Events
               </Nav.Link>
             </Link>
-            <Link>
+            <Link to='/support'>
               <Nav.Link
                 href='#features'
                 style={{ color: '#ed3181', fontSize: '20px' }}
@@ -52,20 +52,12 @@ function NavBar(props) {
                 Support
               </Nav.Link>
             </Link>
-            <Link>
+            <Link to='/faq'>
               <Nav.Link
                 href='#features'
                 style={{ color: '#ed3181', fontSize: '20px' }}
               >
                 FAQ
-              </Nav.Link>
-            </Link>
-            <Link>
-              <Nav.Link
-                href='#pricing'
-                style={{ color: '#ed3181', fontSize: '20px' }}
-              >
-                Contact us
               </Nav.Link>
             </Link>
           </Nav>

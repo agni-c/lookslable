@@ -10,4 +10,12 @@
     font-size: 20px;
     margin-left: 0;
   }
+
+  .landmark {
+    margin-left: 40px;
+  }
+
+  .price {
+    margin-left: 85px;
+  }
 }

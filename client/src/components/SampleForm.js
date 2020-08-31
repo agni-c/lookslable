@@ -105,14 +105,14 @@ class SampleForm extends React.Component {
           // enctype="multipart/form-data"
           >
             <Form.Group as={Row}>
-              <Form.Label className='formGroup landmark'>Landmark</Form.Label>
-              <Col sm='10'>
+              <Form.Label className='formGroup'>Landmark</Form.Label>
+              <Col sm='8' className='landmark'>
                 <Form.Control
                   type='text'
                   name='landmark'
                   placeholder='eg. lake gardens'
                   required
-                  id='landmark'
+                  // style={{ width: '100px' }}
                   onChange={(event) => {
                     this.landmarkHandler(event.target.value);
                     console.log(event.target.value);
@@ -123,9 +123,10 @@ class SampleForm extends React.Component {
               <br />
             </Form.Group>
             <Form.Group as={Row}>
-              <Form.Label className='formGroup price'>Price</Form.Label>
-              <Col sm='10'>
+              <Form.Label className='formGroup'>Price</Form.Label>
+              <Col sm='8' className='price'>
                 <Form.Control
+                  // style={{ width: '100px' }}
                   as='select'
                   sm={10}
                   id='price'
@@ -146,8 +147,8 @@ class SampleForm extends React.Component {
               <br />
             </Form.Group>
             <Form.Group as={Row}>
-              <Form.Label className='formGroup date'>Date and Time</Form.Label>
-              <Col sm='9'>
+              <Form.Label className='formGroup '>Date and Time</Form.Label>
+              <Col sm='8' className='date'>
                 <Form.Control
                   type='datetime-local'
                   id='time'
