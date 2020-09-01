@@ -16,11 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import './styles.css';
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    marginTop: '100px',
     '& > *': {
       margin: theme.spacing(1),
       width: theme.spacing(100),
@@ -84,28 +79,31 @@ const PuserForm = (props) => {
   };
   return (
     <div className={classes.root}>
-      <Paper elevation={3} style={{ backgroundColor: '#222831' }}>
+      <Paper
+        elevation={3}
+        style={{ backgroundColor: '#222831', marginTop: '100px' }}
+      >
         <div
           style={{
             display: 'flex',
             justifyContent: 'center',
-            marginTop: '25px',
-            marginBottom: '25px',
+            marginTop: '50px',
+
             color: '#fff',
           }}
         >
-          <h3>Please Fill up the details</h3>
+          <h3 style={{ marginTop: '25px', marginBottom: '25px' }}>
+            Please Fill up the details
+          </h3>
         </div>
         <form className={classes.form} style={{ width: '100%' }}>
           <div style={{ margin: '0 auto' }}>
             <Form.Group as={Row} style={{ width: '100%', marginLeft: '55px' }}>
-              {/* <div style={{ display: 'flex', justifyContent: 'flex-start' }}> */}
               <Form.Label
                 style={{
                   color: '#ed3181',
                   fontSize: '18px',
                   marginLeft: '15px',
-                  // marginLeft: '15px',
                 }}
               >
                 Phone Number

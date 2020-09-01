@@ -94,7 +94,15 @@ const HeroMain = () => {
           aria-labelledby='simple-modal-title'
           aria-describedby='simple-modal-description'
         >
-          <PuserForm handleProfile={handleProfile} />
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <PuserForm handleProfile={handleProfile} />
+          </div>
         </Modal>
       );
     } else {
