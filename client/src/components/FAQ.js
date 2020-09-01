@@ -2,9 +2,18 @@ import React from 'react';
 
 const FAQ = () => {
   return (
-    <div>
-      <h1>FAQ</h1>
-      <p>
+    <div style={{ margin: '0 10px' }}>
+      <h1
+        style={{
+          textAlign: 'center',
+          color: '#ed3181',
+          marginTop: '25px',
+          marginBottom: '25px',
+        }}
+      >
+        FAQ
+      </h1>
+      <p style={{ color: '#fff' }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

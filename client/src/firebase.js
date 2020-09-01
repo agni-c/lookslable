@@ -10,6 +10,8 @@ import UploadedImages from './routes/UploadedImages/UploadedImages';
 import EditLocationRender from './routes/Location/EditLocation/EditLocationRender';
 import SubmitLocationImages from './routes/Location/SubmitLocationImages/SubmitLocationImages';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import FAQ from './components/FAQ';
+import Support from './components/Support';
 // Configure Firebase.
 const config = {
   apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',
@@ -79,6 +81,14 @@ class SignInScreen extends React.Component {
     return (
       <Router>
         <Switch>
+          <Route path='/puser/faq' exact>
+            <NavBar />
+            <FAQ />
+          </Route>
+          <Route path='/puser/support' exact>
+            <NavBar />
+            <Support />
+          </Route>
           <Route path='/puser'>
             <NavBar />
             <HeroMain />

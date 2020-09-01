@@ -1,24 +1,26 @@
-import React, { useContext } from "react";
-import { BookingsAdminContext } from "../../context/bookingsAdmin";
-import { PuserAdminContext } from "../../context/pUserAdmin";
-import { IuserAdminContext } from "../../context/iUserAdmin";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import React, { useContext } from 'react';
+import { BookingsAdminContext } from '../../context/bookingsAdmin';
+import { PuserAdminContext } from '../../context/pUserAdmin';
+import { IuserAdminContext } from '../../context/iUserAdmin';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import MaterialTable from "material-table";
-import {} from "@material-ui/icons";
-import { AssigningPUser, uploadAdminLinks } from "../../api";
-import { useEffect } from "react";
+import MaterialTable from 'material-table';
+import {} from '@material-ui/icons';
+import { AssigningPUser, uploadAdminLinks } from '../../api';
+import { useEffect } from 'react';
 
 export default function BookingFragment() {
   const [state, setState] = useContext(BookingsAdminContext);
   const [pData, setPData] = useContext(PuserAdminContext);
   const [iData, setIData] = useContext(IuserAdminContext);
 
-  if (iData.data && state.data && pData.data) {
-    state.data.map((d) => {
-      d.iname = iData.data.find((i) => i.uid === d.iuid).name;
-      d.pname = pData.data.find((p) => p.uid === d.puid).name;
-    });
+  if (iData.data && state.data) {
+    if (pData.data) {
+      state.data.map((d) => {
+        d.iname = iData.data.find((i) => i.uid === d.iuid).name;
+        d.pname = pData.data.find((p) => p.uid === d.puid).name;
+      });
+    }
   }
   {
     if (state.loading === true || state.data === []) {
@@ -26,7 +28,7 @@ export default function BookingFragment() {
     } else {
       return (
         <MaterialTable
-          title="Booking Details"
+          title='Booking Details'
           columns={state.columns}
           data={state.data}
           editable={{
@@ -49,7 +51,7 @@ export default function BookingFragment() {
                     setState((prevState) => {
                       const data = [...prevState.data];
                       data[data.indexOf(oldData)] = newData;
-                      console.log("old data is" + oldData.puid);
+                      console.log('old data is' + oldData.puid);
 
                       if (oldData.puid !== newData.puid) {
                         AssigningPUser(

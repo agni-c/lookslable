@@ -3,7 +3,8 @@ import './HeroMain.css';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import firebase from 'firebase';
 import Location from '../../routes/Location/Location';
-import Support from '../../routes/Support/Support';
+import Support from '../../components/Support';
+import FAQ from '../../components/FAQ';
 import DriveLink from '../../routes/DriveLink/DriveLink';
 import MyBookings from '../../routes/MyBookings/MyBookings';
 import StyledCard from '../../components/Card/StyledCard';
@@ -103,7 +104,6 @@ const HeroMain = () => {
             <Route path='/puser' exact component={Homedata} />
             <Route path='/puser/location' exact component={Location} />
             <Route path='/puser/my-bookings' exact component={MyBookings} />
-            <Route path='/puser/support' exact component={Support} />
           </Switch>
         </BrowserRouter>
       );

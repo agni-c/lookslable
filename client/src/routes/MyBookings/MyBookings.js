@@ -17,6 +17,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { CircularProgress } from '@material-ui/core';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles({
   root: {
@@ -65,13 +67,22 @@ const MyBookings = () => {
 
   const handleDriveLink = (iuid, puid, time, bookingdate) => {
     (async () => {
-      console.log(iuid + ' ' + puid + ' ' + time + ' ' + bookingdate);
-      await uploadDriveLink(iuid, puid, time, bookingdate, driveLink);
+      if (driveLink === '') {
+        toast('Enter Drivelink!');
+      } else {
+        await uploadDriveLink(iuid, puid, time, bookingdate, driveLink);
+        toast('Successfully Submited');
+      }
     })();
   };
   const handleCustomDriveLink = (iuid, puid, date) => {
     (async () => {
-      await uploadDriveLinkCustombooking(iuid, puid, date, driveLink);
+      if (driveLink === '') {
+        toast('Enter Drivelink!');
+      } else {
+        await uploadDriveLinkCustombooking(iuid, puid, date, driveLink);
+        toast('Successfully Submited');
+      }
     })();
   };
 
@@ -100,7 +111,7 @@ const MyBookings = () => {
       console.log(customEvent);
       idata.map((i) => {
         console.log(i);
-        if (CustomEvent !== false) {
+        if (customEvent !== false) {
           customEvent.map((e) => {
             if (e.iuid === i.uid) {
               e.iname = i.name;
@@ -197,7 +208,7 @@ const MyBookings = () => {
           >
             <CircularProgress style={{ color: '#ed3181' }} />
           </div>
-        ) : customState.data !== '' ? (
+        ) : customState.data !== false ? (
           customState.data.map((d) => (
             <>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -248,6 +259,7 @@ const MyBookings = () => {
           </div>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
   // } else {

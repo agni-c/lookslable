@@ -25,7 +25,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mr-auto'>
-            <Link>
+            <Link to='/puser/faq'>
               <Nav.Link
                 href='#features'
                 style={{ color: '#ed3181', fontSize: '20px' }}
@@ -33,12 +33,12 @@ function NavBar() {
                 FAQ
               </Nav.Link>
             </Link>
-            <Link>
+            <Link to='/puser/support'>
               <Nav.Link
                 href='#pricing'
                 style={{ color: '#ed3181', fontSize: '20px' }}
               >
-                Contact us
+                Support
               </Nav.Link>
             </Link>
           </Nav>
