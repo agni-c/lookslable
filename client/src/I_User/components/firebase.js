@@ -11,7 +11,7 @@ import FAQ from '../../components/FAQ';
 
 // Configure Firebase.
 const config = {
-  apiKey: 'AIzaSyA2NqT0Shr_8yb-YQWWCh3b-1DnFUi4ZhI',
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
   authDomain: 'spring-internship.firebaseapp.com',
   databaseURL: 'https://spring-internship.firebaseio.com',
   projectId: 'spring-internship',

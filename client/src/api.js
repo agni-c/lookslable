@@ -4,10 +4,10 @@ import { func } from 'prop-types';
 
 require('dotenv').config();
 // Axios defaults.baseURL method => sets default host URL (as prefix)
-axios.defaults.baseURL =
-  'http://localhost:5000/spring-internship/us-central1/app/api';
 // axios.defaults.baseURL =
-//   "https://us-central1-spring-internship.cloudfunctions.net/app/api";
+//   'http://localhost:5000/spring-internship/us-central1/app/api';
+axios.defaults.baseURL =
+  'https://us-central1-spring-internship.cloudfunctions.net/app/api';
 
 export async function iuserevent(iuid) {
   console.log('in api' + iuid);

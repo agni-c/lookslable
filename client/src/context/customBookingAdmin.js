@@ -17,7 +17,9 @@ export const CustomBookingsAdminProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const response = await customBookingDetails();
+      console.log(response);
       const data = Object.values(response);
+      console.log(data);
       const columns = [
         { title: 'PUID', field: 'puid' },
         { title: 'Name', field: 'name' },

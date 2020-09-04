@@ -142,7 +142,7 @@ const MyBookings = () => {
           state.data.map((d) => (
             <>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Card>
+                <Card style={{ marginTop: '25px' }}>
                   <CardContent>
                     <Typography variant='h5' component='h2'>
                       {d.landmark}
@@ -212,7 +212,7 @@ const MyBookings = () => {
           customState.data.map((d) => (
             <>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Card>
+                <Card style={{ marginTop: '25px' }}>
                   <CardContent>
                     <Typography>Address: {d.address}</Typography>
                     <Typography>Booking Date: {d.date}</Typography>
