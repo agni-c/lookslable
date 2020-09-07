@@ -14,14 +14,18 @@ export default function BookingFragment() {
   const [pData, setPData] = useContext(PuserAdminContext);
   const [iData, setIData] = useContext(IuserAdminContext);
 
-  if (iData.data) {
+  if (iData.data && pData.data) {
     state.data.map((d) => {
       d.iname = iData.data.map((i) => {
         if (i.uid === d.iuid) {
           return i.name;
         }
       });
-      // d.pname = pData.data.find((p) => p.uid === d.puid).name;
+      d.pname = pData.data.map((p) => {
+        if (p.uid === d.iuid) {
+          return p.name;
+        }
+      });
     });
   }
 
