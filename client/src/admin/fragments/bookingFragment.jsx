@@ -14,14 +14,24 @@ export default function BookingFragment() {
   const [pData, setPData] = useContext(PuserAdminContext);
   const [iData, setIData] = useContext(IuserAdminContext);
 
-  if (iData.data && state.data) {
-    if (pData.data) {
-      state.data.map((d) => {
-        d.iname = iData.data.find((i) => i.uid === d.iuid).name;
-        d.pname = pData.data.find((p) => p.uid === d.puid).name;
+  if (iData.data) {
+    state.data.map((d) => {
+      d.iname = iData.data.map((i) => {
+        if (i.uid === d.iuid) {
+          return i.name;
+        }
       });
-    }
+      // d.pname = pData.data.find((p) => p.uid === d.puid).name;
+    });
   }
+
+  // if (iData.data && state.data) {
+  //   if (pData.data) {
+  // state.data.map((d) => {
+  //   d.iname = iData.data.find((i) => i.uid === d.iuid).name;
+  //   d.pname = pData.data.find((p) => p.uid === d.puid).name;
+  // });
+  //   }0  // }
   {
     if (state.loading === true || state.data === []) {
       return <CircularProgress />;

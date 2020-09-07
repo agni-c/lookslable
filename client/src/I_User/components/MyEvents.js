@@ -518,6 +518,7 @@ const MyEvents = () => {
                                       open={openGraph}
                                       onClose={handleGraphClose}
                                       aria-labelledby='simple-modal-title'
+                                      overflow='scroll'
                                       aria-describedby='simple-modal-description'
                                     >
                                       <div
@@ -531,9 +532,28 @@ const MyEvents = () => {
                                             padding: '20px',
                                             height: 'auto',
                                             width: '800px',
-                                            margin: '250px',
+                                            margin: '50px 10px 0 10px',
                                           }}
                                         >
+                                          <div
+                                            style={{
+                                              display: 'flex',
+                                              justifyContent: 'flex-end',
+                                            }}
+                                          >
+                                            <Button
+                                              variant='contained'
+                                              onClick={handleGraphClose}
+                                              style={{
+                                                width: 'auto',
+                                                height: '40px',
+                                                color: '#fff',
+                                                backgroundColor: '#ed3181',
+                                              }}
+                                            >
+                                              Close
+                                            </Button>
+                                          </div>
                                           <Line
                                             // height={400}
                                             // width={800}
@@ -618,9 +638,29 @@ const MyEvents = () => {
                                             padding: '20px',
                                             height: 'auto',
                                             width: '800px',
-                                            margin: '250px auto',
+                                            margin: '100px auto',
                                           }}
                                         >
+                                          <div
+                                            style={{
+                                              display: 'flex',
+                                              justifyContent: 'flex-end',
+                                              marginBottom: '25px',
+                                            }}
+                                          >
+                                            <Button
+                                              variant='contained'
+                                              onClick={handleClose}
+                                              style={{
+                                                width: 'auto',
+                                                height: '40px',
+                                                color: '#fff',
+                                                backgroundColor: '#ed3181',
+                                              }}
+                                            >
+                                              Close
+                                            </Button>
+                                          </div>
                                           {link1 === 'NO' ? null : (
                                             <>
                                               <a href={link1}>{link1}</a> <br />
