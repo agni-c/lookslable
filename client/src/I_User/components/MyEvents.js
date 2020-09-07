@@ -20,7 +20,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactStars from 'react-rating-stars-component';
-import { Modal, TextField, CircularProgress } from '@material-ui/core';
+import { Modal, TextField, CircularProgress, Dialog } from '@material-ui/core';
 import LinkPopOver from './LinkPopOver';
 import CustomLinkPopOver from './CustomLinkPopOver';
 import { ToastContainer, toast } from 'react-toastify';
@@ -332,7 +332,7 @@ const MyEvents = () => {
                               <>
                                 <TextField
                                   id='outlined-basic'
-                                  label='Links'
+                                  label='Upload Another Link'
                                   variant='outlined'
                                   edit={d.rating ? false : true}
                                   value={link}
@@ -358,9 +358,10 @@ const MyEvents = () => {
                                     backgroundColor: '#ed3181',
                                     color: '#fff',
                                     height: '40px',
+                                    width: 'auto',
                                   }}
                                 >
-                                  Upload
+                                  Upload Another Link
                                 </Button>
                                 <LinkPopOver data={d} />
                               </>
@@ -459,7 +460,7 @@ const MyEvents = () => {
                               <>
                                 <TextField
                                   id='outlined-basic'
-                                  label='Links'
+                                  label='Upload Another Link'
                                   variant='outlined'
                                   disabled={d.link === 'NO' ? false : true}
                                   value={link}
@@ -478,9 +479,10 @@ const MyEvents = () => {
                                     backgroundColor: '#ed3181',
                                     color: '#fff',
                                     height: '40px',
+                                    width: 'auto',
                                   }}
                                 >
-                                  Upload
+                                  Upload Another Link
                                 </Button>
                                 <br />
                                 {d.key2 === 'Premium' ? (
@@ -514,11 +516,11 @@ const MyEvents = () => {
                                     >
                                       Promotion
                                     </Button>
-                                    <Modal
+                                    <Dialog
                                       open={openGraph}
                                       onClose={handleGraphClose}
                                       aria-labelledby='simple-modal-title'
-                                      overflow='scroll'
+                                      // overflow='scroll'
                                       aria-describedby='simple-modal-description'
                                     >
                                       <div
@@ -532,7 +534,7 @@ const MyEvents = () => {
                                             padding: '20px',
                                             height: 'auto',
                                             width: '800px',
-                                            margin: '50px 10px 0 10px',
+                                            margin: '20px 10px 0 10px',
                                           }}
                                         >
                                           <div
@@ -555,11 +557,10 @@ const MyEvents = () => {
                                             </Button>
                                           </div>
                                           <Line
-                                            // height={400}
-                                            // width={800}
                                             data={chartData}
                                             options={{
-                                              maintainAspectRatio: false,
+                                              responsive: true,
+                                              maintainAspectRatio: true,
                                             }}
                                           />
                                           <div
@@ -591,7 +592,7 @@ const MyEvents = () => {
                                           </div>
                                         </Card>
                                       </div>
-                                    </Modal>
+                                    </Dialog>
                                   </>
                                 ) : (
                                   <>
@@ -625,6 +626,7 @@ const MyEvents = () => {
                                       open={open}
                                       onClose={handleClose}
                                       aria-labelledby='simple-modal-title'
+                                      // overflow='scroll'
                                       aria-describedby='simple-modal-description'
                                     >
                                       <div
@@ -636,7 +638,7 @@ const MyEvents = () => {
                                         <Card
                                           style={{
                                             padding: '20px',
-                                            height: 'auto',
+                                            // height: 'auto',
                                             width: '800px',
                                             margin: '100px auto',
                                           }}
