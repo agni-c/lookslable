@@ -1,13 +1,15 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import HeroMain from './HeroMain1';
 import { Container } from 'react-bootstrap';
 import MyEvents from './MyEvents';
 import Support from '../../components/Support';
 import FAQ from '../../components/FAQ';
+import { Card } from '@material-ui/core';
+import { iuserevent, customiuserevent } from '../../api';
 
 // Configure Firebase.
 const config = {
@@ -30,38 +32,45 @@ class SignInScreen extends React.Component {
     super(props);
     this.state = {
       first: 0,
+      current: [],
     };
   }
-  // The component's Local state.
+
   state = {
-    isSignedIn: false, // Local signed-in state.
+    isSignedIn: false,
   };
 
-  // Configure FirebaseUI.
   uiConfig = {
-    // Popup signin flow rather than redirect flow.
     signInFlow: 'popup',
-    // We will display Google and Facebook as auth providers.
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      // firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      // firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-    ],
+
+    signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
-      // Avoid redirects after sign-in.
       signInSuccessWithAuthResult: () => false,
     },
   };
 
-  // Listen to the Firebase Auth state and set the local state.
+  validateDate = (date) => {
+    var currentdate = new Date().toISOString().substring(0, 16);
+
+    if (Date.parse(date) - Date.parse(currentdate) <= 0) {
+      return false;
+    } else if (currentdate.substring(8, 10) === date.substring(8, 10)) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  handleCurrentEvents = () => {
+    this.setState({ current: false });
+  };
+
   componentDidMount() {
     this.unregisterAuthObserver = firebase
       .auth()
       .onAuthStateChanged((user) => this.setState({ isSignedIn: !!user }));
   }
 
-  // Make sure we un-register Firebase observers when the component unmounts.
   componentWillUnmount() {
     this.unregisterAuthObserver();
   }
@@ -86,6 +95,32 @@ class SignInScreen extends React.Component {
           />
         </div>
       );
+    }
+    {
+      (async () => {
+        var uid = firebase.auth().currentUser.uid;
+        const event = await iuserevent(uid);
+        const customEvent = await customiuserevent(uid);
+        if (event) {
+          event.map((e) => {
+            if (this.validateDate(e.bookingdate)) {
+              this.setState({
+                current: [e.bookingdate],
+              });
+            }
+          });
+        }
+
+        if (customEvent) {
+          customEvent.map((c) => {
+            if (this.validateDate(c.date)) {
+              this.setState({
+                current: [c.date],
+              });
+            }
+          });
+        }
+      })();
     }
 
     return (
@@ -113,9 +148,35 @@ class SignInScreen extends React.Component {
                     <h1 style={{ color: '#fff' }}>
                       {firebase.auth().currentUser.displayName}
                     </h1>
+                    {/* <CurrentEvents
+                      handleCurrentEvents={this.handleCurrentEvents()}
+                    /> */}
+                    {(() => {
+                      console.log(this.state.current.length);
+                    })()}
+                    {this.state.current.length > 0 ? (
+                      <div
+                        style={{
+                          backgroundColor: '#fff',
+                          // width: '100%',
+                          height: '50px',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          margin: '50px 10px 10px 0',
+                        }}
+                      >
+                        <Link
+                          to='/myevents'
+                          style={{ textDecoration: 'none', color: '#ed3181' }}
+                        >
+                          Current Events
+                        </Link>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
-                {/* <HeroMain /> */}
+
                 <HeroMain />
               </Container>
             </Route>

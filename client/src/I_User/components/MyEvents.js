@@ -251,9 +251,15 @@ const MyEvents = () => {
   if (state.data !== false || customState.data !== false) {
     return (
       <>
-        <h4 style={{ marginLeft: '5vh', color: '#fff', marginTop: '10px' }}>
-          Events
-        </h4>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '25px',
+          }}
+        >
+          <p style={{ color: '#ed3181', fontSize: '25px' }}>Events</p>
+        </div>
         <div style={{ padding: '5px' }}>
           {state.data ? (
             loader ? (
@@ -376,12 +382,14 @@ const MyEvents = () => {
               ))
             )
           ) : (
-            <h1 style={{ color: '#fff', textAlign: 'center' }}>
-              No Booking Found
-            </h1>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <p style={{ color: '#fff' }}>No Events Found</p>
+            </div>
           )}
         </div>
-        <h4 style={{ marginLeft: '5vh', color: '#fff' }}>Custom Events</h4>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <p style={{ color: '#ed3181', fontSize: '25px' }}>Custom Events</p>
+        </div>
         <div style={{ padding: '5px' }}>
           {customState.data ? (
             customLoader ? (
@@ -558,9 +566,11 @@ const MyEvents = () => {
                                           </div>
                                           <Line
                                             data={chartData}
+                                            height={100}
+                                            width={150}
                                             options={{
                                               responsive: true,
-                                              maintainAspectRatio: true,
+                                              // maintainAspectRatio: true,
                                             }}
                                           />
                                           <div
@@ -745,16 +755,20 @@ const MyEvents = () => {
               ))
             )
           ) : (
-            <h1 style={{ color: '#fff', textAlign: 'center' }}>
-              No Custom Bookings
-            </h1>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <p style={{ color: '#fff' }}>No Custom Bookings Found</p>
+            </div>
           )}
           <ToastContainer />
         </div>
       </>
     );
   } else {
-    return <h1 style={{ height: '100vh', color: 'white' }}>No record Found</h1>;
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <p style={{ color: '#fff' }}>No Events Found</p>
+      </div>
+    );
   }
 };
 
